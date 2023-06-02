@@ -2,7 +2,7 @@ import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import cx from "classnames";
 
-const Card =({ title, content, className }) => {
+const Card = ({ title, content, className }) => {
   const t = useTranslations();
 
   return (
@@ -11,6 +11,6 @@ const Card =({ title, content, className }) => {
       {content}
     </div>
   );
-});
+};
 
 export default Card;

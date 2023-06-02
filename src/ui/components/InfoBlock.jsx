@@ -11,6 +11,6 @@ const InfoBlock = ({ title, content }) => {
       {content}
     </div>
   );
-});
+};
 
 export default InfoBlock;
