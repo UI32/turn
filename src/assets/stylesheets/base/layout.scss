@@ -1,0 +1,40 @@
+// Layout
+
+$header-height: 101px;
+$header-height-mv: 60px;
+
+.outer-wrapper {
+  overflow-x: hidden;
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: $header-height-mv;
+  }
+  .content {
+    padding-top: $header-height-mv;
+  }
+  @include mq(md) {
+    .header {
+      height: $header-height;
+    }
+    .content {
+      padding-top: $header-height;
+    }
+  }
+}
+
+.inner-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.simple-layout {
+  .footer {
+    background: transparent;
+    color: $black-grey;
+  }
+}

@@ -1,0 +1,55 @@
+// Utils
+
+.hide-in-desktop {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.show-in-mobile {
+  display: block;
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+.show-in-tablet {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.show-in-desktop {
+  display: none;
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 0.0625rem;
+  margin: -0.0625rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0.0625rem;
+  word-wrap: normal;
+}
+
+.screen-reader-link {
+  opacity: 0;
+}
+
+.disable-scroll-mobile {
+  overflow: hidden;
+}
+
+svg {
+  path {
+    fill: currentColor;
+  }
+}

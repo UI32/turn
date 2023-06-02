@@ -1,0 +1,37 @@
+// Headings
+
+.alpha {
+  @include typo-rwd(alpha);
+}
+
+.beta {
+  @include typo-rwd(beta);
+}
+
+.gamma {
+  @include typo-rwd(gamma);
+}
+
+.delta {
+  @include typo-rwd(delta);
+}
+
+.intro-text {
+  @include typo-rwd(intro-text);
+}
+
+.basic-text {
+  @include typo-rwd(basic-text);
+}
+
+.text {
+  @include typo-rwd(basic-text);
+  color: $grey-4;
+}
+
+
+.centered {
+  @include mq(lg) {
+    text-align: center;
+  }
+}
