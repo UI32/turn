@@ -1,0 +1,9 @@
+// Lang selector
+
+.lang-selector {
+  .lang-item {
+    &:disabled {
+      display: none;
+    }
+  }
+}

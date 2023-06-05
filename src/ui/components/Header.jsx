@@ -1,9 +1,11 @@
 import React, { useState, useCallback, useLayoutEffect } from "react";
 import useTranslations from "../../hooks/useTranslations";
 import LangSelector from "../components/LangSelector";
-import {Link} from "gatsby";
+import { Link } from "gatsby";
 import cx from "classnames";
 import useScrollspy from "../../hooks/useScrollSpy";
+import logo from "../../assets/images/logo.svg";
+import ButtonHashLink from "../components/buttons/Button";
 
 const Header = () => {
   const t = useTranslations();
@@ -27,26 +29,44 @@ const Header = () => {
     return () => document.body.classList.remove("disable-scroll-mobile");
   }, [isMenuOpen]); // Empty array ensures effect is only run on mount and unmount
 
-  const ids = ["option1", "option2"];
+  const ids = ["mission", "howItWorks", "about"];
   const activeId = useScrollspy(ids, 101);
 
   return (
     <header className={cx("header", { "open-menu": isMenuOpen })}>
       <div className="wrapper">
         <Link to="/" className="logo" activeClassName="active">
-          Logo
+          <img src={logo} alt="Logo Turn2x" />
         </Link>
         <nav className="main-nav" onClick={closeMenu}>
           <Link
-            to=""
+            to="/#mission"
             className={cx("nav-item", {
-              active: activeId === "option1" || activeId === "option2",
+              active: activeId === "mission",
             })}
           >
-            {t("sample:text")}
+            {t("mission:name")}
+          </Link>
+          <Link
+            to="/#howItWorks"
+            className={cx("nav-item", {
+              active: activeId === "howItWorks",
+            })}
+          >
+            {t("how-it-works:name")}
+          </Link>
+          <Link
+            to="/#howItWorks"
+            className={cx("nav-item", {
+              active: activeId === "about",
+            })}
+          >
+            {t("about:name")}
           </Link>
           <LangSelector />
+          <ButtonHashLink label="contact-sales:name" to="/#contact" />
         </nav>
+
         <button
           className="button-menu show-in-mobile"
           onClick={toggleMenu}

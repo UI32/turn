@@ -1,3 +1,9 @@
 {
-  "sample:text": "[DE] Sample text"
+  "mission:name": "[DE] Mission",
+  "how-it-works:name": "[DE] How it works",
+  "about:name": "[DE] About us",
+  "contact-sales:name": "[DE] Contact Sales",
+  "data-privacy:name": "[DE] Data Privacy",
+  "cookie-settings:name": "[DE] Cookie Settings",
+  "imprint:name": "[DE] Imprint"
 }
