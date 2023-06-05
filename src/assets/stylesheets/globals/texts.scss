@@ -3,36 +3,36 @@
 // Font face
 
 @font-face {
-  font-family: 'DIN Next LT Pro';
-  src: url('../fonts/DINNextLTPro-Light.woff2') format('woff2'),
-      url('../fonts/DINNextLTPro-Light.woff') format('woff');
+  font-family: "DIN Next LT Pro";
+  src: url("../fonts/DINNextLTPro-Light.woff2") format("woff2"),
+    url("../fonts/DINNextLTPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DIN Next LT Pro';
-  src: url('../fonts/DINNextLTPro-Regular.woff2') format('woff2'),
-      url('../fonts/DINNextLTPro-Regular.woff') format('woff');
+  font-family: "DIN Next LT Pro";
+  src: url("../fonts/DINNextLTPro-Regular.woff2") format("woff2"),
+    url("../fonts/DINNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DIN Next LT Pro';
-  src: url('../fonts/DINNextLTPro-Medium.woff2') format('woff2'),
-      url('../fonts/DINNextLTPro-Medium.woff') format('woff');
+  font-family: "DIN Next LT Pro";
+  src: url("../fonts/DINNextLTPro-Medium.woff2") format("woff2"),
+    url("../fonts/DINNextLTPro-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DIN Next LT Pro';
-  src: url('../fonts/DINNextLTPro-Bold.woff2') format('woff2'),
-      url('../fonts/DINNextLTPro-Bold.woff') format('woff');
+  font-family: "DIN Next LT Pro";
+  src: url("../fonts/DINNextLTPro-Bold.woff2") format("woff2"),
+    url("../fonts/DINNextLTPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -49,102 +49,119 @@ $typography: (
     format: (
       xxs: (
         ff: font,
-        fz: 1.2,
         lh: normal,
       ),
     ),
   ),
+
+  jumbo: (
+    format: (
+      xxs: (
+        fz: 36px,
+        lh: 37.8px,
+        ls: -0.03em,
+        fw: 500,
+      ),
+      lg: (
+        fz: 80px,
+        lh: 84px,
+        ls: -0.03em,
+      ),
+    ),
+  ),
+
   alpha: (
     format: (
       xxs: (
-        fz: 40px,
-        lh: 1.1,
+        fz: 36px,
+        lh: 37.8px,
+        ls: -0.03em,
         fw: 500,
       ),
-      md: (
-        fz: 80px,
-        lh: 1.2,
-      ),
-      xl: (
-        fz: 120px,
-        lh: 151px,
+      lg: (
+        fz: 42px,
+        lh: 44.1px,
+        ls: -0.03em,
       ),
     ),
   ),
   beta: (
     format: (
       xxs: (
-        fz: 40px,
+        fz: 32px,
         lh: 1.1,
         fw: 500,
+        ls: -0.03em,
       ),
       lg: (
-        fz: 70px,
-      ),
-      xl: (
-        fz: 88px,
+        fz: 36px,
+        lh: 37.8px,
       ),
     ),
   ),
-  gamma: (
+
+  lead-xs: (
     format: (
       xxs: (
-        fz: 40px,
-        lh: 1.2,
-        fw: 600,
-      ),
-      lg: (
-        fz: 50px,
-        lh: 1.2,
-      ),
-      xl: (
-        fz: 64px,
-        lh: 80.32px,
-        fw: 600,
-      ),
-    ),
-  ),
-  delta: (
-    format: (
-      xxs: (
-        fz: 28px,
-        lh: 1.2,
+        fz: 10px,
+        lh: 10.5px,
         fw: 500,
-      ),
-      xl: (
-        fz: 32px,
-        lh: 40.32px,
-        fw: 500,
+        ls: -0.04em,
       ),
     ),
   ),
-  intro-text: (
+
+  lead-m: (
+    format: (
+      sm: (
+        fz: 15px,
+        lh: 18px,
+        fw: 500,
+        ls: -0.1em,
+      ),
+    ),
+  ),
+
+  text-s: (
+    format: (
+      sm: (
+        fz: 14px,
+        lh: 16.8px,
+        fw: 400,
+        ls: -0.02em,
+      ),
+    ),
+  ),
+
+  text-m: (
     format: (
       xxs: (
-        fz: 24px,
-        lh: 1.2,
-        fw: 300,
-      ),
-      md: (
-        fz: 28px,
-        lh: 1.2,
-      ),
-      xl: (
-        fz: 32px,
-        lh: 40px,
+        fz: 16px,
+        lh: 19.2px,
+        fw: 400,
+        ls: -0.02em,
       ),
     ),
   ),
-  basic-text: (
+
+  text-l: (
     format: (
       xxs: (
         fz: 18px,
-        lh: 1.2,
-        fw: 300,
+        lh: 21.6px,
+        fw: 400,
+        ls: -0.02em,
       ),
-      md: (
+    ),
+  ),
+
+  text-xl: (
+    format: (
+      xxs: (
         fz: 20px,
-        lh: 25px,
+        lh: 24px,
+        fw: 400,
+        ls: -0.02em,
       ),
     ),
   ),

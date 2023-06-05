@@ -38,41 +38,50 @@ const Header = () => {
         <Link to="/" className="logo" activeClassName="active">
           <img src={logo} alt="Logo Turn2x" />
         </Link>
-        <nav className="main-nav" onClick={closeMenu}>
-          <Link
-            to="/#mission"
-            className={cx("nav-item", {
-              active: activeId === "mission",
-            })}
-          >
-            {t("mission:name")}
-          </Link>
-          <Link
-            to="/#howItWorks"
-            className={cx("nav-item", {
-              active: activeId === "howItWorks",
-            })}
-          >
-            {t("how-it-works:name")}
-          </Link>
-          <Link
-            to="/#howItWorks"
-            className={cx("nav-item", {
-              active: activeId === "about",
-            })}
-          >
-            {t("about:name")}
-          </Link>
-          <LangSelector />
-          <ButtonHashLink label="contact-sales:name" to="/#contact" />
-        </nav>
+        <div className="header-content">
+          <nav className="header-nav" onClick={closeMenu}>
+            <Link
+              to="/#mission"
+              className={cx("nav-item", {
+                active: activeId === "mission",
+              })}
+            >
+              {t("mission:name")}
+            </Link>
+            <Link
+              to="/#howItWorks"
+              className={cx("nav-item", {
+                active: activeId === "howItWorks",
+              })}
+            >
+              {t("how-it-works:name")}
+            </Link>
+            <Link
+              to="/#howItWorks"
+              className={cx("nav-item", {
+                active: activeId === "about",
+              })}
+            >
+              {t("about:name")}
+            </Link>
+          </nav>
+
+          <div className="header-actions">
+            <LangSelector />
+            <ButtonHashLink clear label="contact-sales:name" to="/#contact" />
+          </div>
+        </div>
 
         <button
           className="button-menu show-in-mobile"
           onClick={toggleMenu}
           aria-label="menu"
         >
-          <span className="hamburger"></span>
+          <div className="hamburger">
+            <span className="line line-1"></span>
+            <span className="line line-2"></span>
+            <span className="line line-3"></span>
+          </div>
         </button>
       </div>
     </header>

@@ -8,7 +8,7 @@
 
 .show-in-mobile {
   display: block;
-  @include mq(lg) {
+  @include mq(md) {
     display: none;
   }
 }
