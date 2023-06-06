@@ -1,4 +1,9 @@
-import React, { useState, useCallback, useLayoutEffect } from "react";
+import React, {
+  useState,
+  useCallback,
+  useLayoutEffect,
+  useEffect,
+} from "react";
 import useTranslations from "../../hooks/useTranslations";
 import LangSelector from "../components/LangSelector";
 import { Link } from "gatsby";
@@ -9,6 +14,28 @@ import ButtonHashLink from "../components/buttons/Button";
 
 const Header = () => {
   const t = useTranslations();
+
+  // Sticky header
+  const [isSticky, setisSticky] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollTop = window.pageYOffset;
+
+      if (scrollTop > 80) {
+        setisSticky(true);
+      } else {
+        setisSticky(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Open/Close menu
 
   const [isMenuOpen, setisMenuOpen] = useState(false);
   const toggleMenu = useCallback(
@@ -33,7 +60,12 @@ const Header = () => {
   const activeId = useScrollspy(ids, 101);
 
   return (
-    <header className={cx("header", { "open-menu": isMenuOpen })}>
+    <header
+      className={cx("header", {
+        "open-menu": isMenuOpen,
+        "is-sticky": isSticky,
+      })}
+    >
       <div className="wrapper">
         <Link to="/" className="logo" activeClassName="active">
           <img src={logo} alt="Logo Turn2x" />

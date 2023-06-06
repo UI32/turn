@@ -8,8 +8,8 @@
   outline: none;
   text-align: center;
   border-radius: 6px;
-  font-size: 18px;
   padding: 0 24px;
+  @include typo-rwd(text-l);
 
   height: 41px;
   &-clear {
