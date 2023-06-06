@@ -1,7 +1,7 @@
 import React from "react";
-import useTranslations from "../../hooks/useTranslations";
+import useTranslations from "../../../hooks/useTranslations";
 import cx from "classnames";
-import { ReactComponent as Info } from "../../assets/icons/icon-info-circle.svg";
+import { ReactComponent as Exclamation } from "../../../assets/icons/exclamation.svg";
 
 const FormField = ({
   label,
@@ -20,12 +20,14 @@ const FormField = ({
         [className]: className,
       })}
     >
-      <label htmlFor={labelFor} className="form-label">
-        {t(label)}
-        {required && " *"}
-      </label>
+      {label && (
+        <label htmlFor={labelFor} className="form-label">
+          {t(label)}
+          {required && " *"}
+        </label>
+      )}
       {field}
-      {errorText && <Info className="error-icon" />}
+      {errorText && <Exclamation className="error-icon" />}
       {errorText && <p className="error-text">{t(errorText)}</p>}
     </div>
   );

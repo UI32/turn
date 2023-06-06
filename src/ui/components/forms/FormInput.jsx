@@ -1,5 +1,5 @@
 import React from "react";
-import useTranslations from "../../hooks/useTranslations";
+import useTranslations from "../../../hooks/useTranslations";
 
 const FormInput = ({ type, id, name, placeholder, onChange }) => {
   const t = useTranslations();

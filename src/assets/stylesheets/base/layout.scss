@@ -1,1 +1,11 @@
 // Layout
+
+.content {
+  > div {
+    z-index: 2;
+    position: relative;
+  }
+  .hero {
+    z-index: 0;
+  }
+}

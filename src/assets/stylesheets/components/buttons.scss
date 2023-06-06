@@ -10,10 +10,12 @@
   border-radius: 6px;
   padding: 0 24px;
   @include typo-rwd(text-l);
-
   height: 41px;
+  background: $primary;
+  color: $white;
   &-clear {
     background: $grey-light;
+    color: $black;
   }
 
   &-icon {

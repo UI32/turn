@@ -6,6 +6,11 @@
   "announcement:text": "[DE] May 2023: Announcing a €4.3M Seed Round",
   "hero:title": "Wir entkarbonisieren die Industrie mittels Eneuerbarer Gasbrennstoffe.",
   "hero:quote": "[DE] We turn energy to Renewable Natural Gas <br/> to provide you with a CO2 neutral energy solution.",
+  "contact:full-name": "[DE] Full Name",
+  "contact:phone": "[DE] Phone",
+  "contact:email": "[DE] Email",
+  "contact:message": "[DE] Message",
+  "contact:submit": "[DE] Submit",
   "data-privacy:name": "[DE] Data Privacy",
   "cookie-settings:name": "[DE] Cookie Settings",
   "imprint:name": "[DE] Imprint"

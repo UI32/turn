@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Hero from "../components/Hero";
+import Contact from "../components/Contact";
 
 const HomePage = () => {
   // useEffect(() => {
@@ -16,6 +17,7 @@ const HomePage = () => {
   return (
     <MainLayout>
       <Hero />
+      <Contact />
     </MainLayout>
   );
 };
