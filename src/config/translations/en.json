@@ -15,7 +15,10 @@
   "contact:email": "Email",
   "contact:message": "Message",
   "contact:submit": "Submit",
-  "data-privacy:name": "Data Privacy",
+  "data-privacy:name": "Data Privacy Policy",
+  "legal:name": "Legal",
+  "careers:name": "Careers",
+  "hiring:name": "We're hiring!",
   "cookie-settings:name": "Cookie Settings",
   "imprint:name": "Imprint"
 }

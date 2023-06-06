@@ -11,11 +11,13 @@ const ButtonGeneric = ({
   icon,
   loading,
   success,
+  tiny,
 }) => {
   const t = useTranslations();
   const buttonClasses = cx("button", {
     "button-clear": clear,
     "is-disabled": disabled,
+    "button-tiny": tiny,
   });
   const buttonContent = (
     <>
