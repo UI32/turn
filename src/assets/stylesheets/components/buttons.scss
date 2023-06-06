@@ -8,14 +8,16 @@
   outline: none;
   text-align: center;
   border-radius: 6px;
-  padding: 0 24px;
+  padding: 0 30px;
   @include typo-rwd(text-l);
-  height: 41px;
+  height: 51px;
   background: $primary;
   color: $white;
   &-clear {
     background: $grey-light;
     color: $black;
+    height: 41px;
+    padding: 0 24px;
   }
 
   &-icon {
@@ -29,5 +31,17 @@
       width: 20px;
       height: 20px;
     }
+  }
+
+  .success {
+    &-text {
+      display: flex;
+      align-items: center;
+      @include centered(absolute);
+    }
+  }
+
+  .success-icon {
+    margin-left: 6px;
   }
 }

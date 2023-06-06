@@ -7,8 +7,12 @@ $white: #fff;
 $primary: #385494;
 $primary-dark: #385494;
 $grey-light: #f6f6f6;
-$success: #00c853;
-$error: #d50000;
+$grey-transparent-40: rgba($black, 0.4);
+$success: #19aa86;
+$error: #ef4444;
+$error-dark: #7f1d1d;
+$error-light: #fca5a5;
+$error-extra-light: #fff7f7;
 $warning: #ffa900;
 
 // Fonts
@@ -43,5 +47,5 @@ $grid-breakpoints: (
   // Large screen / desktop
   xl: $xl,
   // Extra large screen / wide desktop
-  xxl: $xxl // Extra large screen / wide desktop,,,,,,,,,,,,,,
+  xxl: $xxl // Extra large screen / wide desktop,,,,,,,,,,,,,,,,,,,,
 );

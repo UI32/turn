@@ -1,1 +1,63 @@
 // Forms
+
+.form {
+  &-field {
+    margin-bottom: 9px;
+    position: relative;
+    &.has-error {
+      color: $error-dark;
+      .form-input {
+        border-color: $error-light;
+        background: $error-extra-light;
+      }
+    }
+    .error-icon,
+    .success-icon {
+      position: absolute;
+      top: 16px;
+      right: 14px;
+    }
+
+    .success-icon {
+      color: $success;
+    }
+
+    .error-icon {
+      color: $error;
+    }
+
+    .error-text {
+      color: black;
+      opacity: 0.5;
+      font-size: 19px;
+      line-height: 23px;
+      margin-top: 10px;
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &-input,
+  &-textarea {
+    border: 1px solid transparent;
+    background: $grey-light;
+    border-radius: 6px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 16px 16px 12px 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+  }
+  &-textarea {
+    display: block;
+    resize: none;
+    min-height: 112px;
+  }
+}

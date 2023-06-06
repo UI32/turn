@@ -1,0 +1,49 @@
+// Contact
+
+.panel {
+  background: $white;
+  border-radius: 12px;
+  padding: 56px;
+}
+
+.contact {
+  &-panel {
+    background-image: url("../images/panel-bg2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: flex-start;
+  }
+  &-info,
+  &-form {
+    flex: 1 1 auto;
+  }
+
+  .animated-logo {
+    margin-bottom: 46px;
+  }
+
+  .beta {
+    margin-bottom: 14px;
+  }
+
+  .lead-m {
+    color: $grey-transparent-40;
+    margin-bottom: 20px;
+  }
+
+  .text-l {
+    opacity: 0.5;
+    margin-bottom: 39px;
+  }
+
+  &-form {
+    margin-top: 100px;
+  }
+
+  .button {
+    min-width: 116px;
+    margin-bottom: 4px;
+    position: relative;
+  }
+}

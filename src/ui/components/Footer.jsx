@@ -7,7 +7,7 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <header className="footer">
+    <footer className="footer">
       <div className="wrapper">
         <Link className="footer-caption" to="/privacy">
           {t("data-privacy:name")}
@@ -21,7 +21,7 @@ const Footer = () => {
         </Link>
         <span className="footer-caption">© 2023 Turn Energy GmbH</span>
       </div>
-    </header>
+    </footer>
   );
 };
 

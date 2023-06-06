@@ -53,3 +53,11 @@ svg {
     fill: currentColor;
   }
 }
+
+.lottie-container {
+  svg {
+    path {
+      fill: inherit;
+    }
+  }
+}

@@ -6,16 +6,12 @@ import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 
 const HomePage = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
   useEffect(() => {
     AOS.init({});
   }, []);
 
   return (
-    <MainLayout>
+    <MainLayout bottomPattern>
       <Hero />
       <Contact />
     </MainLayout>

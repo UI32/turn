@@ -8,11 +8,11 @@ const Contact = ({}) => {
   return (
     <div className="contact" id="contact">
       <div className="wrapper">
-        <div className="panel">
+        <div className="panel contact-panel">
           <div className="contact-info">
-            <img src={icon} alt="icon" />
-            <p className="pretitle">{t("contact:name")}</p>
-            <h1 className="jumbo">{t("contact:title")}</h1>
+            <img src={icon} alt="icon" className="animated-logo" />
+            <p className="lead-m">{t("contact:name")}</p>
+            <h2 className="beta">{t("contact:title")}</h2>
             <p
               className="text-l"
               dangerouslySetInnerHTML={{

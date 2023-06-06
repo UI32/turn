@@ -50,3 +50,14 @@ $quick-change: 0.1s ease-in-out;
     transform: translateY(0);
   }
 }
+
+// Rotation
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

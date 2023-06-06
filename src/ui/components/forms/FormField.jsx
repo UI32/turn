@@ -2,6 +2,7 @@ import React from "react";
 import useTranslations from "../../../hooks/useTranslations";
 import cx from "classnames";
 import { ReactComponent as Exclamation } from "../../../assets/icons/exclamation.svg";
+import { ReactComponent as Tick } from "../../../assets/icons/tick.svg";
 
 const FormField = ({
   label,
@@ -10,6 +11,7 @@ const FormField = ({
   errorText,
   required,
   className,
+  success,
 }) => {
   const t = useTranslations();
 
@@ -27,6 +29,7 @@ const FormField = ({
         </label>
       )}
       {field}
+      {success && <Tick className="success-icon" />}
       {errorText && <Exclamation className="error-icon" />}
       {errorText && <p className="error-text">{t(errorText)}</p>}
     </div>

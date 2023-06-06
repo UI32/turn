@@ -8,6 +8,7 @@ const Contact = ({}) => {
   return (
     <form className="contact-form">
       <FormField
+        success
         field={
           <FormInput
             type="text"
@@ -18,6 +19,7 @@ const Contact = ({}) => {
         }
       />
       <FormField
+        errorText="Please enter a correct Email."
         field={
           <FormInput
             type="email"
@@ -41,6 +43,8 @@ const Contact = ({}) => {
         field={<Textarea id="" name="message" placeholder="contact:message" />}
       />
       <Button type="submit" label="contact:submit" />
+      <Button type="submit" success />
+      <Button type="submit" loading />
     </form>
   );
 };
