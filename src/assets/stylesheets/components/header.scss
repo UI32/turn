@@ -48,6 +48,10 @@
   }
 
   @include mq($until: md) {
+    &.is-sticky {
+      min-height: 46px;
+      padding-top: 12px;
+    }
     .logo {
       width: 89px;
     }
@@ -55,7 +59,7 @@
       display: none;
       padding-right: 40px;
       position: absolute;
-      top: 40px;
+      top: 34px;
       left: 0;
       width: 100%;
       background: $white;

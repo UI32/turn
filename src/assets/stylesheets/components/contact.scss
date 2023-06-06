@@ -3,7 +3,10 @@
 .panel {
   background: $white;
   border-radius: 12px;
-  padding: 56px;
+  padding: 40px 18px 28px 24px;
+  @include mq(md) {
+    padding: 56px;
+  }
 }
 
 .contact {
@@ -11,8 +14,6 @@
     background-image: url("../images/panel-bg2.png");
     background-repeat: no-repeat;
     background-size: contain;
-    display: flex;
-    align-items: flex-start;
   }
   &-info,
   &-form {
@@ -20,7 +21,7 @@
   }
 
   .animated-logo {
-    margin-bottom: 46px;
+    margin-bottom: 24px;
   }
 
   .beta {
@@ -29,21 +30,38 @@
 
   .lead-m {
     color: $grey-transparent-40;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   .text-l {
     opacity: 0.5;
-    margin-bottom: 39px;
-  }
-
-  &-form {
-    margin-top: 100px;
+    margin-bottom: 22px;
   }
 
   .button {
     min-width: 116px;
     margin-bottom: 4px;
     position: relative;
+  }
+
+  @include mq(md) {
+    &-panel {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .animated-logo {
+      margin-bottom: 46px;
+    }
+
+    &-form {
+      margin-top: 100px;
+    }
+    .lead-m {
+      margin-bottom: 20px;
+    }
+    .text-l {
+      margin-bottom: 39px;
+    }
   }
 }
