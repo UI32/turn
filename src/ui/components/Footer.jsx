@@ -3,6 +3,7 @@ import useTranslations from "../../hooks/useTranslations";
 import { Link } from "gatsby";
 import Globe from "./Globe";
 import ButtonHashLink from "../components/buttons/Button";
+import GlobeText from "./GlobeText";
 
 const Footer = () => {
   const t = useTranslations();
@@ -18,7 +19,10 @@ const Footer = () => {
         <Link className="footer-caption" to="/legal">
           {t("legal:name")}
         </Link>
-        <Globe />
+        <div className="globe-wrapper">
+          <GlobeText />
+          <Globe />
+        </div>
         <Link className="footer-caption" to="/privacy">
           {t("data-privacy:name")}
         </Link>

@@ -13,7 +13,7 @@ export default function Globe() {
       height: 120 * 2,
       phi: 0,
       theta: 0,
-      dark: 1,
+      dark: 0,
       diffuse: 1.2,
       mapSamples: 16000,
       mapBrightness: 6,
