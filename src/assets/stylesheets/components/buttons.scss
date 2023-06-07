@@ -11,7 +11,7 @@
   padding: 0 30px;
   @include typo-rwd(text-l);
   height: 51px;
-  background: $primary;
+  background: $primary-dark;
   color: $white;
   &-clear {
     background: $grey-light;

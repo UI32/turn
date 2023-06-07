@@ -10,6 +10,7 @@ import { Link } from "gatsby";
 import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
+import logo from "../../assets/images/logo-text.svg";
 
 const Header = () => {
   const t = useTranslations();
@@ -69,7 +70,7 @@ const Header = () => {
             loop={true}
             autoplay={true}
           ></AnimatedIcon>
-          {/* <img src={logo} alt="Logo Turn2x" /> */}
+          <img src={logo} alt="Logo Turn2x" />
         </Link>
         <div className="header-content">
           <nav className="header-nav" onClick={closeMenu}>

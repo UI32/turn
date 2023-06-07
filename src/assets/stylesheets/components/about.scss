@@ -1,0 +1,22 @@
+// About
+
+.about {
+  .lottie-container {
+    margin-bottom: 10px;
+  }
+}
+
+// Member
+
+.member {
+  $self: &;
+  &-description {
+    display: none;
+  }
+
+  &.extended {
+    #{$self}-description {
+      display: block;
+    }
+  }
+}

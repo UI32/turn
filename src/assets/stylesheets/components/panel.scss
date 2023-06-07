@@ -5,9 +5,7 @@
   border-radius: 12px;
   padding: 40px 18px 28px 24px;
   margin-bottom: 12px;
-  .lottie-container {
-    margin-bottom: 24px;
-  }
+
   .beta {
     margin-bottom: 14px;
   }
@@ -27,14 +25,14 @@
         color: $primary;
       }
     }
+    .lottie-container {
+      margin-left: -18px;
+    }
   }
   @include mq(md) {
     padding: 56px;
     margin-bottom: 68px;
     &-header {
-      .lottie-container {
-        margin-bottom: 46px;
-      }
       .lead-m {
         margin-bottom: 20px;
       }
@@ -43,4 +41,9 @@
       }
     }
   }
+}
+
+.lottie-container {
+  width: 80px;
+  height: 80px;
 }

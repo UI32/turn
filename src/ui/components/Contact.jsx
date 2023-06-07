@@ -1,8 +1,9 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
-import icon from "../../assets/images/icon2.svg";
 import ContactForm from "./ContactForm";
 import Panel from "./Panel";
+import AnimatedIcon from "./AnimatedIcon";
+import headerIcon from "../../assets/animations/Icon-2-loopable.json";
 
 const Contact = ({}) => {
   const t = useTranslations();
@@ -11,7 +12,13 @@ const Contact = ({}) => {
       <div className="wrapper">
         <Panel
           className="contact-panel"
-          icon={icon}
+          icon={
+            <AnimatedIcon
+              lottieAnimation={headerIcon}
+              loop={true}
+              autoplay={true}
+            ></AnimatedIcon>
+          }
           pretitle="contact:name"
           title="contact:title"
         >
