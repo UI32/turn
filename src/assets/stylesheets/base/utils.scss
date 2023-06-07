@@ -47,17 +47,3 @@
 .disable-scroll-mobile {
   overflow: hidden;
 }
-
-svg {
-  path {
-    fill: currentColor;
-  }
-}
-
-.lottie-container {
-  svg {
-    path {
-      fill: inherit;
-    }
-  }
-}

@@ -7,9 +7,7 @@ const Panel = ({ className, pretitle, title, icon, children }) => {
   return (
     <div className={cx("panel", { [className]: className })}>
       <div className="panel-header">
-        <div className="lottie-container">
-          <img src={icon} alt="icon" className="animated-logo" />
-        </div>
+        {icon}
         <p className="lead-m">{t(pretitle)}</p>
         <h2
           className="beta"

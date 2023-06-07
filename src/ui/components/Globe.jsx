@@ -22,8 +22,8 @@ export default function Globe() {
       glowColor: [0.8509803921568627, 0.888, 0.996],
       markers: [
         // longitude latitude
-        // { location: [37.7595, -122.4367], size: 0.03 },
-        // { location: [40.7128, -74.006], size: 0.1 },
+        // { location: [52.375893, 9.73201], size: marker1Size }, // Hannover
+        // { location: [59.913868, 10.752245], size: marker2Size }, // Oslo
       ],
       onRender: state => {
         // Called on every animation frame.

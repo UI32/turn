@@ -67,10 +67,13 @@ a {
   padding: 0 16px;
 }
 
-svg {
-  width: 24px;
-  height: 24px;
+.icon {
   path {
     fill: currentColor;
   }
+}
+
+svg {
+  width: 24px;
+  height: 24px;
 }
