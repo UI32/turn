@@ -8,10 +8,8 @@ import useTranslations from "../../hooks/useTranslations";
 import LangSelector from "../components/LangSelector";
 import { Link } from "gatsby";
 import cx from "classnames";
-import logo from "../../assets/images/logo.svg";
-import ButtonHashLink from "../components/buttons/Button";
 import AnimatedIcon from "./AnimatedIcon";
-import topLogoAnimation from "../../assets/animations/Icon-1.json";
+import headerIcon from "../../assets/animations/Icon-1.json";
 
 const Header = () => {
   const t = useTranslations();
@@ -67,7 +65,7 @@ const Header = () => {
       <div className="wrapper">
         <Link to="/" className="logo" activeClassName="active">
           <AnimatedIcon
-            lottieAnimation={topLogoAnimation}
+            lottieAnimation={headerIcon}
             loop={true}
             autoplay={true}
           ></AnimatedIcon>
