@@ -8,9 +8,7 @@ import useTranslations from "../../hooks/useTranslations";
 import LangSelector from "../components/LangSelector";
 import { Link } from "gatsby";
 import cx from "classnames";
-import useScrollspy from "../../hooks/useScrollSpy";
 import logo from "../../assets/images/logo.svg";
-import ButtonHashLink from "../components/buttons/Button";
 
 const Header = () => {
   const t = useTranslations();
@@ -56,9 +54,6 @@ const Header = () => {
     return () => document.body.classList.remove("disable-scroll-mobile");
   }, [isMenuOpen]); // Empty array ensures effect is only run on mount and unmount
 
-  const ids = ["mission", "howItWorks", "about"];
-  const activeId = useScrollspy(ids, 101);
-
   return (
     <header
       className={cx("header", {
@@ -72,35 +67,22 @@ const Header = () => {
         </Link>
         <div className="header-content">
           <nav className="header-nav" onClick={closeMenu}>
-            <Link
-              to="/#mission"
-              className={cx("nav-item", {
-                active: activeId === "mission",
-              })}
-            >
+            <Link to="/#mission" className="nav-item">
               {t("mission:name")}
             </Link>
-            <Link
-              to="/#howItWorks"
-              className={cx("nav-item", {
-                active: activeId === "howItWorks",
-              })}
-            >
+            <Link to="/#howItWorks" className="nav-item">
               {t("how-it-works:name")}
             </Link>
-            <Link
-              to="/#howItWorks"
-              className={cx("nav-item", {
-                active: activeId === "about",
-              })}
-            >
+            <Link to="/#about" className="nav-item">
               {t("about:name")}
             </Link>
           </nav>
 
           <div className="header-actions">
             <LangSelector />
-            <ButtonHashLink clear label="contact-sales:name" to="/#contact" />
+            <Link to="/#contact" className="button button-clear">
+              {t("contact-sales:name")}
+            </Link>
           </div>
         </div>
 
