@@ -11,10 +11,18 @@ import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
-import ButtonHashLink from "../components/buttons/Button";
 
 const Header = () => {
   const t = useTranslations();
+
+  // Open/Close menu
+
+  const [isMenuOpen, setisMenuOpen] = useState(false);
+  const toggleMenu = useCallback(
+    () => setisMenuOpen(!isMenuOpen),
+    [isMenuOpen],
+  );
+  const closeMenu = useCallback(() => setisMenuOpen(false), [setisMenuOpen]);
 
   // Sticky header
   const [isSticky, setisSticky] = useState(false);
@@ -35,15 +43,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // Open/Close menu
-
-  const [isMenuOpen, setisMenuOpen] = useState(false);
-  const toggleMenu = useCallback(
-    () => setisMenuOpen(!isMenuOpen),
-    [isMenuOpen],
-  );
-  const closeMenu = useCallback(() => setisMenuOpen(false), [setisMenuOpen]);
 
   useLayoutEffect(() => {
     // Remove body scroll when menu is open
@@ -74,42 +73,44 @@ const Header = () => {
           <img src={logo} alt="Logo Turn2x" />
         </Link>
         <div className="header-content">
-          <nav className="header-nav" onClick={closeMenu}>
-            <Link to="/#mission" className="nav-item">
-              {t("mission:name")}
-            </Link>
-            <Link to="/#howItWorks" className="nav-item">
-              {t("how-it-works:name")}
-            </Link>
-            <Link to="/#about" className="nav-item">
-              {t("about:name")}
-            </Link>
-          </nav>
+          <div className="header-wrapper">
+            <nav className="header-nav" onClick={closeMenu}>
+              <Link to="/#mission" className="nav-item">
+                {t("mission:name")}
+              </Link>
+              <Link to="/#howItWorks" className="nav-item">
+                {t("how-it-works:name")}
+              </Link>
+              <Link to="/#about" className="nav-item">
+                {t("about:name")}
+              </Link>
+            </nav>
 
-          <div className="header-actions">
-            <LangSelector />
-            <Link to="/#contact" className="button button-clear">
-              {t("contact-sales:name")}
-            </Link>
-          </div>
-          <div className="show-in-mobile">
-            <div className="nav-item">
-              <span>{t("careers:name")}</span>
-              <a
-                className="button button-tiny"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t("hiring:name")}
-              </a>
+            <div className="header-actions">
+              <LangSelector />
+              <Link to="/#contact" className="button button-clear">
+                {t("contact-sales:name")}
+              </Link>
             </div>
-            <Link className="nav-item" to="/legal">
-              {t("legal:name")}
-            </Link>
-            <Link className="nav-item" to="/privacy">
-              {t("data-privacy:name")}
-            </Link>
+            <div className="show-in-mobile">
+              <div className="nav-item">
+                <span>{t("careers:name")}</span>
+                <a
+                  className="button button-tiny"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("hiring:name")}
+                </a>
+              </div>
+              <Link className="nav-item" to="/legal">
+                {t("legal:name")}
+              </Link>
+              <Link className="nav-item" to="/privacy">
+                {t("data-privacy:name")}
+              </Link>
+            </div>
           </div>
         </div>
 

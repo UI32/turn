@@ -73,6 +73,12 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+
   // Mobile
 
   @include mq($until: md) {
@@ -92,7 +98,7 @@
         width: 65px;
       }
     }
-    .header-content {
+    &-content {
       display: none;
       padding-right: 40px;
       position: fixed;
@@ -102,8 +108,16 @@
       bottom: 0;
       background: $white;
       z-index: 10;
-      padding: 0 16px 28px 16px;
+      padding: 0 16px 20px 16px;
       animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+    &-wrapper {
+      display: block;
+      position: absolute;
+      top: 100px;
+      bottom: 28px;
+      left: 16px;
+      right: 16px;
     }
     &.open-menu {
       .header-content {
@@ -143,6 +157,14 @@
       padding: 0;
       margin-top: 44px;
       -webkit-tap-highlight-color: transparent;
+    }
+
+    .show-in-mobile {
+      .nav-item {
+        &:last-child {
+          padding-bottom: 10px;
+        }
+      }
     }
 
     .nav-item {

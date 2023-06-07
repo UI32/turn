@@ -22,7 +22,7 @@ const Contact = ({}) => {
         }
       />
       <FormField
-        errorText="Please enter a correct Email."
+        errorText="contact:email-message"
         field={
           <FormInput
             type="email"
