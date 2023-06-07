@@ -16,7 +16,7 @@ const GlobeText = () => {
           width="300px"
           height="300px"
           viewBox="0 0 300 300"
-          enable-background="new 0 0 300 300"
+          enableBackground="new 0 0 300 300"
           xmlSpace="preserve"
         >
           <defs>

@@ -13,8 +13,9 @@
   height: 51px;
   background: $primary-dark;
   color: $white;
+  -webkit-tap-highlight-color: transparent;
   &-clear {
-    background: $grey-light;
+    background: $beige-100;
     color: $black;
     height: 41px;
     padding: 0 24px;
@@ -52,7 +53,7 @@
     }
   }
 
-  .success-icon {
+  .icon {
     margin-left: 6px;
   }
 }

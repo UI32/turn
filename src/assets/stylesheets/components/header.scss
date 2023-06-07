@@ -1,7 +1,7 @@
 // Header
 
 .header {
-  padding: 14px 0;
+  padding: 20px 0;
   background: $white;
   &.is-sticky {
     position: fixed;
@@ -13,7 +13,15 @@
     z-index: 99;
     animation: slide-bottom 0.3s ease;
     .logo {
-      // width: 111px;
+      padding-left: 34px;
+      img {
+        width: 82px;
+      }
+      .lottie-container {
+        width: 70px;
+        height: 70px;
+        left: -22px;
+      }
     }
   }
   > .wrapper {
@@ -31,7 +39,7 @@
   .logo {
     position: relative;
     padding-left: 48px;
-    // width: 89px;
+    z-index: 11;
     img {
       display: block;
       width: 119px;
@@ -50,18 +58,27 @@
   .nav-item {
     @include typo-rwd(text-l);
     padding: 0 16px;
+    &:hover {
+      color: $primary-dark;
+      &:before {
+        opacity: 1;
+      }
+    }
   }
 
   .button-menu {
     position: absolute;
     top: 0;
     right: 14px;
+    -webkit-tap-highlight-color: transparent;
   }
+
+  // Mobile
 
   @include mq($until: md) {
     &.is-sticky {
       min-height: 46px;
-      padding-top: 12px;
+      padding-top: 15px;
     }
     .logo {
       position: relative;
@@ -78,33 +95,65 @@
     .header-content {
       display: none;
       padding-right: 40px;
-      position: absolute;
-      top: 34px;
+      position: fixed;
+      top: 0;
       left: 0;
       width: 100%;
+      bottom: 0;
       background: $white;
       z-index: 10;
-      padding: 0 16px 16px 16px;
+      padding: 0 16px 28px 16px;
       animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
     &.open-menu {
       .header-content {
         display: block;
+        background-color: $white;
+        background-image: url("../images/menu-pattern.png");
+        overflow-y: auto;
+        .button-clear {
+          background: transparent;
+          padding: 0;
+          height: auto;
+          display: block;
+          text-align: left;
+        }
+      }
+    }
+
+    .nav-item,
+    .lang-item,
+    .button-clear {
+      display: flex;
+      align-items: center;
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: $primary;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 22px;
+        opacity: 0.4;
       }
     }
     .nav-item,
-    .lang-selector .lang-item {
-      display: block;
+    .lang-selector .lang-item,
+    .button-clear {
       padding: 0;
-      margin-bottom: 10px;
+      margin-top: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .nav-item {
+      .button {
+        margin-left: 10px;
+      }
     }
   }
 
   @include mq(md) {
     padding: 25px 0;
-    // .logo {
-    //   width: 162px;
-    // }
     &-nav {
       display: flex;
       align-items: center;
@@ -131,6 +180,7 @@
   background: transparent;
   border: none;
   outline: none;
+  z-index: 11;
 }
 
 .hamburger {
@@ -138,6 +188,7 @@
   width: 25px;
   height: 25px;
   position: relative;
+  top: -2px;
   .line {
     width: 100%;
     height: 3px;

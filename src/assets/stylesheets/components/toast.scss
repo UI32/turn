@@ -1,0 +1,29 @@
+// Toast
+
+.toast {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 16px 18px;
+  border-radius: 8px;
+  margin-bottom: 9px;
+  .success-icon,
+  .error-icon {
+    flex-shrink: 0;
+    margin-right: 11px;
+  }
+  .text {
+    flex: 1 1 auto;
+    opacity: 0.6;
+  }
+
+  .button-icon {
+    margin-left: 10px;
+    svg {
+      width: 16px;
+      height: 16px;
+      opacity: 0.6;
+    }
+  }
+}

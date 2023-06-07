@@ -3,10 +3,13 @@ import FormInput from "./forms/FormInput";
 import FormField from "./forms/FormField";
 import Textarea from "./forms/Textarea";
 import Button from "./buttons/Button";
+import Toast from "./Toast.jsx";
 
 const Contact = ({}) => {
   return (
     <form className="contact-form">
+      <Toast success text="contact:success" />
+      <Toast error text="contact:error" />
       <FormField
         success
         field={

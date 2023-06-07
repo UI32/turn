@@ -13,8 +13,14 @@ const Footer = () => {
       <div className="wrapper">
         <div className="footer-item">
           <span className="footer-caption">{t("careers:name")}</span>
-
-          <ButtonHashLink tiny label="hiring:name" to="#" />
+          <a
+            className="button button-tiny"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("hiring:name")}
+          </a>
         </div>
         <Link className="footer-caption" to="/legal">
           {t("legal:name")}

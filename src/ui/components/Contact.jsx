@@ -36,6 +36,7 @@ const Contact = ({}) => {
               }}
             />
           </div>
+
           <ContactForm />
         </Panel>
       </div>

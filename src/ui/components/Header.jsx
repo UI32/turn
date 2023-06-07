@@ -11,6 +11,7 @@ import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
+import ButtonHashLink from "../components/buttons/Button";
 
 const Header = () => {
   const t = useTranslations();
@@ -89,6 +90,25 @@ const Header = () => {
             <LangSelector />
             <Link to="/#contact" className="button button-clear">
               {t("contact-sales:name")}
+            </Link>
+          </div>
+          <div className="show-in-mobile">
+            <div className="nav-item">
+              <span>{t("careers:name")}</span>
+              <a
+                className="button button-tiny"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("hiring:name")}
+              </a>
+            </div>
+            <Link className="nav-item" to="/legal">
+              {t("legal:name")}
+            </Link>
+            <Link className="nav-item" to="/privacy">
+              {t("data-privacy:name")}
             </Link>
           </div>
         </div>

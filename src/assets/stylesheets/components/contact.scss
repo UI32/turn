@@ -8,13 +8,16 @@
   }
   &-info,
   &-form {
-    flex: 1 1 auto;
+    flex: 1 1 50%;
   }
 
   .button {
     min-width: 116px;
     margin-bottom: 4px;
     position: relative;
+  }
+
+  .toast {
   }
 
   @include mq(md) {
