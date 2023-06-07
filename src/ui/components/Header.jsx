@@ -6,6 +6,8 @@ import cx from "classnames";
 import useScrollspy from "../../hooks/useScrollSpy";
 import logo from "../../assets/images/logo.svg";
 import ButtonHashLink from "../components/buttons/Button";
+import AnimatedIcon from "./AnimatedIcon";
+import topLogoAnimation from "../../assets/animations/Icon-1.json";
 
 const Header = () => {
   const t = useTranslations();
@@ -36,7 +38,12 @@ const Header = () => {
     <header className={cx("header", { "open-menu": isMenuOpen })}>
       <div className="wrapper">
         <Link to="/" className="logo" activeClassName="active">
-          <img src={logo} alt="Logo Turn2x" />
+          <AnimatedIcon
+            lottieAnimation={topLogoAnimation}
+            loop={true}
+            autoplay={true}
+          ></AnimatedIcon>
+          {/* <img src={logo} alt="Logo Turn2x" /> */}
         </Link>
         <div className="header-content">
           <nav className="header-nav" onClick={closeMenu}>
