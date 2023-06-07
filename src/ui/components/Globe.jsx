@@ -19,7 +19,7 @@ export default function Globe() {
       mapBrightness: 1,
       baseColor: [0.75294, 0.8, 0.9411],
       markerColor: [0.1, 0.8, 1],
-      glowColor: [0.8509803921568627, 0.888, 0.996],
+      glowColor: [(188 * 0.85) / 255, (196 * 0.85) / 255, (229 * 0.85) / 255],
       markers: [
         // longitude latitude
         // { location: [52.375893, 9.73201], size: marker1Size }, // Hannover

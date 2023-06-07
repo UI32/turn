@@ -25,12 +25,11 @@ const GlobeText = () => {
               d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
             />
           </defs>
-          <circle cx="150" cy="100" r="75" fill="none" />
           <g>
             <use xlinkHref="#circlePath" fill="none" />
             <text fill="#000">
               <textPath xlinkHref="#circlePath">
-                Global &nbsp; &nbsp; &nbsp; responsibility
+                Global &nbsp; &nbsp;responsibility
               </textPath>
             </text>
           </g>

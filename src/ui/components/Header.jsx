@@ -86,7 +86,7 @@ const Header = () => {
               </Link>
             </nav>
 
-            <div className="header-actions">
+            <div className="header-actions" onClick={closeMenu}>
               <LangSelector />
               <Link to="/#contact" className="button button-clear">
                 {t("contact-sales:name")}
