@@ -5,6 +5,7 @@
   &-bg {
     width: 100%;
     max-height: 870px;
+    overflow: hidden;
     video {
       width: 100%;
     }
@@ -14,6 +15,33 @@
     width: 100%;
     max-width: 986px;
     padding: 14px 0 25px;
+  }
+
+  &-pattern {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+  }
+
+  &-quote {
+    font-size: 56px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    padding: 140px 0;
+    .left-icon {
+      margin-right: 10px;
+    }
+    .right-icon {
+      margin-left: 10px;
+    }
   }
 
   @include mq(md) {

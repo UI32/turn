@@ -2,6 +2,20 @@
 
 .header {
   padding: 14px 0;
+  background: $white;
+  &.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 6px 0;
+    z-index: 99;
+    animation: slide-bottom 0.3s ease;
+    .logo {
+      width: 111px;
+    }
+  }
   > .wrapper {
     display: flex;
     align-items: center;
@@ -23,9 +37,7 @@
   }
 
   .nav-item {
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.02em;
+    @include typo-rwd(text-l);
     padding: 0 16px;
   }
 
@@ -36,6 +48,10 @@
   }
 
   @include mq($until: md) {
+    &.is-sticky {
+      min-height: 46px;
+      padding-top: 12px;
+    }
     .logo {
       width: 89px;
     }
@@ -43,7 +59,7 @@
       display: none;
       padding-right: 40px;
       position: absolute;
-      top: 40px;
+      top: 34px;
       left: 0;
       width: 100%;
       background: $white;
@@ -65,7 +81,7 @@
   }
 
   @include mq(md) {
-    padding: 30px 0;
+    padding: 25px 0;
     .logo {
       width: 162px;
     }

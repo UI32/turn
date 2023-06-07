@@ -2,26 +2,29 @@ import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import { Link } from "gatsby";
 import Globe from "./Globe";
+import ButtonHashLink from "../components/buttons/Button";
 
 const Footer = () => {
   const t = useTranslations();
 
   return (
-    <header className="footer">
+    <footer className="footer">
       <div className="wrapper">
+        <div className="footer-item">
+          <span className="footer-caption">{t("careers:name")}</span>
+
+          <ButtonHashLink tiny label="hiring:name" to="#" />
+        </div>
+        <Link className="footer-caption" to="/legal">
+          {t("legal:name")}
+        </Link>
+        <Globe />
         <Link className="footer-caption" to="/privacy">
           {t("data-privacy:name")}
         </Link>
-        <Link className="footer-caption" to="/cookies">
-          {t("cookie-settings:name")}
-        </Link>
-        <Globe />
-        <Link className="footer-caption" to="/imprint">
-          {t("imprint:name")}
-        </Link>
         <span className="footer-caption">© 2023 Turn Energy GmbH</span>
       </div>
-    </header>
+    </footer>
   );
 };
 

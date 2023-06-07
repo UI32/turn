@@ -48,8 +48,16 @@
   overflow: hidden;
 }
 
-// svg {
-//   path {
-//     fill: currentColor;
-//   }
-// }
+svg {
+  path {
+    fill: currentColor;
+  }
+}
+
+.lottie-container {
+  svg {
+    path {
+      fill: inherit;
+    }
+  }
+}

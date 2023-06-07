@@ -1,1 +1,28 @@
 // Layout
+
+.content {
+  position: relative;
+  > div {
+    z-index: 2;
+    position: relative;
+  }
+  .hero {
+    z-index: 0;
+  }
+}
+
+.outer-wrapper {
+  position: relative;
+  .bottom-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .content {
+    z-index: 2;
+  }
+  .footer {
+    z-index: 2;
+  }
+}
