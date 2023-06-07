@@ -9,7 +9,7 @@ const Checkbox = ({ id, value, text, onChange }) => {
     <label className="checkbox">
       <input type="checkbox" id={id} value={value} onChange={onChange} />
       {t(text)}
-      <Tick className="checkmark" />
+      <Tick className="checkmark icon" />
     </label>
   );
 };
