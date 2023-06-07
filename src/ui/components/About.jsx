@@ -3,6 +3,8 @@ import useTranslations from "../../hooks/useTranslations";
 import icon from "../../assets/images/icon3.svg";
 import Panel from "./Panel";
 import philip from "../../assets/images/about/philip.png";
+import benedikt from "../../assets/images/about/benedikt.png";
+import dominik from "../../assets/images/about/dominik.png";
 import Member from "./Member";
 
 const About = ({}) => {
@@ -23,6 +25,20 @@ const About = ({}) => {
               image={philip}
               position="philip:position"
               description="philip:description"
+            />
+            <Member
+              name="Benedikt Stolz"
+              alt="Benedikt Stolz"
+              image={benedikt}
+              position="benedikt:position"
+              description="benedikt:description"
+            />
+            <Member
+              name="Dominik Stolz"
+              alt="Dominik Stolz"
+              image={dominik}
+              position="dominik:position"
+              description="dominik:description"
             />
           </div>
           <div className="about-advisors"></div>

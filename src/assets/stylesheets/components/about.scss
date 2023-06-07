@@ -1,0 +1,15 @@
+// About
+
+// Member
+
+.member {
+  $self: &;
+  &-description {
+    display: none;
+  }
+  &.extended {
+    #{$self}-description {
+      display: block;
+    }
+  }
+}
