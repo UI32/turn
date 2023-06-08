@@ -21,10 +21,16 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
     <div className={cx("about-card", { extended: extendInfo })}>
       <div className="about-content" onClick={onExtendInfo}>
         <div className="about-image">
-          <img src={image} alt={alt} className="extended-image" />
-          <img src={imageSm} alt={alt} className="normal-image" />
+          <img src={imageSm} alt={alt} />
         </div>
         <div className="about-info">
+          <h2 className="about-name">{name}</h2>
+          <p className="about-position">{t(position)}</p>
+        </div>
+      </div>
+      <div className="extra">
+        <img src={image} alt={alt} />
+        <div className="info">
           <h2 className="about-name">{name}</h2>
           <p className="about-position">{t(position)}</p>
           <p className="about-description">{t(description)}</p>
@@ -40,10 +46,10 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
             </a>
           </div>
         </div>
+        <button className="close-button" onClick={onCloseInfo}>
+          <Cross />
+        </button>
       </div>
-      <button className="close-button" onClick={onCloseInfo}>
-        <Cross />
-      </button>
     </div>
   );
 };

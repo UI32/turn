@@ -38,12 +38,10 @@
       display: flex;
       justify-content: space-between;
       .about-card {
-        &:not(.extended) {
-          width: 33.3%;
-          // flex: 0 0 calc(33.3% - 66px);
-          &:not(:last-child) {
-            margin-right: 33px;
-          }
+        width: 33.3%;
+        // flex: 0 0 calc(33.3% - 66px);
+        &:not(:last-child) {
+          margin-right: 33px;
         }
       }
     }
@@ -86,170 +84,227 @@
 
 // About card
 
-.about {
-  $self: &;
+// .about {
+//   $self: &;
 
-  &-description,
-  &-contact,
-  .close-button {
-    display: none;
-  }
+//   &-description,
+//   &-contact,
+//   .close-button {
+//     display: none;
+//   }
 
-  .close-button {
-    background: transparent;
-    border: none;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    z-index: 11;
-  }
+//   .close-button {
+//     background: transparent;
+//     border: none;
+//     position: absolute;
+//     top: 16px;
+//     right: 16px;
+//     z-index: 11;
+//   }
 
-  &-name,
-  &-position,
-  &-contact {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.02em;
-  }
+//   &-name,
+//   &-position,
+//   &-contact {
+//     font-weight: 400;
+//     font-size: 20px;
+//     line-height: 24px;
+//     letter-spacing: -0.02em;
+//   }
 
-  &-description {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26.6px;
-    letter-spacing: -0.02em;
-    flex: 1 1 auto;
-    margin-bottom: 10px;
-  }
+//   &-description {
+//     font-weight: 400;
+//     font-size: 20px;
+//     line-height: 26.6px;
+//     letter-spacing: -0.02em;
+//     flex: 1 1 auto;
+//     margin-bottom: 10px;
+//   }
 
-  &-name {
-    margin-bottom: 4px;
-  }
+//   &-name {
+//     margin-bottom: 4px;
+//   }
 
-  &-position {
-    opacity: 0.5;
-    margin-bottom: 27px;
-  }
+//   &-position {
+//     opacity: 0.5;
+//     margin-bottom: 27px;
+//   }
 
-  &-info {
-    text-align: left;
-  }
+//   &-info {
+//     text-align: left;
+//   }
 
-  &-contact {
-    margin-top: 40px;
-    p {
-      margin-bottom: 5px;
-    }
-  }
+//   &-contact {
+//     margin-top: 40px;
+//     p {
+//       margin-bottom: 5px;
+//     }
+//   }
 
-  &-image {
-    img {
-      width: 100%;
-    }
-  }
+//   &-image {
+//     img {
+//       width: 100%;
+//     }
+//   }
 
-  &-card {
+//   &-card {
+//     cursor: pointer;
+//     position: relative;
+//     margin-bottom: 12px;
+
+//     .extended-image {
+//       display: none;
+//     }
+
+//     // Extended card
+
+//     &.extended {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       right: 0;
+//       margin: 0 auto;
+//       max-width: 100%;
+
+//       .extended-image {
+//         display: block;
+//       }
+
+//       .normal-image {
+//         display: none;
+//       }
+
+//       &:before {
+//         content: "";
+//         width: 100%;
+//         height: 100%;
+//         position: fixed;
+//         background: rgba($black, 0.5);
+//         top: 0;
+//         left: 0;
+//         z-index: 2;
+//         animation: fade-in 0.2s ease;
+//       }
+//       #{$self}-content {
+//         background: $white;
+//         border-radius: 12px;
+//         z-index: 10;
+//         position: relative;
+//         padding: 20px;
+//       }
+//       #{$self}-image {
+//         // max-height: 433px;
+//         flex: 0 0 320px;
+//       }
+//       #{$self}-description,
+//       #{$self}-contact,
+//       .close-button {
+//         display: block;
+//       }
+//     }
+//   }
+
+//   @include mq($until: md) {
+//     &-card {
+//       &.extended {
+//         width: calc(100% - 16px);
+//         position: fixed;
+//         z-index: 10;
+//         top: 10px;
+//         bottom: 10px;
+//         overflow-y: auto;
+//         #{$self}-image {
+//           border-radius: 12px;
+//           margin-bottom: 16px;
+//         }
+//         .extended-image {
+//           display: none;
+//         }
+//         .normal-image {
+//           display: block;
+//           width: 100%;
+//         }
+//       }
+//     }
+//   }
+//   @include mq(md) {
+//     .close-button {
+//       top: 56px;
+//       right: 62px;
+//     }
+//     &-card {
+//       &.extended {
+//         max-width: 952px;
+//         #{$self}-content {
+//           display: flex;
+//           // align-items: flex-start;
+//           padding: 54px 60px;
+//           border-radius: 12px;
+//         }
+//         #{$self}-info {
+//           padding-right: 40px;
+//           display: flex;
+//           flex-direction: column;
+//         }
+//         #{$self}-image {
+//           margin-right: 40px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.about-card {
+  &:not(.advisor) {
     cursor: pointer;
-    position: relative;
-    margin-bottom: 12px;
-
-    .extended-image {
-      display: none;
+  }
+  .extra {
+    display: none;
+    padding: 54px 60px;
+    img {
+      flex: 0 0 320px;
     }
+  }
 
-    // Extended card
-
-    &.extended {
-      position: absolute;
+  &.extended {
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: fixed;
       top: 0;
       left: 0;
-      right: 0;
-      margin: 0 auto;
-      max-width: 100%;
-
-      .extended-image {
-        display: block;
-      }
-
-      .normal-image {
-        display: none;
-      }
-
-      &:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        background: rgba($black, 0.5);
-        top: 0;
-        left: 0;
-        z-index: 2;
-        animation: fade-in 0.2s ease;
-      }
-      #{$self}-content {
-        background: $white;
-        border-radius: 12px;
-        z-index: 10;
-        position: relative;
-        padding: 20px;
-      }
-      #{$self}-image {
-        // max-height: 433px;
-        flex: 0 0 320px;
-      }
-      #{$self}-description,
-      #{$self}-contact,
-      .close-button {
-        display: block;
-      }
+      background: rgba($black, 0.5);
+      z-index: 10;
+    }
+    .extra {
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      max-width: 950px;
+      background: $white;
+      z-index: 10;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: flex-start;
     }
   }
 
   @include mq($until: md) {
-    &-card {
-      &.extended {
-        width: calc(100% - 16px);
-        position: fixed;
-        z-index: 10;
-        top: 10px;
-        bottom: 10px;
-        overflow-y: auto;
-        #{$self}-image {
-          border-radius: 12px;
-          margin-bottom: 16px;
-        }
-        .extended-image {
-          display: none;
-        }
-        .normal-image {
-          display: block;
-          width: 100%;
-        }
+    &.extended {
+      .extra {
+        flex-direction: column;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        transform: none;
+        overflow: auto;
       }
-    }
-  }
-  @include mq(md) {
-    .close-button {
-      top: 56px;
-      right: 62px;
-    }
-    &-card {
-      &.extended {
-        max-width: 952px;
-        #{$self}-content {
-          display: flex;
-          // align-items: flex-start;
-          padding: 54px 60px;
-          border-radius: 12px;
-        }
-        #{$self}-info {
-          padding-right: 40px;
-          display: flex;
-          flex-direction: column;
-        }
-        #{$self}-image {
-          margin-right: 40px;
-        }
+      .close-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
       }
     }
   }
