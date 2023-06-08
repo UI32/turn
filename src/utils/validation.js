@@ -14,3 +14,11 @@ export const getFormErrors = formData => {
   }
   return errors;
 };
+
+export const blockInvalidPhoneInput = event => {
+  {
+    const permittedKeys = ["Backspace", "Enter", "Intro", "Space", "Tab"];
+    if (permittedKeys.includes(event.key)) return;
+    if (event.key.match(/[a-zA-Z!?.,_"'¿¡|#$€&/<>]/)) event.preventDefault();
+  }
+};

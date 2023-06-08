@@ -1,7 +1,7 @@
 import React from "react";
 import useTranslations from "../../../hooks/useTranslations";
 
-const FormInput = ({ type, id, name, placeholder, onChange }) => {
+const FormInput = ({ type, id, name, placeholder, onChange, onKeydown }) => {
   const t = useTranslations();
 
   return (
@@ -12,6 +12,7 @@ const FormInput = ({ type, id, name, placeholder, onChange }) => {
       name={name}
       placeholder={t(placeholder)}
       onChange={onChange}
+      onKeyDown={onKeydown}
     />
   );
 };

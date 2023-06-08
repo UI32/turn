@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import FormInput from "./forms/FormInput";
 import FormField from "./forms/FormField";
 import Textarea from "./forms/Textarea";
 import Button from "./buttons/Button";
-import { getFormErrors, validateMail } from "../../utils/validation";
+import {
+  blockInvalidPhoneInput,
+  getFormErrors,
+  validateMail,
+} from "../../utils/validation";
 import useFormSubmit from "../../hooks/useFormSubmit";
 
 const Contact = ({}) => {
@@ -22,16 +26,7 @@ const Contact = ({}) => {
   }, [successVisible]);
 
   return (
-    <form
-      id="contact-form"
-      className="contact-form"
-      action="https://formspree.io/f/mbjevpee"
-      method="post"
-      onSubmit={event => {
-        event.preventDefault();
-        handleSubmit(formData);
-      }}
-    >
+    <form id="contact-form" className="contact-form">
       <FormField
         success={formData.full_name}
         errorText={errors.full_name}
@@ -70,8 +65,9 @@ const Contact = ({}) => {
         success={formData.phone}
         field={
           <FormInput
+            onKeydown={blockInvalidPhoneInput}
             value={formData.phone}
-            type="number"
+            type="text"
             id=""
             name="phone"
             placeholder="contact:phone"
@@ -81,8 +77,15 @@ const Contact = ({}) => {
       />
       <FormField
         value={formData.message}
-        field={<Textarea id="" name="message" placeholder="contact:message" />}
-        onChange={e => updateFormData("message", e.target.value)}
+        field={
+          <Textarea
+            value={formData.message}
+            id=""
+            name="message"
+            placeholder="contact:message"
+            onChange={e => updateFormData("message", e.target.value)}
+          />
+        }
       />
       {submitResult.errors.conection && (
         <div className="error">{submitResult.errors.conection}</div>
@@ -93,8 +96,8 @@ const Contact = ({}) => {
         <Button type="button" success />
       ) : (
         <Button
-          type="submit"
-          // onClick={() => handleSubmit(formData)}
+          type="button"
+          onClick={() => handleSubmit(formData)}
           label="contact:submit"
           disabled={!isDirty || Object.keys(errors).length !== 0}
         />

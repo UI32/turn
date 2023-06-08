@@ -2,10 +2,12 @@ import React, { useCallback, useState, useEffect } from "react";
 import useTranslations from "./useTranslations";
 // import Notification from "../ui/components/Notification";
 import { getFormErrors } from "../utils/validation";
+import { convertToFormData } from "../utils/format";
 
 // Form submission is done with Formspree
 
 const SUCCESS_VISIBLE_TIME = 2000;
+const formSpreeEndpoint = "https://formspree.io/f/mbjevpee"; // TODO Replace with the client version on build
 
 const useFormSubmit = () => {
   const [loading, setLoading] = useState();
@@ -35,16 +37,17 @@ const useFormSubmit = () => {
       setSubmitResult({ successVisible: false, errors: formErrors });
       return;
     }
+    const formatedData = convertToFormData(formData);
     try {
       setLoading(true);
-      const response = await fetch("https://formspree.io/f/mbjevpee", {
-        method: "POST",
-        body: formData,
+      const response = await fetch(formSpreeEndpoint, {
+        method: "post",
+        body: formatedData,
+
         headers: {
           Accept: "application/json",
         },
       });
-      console.log("Form submitted: ", response);
       if (response.status !== 200) throw Error("Form submission failed");
       setSubmitResult({ successVisible: true, errors: {} });
     } catch (e) {
