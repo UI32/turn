@@ -12,7 +12,7 @@ const Hero = ({}) => {
       <img className="hero-pattern" src={pattern} alt="pattern" />
       <div className="hero-content">
         <div className="wrapper">
-          <div className="hero-text">
+          <div className="hero-text" data-aos="custom-animation">
             <h1
               className="jumbo"
               dangerouslySetInnerHTML={{
@@ -21,20 +21,31 @@ const Hero = ({}) => {
             />
           </div>
         </div>
-        <div className="hero-bg">
+        <div className="hero-bg" data-aos="custom-animation">
           <video className="videoloop" autoPlay loop muted playsInline>
             <source src={heroVideoURL} />
           </video>
         </div>
         <div className="hero-quote">
           <div className="wrapper">
-            <img src={logo1} alt="Turnx2 pattern" className="left-icon" />
+            <img
+              src={logo1}
+              alt="Turnx2 pattern"
+              className="left-icon"
+              data-aos="custom-animation"
+            />
             <span
+              data-aos="custom-animation"
               dangerouslySetInnerHTML={{
                 __html: t("hero:quote"),
               }}
             />
-            <img src={logo2} alt="Turnx2 pattern" className="right-icon" />
+            <img
+              src={logo2}
+              alt="Turnx2 pattern"
+              className="right-icon"
+              data-aos="custom-animation"
+            />
           </div>
         </div>
       </div>

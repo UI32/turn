@@ -2,14 +2,13 @@ import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import { Link } from "gatsby";
 import Globe from "./Globe";
-import ButtonHashLink from "../components/buttons/Button";
 import GlobeText from "./GlobeText";
 
 const Footer = () => {
   const t = useTranslations();
 
   return (
-    <footer className="footer">
+    <footer className="footer" data-aos="custom-animation">
       <div className="wrapper">
         <div className="footer-item">
           <span className="footer-caption">{t("careers:name")}</span>

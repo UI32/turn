@@ -39,7 +39,7 @@ const About = ({}) => {
           pretitle="about:management"
           title="about:title"
         >
-          <div className="about-management">
+          <div className="about-management" data-aos="custom-animation">
             <AboutCard
               name="Philip Kessler"
               alt="Philip Kessler"
@@ -65,7 +65,7 @@ const About = ({}) => {
               description="dominik:description"
             />
           </div>
-          <div className="about-clients">
+          <div className="about-clients" data-aos="custom-animation">
             <div className="client">
               <img src={fraunhofer} alt="Fraunhofer" />
             </div>
@@ -85,8 +85,10 @@ const About = ({}) => {
               <img src={siemens} alt="Siemens" />
             </div>
           </div>
-          <p className="lead-m">{t("about:advisory-board")}</p>
-          <div className="about-advisors">
+          <p className="lead-m" data-aos="custom-animation">
+            {t("about:advisory-board")}
+          </p>
+          <div className="about-advisors" data-aos="custom-animation">
             <AboutCardAdvisor
               name="Dr. Stefan Kaufmann"
               alt="Dr. Stefan Kaufmann"
@@ -112,7 +114,7 @@ const About = ({}) => {
               position="christian:position"
             />
           </div>
-          <div className="about-actions">
+          <div className="about-actions" data-aos="custom-animation">
             <a
               className="button"
               href="#"

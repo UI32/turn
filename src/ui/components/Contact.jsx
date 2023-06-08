@@ -8,7 +8,7 @@ import headerIcon from "../../assets/animations/Icon-2-loopable.json";
 const Contact = ({}) => {
   const t = useTranslations();
   return (
-    <div className="contact" id="contact">
+    <div className="contact" id="contact" data-aos="custom-animation">
       <div className="wrapper">
         <Panel
           className="contact-panel"
