@@ -49,6 +49,14 @@
   overflow: hidden;
 }
 
+.disable-scroll {
+  .header {
+    &.is-sticky {
+      position: relative;
+    }
+  }
+}
+
 .success-icon {
   color: $primary;
 }

@@ -203,14 +203,6 @@
         display: block;
       }
     }
-
-    //Advisor
-
-    // &.advisor {
-    //   #{$self}-image {
-    //     height: 274px;
-    //   }
-    // }
   }
 
   @include mq($until: md) {
@@ -219,7 +211,7 @@
         width: calc(100% - 16px);
         position: fixed;
         z-index: 10;
-        top: 52px;
+        top: 10px;
         bottom: 10px;
         overflow-y: auto;
         #{$self}-image {
