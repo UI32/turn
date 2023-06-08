@@ -1,67 +1,37 @@
-import React, { useCallback, useState } from "react";
+import React, { useState, useEffect } from "react";
 import FormInput from "./forms/FormInput";
 import FormField from "./forms/FormField";
 import Textarea from "./forms/Textarea";
 import Button from "./buttons/Button";
 import { getFormErrors, validateMail } from "../../utils/validation";
+import useFormSubmit from "../../hooks/useFormSubmit";
 
-const SUCCESS_VISIBLE_TIME = 2000;
-
-// Form submission is done with Formspree
 const Contact = ({}) => {
-  const [errors, setErrors] = useState({});
+  const [loading, handleSubmit, submitResult] = useFormSubmit();
+  const successVisible = submitResult.successVisible;
   const [formData, setFormData] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [successVisible, setSuccessVisible] = useState(false);
-
-  const showSuccess = useCallback(async () => {
-    setSuccessVisible(true);
-    setTimeout(() => setSuccessVisible(false), SUCCESS_VISIBLE_TIME);
-  }, []);
+  const isDirty = Object.keys(formData).length !== 0;
+  const errors = isDirty ? getFormErrors(formData) : {};
 
   const updateFormData = (key, value) => {
     setFormData({ ...formData, [key]: value });
   };
 
-  const handleSubmit = useCallback(() => {
-    async function submit() {
-      setLoading(true);
-      // TODO change this to the company's form in Formspree
-      fetch("https://formspree.io/f/mbjevpee", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      })
-        .then(response => {
-          if (response.ok) {
-            setLoading(false);
-            showSuccess();
-            setFormData({});
-          } else {
-            response.json().then(data => {
-              if (Object.hasOwn(data, "errors")) {
-                console.log("Form submission failed.");
-                data.errors.map(error => console.warn(error));
-              } else {
-                console.log("Form submission failed.");
-              }
-            });
-          }
-        })
-        .catch(error => {
-          console.warn(error);
-        });
-    }
-    const formErrors = getFormErrors(formData);
-    setErrors(formErrors);
-    if (Object.keys(formErrors).length !== 0) return;
-    submit();
-  }, [formData, showSuccess]);
+  useEffect(() => {
+    if (!successVisible) setFormData({});
+  }, [successVisible]);
 
   return (
-    <form id="contact-form" className="contact-form">
+    <form
+      id="contact-form"
+      className="contact-form"
+      action="https://formspree.io/f/mbjevpee"
+      method="post"
+      onSubmit={event => {
+        event.preventDefault();
+        handleSubmit(formData);
+      }}
+    >
       <FormField
         success={formData.full_name}
         errorText={errors.full_name}
@@ -114,15 +84,19 @@ const Contact = ({}) => {
         field={<Textarea id="" name="message" placeholder="contact:message" />}
         onChange={e => updateFormData("message", e.target.value)}
       />
+      {submitResult.errors.conection && (
+        <div className="error">{submitResult.errors.conection}</div>
+      )}
       {loading ? (
-        <Button type="submit" loading />
+        <Button type="button" loading />
       ) : successVisible ? (
-        <Button type="submit" success />
+        <Button type="button" success />
       ) : (
         <Button
-          type="button"
-          onClick={() => handleSubmit()}
+          type="submit"
+          // onClick={() => handleSubmit(formData)}
           label="contact:submit"
+          disabled={!isDirty || Object.keys(errors).length !== 0}
         />
       )}
     </form>

@@ -1,44 +1,57 @@
 import React, { useCallback, useState, useEffect } from "react";
 import useTranslations from "./useTranslations";
-import Notification from "../ui/components/Notification";
+// import Notification from "../ui/components/Notification";
+import { getFormErrors } from "../utils/validation";
 
-// This is using formSubmit.co to handle the form submitting.
-// It is kind of weird... but free. We might want to change it eventually.
+// Form submission is done with Formspree
+
+const SUCCESS_VISIBLE_TIME = 2000;
 
 const useFormSubmit = () => {
   const [loading, setLoading] = useState();
 
-  const [submitResult, setSubmitResult] = useState(null);
+  const [submitResult, setSubmitResult] = useState({
+    successVisible: false,
+    errors: {},
+  });
 
   const t = useTranslations();
 
-  // Removes the result object after 3 seconds.
+  // Removes the success flag after some wait time.
   useEffect(() => {
-    if (submitResult) setTimeout(() => setSubmitResult(null), 3000);
+    setTimeout(
+      () =>
+        setSubmitResult({
+          errors: {},
+          successVisible: false,
+        }),
+      SUCCESS_VISIBLE_TIME,
+    );
   }, [submitResult]);
 
-  const submit = useCallback(async info => {
+  const submit = useCallback(async formData => {
+    const formErrors = getFormErrors(formData);
+    if (Object.keys(formErrors).length !== 0) {
+      setSubmitResult({ successVisible: false, errors: formErrors });
+      return;
+    }
     try {
       setLoading(true);
-      await fetch(`https://formsubmit.co/ajax/${t("contact:bonsai-email")}`, {
+      const response = await fetch("https://formspree.io/f/mbjevpee", {
         method: "POST",
+        body: formData,
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          name: info.name,
-          email: info.email,
-          purpose: info.purpose,
-          budget: info.budget,
-          message: info.message,
-        }),
       });
-      setSubmitResult(<Notification message={t("contact:submit-success")} />);
+      console.log("Form submitted: ", response);
+      if (response.status !== 200) throw Error("Form submission failed");
+      setSubmitResult({ successVisible: true, errors: {} });
     } catch (e) {
-      setSubmitResult(
-        <Notification message={t("contact:submit-fail")} isError={true} />,
-      );
+      setSubmitResult({
+        successVisible: false,
+        errors: { conection: e.message },
+      });
     }
     setLoading(false);
   }, []);
