@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import useTranslations from "../../hooks/useTranslations";
 import LangSelector from "../components/LangSelector";
-import { Link } from "gatsby";
+import Link from "../components/LinkLocalized";
 import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";

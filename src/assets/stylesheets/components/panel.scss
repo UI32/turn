@@ -22,7 +22,7 @@
   &-header {
     .beta {
       span {
-        color: $primary;
+        color: $primary-dark;
       }
     }
     .lottie-container {
@@ -30,7 +30,7 @@
     }
   }
   @include mq(md) {
-    padding: 56px;
+    padding: 20px;
     margin-bottom: 68px;
     &-header {
       .lead-m {
@@ -40,6 +40,10 @@
         margin-bottom: 39px;
       }
     }
+  }
+
+  @include mq(lg) {
+    padding: 56px;
   }
 }
 

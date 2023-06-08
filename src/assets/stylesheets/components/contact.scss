@@ -1,6 +1,7 @@
 // Contact
 
 .contact {
+  z-index: 1 !important;
   &-panel {
     background-image: url("../images/panel-bg2.png");
     background-repeat: no-repeat;
