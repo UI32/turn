@@ -7,6 +7,7 @@ import dominik from "../../assets/images/about/dominik.png";
 import Member from "./Member";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-3.json";
+import { midScreenPlay } from "../../utils/lottieInteractivities";
 
 const About = ({}) => {
   const t = useTranslations();
@@ -17,9 +18,11 @@ const About = ({}) => {
           className="about-panel"
           icon={
             <AnimatedIcon
+              startFrame={60}
+              autoplay={false}
+              loop={false}
               lottieAnimation={headerIcon}
-              loop={true}
-              autoplay={true}
+              interactivity={midScreenPlay}
             ></AnimatedIcon>
           }
           pretitle="about:management"
