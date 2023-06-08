@@ -2,6 +2,7 @@
 
 .contact {
   &-panel {
+    position: relative;
     background-image: url("../images/panel-bg2.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -18,6 +19,12 @@
   }
 
   .toast {
+    position: absolute;
+    top: 114px;
+    left: 50%;
+    width: calc(50% - 56px);
+    z-index: 10;
+    background: $white;
   }
 
   @include mq(md) {
