@@ -8,12 +8,21 @@ import useTranslations from "../../hooks/useTranslations";
 import LangSelector from "../components/LangSelector";
 import { Link } from "gatsby";
 import cx from "classnames";
-import useScrollspy from "../../hooks/useScrollSpy";
-import logo from "../../assets/images/logo.svg";
-import ButtonHashLink from "../components/buttons/Button";
+import AnimatedIcon from "./AnimatedIcon";
+import headerIcon from "../../assets/animations/Icon-1.json";
+import logo from "../../assets/images/logo-text.svg";
 
 const Header = () => {
   const t = useTranslations();
+
+  // Open/Close menu
+
+  const [isMenuOpen, setisMenuOpen] = useState(false);
+  const toggleMenu = useCallback(
+    () => setisMenuOpen(!isMenuOpen),
+    [isMenuOpen],
+  );
+  const closeMenu = useCallback(() => setisMenuOpen(false), [setisMenuOpen]);
 
   // Sticky header
   const [isSticky, setisSticky] = useState(false);
@@ -35,15 +44,6 @@ const Header = () => {
     };
   }, []);
 
-  // Open/Close menu
-
-  const [isMenuOpen, setisMenuOpen] = useState(false);
-  const toggleMenu = useCallback(
-    () => setisMenuOpen(!isMenuOpen),
-    [isMenuOpen],
-  );
-  const closeMenu = useCallback(() => setisMenuOpen(false), [setisMenuOpen]);
-
   useLayoutEffect(() => {
     // Remove body scroll when menu is open
     // Get original body overflow
@@ -56,9 +56,6 @@ const Header = () => {
     return () => document.body.classList.remove("disable-scroll-mobile");
   }, [isMenuOpen]); // Empty array ensures effect is only run on mount and unmount
 
-  const ids = ["mission", "howItWorks", "about"];
-  const activeId = useScrollspy(ids, 101);
-
   return (
     <header
       className={cx("header", {
@@ -68,39 +65,52 @@ const Header = () => {
     >
       <div className="wrapper">
         <Link to="/" className="logo" activeClassName="active">
+          <AnimatedIcon
+            lottieAnimation={headerIcon}
+            loop={true}
+            autoplay={true}
+          ></AnimatedIcon>
           <img src={logo} alt="Logo Turn2x" />
         </Link>
         <div className="header-content">
-          <nav className="header-nav" onClick={closeMenu}>
-            <Link
-              to="/#mission"
-              className={cx("nav-item", {
-                active: activeId === "mission",
-              })}
-            >
-              {t("mission:name")}
-            </Link>
-            <Link
-              to="/#howItWorks"
-              className={cx("nav-item", {
-                active: activeId === "howItWorks",
-              })}
-            >
-              {t("how-it-works:name")}
-            </Link>
-            <Link
-              to="/#howItWorks"
-              className={cx("nav-item", {
-                active: activeId === "about",
-              })}
-            >
-              {t("about:name")}
-            </Link>
-          </nav>
+          <div className="header-wrapper">
+            <nav className="header-nav" onClick={closeMenu}>
+              <Link to="/#mission" className="nav-item">
+                {t("mission:name")}
+              </Link>
+              <Link to="/#howItWorks" className="nav-item">
+                {t("how-it-works:name")}
+              </Link>
+              <Link to="/#about" className="nav-item">
+                {t("about:name")}
+              </Link>
+            </nav>
 
-          <div className="header-actions">
-            <LangSelector />
-            <ButtonHashLink clear label="contact-sales:name" to="/#contact" />
+            <div className="header-actions" onClick={closeMenu}>
+              <LangSelector />
+              <Link to="/#contact" className="button button-clear">
+                {t("contact-sales:name")}
+              </Link>
+            </div>
+            <div className="show-in-mobile">
+              <div className="nav-item">
+                <span>{t("careers:name")}</span>
+                <a
+                  className="button button-tiny"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("hiring:name")}
+                </a>
+              </div>
+              <Link className="nav-item" to="/legal">
+                {t("legal:name")}
+              </Link>
+              <Link className="nav-item" to="/privacy">
+                {t("data-privacy:name")}
+              </Link>
+            </div>
           </div>
         </div>
 

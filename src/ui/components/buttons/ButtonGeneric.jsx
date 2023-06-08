@@ -27,7 +27,7 @@ const ButtonGeneric = ({
       {success ? (
         <div className="success-text">
           <span className="button-text">Success</span>
-          <Tick className="success-icon" />
+          <Tick className="icon" />
         </div>
       ) : null}
     </>

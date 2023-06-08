@@ -48,16 +48,10 @@
   overflow: hidden;
 }
 
-svg {
-  path {
-    fill: currentColor;
-  }
+.success-icon {
+  color: $primary;
 }
 
-.lottie-container {
-  svg {
-    path {
-      fill: inherit;
-    }
-  }
+.error-icon {
+  color: $error;
 }

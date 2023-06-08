@@ -1,14 +1,5 @@
 // Contact
 
-.panel {
-  background: $white;
-  border-radius: 12px;
-  padding: 40px 18px 28px 24px;
-  @include mq(md) {
-    padding: 56px;
-  }
-}
-
 .contact {
   &-panel {
     background-image: url("../images/panel-bg2.png");
@@ -17,25 +8,7 @@
   }
   &-info,
   &-form {
-    flex: 1 1 auto;
-  }
-
-  .animated-logo {
-    margin-bottom: 24px;
-  }
-
-  .beta {
-    margin-bottom: 14px;
-  }
-
-  .lead-m {
-    color: $grey-transparent-40;
-    margin-bottom: 14px;
-  }
-
-  .text-l {
-    opacity: 0.5;
-    margin-bottom: 22px;
+    flex: 1 1 50%;
   }
 
   .button {
@@ -44,24 +17,19 @@
     position: relative;
   }
 
+  .toast {
+  }
+
   @include mq(md) {
     &-panel {
-      display: flex;
-      align-items: flex-start;
-    }
-
-    .animated-logo {
-      margin-bottom: 46px;
+      .panel-content {
+        display: flex;
+        align-items: flex-start;
+      }
     }
 
     &-form {
-      margin-top: 100px;
-    }
-    .lead-m {
-      margin-bottom: 20px;
-    }
-    .text-l {
-      margin-bottom: 39px;
+      margin-top: -20px;
     }
   }
 }

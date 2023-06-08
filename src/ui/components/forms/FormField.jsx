@@ -29,8 +29,8 @@ const FormField = ({
         </label>
       )}
       {field}
-      {success && <Tick className="success-icon" />}
-      {errorText && <Exclamation className="error-icon" />}
+      {success && <Tick className="success-icon icon" />}
+      {errorText && <Exclamation className="error-icon icon" />}
       {errorText && <p className="error-text">{t(errorText)}</p>}
     </div>
   );

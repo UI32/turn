@@ -1,9 +1,11 @@
 // Banners
 
 .notification-banner {
-  background: $primary;
+  background: $primary-dark;
   color: $white;
   padding: 10px 0 8px 0;
+  z-index: 11;
+  position: relative;
 
   .wrapper {
     display: flex;

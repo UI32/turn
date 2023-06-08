@@ -11,10 +11,15 @@
   padding: 0 30px;
   @include typo-rwd(text-l);
   height: 51px;
-  background: $primary;
+  background: $primary-dark;
   color: $white;
+  -webkit-tap-highlight-color: transparent;
+  &.is-disabled {
+    background: $grey-300;
+    color: $white;
+  }
   &-clear {
-    background: $grey-light;
+    background: $beige-100;
     color: $black;
     height: 41px;
     padding: 0 24px;
@@ -52,7 +57,7 @@
     }
   }
 
-  .success-icon {
+  .icon {
     margin-left: 6px;
   }
 }

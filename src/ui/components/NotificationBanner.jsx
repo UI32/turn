@@ -18,7 +18,7 @@ const NotificationBanner = ({}) => {
               setclose(true);
             }}
           >
-            <Cross />
+            <Cross className="icon" />
           </button>
         </div>
       </div>

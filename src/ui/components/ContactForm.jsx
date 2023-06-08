@@ -9,6 +9,7 @@ import {
   validateMail,
 } from "../../utils/validation";
 import useFormSubmit from "../../hooks/useFormSubmit";
+import Toast from "./Toast.jsx";
 
 const Contact = ({}) => {
   const [loading, handleSubmit, submitResult] = useFormSubmit();
@@ -26,10 +27,12 @@ const Contact = ({}) => {
   }, [successVisible]);
 
   return (
-    <form id="contact-form" className="contact-form">
+    <form className="contact-form">
+      <Toast success text="contact:success" />
+      <Toast error text="contact:error" />
       <FormField
         success={formData.full_name}
-        errorText={errors.full_name}
+        //errorText={errors.full_name? "contact:name-message" : ""}
         field={
           <FormInput
             value={formData.full_name}
@@ -48,7 +51,7 @@ const Contact = ({}) => {
             ? errors.email
             : validateMail(formData.email)
             ? ""
-            : "Please enter a correct Email."
+            : "contact:email-message"
         }
         field={
           <FormInput

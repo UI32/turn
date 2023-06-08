@@ -18,9 +18,19 @@
     }
   }
 
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .footer-caption {
+    display: block;
+  }
+
+  .globe {
+    text-align: center;
+  }
+
+  @include mq(md) {
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }

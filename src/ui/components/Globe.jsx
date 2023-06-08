@@ -16,14 +16,14 @@ export default function Globe() {
       dark: 0,
       diffuse: 1.2,
       mapSamples: 16000,
-      mapBrightness: 6,
-      baseColor: [0.4, 0.3, 0.3],
+      mapBrightness: 1,
+      baseColor: [0.75294, 0.8, 0.9411],
       markerColor: [0.1, 0.8, 1],
-      glowColor: [1, 1, 1],
+      glowColor: [(188 * 0.85) / 255, (196 * 0.85) / 255, (229 * 0.85) / 255],
       markers: [
         // longitude latitude
-        { location: [37.7595, -122.4367], size: 0.03 },
-        { location: [40.7128, -74.006], size: 0.1 },
+        // { location: [52.375893, 9.73201], size: marker1Size }, // Hannover
+        // { location: [59.913868, 10.752245], size: marker2Size }, // Oslo
       ],
       onRender: state => {
         // Called on every animation frame.

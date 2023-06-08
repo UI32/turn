@@ -1,0 +1,49 @@
+// Panel
+
+.panel {
+  background: $white;
+  border-radius: 12px;
+  padding: 40px 18px 28px 24px;
+  margin-bottom: 12px;
+
+  .beta {
+    margin-bottom: 14px;
+  }
+
+  .lead-m {
+    color: $grey-transparent-40;
+    margin-bottom: 14px;
+  }
+  .text-l {
+    opacity: 0.5;
+    margin-bottom: 22px;
+  }
+
+  &-header {
+    .beta {
+      span {
+        color: $primary;
+      }
+    }
+    .lottie-container {
+      margin-left: -18px;
+    }
+  }
+  @include mq(md) {
+    padding: 56px;
+    margin-bottom: 68px;
+    &-header {
+      .lead-m {
+        margin-bottom: 20px;
+      }
+      .text-l {
+        margin-bottom: 39px;
+      }
+    }
+  }
+}
+
+.lottie-container {
+  width: 80px;
+  height: 80px;
+}
