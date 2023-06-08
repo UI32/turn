@@ -6,7 +6,7 @@ import benedikt from "../../assets/images/about/benedikt.png";
 import dominik from "../../assets/images/about/dominik.png";
 import Member from "./Member";
 import AnimatedIcon from "./AnimatedIcon";
-import headerIcon from "../../assets/animations/Icon-3.json";
+import aboutIcon from "../../assets/animations/Icon-3.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
 
 const About = ({}) => {
@@ -18,10 +18,10 @@ const About = ({}) => {
           className="about-panel"
           icon={
             <AnimatedIcon
-              startFrame={60}
+              lottieAnimation={aboutIcon}
+              startFrame={30}
               autoplay={false}
-              loop={false}
-              lottieAnimation={headerIcon}
+              loop={true}
               interactivity={midScreenPlay}
             ></AnimatedIcon>
           }
