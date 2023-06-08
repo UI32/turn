@@ -13,10 +13,16 @@ import Toast from "./Toast.jsx";
 
 const Contact = ({}) => {
   const [loading, handleSubmit, submitResult] = useFormSubmit();
+
   const successVisible = submitResult.successVisible;
+  const conectionError = submitResult.errors.conection;
+
   const [formData, setFormData] = useState({});
-  const isDirty = Object.keys(formData).length !== 0;
+  const isDirty = Object.values(formData).find(value => value !== "");
   const errors = isDirty ? getFormErrors(formData) : {};
+
+  const [successToastOpen, setSuccessToastOpen] = useState(false);
+  const [errorToastOpen, setErrorToastOpen] = useState(false);
 
   const updateFormData = (key, value) => {
     setFormData({ ...formData, [key]: value });
@@ -24,15 +30,31 @@ const Contact = ({}) => {
 
   useEffect(() => {
     if (!successVisible) setFormData({});
+    else setSuccessToastOpen(true);
   }, [successVisible]);
+
+  useEffect(() => {
+    if (conectionError) setErrorToastOpen(true);
+  }, [conectionError]);
 
   return (
     <form className="contact-form">
-      <Toast success text="contact:success" />
-      <Toast error text="contact:error" />
+      {successToastOpen && (
+        <Toast
+          success
+          text="contact:success"
+          onClose={() => setSuccessToastOpen(false)}
+        />
+      )}
+      {errorToastOpen && (
+        <Toast
+          error
+          text="contact:error"
+          onClose={() => setErrorToastOpen(false)}
+        />
+      )}
       <FormField
         success={formData.full_name}
-        //errorText={errors.full_name? "contact:name-message" : ""}
         field={
           <FormInput
             value={formData.full_name}
@@ -90,18 +112,14 @@ const Contact = ({}) => {
           />
         }
       />
-      {submitResult.errors.conection && (
-        <div className="error">{submitResult.errors.conection}</div>
-      )}
       {loading ? (
         <Button type="button" loading />
-      ) : successVisible ? (
-        <Button type="button" success />
       ) : (
         <Button
           type="button"
           onClick={() => handleSubmit(formData)}
-          label="contact:submit"
+          success={successVisible}
+          label={successVisible ? "" : "contact:submit"}
           disabled={!isDirty || Object.keys(errors).length !== 0}
         />
       )}
