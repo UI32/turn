@@ -14,6 +14,16 @@
 .outer-wrapper {
   position: relative;
   padding-bottom: 0;
+
+  &.simple {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: $white;
+    .content {
+      flex: 1 1 auto;
+    }
+  }
   .bottom-pattern {
     position: absolute;
     bottom: 0;
