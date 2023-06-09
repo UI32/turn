@@ -78,7 +78,7 @@ const Header = () => {
               <Link to="/#mission" className="nav-item">
                 {t("mission:name")}
               </Link>
-              <Link to="/#howItWorks" className="nav-item">
+              <Link to="/#how-it-works" className="nav-item">
                 {t("how-it-works:name")}
               </Link>
               <Link to="/#about" className="nav-item">

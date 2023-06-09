@@ -8,6 +8,7 @@ $primary: #4579dd;
 $primary-dark: #385494;
 $grey-light: #f6f6f6;
 $grey-transparent-40: rgba($black, 0.4);
+$grey-bg: #fcfcfb;
 $grey-300: #d1d5db;
 $success: #19aa86;
 $error: #ef4444;
@@ -48,5 +49,5 @@ $grid-breakpoints: (
   // Large screen / desktop
   xl: $xl,
   // Extra large screen / wide desktop
-  xxl: $xxl // Extra large screen / wide desktop,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  xxl: $xxl // Extra large screen / wide desktop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );

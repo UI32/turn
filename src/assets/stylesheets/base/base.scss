@@ -12,7 +12,7 @@ html {
 
 body {
   @include typo-rwd(body);
-  background: $white;
+  background: $grey-bg;
   color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

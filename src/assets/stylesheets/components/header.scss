@@ -127,7 +127,6 @@
         overflow-y: auto;
         .button-clear {
           background: transparent;
-          padding: 0;
           height: auto;
           display: block;
           text-align: left;
@@ -155,7 +154,8 @@
     .lang-selector .lang-item,
     .button-clear {
       padding: 0;
-      margin-top: 44px;
+      margin-top: 10px;
+      padding: 16px 0;
       -webkit-tap-highlight-color: transparent;
     }
 
