@@ -1,5 +1,5 @@
 import React from "react";
-import heroVideoURL from "../../assets/videos/sample-video.mp4";
+import heroVideoURL from "../../assets/videos/video.mp4";
 import useTranslations from "../../hooks/useTranslations";
 import pattern from "../../assets/images/pattern1.png";
 import logo1 from "../../assets/images/logo-pattern-left.svg";
