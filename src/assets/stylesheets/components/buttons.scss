@@ -15,11 +15,11 @@
   color: $white;
   -webkit-tap-highlight-color: transparent;
   &.is-disabled {
-    background: $grey-300;
+    background: $grey;
     color: $white;
   }
   &-clear {
-    background: $beige-100;
+    background: $grey-light;
     color: $black;
     height: 41px;
     padding: 0 24px;
