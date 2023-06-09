@@ -3,7 +3,7 @@
 .panel {
   background: $white;
   border-radius: 12px;
-  padding: 40px 18px 28px 24px;
+  padding: 24px;
   margin-bottom: 12px;
 
   .beta {
@@ -30,8 +30,8 @@
     }
   }
   @include mq(md) {
-    padding: 20px;
     margin-bottom: 68px;
+    padding: 40px 18px 28px 24px;
     &-header {
       .lead-m {
         margin-bottom: 20px;

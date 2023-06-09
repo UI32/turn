@@ -13,7 +13,7 @@
 
 .outer-wrapper {
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 0;
   .bottom-pattern {
     position: absolute;
     bottom: 0;
@@ -25,5 +25,14 @@
   }
   .footer {
     z-index: 2;
+  }
+  @include mq($until: md) {
+    .bottom-pattern {
+      max-width: none;
+      width: 250%;
+    }
+  }
+  @include mq(md) {
+    padding-bottom: 60px;
   }
 }

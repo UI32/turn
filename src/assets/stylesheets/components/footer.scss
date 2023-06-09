@@ -4,17 +4,23 @@
   z-index: 1;
   position: relative;
   padding: 58px 0 10px;
+  overflow: hidden;
+
   &-caption {
     font-size: 16px;
-    line-height: 19px;
     opacity: 0.5;
+    line-height: 19px;
   }
 
   &-item {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    .button {
-      margin-left: 8px;
+
+    span {
+      margin-right: 8px;
+      opacity: 0.5;
+      margin-top: 2px;
     }
   }
 
@@ -24,6 +30,37 @@
 
   .globe {
     text-align: center;
+  }
+
+  @include mq($until: sm) {
+    padding-left: 146px;
+    .globe-wrapper {
+      left: 16px;
+      top: 62px;
+    }
+  }
+
+  @include mq($from: sm, $until: md) {
+    padding: 30px 0 30px 200px;
+    .globe-wrapper {
+      left: 44px;
+      top: 36px;
+    }
+  }
+
+  @include mq($until: md) {
+    .globe-wrapper {
+      position: absolute;
+      .footer-caption {
+        margin-top: 0;
+      }
+    }
+    position: relative;
+
+    &-item,
+    &-caption {
+      margin-bottom: 16px;
+    }
   }
 
   @include mq(md) {

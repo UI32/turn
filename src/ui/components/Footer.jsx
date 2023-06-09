@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="wrapper">
         <div className="footer-item">
-          <span className="footer-caption">{t("careers:name")}</span>
+          <span>{t("careers:name")}</span>
           <a
             className="button button-tiny"
             href="#"
