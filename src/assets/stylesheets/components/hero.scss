@@ -48,7 +48,13 @@
       margin-left: 10px;
     }
   }
-
+  @include mq($until: md) {
+    &-quote {
+      img {
+        width: 20px;
+      }
+    }
+  }
   @include mq(md) {
     &-text {
       padding: 62px 0;
