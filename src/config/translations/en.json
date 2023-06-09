@@ -33,6 +33,7 @@
   "contact:message": "Message",
   "contact:submit": "Submit",
   "contact:email-message": "Please enter a correct email",
+  "contact:full-name-message": "Please enter a name",
   "data-privacy:name": "Data Privacy Policy",
   "legal:name": "Legal",
   "careers:name": "Careers",

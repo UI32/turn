@@ -55,6 +55,7 @@ const Contact = ({}) => {
       )}
       <FormField
         success={formData.full_name}
+        errorText={errors.full_name ? "contact:full-name-message" : ""}
         field={
           <FormInput
             value={formData.full_name}
