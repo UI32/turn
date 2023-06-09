@@ -35,4 +35,10 @@
   @include mq(md) {
     padding-bottom: 60px;
   }
+  @include mq($from: md, $until: lg) {
+    .bottom-pattern {
+      max-width: none;
+      height: 1000px;
+    }
+  }
 }
