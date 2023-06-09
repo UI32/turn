@@ -15,12 +15,12 @@ import AboutCard from "./AboutCard";
 import AboutCardAdvisor from "./AboutCardAdvisor";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-3.json";
-import fraunhofer from "../../assets/images/clients/fraunhofer.svg";
-import basf from "../../assets/images/clients/basf.svg";
-import kit from "../../assets/images/clients/kit.svg";
-import mercedes from "../../assets/images/clients/mercedes.svg";
-import dvgw from "../../assets/images/clients/dvgw.svg";
-import siemens from "../../assets/images/clients/siemens.svg";
+import fraunhofer from "../../assets/images/clients/fraunhofer.png";
+import basf from "../../assets/images/clients/basf.png";
+import kit from "../../assets/images/clients/kit.png";
+import mercedes from "../../assets/images/clients/mercedes.png";
+import dvgw from "../../assets/images/clients/dvgw.png";
+import siemens from "../../assets/images/clients/siemens.png";
 
 const About = ({}) => {
   const t = useTranslations();
@@ -67,22 +67,22 @@ const About = ({}) => {
           </div>
           <div className="about-clients" data-aos="custom-animation">
             <div className="client">
-              <img src={fraunhofer} alt="Fraunhofer" />
+              <img src={fraunhofer} alt="Fraunhofer" width="206" height="35" />
             </div>
             <div className="client basf">
-              <img src={basf} alt="Basf" />
+              <img src={basf} alt="Basf" width="114" height="50" />
             </div>
             <div className="client">
-              <img src={kit} alt="kit" />
+              <img src={kit} alt="kit" width="92" height="43" />
             </div>
             <div className="client">
-              <img src={mercedes} alt="Mercedes Benz" />
+              <img src={mercedes} alt="Mercedes Benz" width="186" height="52" />
             </div>
             <div className="client">
-              <img src={dvgw} alt="DVGW" />
+              <img src={dvgw} alt="DVGW" width="81" height="50" />
             </div>
             <div className="client">
-              <img src={siemens} alt="Siemens" />
+              <img src={siemens} alt="Siemens" width="181" height="43" />
             </div>
           </div>
           <p className="lead-m">{t("about:advisory-board")}</p>

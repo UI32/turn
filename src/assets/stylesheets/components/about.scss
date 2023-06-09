@@ -35,6 +35,11 @@
     &-clients {
       padding-bottom: 20px;
     }
+
+    .client img {
+      transform: scale(0.9);
+      margin-left: -10px;
+    }
   }
 
   @include mq(md) {
