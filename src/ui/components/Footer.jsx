@@ -8,7 +8,7 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <footer className="footer" data-aos="custom-animation">
+    <footer className="footer">
       <div className="wrapper">
         <div className="footer-item">
           <span className="footer-caption">{t("careers:name")}</span>

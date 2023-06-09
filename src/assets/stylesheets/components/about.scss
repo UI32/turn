@@ -12,12 +12,17 @@
     justify-content: space-between;
     .client {
       flex: 1 1 50%;
-      margin-bottom: 38px;
+      margin: 16px auto;
     }
+  }
+
+  .lead-m {
+    margin-bottom: 30px;
   }
 
   &-actions {
     text-align: center;
+    padding-top: 48px;
     .button {
       display: inline-flex;
     }
@@ -26,6 +31,9 @@
   @include mq($until: md) {
     .basf {
       order: -1;
+    }
+    &-clients {
+      padding-bottom: 20px;
     }
   }
 
@@ -47,7 +55,7 @@
     }
 
     &-clients {
-      padding: 66px 0 40px;
+      padding: 36px 0 50px;
       .client {
         flex-basis: 33.3%;
       }
@@ -82,19 +90,67 @@
   }
 }
 
+// About card
+
 .about-card {
   &:not(.advisor) {
     cursor: pointer;
   }
-  .extra {
-    display: none;
-    padding: 54px 60px;
+
+  .about-image {
+    margin-bottom: 16px;
     img {
-      flex: 0 0 320px;
+      display: block;
+      width: 100%;
     }
   }
 
+  .about-name,
+  .about-position,
+  .about-description,
+  .about-contact {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    font-weight: $regular;
+  }
+  .about-position {
+    color: rgba($black, 0.5);
+  }
   .about-name {
+    margin-bottom: 4px;
+  }
+
+  .extra {
+    display: none;
+    padding: 54px 60px;
+    max-width: 950px;
+    background: $white;
+    border-radius: 12px;
+    animation: fade-in 0.3s ease;
+    img {
+      flex: 0 0 320px;
+      max-height: 430px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+    .about-description {
+      flex: 1 1 auto;
+    }
+    .about-contact {
+      margin-top: 20px;
+    }
+  }
+
+  .close-button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    top: 56px;
+    right: 62px;
   }
 
   &.extended {
@@ -109,52 +165,22 @@
       z-index: 10;
     }
     .extra {
-      display: block;
       position: fixed;
       top: 50%;
       left: 50%;
       width: 100%;
-      max-width: 950px;
-      background: $white;
       z-index: 10;
       transform: translate(-50%, -50%);
       display: flex;
-      align-items: flex-start;
-      border-radius: 12px;
 
       .about-position {
         margin-bottom: 27px;
       }
     }
-    .close-button {
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      position: absolute;
-      top: 56px;
-      right: 62px;
-    }
-
-    .about-name,
-    .about-position,
-    .about-description,
-    .about-contact {
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: -0.02em;
-      font-weight: $regular;
-    }
-
-    .about-position {
-      color: rgba($black, 0.5);
-    }
-
-    .about-name {
-      margin-bottom: 4px;
-    }
   }
 
   @include mq($until: md) {
+    margin-bottom: 12px;
     &.extended {
       .extra {
         flex-direction: column;
