@@ -115,10 +115,19 @@
       display: block;
       position: absolute;
       top: 100px;
-      bottom: 28px;
+      bottom: 16px;
       left: 16px;
       right: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      // justify-content: flex-end;
     }
+
+    .header-nav {
+      margin-top: auto;
+    }
+
     &.open-menu {
       .header-content {
         display: block;

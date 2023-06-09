@@ -20,10 +20,10 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
   return (
     <div className={cx("about-card", { extended: extendInfo })}>
       <div className="about-content" onClick={onExtendInfo}>
-        <div className="about-image">
+        <div className="about-image" data-aos="custom-animation">
           <img src={imageSm} alt={alt} />
         </div>
-        <div className="about-info">
+        <div className="about-info" data-aos="custom-animation">
           <h2 className="about-name">{name}</h2>
           <p className="about-position">{t(position)}</p>
         </div>

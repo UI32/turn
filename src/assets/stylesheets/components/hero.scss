@@ -53,7 +53,12 @@
     &-text {
       padding: 62px 0;
     }
-
+    &-quote {
+      font-size: 40px;
+      padding: 100px 0;
+    }
+  }
+  @include mq(lg) {
     &-quote {
       font-size: 56px;
       padding: 140px 0;
