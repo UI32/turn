@@ -52,7 +52,6 @@
       justify-content: space-between;
       .about-card {
         width: 33.3%;
-        // flex: 0 0 calc(33.3% - 66px);
         &:not(:last-child) {
           margin-right: 33px;
         }
@@ -76,7 +75,6 @@
       }
       .about-card {
         width: 25%;
-        // flex: 0 0 calc(33.3% - 66px);
         &:not(:last-child) {
           margin-right: 33px;
         }
@@ -100,14 +98,26 @@
 .about-card {
   &:not(.advisor) {
     cursor: pointer;
+    .about-image {
+      overflow: hidden;
+      position: relative;
+      padding-top: 96%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 
   .about-image {
     margin-bottom: 16px;
-    img {
-      display: block;
-      width: 100%;
-    }
   }
 
   .about-name,
@@ -135,7 +145,6 @@
     animation: fade-in 0.3s ease;
     img {
       flex: 0 0 320px;
-      max-height: 430px;
     }
     .info {
       display: flex;
@@ -173,7 +182,7 @@
       position: fixed;
       top: 50%;
       left: 50%;
-      width: 100%;
+      width: 96%;
       z-index: 10;
       transform: translate(-50%, -50%);
       display: flex;
@@ -212,6 +221,11 @@
   @include mq(md) {
     .info {
       padding: 0 40px;
+    }
+    .extra {
+      img {
+        max-height: 430px;
+      }
     }
   }
 }
