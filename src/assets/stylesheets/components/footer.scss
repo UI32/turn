@@ -40,7 +40,7 @@
     }
   }
 
-  @include mq($from: sm, $until: md) {
+  @include mq($from: sm, $until: lg) {
     padding: 30px 0 30px 200px;
     .globe-wrapper {
       left: 44px;
@@ -48,7 +48,7 @@
     }
   }
 
-  @include mq($until: md) {
+  @include mq($until: lg) {
     .globe-wrapper {
       position: absolute;
       .footer-caption {
@@ -63,11 +63,23 @@
     }
   }
 
-  @include mq(md) {
+  @include mq(lg) {
     .wrapper {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      > * {
+        flex: 1 1 25%;
+      }
+    }
+  }
+  @include mq(lg) {
+    .footer-caption {
+      &:not(:first-child) {
+        text-align: center;
+      }
+      &:last-child {
+        text-align: right;
+      }
     }
   }
 }
