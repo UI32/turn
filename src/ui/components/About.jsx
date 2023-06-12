@@ -57,8 +57,8 @@ const About = ({}) => {
               description="benedikt:description"
             />
             <AboutCard
-              name="Dominik Stolz"
-              alt="Dominik Stolz"
+              name="Dr. Dominik Schollenberger"
+              alt="Dr. Dominik Schollenberger"
               image={dominik}
               imageSm={dominikSm}
               position="dominik:position"

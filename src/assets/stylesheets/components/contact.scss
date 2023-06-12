@@ -20,10 +20,6 @@
   }
 
   .toast {
-    position: absolute;
-    top: 114px;
-    left: 50%;
-    width: calc(50% - 56px);
     z-index: 10;
     background: $white;
   }
@@ -37,7 +33,14 @@
     }
 
     &-form {
+      position: relative;
       margin-top: -20px;
+    }
+    .toast {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
     }
   }
 }
