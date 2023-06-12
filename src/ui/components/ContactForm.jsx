@@ -19,7 +19,7 @@ const Contact = ({}) => {
 
   const [formData, setFormData] = useState({});
   const isDirty = Object.values(formData).find(value => value !== "");
-  const errors = isDirty ? getFormErrors(formData) : {};
+  const errors = isDirty ? getFormErrors(formData) : submitResult.errors;
 
   const [successToastOpen, setSuccessToastOpen] = useState(false);
   const [errorToastOpen, setErrorToastOpen] = useState(false);
@@ -118,10 +118,12 @@ const Contact = ({}) => {
       ) : (
         <Button
           type="button"
-          onClick={() => handleSubmit(formData)}
+          onClick={() => {
+            handleSubmit(formData);
+          }}
           success={successVisible}
           label={successVisible ? "" : "contact:submit"}
-          disabled={!isDirty || Object.keys(errors).length !== 0}
+          disabled={Object.keys(errors).length !== 0}
         />
       )}
     </form>
