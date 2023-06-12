@@ -2,18 +2,23 @@
 
 .content {
   position: relative;
-  > div {
-    z-index: 2;
-    position: relative;
-  }
-  .hero {
-    z-index: 0;
-  }
 }
 
 .outer-wrapper {
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 0;
+  overflow-x: hidden;
+
+  &.simple {
+    background: $white;
+    .content {
+      flex: 1 1 auto;
+    }
+    .bottom-pattern {
+      position: fixed;
+      top: 40%;
+    }
+  }
   .bottom-pattern {
     position: absolute;
     bottom: 0;
@@ -25,5 +30,21 @@
   }
   .footer {
     z-index: 2;
+    flex: 0 0 auto;
+  }
+  @include mq($until: md) {
+    .bottom-pattern {
+      max-width: none;
+      width: 250%;
+    }
+  }
+  @include mq(md) {
+    padding-bottom: 60px;
+  }
+  @include mq($from: md, $until: lg) {
+    .bottom-pattern {
+      max-width: none;
+      height: 1000px;
+    }
   }
 }

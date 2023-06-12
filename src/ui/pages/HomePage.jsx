@@ -5,6 +5,10 @@ import "aos/dist/aos.css";
 import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 import About from "../components/About";
+import HowItWorks from "../components/HowItWorks";
+import Mission from "../components/Mission";
+import Model3D from "../components/Model3D";
+import Motto from "../components/Motto";
 
 const HomePage = () => {
   useEffect(() => {
@@ -14,6 +18,10 @@ const HomePage = () => {
   return (
     <MainLayout bottomPattern>
       <Hero />
+      <Motto />
+      <HowItWorks />
+      <Model3D />
+      <Mission />
       <About />
       <Contact />
     </MainLayout>

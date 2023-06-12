@@ -2,7 +2,6 @@ import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import { Link } from "gatsby";
 import Globe from "./Globe";
-import ButtonHashLink from "../components/buttons/Button";
 import GlobeText from "./GlobeText";
 
 const Footer = () => {
@@ -12,7 +11,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="wrapper">
         <div className="footer-item">
-          <span className="footer-caption">{t("careers:name")}</span>
+          <span>{t("careers:name")}</span>
           <a
             className="button button-tiny"
             href="#"

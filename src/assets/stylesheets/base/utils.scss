@@ -44,8 +44,17 @@
   opacity: 0;
 }
 
-.disable-scroll-mobile {
+.disable-scroll-mobile,
+.disable-scroll {
   overflow: hidden;
+}
+
+.disable-scroll {
+  .header {
+    &.is-sticky {
+      position: relative;
+    }
+  }
 }
 
 .success-icon {

@@ -1,10 +1,9 @@
 // Contact
 
 .contact {
+  z-index: 1 !important;
   &-panel {
-    background-image: url("../images/panel-bg2.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    position: relative;
   }
   &-info,
   &-form {
@@ -13,23 +12,38 @@
 
   .button {
     min-width: 116px;
-    margin-bottom: 4px;
+    margin: 2px 0 4px;
     position: relative;
   }
 
   .toast {
+    z-index: 10;
+    background: $white;
   }
 
   @include mq(md) {
     &-panel {
+      background-image: url("../images/panel-bg2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
       .panel-content {
         display: flex;
         align-items: flex-start;
       }
+      .beta {
+        max-width: 50%;
+      }
     }
 
     &-form {
+      position: relative;
       margin-top: -20px;
+    }
+    .toast {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
     }
   }
 }

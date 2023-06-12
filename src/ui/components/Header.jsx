@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import useTranslations from "../../hooks/useTranslations";
 import LangSelector from "../components/LangSelector";
-import { Link } from "gatsby";
+import Link from "../components/LinkLocalized";
 import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
@@ -78,7 +78,7 @@ const Header = () => {
               <Link to="/#mission" className="nav-item">
                 {t("mission:name")}
               </Link>
-              <Link to="/#howItWorks" className="nav-item">
+              <Link to="/#how-it-works" className="nav-item">
                 {t("how-it-works:name")}
               </Link>
               <Link to="/#about" className="nav-item">
@@ -87,7 +87,7 @@ const Header = () => {
             </nav>
 
             <div className="header-actions" onClick={closeMenu}>
-              <LangSelector />
+              <LangSelector className="show-in-tablet" />
               <Link to="/#contact" className="button button-clear">
                 {t("contact-sales:name")}
               </Link>
@@ -114,6 +114,8 @@ const Header = () => {
           </div>
         </div>
 
+        <LangSelector className="show-in-mobile lang-mobile" />
+
         <button
           className="button-menu show-in-mobile"
           onClick={toggleMenu}
@@ -122,7 +124,6 @@ const Header = () => {
           <div className="hamburger">
             <span className="line line-1"></span>
             <span className="line line-2"></span>
-            <span className="line line-3"></span>
           </div>
         </button>
       </div>
