@@ -31,6 +31,8 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
         </div>
       </div>
 
+      <div className="overlay" onClick={onCloseInfo}></div>
+
       <div className="extra">
         <img src={image} alt={alt} />
         <div className="info">

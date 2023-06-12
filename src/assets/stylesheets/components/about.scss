@@ -96,6 +96,7 @@
 // About card
 
 .about-card {
+  -webkit-tap-highlight-color: transparent;
   &:not(.advisor) {
     cursor: pointer;
     .about-image {
@@ -167,16 +168,23 @@
     right: 62px;
   }
 
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba($black, 0.5);
+    z-index: 1;
+  }
+
+  .overlay {
+    display: none;
+  }
+
   &.extended {
-    &:before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: rgba($black, 0.5);
-      z-index: 10;
+    > .overlay {
+      display: block;
     }
     .extra {
       position: fixed;

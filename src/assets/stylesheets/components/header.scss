@@ -57,8 +57,20 @@
   .nav-item {
     @include typo-rwd(text-l);
     padding: 0 16px;
+    border-radius: 6px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    transition: all 0.4s ease-in-out;
     &:hover {
+      transition: all 0.4s ease-in-out;
       color: $primary-dark;
+      background: linear-gradient(
+        156deg,
+        rgba(246, 246, 246, 0) 0%,
+        rgba(246, 246, 246, 1) 100%
+      );
       &:before {
         opacity: 1;
       }
