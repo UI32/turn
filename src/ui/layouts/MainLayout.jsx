@@ -5,17 +5,27 @@ import Footer from "../components/Footer";
 import { MemoryRouter } from "react-router-dom";
 import NotificationBanner from "../components/NotificationBanner";
 import pattern from "../../assets/images/pattern2.png";
+import pattern3 from "../../assets/images/pattern3.png";
 
-const MainLayout = ({ children, className, bottomPattern }) => {
+const MainLayout = ({ children, className, bottomPattern, simple }) => {
   return (
     <MemoryRouter>
-      <div className={cx("outer-wrapper", className)}>
+      <div
+        className={cx("outer-wrapper", {
+          [className]: className,
+          simple: simple,
+        })}
+      >
         <NotificationBanner />
         <Header />
         <div className="content">{children}</div>
         <Footer />
         {bottomPattern && (
-          <img className="bottom-pattern" src={pattern} alt="pattern" />
+          <img
+            className="bottom-pattern"
+            src={simple ? pattern3 : pattern}
+            alt="pattern"
+          />
         )}
       </div>
     </MemoryRouter>

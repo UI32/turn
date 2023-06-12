@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `site.com`,
+    siteUrl: "https://bonsaitech.io/",
     title: `Turn2x`,
     description: ``,
     author: `Bonsai Tech`,
