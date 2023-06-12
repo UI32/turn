@@ -7,7 +7,7 @@ import { convertToFormData } from "../utils/format";
 // Form submission is done with Formspree
 
 const SUCCESS_VISIBLE_TIME = 2000;
-const formSpreeEndpoint = "https://formspree.io/f/mbjevpee"; // TODO Replace with the client version on build
+const formSpreeEndpoint = "https://formspree.io/f/mbjevpee"; // TODO Replace with the client's account endpoint on build
 
 const useFormSubmit = () => {
   const [loading, setLoading] = useState();
@@ -21,6 +21,7 @@ const useFormSubmit = () => {
 
   // Removes the success flag after some wait time.
   useEffect(() => {
+    if (!submitResult.successVisible) return;
     setTimeout(
       () =>
         setSubmitResult({
