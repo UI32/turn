@@ -1,40 +1,55 @@
 // Layout
 
-$header-height: 101px;
-$header-height-mv: 60px;
+.content {
+  position: relative;
+  > div {
+    z-index: 2;
+    position: relative;
+  }
+  .hero {
+    z-index: 0;
+  }
+}
 
 .outer-wrapper {
+  position: relative;
+  padding-bottom: 0;
   overflow-x: hidden;
-  .header {
-    position: fixed;
-    top: 0;
+
+  &.simple {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: $white;
+    .content {
+      flex: 1 1 auto;
+    }
+  }
+  .bottom-pattern {
+    position: absolute;
+    bottom: 0;
     left: 0;
-    right: 0;
-    z-index: 99;
-    height: $header-height-mv;
+    z-index: 1;
   }
   .content {
-    padding-top: $header-height-mv;
+    z-index: 2;
+  }
+  .footer {
+    z-index: 2;
+  }
+  @include mq($until: md) {
+    .bottom-pattern {
+      max-width: none;
+      width: 250%;
+    }
   }
   @include mq(md) {
-    .header {
-      height: $header-height;
-    }
-    .content {
-      padding-top: $header-height;
-    }
+    padding-bottom: 60px;
   }
-}
-
-.inner-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.simple-layout {
-  .footer {
-    background: transparent;
-    color: $black-grey;
+  @include mq($from: md, $until: lg) {
+    .bottom-pattern {
+      max-width: none;
+      height: 1000px;
+    }
   }
 }

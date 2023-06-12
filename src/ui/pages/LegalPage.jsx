@@ -1,13 +1,14 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
-import SimpleLayout from "../layouts/SimpleLayout";
+import MainLayout from "../layouts/MainLayout";
 
 const LegalPage = () => {
   const t = useTranslations();
 
   return (
-    <SimpleLayout>
-      <div className="generic-content">
+    <MainLayout bottomPattern className="simple">
+      <div className="generic-content wrapper">
+        <h1 className="alpha">{t("legal:name")}</h1>
         <div className="inner-wrapper">
           <p>{t("sample:text")}</p>
           <ul className="basic-list">
@@ -18,10 +19,10 @@ const LegalPage = () => {
             <li>{t("sample:text")}</li>
             <li>{t("sample:text")}</li>
           </ul>
-          <h3 className="delta">{t("sample:text")}</h3>
+          <div className="panel">Info</div>
         </div>
       </div>
-    </SimpleLayout>
+    </MainLayout>
   );
 };
 

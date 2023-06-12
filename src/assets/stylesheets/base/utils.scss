@@ -8,7 +8,7 @@
 
 .show-in-mobile {
   display: block;
-  @include mq(lg) {
+  @include mq(md) {
     display: none;
   }
 }
@@ -44,12 +44,23 @@
   opacity: 0;
 }
 
-.disable-scroll-mobile {
+.disable-scroll-mobile,
+.disable-scroll {
   overflow: hidden;
 }
 
-svg {
-  path {
-    fill: currentColor;
+.disable-scroll {
+  .header {
+    &.is-sticky {
+      position: relative;
+    }
   }
+}
+
+.success-icon {
+  color: $primary;
+}
+
+.error-icon {
+  color: $error;
 }

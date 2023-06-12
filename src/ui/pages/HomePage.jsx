@@ -1,33 +1,27 @@
 import React, { useEffect } from "react";
 import MainLayout from "../layouts/MainLayout";
-import Cta from "../components/Cta";
-import Quote from "../components/Quote";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Hero from "../components/Hero";
+import Contact from "../components/Contact";
+import About from "../components/About";
+import HowItWorks from "../components/HowItWorks";
+import Mission from "../components/Mission";
+import Model3D from "../components/Model3D";
 
 const HomePage = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
   useEffect(() => {
     AOS.init({});
   }, []);
 
   return (
-    <MainLayout>
-      <Cta
-        skin="dark"
-        title="cta:title"
-        buttonText="action:lets-make-it-happen"
-      />
-      <Cta skin="dark" title="cta2:title" buttonText="cta2:action" reversed />
-      <Cta skin="dark" title="cta3:title" buttonText="cta3:action" />
-      <Quote
-        text="quote:text"
-        author="Daniel Seiler"
-        position="quote:daniel-position"
-      />
+    <MainLayout bottomPattern>
+      <Hero />
+      <HowItWorks />
+      <Model3D />
+      <Mission />
+      <About />
+      <Contact />
     </MainLayout>
   );
 };

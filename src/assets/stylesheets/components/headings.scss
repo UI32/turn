@@ -1,5 +1,9 @@
 // Headings
 
+.jumbo {
+  @include typo-rwd(jumbo);
+}
+
 .alpha {
   @include typo-rwd(alpha);
 }
@@ -8,30 +12,28 @@
   @include typo-rwd(beta);
 }
 
-.gamma {
-  @include typo-rwd(gamma);
+.lead-xs {
+  @include typo-rwd(lead-xs);
+  text-transform: uppercase;
 }
 
-.delta {
-  @include typo-rwd(delta);
+.lead-m {
+  @include typo-rwd(lead-m);
+  text-transform: uppercase;
 }
 
-.intro-text {
-  @include typo-rwd(intro-text);
+.text-s {
+  @include typo-rwd(text-s);
 }
 
-.basic-text {
-  @include typo-rwd(basic-text);
+.text-m {
+  @include typo-rwd(text-m);
 }
 
-.text {
-  @include typo-rwd(basic-text);
-  color: $grey-4;
+.text-l {
+  @include typo-rwd(text-l);
 }
 
-
-.centered {
-  @include mq(lg) {
-    text-align: center;
-  }
+.text-xl {
+  @include typo-rwd(text-xl);
 }

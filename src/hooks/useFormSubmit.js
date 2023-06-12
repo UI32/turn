@@ -1,44 +1,60 @@
 import React, { useCallback, useState, useEffect } from "react";
 import useTranslations from "./useTranslations";
-import Notification from "../ui/components/Notification";
+// import Notification from "../ui/components/Notification";
+import { getFormErrors } from "../utils/validation";
+import { convertToFormData } from "../utils/format";
 
-// This is using formSubmit.co to handle the form submitting.
-// It is kind of weird... but free. We might want to change it eventually.
+// Form submission is done with Formspree
+
+const SUCCESS_VISIBLE_TIME = 2000;
+const formSpreeEndpoint = "https://formspree.io/f/mbjevpee"; // TODO Replace with the client version on build
 
 const useFormSubmit = () => {
   const [loading, setLoading] = useState();
 
-  const [submitResult, setSubmitResult] = useState(null);
+  const [submitResult, setSubmitResult] = useState({
+    successVisible: false,
+    errors: {},
+  });
 
   const t = useTranslations();
 
-  // Removes the result object after 3 seconds.
+  // Removes the success flag after some wait time.
   useEffect(() => {
-    if (submitResult) setTimeout(() => setSubmitResult(null), 3000);
+    setTimeout(
+      () =>
+        setSubmitResult({
+          errors: {},
+          successVisible: false,
+        }),
+      SUCCESS_VISIBLE_TIME,
+    );
   }, [submitResult]);
 
-  const submit = useCallback(async info => {
+  const submit = useCallback(async formData => {
+    const formErrors = getFormErrors(formData);
+    if (Object.keys(formErrors).length !== 0) {
+      setSubmitResult({ successVisible: false, errors: formErrors });
+      return;
+    }
+    const formatedData = convertToFormData(formData);
     try {
       setLoading(true);
-      await fetch(`https://formsubmit.co/ajax/${t("contact:bonsai-email")}`, {
-        method: "POST",
+      const response = await fetch(formSpreeEndpoint, {
+        method: "post",
+        body: formatedData,
+
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          name: info.name,
-          email: info.email,
-          purpose: info.purpose,
-          budget: info.budget,
-          message: info.message,
-        }),
       });
-      setSubmitResult(<Notification message={t("contact:submit-success")} />);
+      if (response.status !== 200) throw Error("Form submission failed");
+      setSubmitResult({ successVisible: true, errors: {} });
     } catch (e) {
-      setSubmitResult(
-        <Notification message={t("contact:submit-fail")} isError={true} />,
-      );
+      setSubmitResult({
+        successVisible: false,
+        errors: { conection: e.message },
+      });
     }
     setLoading(false);
   }, []);

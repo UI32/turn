@@ -2,21 +2,20 @@
 
 // Colors
 
-$black-grey: #141e30;
+$black: #000;
 $white: #fff;
-$grey-1: #f2f4f8;
-$grey-2: #dde1e6;
-$grey-3: #c7ced4;
-$grey-4: #b1b9c2;
-$grey-5: #9ea7b3;
-$grey-6: #8b95a3;
-$grey-7: #788393;
-$grey-8: #657283;
-$grey-9: #526173;
-$grey-10: #3f4f63;
-$success: #00c853;
-$error: #d50000;
-$warning: #ffa900;
+$primary: #4579dd;
+$primary-light: #487aee;
+$primary-dark: #385494;
+$grey: #d1d5db;
+$grey-bg: #fcfcfb;
+$grey-light: #f6f6f6;
+$grey-light2: #f0f0f0;
+$success: #19aa86;
+$error: #ef4444;
+$error-dark: #7f1d1d;
+$error-light: #fca5a5;
+$error-extra-light: #fff7f7;
 
 // Fonts
 $font-base: 16px;
@@ -28,13 +27,13 @@ $bold: 700;
 $heavy: 900;
 
 // Layout
-$layout-maxWidth: 1500px;
+$layout-maxWidth: 1220px;
 
 $xxs: 0;
 $xs: 390px;
 $sm: 520px;
 $md: 760px;
-$lg: 960px;
+$lg: 1060px;
 $xl: 1220px;
 $xxl: 1600px;
 
@@ -50,5 +49,6 @@ $grid-breakpoints: (
   // Large screen / desktop
   xl: $xl,
   // Extra large screen / wide desktop
-  xxl: $xxl // Extra large screen / wide desktop,,,,,
+  xxl: $xxl
+    // Extra large screen / wide desktop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );

@@ -1,31 +1,39 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
-import {Link} from "gatsby";
+import { Link } from "gatsby";
+import Globe from "./Globe";
+import GlobeText from "./GlobeText";
 
 const Footer = () => {
   const t = useTranslations();
 
   return (
-    <header className="footer">
+    <footer className="footer">
       <div className="wrapper">
-        <div className="left-slot">
-          <Link className="footer-caption" to="/privacy">
-            {t("sample:text")}
-          </Link>
-          <Link className="footer-caption" to="/legal">
-            {t("sample:text")}
-          </Link>
-          <Link className="footer-caption" to="/cookies">
-            {t("sample:text")}
-          </Link>
+        <div className="footer-item">
+          <span>{t("careers:name")}</span>
+          <a
+            className="button button-tiny"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("hiring:name")}
+          </a>
         </div>
-        <div className="right-slot">
-          <span className="footer-caption">
-            turn2x 2023 © {t("sample:text")}
-          </span>
+        <Link className="footer-caption" to="/legal">
+          {t("legal:name")}
+        </Link>
+        <div className="globe-wrapper">
+          <GlobeText />
+          <Globe />
         </div>
+        <Link className="footer-caption" to="/privacy">
+          {t("data-privacy:name")}
+        </Link>
+        <span className="footer-caption">© 2023 Turn Energy GmbH</span>
       </div>
-    </header>
+    </footer>
   );
 };
 

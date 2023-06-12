@@ -25,94 +25,16 @@ $quick-change: 0.1s ease-in-out;
   }
 }
 
-@keyframes scale {
+// Slide bottom
+
+@keyframes slide-bottom {
   0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-}
-
-@keyframes overflow {
-  0% {
-    overflow: hidden;
-  }
-
-  100% {
-    overflow: auto;
-  }
-}
-
-@keyframes pulse-in {
-  0% {
-    box-shadow: 0 0 0 0 rgba($black-grey, 0.2);
-  }
-
-  100% {
-    box-shadow: 6px 6px 0 0 rgba($black-grey, 0.9);
-  }
-}
-
-@keyframes pulse-out {
-  0% {
-    box-shadow: 6px 6px 0 0 rgba($black-grey, 0.9);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba($black-grey, 0.9);
-  }
-}
-
-@keyframes pulse-in-dark {
-  0% {
-    box-shadow: 0 0 0 0 rgba($black-grey, 0.2);
-  }
-
-  100% {
-    box-shadow: 6px 6px 0 0 rgba($black-grey, 0.9);
-  }
-}
-
-@keyframes pulse-out-dark {
-  0% {
-    box-shadow: 6px 6px 0 0 rgba($black-grey, 0.9);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba($black-grey, 0.9);
-  }
-}
-
-@keyframes appear-cube-icon {
-  0% {
-    transform: translate(-50%, 0) scale(1);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   100% {
-    transform: translate(-50%, -16px) scale(1.1);
-  }
-}
-
-@keyframes nav-item-hover {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(100%);
-  }
-}
-
-@keyframes appear-top {
-  0% {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
-  100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -120,11 +42,67 @@ $quick-change: 0.1s ease-in-out;
 
 [data-aos="custom-animation"] {
   opacity: 0;
-  transform: translateY(10px);
-  transition: transform, opacity, 0.6s ease-in 0.3s;
+  // transition-property: transform, opacity;
+  transform: translateY(20px);
+
+  transition: transform, opacity, 0.8s ease-in-out 0.3s;
 
   &.aos-animate {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// Rotation
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Globe rotation
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+  }
+}
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(360deg);
+  }
+  to {
+    -moz-transform: rotate(0);
+  }
+}
+@-ms-keyframes rotate {
+  from {
+    -ms-transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0);
+  }
+}
+@-o-keyframes rotate {
+  from {
+    -o-transform: rotate(360deg);
+  }
+  to {
+    -o-transform: rotate(0);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
   }
 }

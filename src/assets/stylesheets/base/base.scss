@@ -12,8 +12,8 @@ html {
 
 body {
   @include typo-rwd(body);
-  background: $white;
-  color: $black-grey;
+  background: $grey-bg;
+  color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -64,16 +64,16 @@ a {
 .wrapper {
   max-width: $layout-maxWidth;
   margin: 0 auto;
-  padding: 0 24px;
-  // @include mq($until: $layout-maxWidth) {
-  //   padding: 0 20px;
-  // }
+  padding: 0 16px;
 }
 
-svg {
-  width: 26px;
-  height: 26px;
+.icon {
   path {
     fill: currentColor;
   }
+}
+
+svg {
+  width: 24px;
+  height: 24px;
 }

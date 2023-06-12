@@ -1,1 +1,63 @@
 //Buttons
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0 30px;
+  @include typo-rwd(text-l);
+  height: 51px;
+  background: $primary-dark;
+  color: $white;
+  -webkit-tap-highlight-color: transparent;
+  &.is-disabled {
+    background: $grey;
+    color: $white;
+  }
+  &-clear {
+    background: $grey-light;
+    color: $black;
+    height: 41px;
+    padding: 0 24px;
+  }
+
+  &-tiny {
+    font-size: 16px;
+    line-height: 19px;
+    height: 25px;
+    padding: 3px 6px 0 6px;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .success {
+    &-text {
+      display: flex;
+      align-items: center;
+      @include centered(absolute);
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .icon {
+    margin-left: 6px;
+  }
+}

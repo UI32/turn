@@ -1,1 +1,73 @@
 // Hero
+
+.hero {
+  position: relative;
+
+  &-bg {
+    width: 100%;
+    max-height: 870px;
+    overflow: hidden;
+    video {
+      width: 100%;
+    }
+  }
+
+  &-text {
+    width: 100%;
+    max-width: 986px;
+    padding: 14px 0 25px;
+  }
+
+  &-pattern {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  &-intro {
+    background: $white;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+  }
+
+  &-quote {
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    padding: 40px 0;
+    .left-icon {
+      margin-right: 10px;
+    }
+    .right-icon {
+      margin-left: 10px;
+    }
+  }
+  @include mq($until: md) {
+    &-quote {
+      img {
+        width: 20px;
+      }
+    }
+  }
+  @include mq(md) {
+    &-text {
+      padding: 62px 0;
+    }
+    &-quote {
+      font-size: 40px;
+      padding: 100px 0;
+    }
+  }
+  @include mq(lg) {
+    &-quote {
+      font-size: 56px;
+      padding: 140px 0;
+    }
+  }
+}

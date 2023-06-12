@@ -1,0 +1,13 @@
+// Lang selector
+
+.lang-selector {
+  .lang-item {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 22px;
+    &:disabled {
+      display: none;
+    }
+  }
+}
