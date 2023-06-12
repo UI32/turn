@@ -7,6 +7,7 @@ import Contact from "../components/Contact";
 import About from "../components/About";
 import HowItWorks from "../components/HowItWorks";
 import Mission from "../components/Mission";
+import Model3D from "../components/Model3D";
 
 const HomePage = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const HomePage = () => {
     <MainLayout bottomPattern>
       <Hero />
       <HowItWorks />
+      <Model3D />
       <Mission />
       <About />
       <Contact />
