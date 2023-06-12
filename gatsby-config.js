@@ -3,8 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `turn2x`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `site.com`,
+    title: `Turn2x`,
+    description: ``,
+    author: `Bonsai Tech`,
+    keywords: ``,
   },
   plugins: [
     "gatsby-plugin-sass",

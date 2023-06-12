@@ -19,15 +19,20 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
 
   return (
     <div className={cx("about-card", { extended: extendInfo })}>
-      <div className="about-content" onClick={onExtendInfo}>
-        <div className="about-image" data-aos="custom-animation">
-          <img src={imageSm} alt={alt} />
-        </div>
-        <div className="about-info" data-aos="custom-animation">
-          <h2 className="about-name">{name}</h2>
-          <p className="about-position">{t(position)}</p>
+      <div data-aos="custom-animation">
+        <div className="about-content" onClick={onExtendInfo}>
+          <div className="about-image">
+            <img src={imageSm} alt={alt} />
+          </div>
+          <div className="about-info">
+            <h2 className="about-name">{name}</h2>
+            <p className="about-position">{t(position)}</p>
+          </div>
         </div>
       </div>
+
+      <div className="overlay" onClick={onCloseInfo}></div>
+
       <div className="extra">
         <img src={image} alt={alt} />
         <div className="info">

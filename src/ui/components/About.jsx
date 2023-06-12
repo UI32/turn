@@ -38,6 +38,7 @@ const About = ({}) => {
           }
           pretitle="about:management"
           title="about:title"
+          data-aos="custom-animation"
         >
           <div className="about-management">
             <AboutCard
@@ -57,8 +58,8 @@ const About = ({}) => {
               description="benedikt:description"
             />
             <AboutCard
-              name="Dominik Stolz"
-              alt="Dominik Stolz"
+              name="Dr. Dominik Schollenberger"
+              alt="Dr. Dominik Schollenberger"
               image={dominik}
               imageSm={dominikSm}
               position="dominik:position"
@@ -85,34 +86,34 @@ const About = ({}) => {
               <img src={siemens} alt="Siemens" width="181" height="43" />
             </div>
           </div>
-          <p className="lead-m" data-aos="custom-animation">
-            {t("about:advisory-board")}
-          </p>
-          <div className="about-advisors" data-aos="custom-animation">
-            <AboutCardAdvisor
-              name="Dr. Stefan Kaufmann"
-              alt="Dr. Stefan Kaufmann"
-              image={stefan}
-              position="stefan:position"
-            />
-            <AboutCardAdvisor
-              name="Evan Horetsky"
-              alt="Evan Horetsky"
-              image={evan}
-              position="evan:position"
-            />
-            <AboutCardAdvisor
-              name="Thomas Schaffer"
-              alt="Thomas Schaffer"
-              image={thomas}
-              position="thomas:position"
-            />
-            <AboutCardAdvisor
-              name="Christian Schneider"
-              alt="Christian Schneider"
-              image={christian}
-              position="christian:position"
-            />
+          <div className="about-advisors-wrapper" data-aos="custom-animation">
+            <p className="lead-m">{t("about:advisory-board")}</p>
+            <div className="about-advisors">
+              <AboutCardAdvisor
+                name="Dr. Stefan Kaufmann"
+                alt="Dr. Stefan Kaufmann"
+                image={stefan}
+                position="stefan:position"
+              />
+              <AboutCardAdvisor
+                name="Evan Horetsky"
+                alt="Evan Horetsky"
+                image={evan}
+                position="evan:position"
+              />
+              <AboutCardAdvisor
+                name="Thomas Schaffer"
+                alt="Thomas Schaffer"
+                image={thomas}
+                position="thomas:position"
+              />
+              <AboutCardAdvisor
+                name="Christian Schneider"
+                alt="Christian Schneider"
+                image={christian}
+                position="christian:position"
+              />
+            </div>
           </div>
           <div className="about-actions" data-aos="custom-animation">
             <a

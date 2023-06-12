@@ -3,12 +3,12 @@ import cx from "classnames";
 import useSwitchLanguage from "../../hooks/useSwitchLanguage";
 import { useIntl } from "react-intl";
 
-const LangSelector = () => {
+const LangSelector = ({ className }) => {
   const switchToEn = useSwitchLanguage("en");
   const switchToDe = useSwitchLanguage("de");
   const { locale } = useIntl();
   return (
-    <div className="lang-selector">
+    <div className={cx("lang-selector", { [className]: className })}>
       <button
         className={cx("lang-item", { active: locale === "de" })}
         onClick={switchToDe}

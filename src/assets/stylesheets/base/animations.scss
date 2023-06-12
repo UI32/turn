@@ -45,7 +45,7 @@ $quick-change: 0.1s ease-in-out;
   // transition-property: transform, opacity;
   transform: translateY(20px);
 
-  transition: transform, opacity, 0.8s ease-in-out 0.3s;
+  transition: transform, opacity, 0.4s ease-in-out 0.3s;
 
   &.aos-animate {
     opacity: 1;
