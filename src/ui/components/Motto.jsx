@@ -2,11 +2,13 @@ import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import logo1 from "../../assets/images/logo-pattern-left.svg";
 import logo2 from "../../assets/images/logo-pattern-right.svg";
+import pattern from "../../assets/images/pattern1.png";
 
 const Motto = ({}) => {
   const t = useTranslations();
   return (
     <div className="motto">
+      <img className="motto-pattern" src={pattern} alt="pattern" />
       <div className="wrapper">
         <img
           src={logo1}

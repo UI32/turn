@@ -14,8 +14,20 @@
     margin-left: 10px;
   }
 
+  .wrapper {
+    z-index: 10;
+    position: relative;
+  }
+
+  &-pattern {
+    z-index: 0;
+    @include centered(absolute);
+    margin-top: -120px;
+  }
+
   @include mq($until: md) {
-    img {
+    .left-icon,
+    .right-icon {
       width: 20px;
     }
   }

@@ -1,14 +1,11 @@
 import React from "react";
 import heroVideoURL from "../../assets/videos/video.mp4";
 import useTranslations from "../../hooks/useTranslations";
-import pattern from "../../assets/images/pattern1.png";
 
 const Hero = ({}) => {
   const t = useTranslations();
   return (
     <div className="hero">
-      <img className="hero-pattern" src={pattern} alt="pattern" />
-
       <div className="hero-intro">
         <div className="wrapper">
           <div className="hero-text" data-aos="custom-animation">

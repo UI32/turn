@@ -5,12 +5,12 @@
   height: calc(100vh - 55px);
   display: flex;
   flex-direction: column;
+  z-index: 10;
 
   &-bg {
     width: 100%;
     overflow: hidden;
     flex: 1 1 auto;
-    z-index: 10;
     video {
       width: 100%;
       height: 100%;
@@ -29,14 +29,6 @@
     width: 100%;
     max-width: 986px;
     padding: 14px 0 25px;
-  }
-
-  &-pattern {
-    position: absolute;
-    top: 300px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
   }
 
   &-intro {
