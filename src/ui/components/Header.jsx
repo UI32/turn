@@ -87,7 +87,7 @@ const Header = () => {
             </nav>
 
             <div className="header-actions" onClick={closeMenu}>
-              <LangSelector />
+              <LangSelector className="show-in-tablet" />
               <Link to="/#contact" className="button button-clear">
                 {t("contact-sales:name")}
               </Link>
@@ -113,6 +113,8 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        <LangSelector className="show-in-mobile lang-mobile" />
 
         <button
           className="button-menu show-in-mobile"

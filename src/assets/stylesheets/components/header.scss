@@ -6,6 +6,10 @@
   position: relative;
   z-index: 10;
 
+  .lang-selector {
+    z-index: 10;
+  }
+
   &.is-sticky {
     position: fixed;
     top: 0;
@@ -79,9 +83,14 @@
   // Mobile
 
   @include mq($until: md) {
+    .lang-mobile {
+      margin: 0 4px 0 auto;
+      position: relative;
+      top: 2px;
+    }
     &.is-sticky {
       min-height: 46px;
-      padding-top: 16px;
+      padding-top: 13px;
     }
     .logo {
       position: relative;
@@ -107,6 +116,9 @@
       z-index: 10;
       padding: 0 16px 20px 16px;
       animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      .lang-selector {
+        display: none;
+      }
     }
     &-wrapper {
       display: block;
@@ -142,7 +154,6 @@
     }
 
     .nav-item,
-    .lang-item,
     .button-clear {
       display: flex;
       align-items: center;
@@ -158,7 +169,6 @@
       }
     }
     .nav-item,
-    .lang-selector .lang-item,
     .button-clear {
       padding: 0;
       margin-top: 10px;
