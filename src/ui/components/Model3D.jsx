@@ -8,7 +8,7 @@ const Model3D = ({}) => {
       <div className="model-wrapper">
         <iframe
           style={{ width: "100%", height: "100%", border: "none" }}
-          src="https://sketchfab.com/models/5ca574f7b6f24d7ab88a8ba6ab6eb0bb/embed?scrollwheel=0&autospin=1&autostart=1&camera=0&ui_hint=0&ui_stop=0"
+          src="https://sketchfab.com/models/5ca574f7b6f24d7ab88a8ba6ab6eb0bb/embed?scrollwheel=0&autospin=0&autostart=1&camera=0&ui_hint=0&ui_stop=0"
         ></iframe>
       </div>
       <div className="panel info-panel">
