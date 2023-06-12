@@ -1,0 +1,30 @@
+// Motto
+
+.motto {
+  position: relative;
+  font-size: 26px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  padding: 40px 0;
+  .left-icon {
+    margin-right: 10px;
+  }
+  .right-icon {
+    margin-left: 10px;
+  }
+
+  @include mq($until: md) {
+    img {
+      width: 20px;
+    }
+  }
+  @include mq(md) {
+    font-size: 40px;
+    padding: 100px 0;
+  }
+  @include mq(lg) {
+    font-size: 56px;
+    padding: 140px 0;
+  }
+}
