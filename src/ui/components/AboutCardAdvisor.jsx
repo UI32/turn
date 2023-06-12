@@ -5,7 +5,7 @@ const AboutCardAdvisor = ({ image, name, alt, position }) => {
   const t = useTranslations();
 
   return (
-    <div className="about-card advisor">
+    <div className="about-card advisor" data-aos="custom-animation">
       <div className="about-content">
         <div className="about-image">
           <img src={image} alt={alt} />
