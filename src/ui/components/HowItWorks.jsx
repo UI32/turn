@@ -1,12 +1,56 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import useTranslations from "../../hooks/useTranslations";
 import Panel from "./Panel";
 import AnimatedIcon from "./AnimatedIcon";
 import howItWorksIcon from "../../assets/animations/Icon-4.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
+import cx from "classnames";
+import section1 from "../../assets/images/section1.svg";
+import section2 from "../../assets/images/section2.svg";
+import section3 from "../../assets/images/section3.svg";
+import section1active from "../../assets/images/section1-active.svg";
+import section2active from "../../assets/images/section2-active.svg";
+import section3active from "../../assets/images/section3-active.svg";
 
-const HowItWorks = () => {
+const useCycleActiveStates = (stateList, delay) => {
+  const [activeState, setActiveState] = useState(stateList[0]);
+  const timerId = useRef(null);
+  // actions
+  const activateState = state => {
+    clearTimeout(timerId.current);
+    setActiveState(state);
+  };
+  const resumeTimer = () => {
+    clearTimeout(timerId.current);
+    timerId.current = setTimeout(cycleActiveState, delay);
+  };
+  const cycleActiveState = () => {
+    const idx = stateList.indexOf(activeState);
+    setActiveState(stateList[(idx + 1) % stateList.length]);
+  };
+  // trigger & content
+  const StateWrapper = ({ state, children, className, ...props }) => (
+    <div
+      onMouseEnter={() => activateState(state)}
+      onMouseLeave={resumeTimer}
+      className={cx({ active: state === activeState, [className]: className })}
+    >
+      {children}
+    </div>
+  );
+  // initialization
+  useEffect(() => {
+    resumeTimer();
+    return () => clearTimeout(timerId.current);
+  });
+  // result
+  return [StateWrapper];
+};
+
+const HowItWorks = ({}) => {
   const t = useTranslations();
+  const [StateWrapper] = useCycleActiveStates(["E1", "E2", "E3"], 3000);
+
   return (
     <div className="how-it-works" id="how-it-works" data-aos="custom-animation">
       <div className="wrapper">
@@ -23,7 +67,52 @@ const HowItWorks = () => {
           }
           pretitle="how-it-works:esg-compliant"
           title="how-it-works:title"
-        ></Panel>
+        >
+          <div className={cx("process")}>
+            <div className="process-bullets">
+              <StateWrapper state="E1" className="bullet">
+                Utilizing renewable energy for electrolysis
+              </StateWrapper>
+              <StateWrapper state="E2" className="bullet">
+                Adding Biogenic CO2 to the green H2U
+              </StateWrapper>
+              <StateWrapper state="E3" className="bullet">
+                Producing renewable natural gas in our reactor{" "}
+              </StateWrapper>
+              <p className="caption">Our RNG is a certifiable energy source:</p>
+              <p className="caption">
+                SFDR9 certification in planning for 2024. The TURN2X reactor is
+                patented.
+              </p>
+            </div>
+            <div className="process-graphic">
+              <StateWrapper state="E1" className="graphic-section section-1">
+                <img src={section1} className="section-img" alt="section 1" />
+                <img
+                  src={section1active}
+                  className="section-img-active"
+                  alt="section 1 active"
+                />
+              </StateWrapper>
+              <StateWrapper state="E2" className="graphic-section section-2">
+                <img src={section2} alt="section 2" className="section-img" />
+                <img
+                  src={section2active}
+                  alt="section 2 active"
+                  className="section-img-active"
+                />
+              </StateWrapper>
+              <StateWrapper state="E3" className="graphic-section section-3">
+                <img src={section3} alt="section 3" className="section-img" />
+                <img
+                  src={section3active}
+                  alt="section 3 active"
+                  className="section-img-active"
+                />
+              </StateWrapper>
+            </div>
+          </div>
+        </Panel>
       </div>
     </div>
   );
