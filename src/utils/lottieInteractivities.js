@@ -1,19 +1,32 @@
-export const midScrollInteractivity = {
-  mode: "scroll",
-  actions: [
-    {
-      visibility: [0, 0.3],
-      type: "stop",
-    },
-    {
-      visibility: [0.3, 0.4],
-      type: "seek",
-      frames: [0, 50],
-    },
-    {
-      visibility: [0.4, 0.6],
-      type: "seek",
-      frames: [50, -50],
-    },
-  ],
+export const midScrollSeek = (startFrame, endFrame) => {
+  return {
+    mode: "scroll",
+    actions: [
+      {
+        visibility: [0, 0.3],
+        type: "stop",
+        frames: [startFrame],
+      },
+      {
+        visibility: [0.3, 0.8],
+        type: "seek",
+        frames: [startFrame, endFrame],
+      },
+    ],
+  };
+};
+
+export const midScreenPlay = (startFrame, endFrame) => {
+  return {
+    mode: "scroll",
+    actions: [
+      { visibility: [0, 0.01], type: "stop", frames: [startFrame] },
+      {
+        visibility: [0.01, 0.99],
+        type: "loop",
+        frames: [startFrame, endFrame],
+      },
+      { visibility: [0.99, 1], type: "stop", frames: [startFrame] },
+    ],
+  };
 };

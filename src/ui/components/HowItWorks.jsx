@@ -2,7 +2,8 @@ import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import Panel from "./Panel";
 import AnimatedIcon from "./AnimatedIcon";
-import headerIcon from "../../assets/animations/Icon-4.json";
+import howItWorksIcon from "../../assets/animations/Icon-4.json";
+import { midScreenPlay } from "../../utils/lottieInteractivities";
 
 const HowItWorks = ({}) => {
   const t = useTranslations();
@@ -13,9 +14,11 @@ const HowItWorks = ({}) => {
           className="how-it-works-panel"
           icon={
             <AnimatedIcon
-              lottieAnimation={headerIcon}
+              lottieAnimation={howItWorksIcon}
               loop={true}
-              autoplay={true}
+              autoplay={false}
+              startFrame={120}
+              interactivity={midScreenPlay}
             ></AnimatedIcon>
           }
           pretitle="how-it-works:esg-compliant"
