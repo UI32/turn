@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import useTranslations from "../../hooks/useTranslations";
 import Panel from "./Panel";
 import AnimatedIcon from "./AnimatedIcon";
-import howItWorksIcon from "../../assets/animations/Icon-4.json";
+import ProcessIcon from "../../assets/animations/Icon-4.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
 import cx from "classnames";
 import section1 from "../../assets/images/section1.svg";
@@ -47,28 +47,28 @@ const useCycleActiveStates = (stateList, delay) => {
   return [StateWrapper];
 };
 
-const HowItWorks = ({}) => {
+const Process = ({}) => {
   const t = useTranslations();
   const [StateWrapper] = useCycleActiveStates(["E1", "E2", "E3"], 3000);
 
   return (
-    <div className="how-it-works" id="how-it-works" data-aos="custom-animation">
+    <div className="process" id="how-it-works" data-aos="custom-animation">
       <div className="wrapper">
         <Panel
-          className="how-it-works-panel"
+          className="process-panel"
           icon={
             <AnimatedIcon
-              lottieAnimation={howItWorksIcon}
+              lottieAnimation={ProcessIcon}
               loop={true}
               autoplay={false}
               startFrame={120}
               interactivity={midScreenPlay}
             ></AnimatedIcon>
           }
-          pretitle="how-it-works:esg-compliant"
-          title="how-it-works:title"
+          pretitle="process:esg-compliant"
+          title="process:title"
         >
-          <div className={cx("process")}>
+          <div className={cx("process-content")}>
             <div className="process-bullets">
               <StateWrapper state="E1" className="bullet">
                 {t("process:section1")}
@@ -115,4 +115,4 @@ const HowItWorks = ({}) => {
   );
 };
 
-export default HowItWorks;
+export default Process;
