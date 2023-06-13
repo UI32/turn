@@ -14,7 +14,8 @@ import stefan from "../../assets/images/about/stefan.png";
 import AboutCard from "./AboutCard";
 import AboutCardAdvisor from "./AboutCardAdvisor";
 import AnimatedIcon from "./AnimatedIcon";
-import headerIcon from "../../assets/animations/Icon-3.json";
+import aboutIcon from "../../assets/animations/Icon-3.json";
+import { midScreenPlay } from "../../utils/lottieInteractivities";
 import fraunhofer from "../../assets/images/clients/fraunhofer.png";
 import basf from "../../assets/images/clients/basf.png";
 import kit from "../../assets/images/clients/kit.png";
@@ -31,9 +32,11 @@ const About = ({}) => {
           className="about-panel"
           icon={
             <AnimatedIcon
-              lottieAnimation={headerIcon}
+              lottieAnimation={aboutIcon}
+              startFrame={10}
+              autoplay={false}
               loop={true}
-              autoplay={true}
+              interactivity={midScreenPlay}
             ></AnimatedIcon>
           }
           pretitle="about:management"
