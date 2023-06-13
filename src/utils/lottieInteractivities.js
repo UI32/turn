@@ -1,4 +1,4 @@
-export const midScrollInteractivity = (startFrame, frameCount) => {
+export const midScrollSeek = (startFrame, endFrame) => {
   return {
     mode: "scroll",
     actions: [
@@ -10,13 +10,13 @@ export const midScrollInteractivity = (startFrame, frameCount) => {
       {
         visibility: [0.3, 0.8],
         type: "seek",
-        frames: [startFrame, frameCount],
+        frames: [startFrame, endFrame],
       },
     ],
   };
 };
 
-export const midScreenPlay = (startFrame, frameCount) => {
+export const midScreenPlay = (startFrame, endFrame) => {
   return {
     mode: "scroll",
     actions: [
@@ -24,7 +24,7 @@ export const midScreenPlay = (startFrame, frameCount) => {
       {
         visibility: [0.01, 0.99],
         type: "loop",
-        frames: [startFrame, frameCount],
+        frames: [startFrame, endFrame],
       },
       { visibility: [0.99, 1], type: "stop", frames: [startFrame] },
     ],

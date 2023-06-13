@@ -3,7 +3,7 @@ import useTranslations from "../../hooks/useTranslations";
 import ContactForm from "./ContactForm";
 import Panel from "./Panel";
 import AnimatedIcon from "./AnimatedIcon";
-import contactsIcon from "../../assets/animations/Icon-2-loopable.json";
+import contactIcon from "../../assets/animations/Icon-2-loopable.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
 
 const Contact = ({}) => {
@@ -15,7 +15,7 @@ const Contact = ({}) => {
           className="contact-panel"
           icon={
             <AnimatedIcon
-              lottieAnimation={contactsIcon}
+              lottieAnimation={contactIcon}
               autoplay={false}
               loop={true}
               interactivity={midScreenPlay}

@@ -33,7 +33,7 @@ const About = ({}) => {
           icon={
             <AnimatedIcon
               lottieAnimation={aboutIcon}
-              startFrame={30}
+              startFrame={10}
               autoplay={false}
               loop={true}
               interactivity={midScreenPlay}

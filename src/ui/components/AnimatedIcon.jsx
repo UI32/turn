@@ -8,14 +8,17 @@ const AnimatedIcon = ({
   loop,
   autoplay,
   interactivity,
+  endFramesTrim,
 }) => {
   if (fps) lottieAnimation.fr = fps;
+  const startingFrame = startFrame || 0;
+  const endingFrame = lottieAnimation.op - (endFramesTrim || 0);
   return (
     <div className="lottie-container">
       <Lottie
         animationData={lottieAnimation}
         interactivity={
-          interactivity && interactivity(startFrame || 0, lottieAnimation.op)
+          interactivity && interactivity(startingFrame, endingFrame)
         }
         autoplay={autoplay}
         loop={loop}
