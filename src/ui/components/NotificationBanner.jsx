@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useTranslations from "../../hooks/useTranslations";
 import { ReactComponent as Cross } from "../../assets/icons/cross.svg";
 
-const NotificationBanner = ({}) => {
+const NotificationBanner = () => {
   const t = useTranslations();
 
   const [close, setclose] = useState(false);

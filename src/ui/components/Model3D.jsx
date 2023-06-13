@@ -1,7 +1,7 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 
-const Model3D = ({}) => {
+const Model3D = () => {
   const t = useTranslations();
   return (
     <div className="model" id="model" data-aos="custom-animation">

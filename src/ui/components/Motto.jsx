@@ -4,7 +4,7 @@ import logo1 from "../../assets/images/logo-pattern-left.svg";
 import logo2 from "../../assets/images/logo-pattern-right.svg";
 import pattern from "../../assets/images/pattern1.png";
 
-const Motto = ({}) => {
+const Motto = () => {
   const t = useTranslations();
   return (
     <div className="motto">
