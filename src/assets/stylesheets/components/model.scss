@@ -25,10 +25,9 @@
 
   .ui-cover {
     background: #f2f2f2;
-    width: 34px;
-    height: 36px;
     position: absolute;
-    animation: fade-in 2s ease;
+    opacity: 0;
+    animation: fade-in 1s ease both 3s;
     &.top-left {
       width: 115px;
       height: 45px;
