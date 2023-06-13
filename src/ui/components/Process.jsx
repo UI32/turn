@@ -69,7 +69,7 @@ const Process = ({}) => {
           title="process:title"
         >
           <div className={cx("process-content")}>
-            <div className="process-bullets">
+            <div className="process-bullets" data-aos="custom-animation">
               <StateWrapper state="E1" className="bullet">
                 {t("process:section1")}
               </StateWrapper>
@@ -82,7 +82,7 @@ const Process = ({}) => {
               <p className="caption">{t("process:caption1")}</p>
               <p className="caption">{t("process:caption2")}</p>
             </div>
-            <div className="process-graphic">
+            <div className="process-graphic" data-aos="custom-animation">
               <StateWrapper state="E1" className="graphic-section section-1">
                 <img src={section1} className="section-img" alt="section 1" />
                 <img
