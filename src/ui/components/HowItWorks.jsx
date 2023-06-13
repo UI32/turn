@@ -71,19 +71,16 @@ const HowItWorks = ({}) => {
           <div className={cx("process")}>
             <div className="process-bullets">
               <StateWrapper state="E1" className="bullet">
-                Utilizing renewable energy for electrolysis
+                {t("process:section1")}
               </StateWrapper>
               <StateWrapper state="E2" className="bullet">
-                Adding Biogenic CO2 to the green H2U
+                {t("process:section2")}
               </StateWrapper>
               <StateWrapper state="E3" className="bullet">
-                Producing renewable natural gas in our reactor{" "}
+                {t("process:section3")}
               </StateWrapper>
-              <p className="caption">Our RNG is a certifiable energy source:</p>
-              <p className="caption">
-                SFDR9 certification in planning for 2024. The TURN2X reactor is
-                patented.
-              </p>
+              <p className="caption">{t("process:caption1")}</p>
+              <p className="caption">{t("process:caption2")}</p>
             </div>
             <div className="process-graphic">
               <StateWrapper state="E1" className="graphic-section section-1">
