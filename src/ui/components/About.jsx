@@ -23,7 +23,7 @@ import mercedes from "../../assets/images/clients/mercedes.png";
 import dvgw from "../../assets/images/clients/dvgw.png";
 import siemens from "../../assets/images/clients/siemens.png";
 
-const About = ({}) => {
+const About = () => {
   const t = useTranslations();
   return (
     <div className="about" id="about">

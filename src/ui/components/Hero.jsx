@@ -2,7 +2,7 @@ import React from "react";
 import heroVideoURL from "../../assets/videos/video.mp4";
 import useTranslations from "../../hooks/useTranslations";
 
-const Hero = ({}) => {
+const Hero = () => {
   const t = useTranslations();
   return (
     <div className="hero">

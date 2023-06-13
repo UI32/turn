@@ -11,7 +11,7 @@ import {
 import useFormSubmit from "../../hooks/useFormSubmit";
 import Toast from "./Toast.jsx";
 
-const Contact = ({}) => {
+const Contact = () => {
   const [loading, handleSubmit, submitResult] = useFormSubmit();
 
   const successVisible = submitResult.successVisible;

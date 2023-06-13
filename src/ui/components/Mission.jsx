@@ -5,7 +5,7 @@ import AnimatedIcon from "./AnimatedIcon";
 import missionIcon from "../../assets/animations/Icon-5.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
 
-const Mission = ({}) => {
+const Mission = () => {
   const t = useTranslations();
   return (
     <div className="mission" id="mission" data-aos="custom-animation">

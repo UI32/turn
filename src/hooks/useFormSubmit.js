@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 import useTranslations from "./useTranslations";
 // import Notification from "../ui/components/Notification";
 import { getFormErrors } from "../utils/validation";

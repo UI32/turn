@@ -5,7 +5,7 @@ import AnimatedIcon from "./AnimatedIcon";
 import howItWorksIcon from "../../assets/animations/Icon-4.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
 
-const HowItWorks = ({}) => {
+const HowItWorks = () => {
   const t = useTranslations();
   return (
     <div className="how-it-works" id="how-it-works" data-aos="custom-animation">
