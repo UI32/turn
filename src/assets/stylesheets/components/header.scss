@@ -8,6 +8,7 @@
 
   .lang-selector {
     z-index: 10;
+    -webkit-tap-highlight-color: transparent;
   }
 
   &.is-sticky {
@@ -257,9 +258,9 @@
 .hamburger {
   display: block;
   width: 14px;
-  height: 14px;
+  height: 8px;
   position: relative;
-  margin-top: 4px;
+  // margin-top: 4px;
   .line {
     width: 14px;
     height: 2px;
@@ -289,5 +290,8 @@
   .line-2 {
     top: 10px;
     transform: translate(4.5px, 0) rotate(-45deg);
+  }
+  .button-menu {
+    margin-top: -2px;
   }
 }

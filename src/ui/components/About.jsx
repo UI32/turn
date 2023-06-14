@@ -9,7 +9,6 @@ import dominik from "../../assets/images/about/dominik.png";
 import dominikSm from "../../assets/images/about/dominik-mb.png";
 import thomas from "../../assets/images/about/thomas.png";
 import evan from "../../assets/images/about/evan.png";
-import christian from "../../assets/images/about/christian.png";
 import stefan from "../../assets/images/about/stefan.png";
 import AboutCard from "./AboutCard";
 import AboutCardAdvisor from "./AboutCardAdvisor";
@@ -110,23 +109,18 @@ const About = () => {
                 image={thomas}
                 position="thomas:position"
               />
-              <AboutCardAdvisor
-                name="Christian Schneider"
-                alt="Christian Schneider"
-                image={christian}
-                position="christian:position"
-              />
+              <div className="about-cta">
+                <h2 className="cta-title">{t("cta:title")}</h2>
+                <a
+                  className="button"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("about:explore-carreer-opportunities")}
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="about-actions" data-aos="custom-animation">
-            <a
-              className="button"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("about:explore-carreer-opportunities")}
-            </a>
           </div>
         </Panel>
       </div>

@@ -34,7 +34,9 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
       <div className="overlay" onClick={onCloseInfo}></div>
 
       <div className="extra">
-        <img src={image} alt={alt} loading="lazy" />
+        <div className="image">
+          <img src={image} alt={alt} loading="lazy" />
+        </div>
         <div className="info">
           <h2 className="about-name">{name}</h2>
           <p className="about-position">{t(position)}</p>
