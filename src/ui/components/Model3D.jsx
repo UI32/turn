@@ -14,14 +14,12 @@ const Model3D = () => {
         ></iframe>
         <div className="ui-cover bottom"></div>
       </div>
-      <div className="panel info-panel">
-        <p className="lead-m">{t("model:title")}</p>
-        <p
-          className="text-xl"
-          dangerouslySetInnerHTML={{
-            __html: t("model:text"),
-          }}
-        />
+      <div className="wrapper">
+        <div className="panel info-panel">
+          <p className="lead-m">{t("model:label")}</p>
+          <h2 className="beta">{t("model:title")}</h2>
+          <p className="text-xl">{t("model:text")}</p>
+        </div>
       </div>
     </div>
   );
