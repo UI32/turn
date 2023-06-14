@@ -6,7 +6,6 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   font-weight: 400;
-  padding: 40px 0;
   .left-icon {
     margin-right: 10px;
   }
@@ -19,24 +18,14 @@
     position: relative;
   }
 
-  &-pattern {
-    z-index: 0;
-    @include centered(absolute);
-    margin-top: -120px;
-  }
-
   @include mq($until: md) {
     .left-icon,
     .right-icon {
-      width: 20px;
+      width: 33px;
     }
   }
   @include mq(md) {
-    font-size: 40px;
-    padding: 100px 0;
-  }
-  @include mq(lg) {
-    font-size: 56px;
-    padding: 140px 0;
+    font-size: 41px;
+    line-height: 54px;
   }
 }

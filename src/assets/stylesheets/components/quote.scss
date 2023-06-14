@@ -1,1 +1,125 @@
 // Quote
+
+.quote {
+  background: $white;
+  padding: 5px;
+  border-radius: 20px;
+  &-img {
+    border-radius: 12px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  &-block {
+    z-index: 2;
+    position: relative;
+    .wrapper {
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  &-info {
+    padding: 20px;
+  }
+
+  &-extra {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    img {
+      margin-left: auto;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &-extra {
+    align-items: center;
+    margin-top: auto;
+    img {
+      order: 1;
+      margin-left: auto;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .text-xl {
+    margin-bottom: 10px;
+  }
+
+  .caption {
+    + .caption {
+      margin-top: 2px;
+    }
+  }
+
+  &-pattern {
+    z-index: 0;
+    @include centered(absolute);
+    margin-top: -120px;
+  }
+
+  @include mq($until: md) {
+    margin-top: 20px;
+    &-block {
+      padding: 40px 0;
+    }
+    &-img {
+      background-image: url("../images/pattern-quote.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      img {
+        max-width: 230px;
+        margin: 0 auto;
+      }
+    }
+    .captions {
+      width: 50%;
+    }
+    .text-xl {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 26px;
+    }
+  }
+
+  @include mq(md) {
+    display: flex;
+    border-radius: 12px;
+    &-block {
+      padding: 154px 0;
+      > .wrapper {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &-img {
+      flex: 0 0 165px;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      padding: 26px 30px 24px 23px;
+    }
+
+    &-extra {
+      flex-direction: row;
+      align-items: center;
+      margin-top: auto;
+      img {
+        order: 1;
+        margin-left: auto;
+        flex-shrink: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
