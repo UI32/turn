@@ -63,18 +63,6 @@
     align-items: center;
     background: transparent;
     transition: all 0.4s ease-in-out;
-    &:hover {
-      transition: all 0.4s ease-in-out;
-      color: $primary-dark;
-      background: linear-gradient(
-        90deg,
-        rgba(243, 244, 246, 1) 0%,
-        rgba(229, 231, 235, 1) 100%
-      );
-      &:before {
-        opacity: 1;
-      }
-    }
   }
 
   .button-menu {
@@ -228,11 +216,31 @@
       align-items: center;
       margin-left: auto;
     }
+
+    .nav-item {
+      &:hover {
+        transition: all 0.4s ease-in-out;
+        color: $primary-dark;
+        background: linear-gradient(
+          90deg,
+          rgba(243, 244, 246, 1) 0%,
+          rgba(229, 231, 235, 1) 100%
+        );
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   @include mq(lg) {
     .nav-item {
       padding: 0 28px;
+    }
+  }
+  @supports (-webkit-touch-callout: none) {
+    .lang-mobile {
+      top: 1px;
     }
   }
 }
