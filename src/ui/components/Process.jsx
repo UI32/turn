@@ -5,12 +5,18 @@ import AnimatedIcon from "./AnimatedIcon";
 import ProcessIcon from "../../assets/animations/Icon-4.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
 import cx from "classnames";
-import section1 from "../../assets/images/section1.svg";
-import section2 from "../../assets/images/section2.svg";
-import section3 from "../../assets/images/section3.svg";
-import section1active from "../../assets/images/section1-active.svg";
-import section2active from "../../assets/images/section2-active.svg";
-import section3active from "../../assets/images/section3-active.svg";
+import section1 from "../../assets/images/process/section1.svg";
+import section1mb from "../../assets/images/process/section1-mb.svg";
+import section2 from "../../assets/images/process/section2.svg";
+import section2mb from "../../assets/images/process/section2-mb.svg";
+import section3 from "../../assets/images/process/section3.svg";
+import section3mb from "../../assets/images/process/section3-mb.svg";
+import section1active from "../../assets/images/process/section1-active.svg";
+import section1activemb from "../../assets/images/process/section1-mb-active.svg";
+import section2active from "../../assets/images/process/section2-active.svg";
+import section2activemb from "../../assets/images/process/section2-mb-active.svg";
+import section3active from "../../assets/images/process/section3-active.svg";
+import section3activemb from "../../assets/images/process/section3-mb-active.svg";
 
 const useCycleActiveStates = (stateList, delay) => {
   const [activeState, setActiveState] = useState(stateList[0]);
@@ -83,30 +89,70 @@ const Process = ({}) => {
               <p className="caption">{t("process:caption2")}</p>
             </div>
             <div className="process-graphic" data-aos="custom-animation">
-              <StateWrapper state="E1" className="graphic-section section-1">
-                <img src={section1} className="section-img" alt="section 1" />
-                <img
-                  src={section1active}
-                  className="section-img-active"
-                  alt="section 1 active"
-                />
-              </StateWrapper>
-              <StateWrapper state="E2" className="graphic-section section-2">
-                <img src={section2} alt="section 2" className="section-img" />
-                <img
-                  src={section2active}
-                  alt="section 2 active"
-                  className="section-img-active"
-                />
-              </StateWrapper>
-              <StateWrapper state="E3" className="graphic-section section-3">
-                <img src={section3} alt="section 3" className="section-img" />
-                <img
-                  src={section3active}
-                  alt="section 3 active"
-                  className="section-img-active"
-                />
-              </StateWrapper>
+              <div className="mobile-graphic">
+                <StateWrapper state="E1" className="graphic-section section-1">
+                  <img
+                    src={section1mb}
+                    className="section-img mobile"
+                    alt="section 1"
+                  />
+                  <img
+                    src={section1activemb}
+                    className="section-img-active mobile"
+                    alt="section 1 active"
+                  />
+                </StateWrapper>
+                <StateWrapper state="E2" className="graphic-section section-2">
+                  <img
+                    src={section2mb}
+                    alt="section 2"
+                    className="section-img mobile"
+                  />
+                  <img
+                    src={section2activemb}
+                    alt="section 2 active"
+                    className="section-img-active mobile"
+                  />
+                </StateWrapper>
+                <StateWrapper state="E3" className="graphic-section section-3">
+                  <img
+                    src={section3mb}
+                    alt="section 3"
+                    className="section-img mobile"
+                  />
+                  <img
+                    src={section3activemb}
+                    alt="section 3 active"
+                    className="section-img-active mobile"
+                  />
+                </StateWrapper>
+              </div>
+              <div className="desktop-graphic">
+                <StateWrapper state="E1" className="graphic-section section-1">
+                  <img src={section1} className="section-img" alt="section 1" />
+                  <img
+                    src={section1active}
+                    className="section-img-active"
+                    alt="section 1 active"
+                  />
+                </StateWrapper>
+                <StateWrapper state="E2" className="graphic-section section-2">
+                  <img src={section2} alt="section 2" className="section-img" />
+                  <img
+                    src={section2active}
+                    alt="section 2 active"
+                    className="section-img-active"
+                  />
+                </StateWrapper>
+                <StateWrapper state="E3" className="graphic-section section-3">
+                  <img src={section3} alt="section 3" className="section-img" />
+                  <img
+                    src={section3active}
+                    alt="section 3 active"
+                    className="section-img-active"
+                  />
+                </StateWrapper>
+              </div>
             </div>
           </div>
         </Panel>
