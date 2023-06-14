@@ -16,9 +16,7 @@ export const getFormErrors = formData => {
 };
 
 export const blockInvalidPhoneInput = event => {
-  {
-    const permittedKeys = ["Backspace", "Enter", "Intro", "Space", "Tab"];
-    if (permittedKeys.includes(event.key)) return;
-    if (event.key.match(/[a-zA-Z!?.,_"'¿¡|#$€&/<>]/)) event.preventDefault();
-  }
+  const permittedKeys = ["Backspace", "Enter", "Intro", "Space", "Tab"];
+  if (permittedKeys.includes(event.key)) return;
+  if (event.key.match(/[a-zA-Z!?.,_"'¿¡|#$€&/<>]/)) event.preventDefault();
 };

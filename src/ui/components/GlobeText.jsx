@@ -1,9 +1,6 @@
 import React from "react";
-import useTranslations from "../../hooks/useTranslations";
 
 const GlobeText = () => {
-  const t = useTranslations();
-
   return (
     <div className="globe-text">
       <div className="circle">
