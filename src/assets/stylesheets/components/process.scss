@@ -51,10 +51,6 @@
       opacity: 0.4;
     }
 
-    #{$self}-graphic {
-      display: flex;
-    }
-
     .graphic-section {
       .section-img {
         display: block;
@@ -71,6 +67,31 @@
         .section-img-active {
           display: block;
         }
+      }
+    }
+
+    .desktop-graphic {
+      display: flex;
+    }
+
+    .mobile-graphic {
+      display: none;
+      align-items: center;
+      margin-top: 29px;
+      .section-img,
+      .section-img-active {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include mq($until: md) {
+      .desktop-graphic {
+        display: none;
+      }
+
+      .mobile-graphic {
+        flex-direction: column;
+        display: flex;
       }
     }
 
