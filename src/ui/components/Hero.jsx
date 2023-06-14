@@ -1,12 +1,13 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
-import { Replay } from "vimond-replay";
-import CompoundVideoStreamer from "vimond-replay/video-streamer/compound";
-import {
-  videoSource,
-  videoPlayerOptions,
-  initialPlaybackProps,
-} from "../../config/videoPlayerConfig";
+// TODO: Uncomment this if a fix to the build error is found
+// import { Replay } from "vimond-replay";
+// import ShakaVideoStreamer from "vimond-replay/video-streamer/shaka-player";
+// import {
+//   videoSource,
+//   videoPlayerOptions,
+//   initialPlaybackProps,
+// } from "../../config/videoPlayerConfig";
 
 const Hero = () => {
   let playVideo, setPlaybackPosition;
@@ -40,15 +41,22 @@ const Hero = () => {
       </div>
       <div className="hero-bg" data-aos="custom-animation">
         <div className="videoloop">
-          <Replay
+          {/* <Replay // Adaptative video streaming. It has dynamic imports that make the build fail
             onPlaybackActionsReady={handlePlaybackActionsReady}
             onStreamStateChange={handleStreamStateChange}
             source={videoSource}
             initialPlaybackProps={initialPlaybackProps}
             options={videoPlayerOptions}
           >
-            <CompoundVideoStreamer />
-          </Replay>
+            <ShakaVideoStreamer />
+          </Replay> */}
+          <video className="videoloop" autoPlay loop muted playsInline>
+            <source
+              src={
+                "https://turn2x.s3.eu-north-1.amazonaws.com/turnDroneVideo.mp4"
+              }
+            />
+          </video>
         </div>
       </div>
     </div>
