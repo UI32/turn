@@ -1,5 +1,4 @@
 import React from "react";
-import heroVideoURL from "../../assets/videos/video.mp4";
 import useTranslations from "../../hooks/useTranslations";
 
 const Hero = () => {
@@ -20,7 +19,11 @@ const Hero = () => {
       </div>
       <div className="hero-bg" data-aos="custom-animation">
         <video className="videoloop" autoPlay loop muted playsInline>
-          <source src={heroVideoURL} />
+          <source
+            src={
+              "https://turn2x.s3.eu-north-1.amazonaws.com/turnDroneVideo.mp4"
+            }
+          />
         </video>
       </div>
     </div>
