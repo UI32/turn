@@ -22,7 +22,7 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
       <div data-aos="custom-animation">
         <div className="about-content" onClick={onExtendInfo}>
           <div className="about-image">
-            <img src={imageSm} alt={alt} />
+            <img src={imageSm} alt={alt} loading="lazy" />
           </div>
           <div className="about-info">
             <h2 className="about-name">{name}</h2>
@@ -34,7 +34,7 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
       <div className="overlay" onClick={onCloseInfo}></div>
 
       <div className="extra">
-        <img src={image} alt={alt} />
+        <img src={image} alt={alt} loading="lazy" />
         <div className="info">
           <h2 className="about-name">{name}</h2>
           <p className="about-position">{t(position)}</p>

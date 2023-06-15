@@ -1,0 +1,132 @@
+// Process
+
+.process {
+  @include mq($from: md, $until: lg) {
+    .beta {
+      max-width: 260px;
+    }
+  }
+  @include mq(lg) {
+    .beta {
+      max-width: 304px;
+    }
+  }
+}
+
+// Process content
+
+.process {
+  $self: &;
+  &-content {
+    .bullet {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 24px;
+      @include typo-rwd(text-xl);
+      transition: color 0.6s ease;
+
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: rgba($primary, 0.4);
+        border-radius: 50%;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        transition: all 0.6s ease;
+      }
+      &.active {
+        color: $primary-dark;
+        &:before {
+          background: $primary-dark;
+        }
+      }
+    }
+
+    .caption {
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 400;
+      opacity: 0.4;
+    }
+
+    .graphic-section {
+      .section-img {
+        display: block;
+        animation: fade-in 0.3s ease;
+      }
+      .section-img-active {
+        display: none;
+        animation: fade-in 0.3s ease;
+      }
+      &.active {
+        .section-img {
+          display: none;
+        }
+        .section-img-active {
+          display: block;
+        }
+      }
+    }
+
+    .desktop-graphic {
+      display: flex;
+    }
+
+    .mobile-graphic {
+      display: none;
+      align-items: center;
+      margin-top: 29px;
+      .section-img,
+      .section-img-active {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include mq($until: md) {
+      .desktop-graphic {
+        display: none;
+      }
+
+      .mobile-graphic {
+        flex-direction: column;
+        display: flex;
+      }
+    }
+
+    @include mq(md) {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 30px;
+      #{$self}-bullets {
+        flex: 0 0 260px;
+      }
+      #{$self}-graphic {
+        flex: 1 1 auto;
+        padding-left: 10px;
+        margin-top: -100px;
+      }
+      .graphic-section {
+        display: flex;
+        margin-right: 10px;
+        &.section-1,
+        &.section-2 {
+          align-self: flex-start;
+        }
+        &.section-3 {
+          align-self: center;
+        }
+      }
+    }
+
+    @include mq(lg) {
+      #{$self}-graphic {
+        padding-left: 42px;
+      }
+      #{$self}-bullets {
+        flex-basis: 310px;
+      }
+    }
+  }
+}

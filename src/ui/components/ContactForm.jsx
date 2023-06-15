@@ -79,7 +79,7 @@ const Contact = () => {
         field={
           <FormInput
             value={formData.email}
-            type="email"
+            type="text"
             id=""
             name="email"
             placeholder="contact:email"
