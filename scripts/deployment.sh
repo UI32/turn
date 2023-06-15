@@ -11,21 +11,22 @@ printf 'This will stash your current changes and update your dev branch after de
 read answer
 
 if [ "$answer" != "${answer#[Yy]}" ] ;then 
-    return 0;
+    echo "LET'S GO!";
 else
     echo "Ok, bye!";
     exit 0;
 fi
 
+echo "Building..." &&
 npm run build &&
-rm -r ./docs &&
+echo "Removing ./docs if found..." &&
+rm -r ./docs;
+echo "Copying ./public to ./docs..." &&
 cp -r ./public ./docs &&
 rm -r ./public &&
-git stash &&
-git checkout deployment &&
-git pull origin dev &&
-git add --all &&
-git commit -m 'update' &&
-git push &&
-git checkout dev &&
-echo 'deployment succeeded'
+echo "Commiting to dpeloyment branch..." &&
+cd ../docs &&
+git add . &&
+git commit -m "update" &&
+git push origin deployment && 
+echo 'Deployment succeeded!'
