@@ -74,7 +74,7 @@ const Process = ({}) => {
           pretitle="process:esg-compliant"
           title="process:title"
         >
-          <div className={cx("process-content")}>
+          {/*<div className={cx("process-content")}>
             <div className="process-bullets" data-aos="custom-animation">
               <StateWrapper state="E1" className="bullet">
                 {t("process:section1")}
@@ -154,7 +154,7 @@ const Process = ({}) => {
                 </StateWrapper>
               </div>
             </div>
-          </div>
+          </div>*/}
         </Panel>
       </div>
     </div>
