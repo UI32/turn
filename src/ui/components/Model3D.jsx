@@ -10,7 +10,7 @@ const Model3D = () => {
         <div className="ui-cover top-right"></div>
         <iframe
           style={{ width: "100%", height: "100%", border: "none", zIndex: -1 }}
-          src="https://sketchfab.com/models/5ca574f7b6f24d7ab88a8ba6ab6eb0bb/embed?scrollwheel=0&autospin=0&autostart=1&camera=0&ui_hint=0&ui_stop=0"
+          src="https://sketchfab.com/models/9480e5409a0442e39e01854d1fd4c47c/embed?scrollwheel=0&autostart=1&camera=0&transparent=1&ui_hint=0&mousewheel=0"
         ></iframe>
         <div className="ui-cover bottom"></div>
       </div>
