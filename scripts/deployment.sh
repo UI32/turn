@@ -17,16 +17,18 @@ else
     exit 0;
 fi
 
-echo "Building..." &&
+echo "**** Removing ./docs folder ..." &&
+rm -rf ./docs &&
+echo "**** Building ..." &&
 npm run build &&
-echo "Removing ./docs if found..." &&
-rm -r ./docs;
-echo "Copying ./public to ./docs..." &&
+echo "**** Copying build to ../web-build ..." &&
 cp -r ./public ./docs &&
-rm -r ./public &&
-echo "Commiting to dpeloyment branch..." &&
-cd ./docs &&
+rm -r ./public && 
+rm -rf ../web-build/*; 
+cp -r public/* ../web-build/ &&
+cd ../web-build &&
+echo "**** Adding all the build and pushing to deployment ..." &&
 git add . &&
 git commit -m "update" &&
 git push origin deployment && 
-echo 'Deployment succeeded!'
+echo "**** Deployment succeeded!" 
