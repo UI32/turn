@@ -67,7 +67,7 @@
     margin-top: -120px;
   }
 
-  @include mq($until: md) {
+  @include mq($until: 900px) {
     margin-top: 20px;
     &-block {
       padding: 40px 0;
@@ -91,7 +91,7 @@
     }
   }
 
-  @include mq(md) {
+  @include mq(900px) {
     display: flex;
     border-radius: 12px;
     &-block {
@@ -122,4 +122,10 @@
       }
     }
   }
+
+  // @include mq($from: md, $until: lg) {
+  //   &-info {
+  //     padding: 16px;
+  //   }
+  // }
 }

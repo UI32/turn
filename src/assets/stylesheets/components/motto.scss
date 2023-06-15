@@ -2,15 +2,20 @@
 
 .motto {
   position: relative;
-  font-size: 26px;
+  font-size: 32px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   font-weight: 400;
   .left-icon {
-    margin-right: 10px;
+    margin-right: 8px;
   }
   .right-icon {
-    margin-left: 10px;
+    margin-left: 8px;
+  }
+
+  .left-icon,
+  .right-icon {
+    width: 24px;
   }
 
   .wrapper {
@@ -18,14 +23,12 @@
     position: relative;
   }
 
-  @include mq($until: md) {
+  @include mq(900px) {
+    font-size: 41px;
+    line-height: 54px;
     .left-icon,
     .right-icon {
       width: 33px;
     }
-  }
-  @include mq(md) {
-    font-size: 41px;
-    line-height: 54px;
   }
 }

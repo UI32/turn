@@ -11,7 +11,7 @@ const QuoteBlock = () => {
       <img className="quote-pattern" src={pattern} alt="pattern" />
       <div className="wrapper">
         <Motto />
-        {/*<Quote
+        <Quote
           author="Dirk Howe"
           authorImage={author}
           quote="dirk:quote"
@@ -20,7 +20,7 @@ const QuoteBlock = () => {
           companyImage={company}
           companyWidth={83}
           companyHeight={33}
-        />*/}
+        />
       </div>
     </div>
   );
