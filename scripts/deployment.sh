@@ -25,7 +25,7 @@ echo "Copying ./public to ./docs..." &&
 cp -r ./public ./docs &&
 rm -r ./public &&
 echo "Commiting to dpeloyment branch..." &&
-cd ../docs &&
+cd ./docs &&
 git add . &&
 git commit -m "update" &&
 git push origin deployment && 
