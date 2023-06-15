@@ -1,13 +1,10 @@
 #!/bin/bash
 
-:'
-This is going to build the project, copy the public folder to docs, 
-delete the public folder, stash current changes, checkout to 
-deployment branch, pull from dev, add all, commit, push and go to dev, 
-'
+date=$(date)
+
 clear
 
-printf 'This will stash your current changes and update your dev branch after deployment. Do you want to continue? (y/n) '
+printf 'This will build and deploy to github pages of this repo. Continue? (y/n) '
 read answer
 
 if [ "$answer" != "${answer#[Yy]}" ] ;then 
@@ -21,12 +18,10 @@ echo "**** Removing ./docs folder ..." &&
 rm -rf ./docs &&
 echo "**** Building ..." &&
 npm run build &&
-echo "**** Copying build to ../web-build ..." &&
+echo "**** Copying build to ./docs ..." &&
 cp -r ./public ./docs &&
-rm -r ./public && 
-rm -rf ../web-build/*; 
-cp -r public/* ../web-build/ &&
-cd ../web-build &&
+echo "**** Updating deployment log... " &&
+echo $date >> ./src/deploymentsLog.txt &&
 echo "**** Adding all the build and pushing to deployment ..." &&
 git add . &&
 git commit -m "update" &&
