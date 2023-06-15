@@ -12,6 +12,7 @@ const FormField = ({
   required,
   className,
   success,
+  hideErrorText,
 }) => {
   const t = useTranslations();
 
@@ -31,7 +32,9 @@ const FormField = ({
       {field}
       {success && <Tick className="success-icon icon" />}
       {errorText && <Exclamation className="error-icon icon" />}
-      {errorText && <p className="error-text">{t(errorText)}</p>}
+      {errorText && !hideErrorText && (
+        <p className="error-text">{t(errorText)}</p>
+      )}
     </div>
   );
 };

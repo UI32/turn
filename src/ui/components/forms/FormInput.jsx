@@ -9,6 +9,7 @@ const FormInput = ({
   onChange,
   onKeydown,
   value,
+  onBlur,
 }) => {
   const t = useTranslations();
   // This input is controlled, the value is set by the parent component
@@ -22,6 +23,7 @@ const FormInput = ({
       placeholder={t(placeholder)}
       onChange={onChange}
       onKeyDown={onKeydown}
+      onBlur={onBlur}
     />
   );
 };
