@@ -18,34 +18,36 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
       <meta property="og:url" content={"" + page} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta
-        property="og:image"
-        itemprop="image"
-        content=""
-      />
-      <meta
-        property="og:image"
-        itemprop="image"
-        content=""
-      />
-      <meta
-        property="og:image"
-        itemprop="image"
-        content=""
-      />
-      <meta
-        property="og:image"
-        itemprop="image"
-        content=""
-      />
+      <meta property="og:image" itemprop="image" content="" />
+      <meta property="og:image" itemprop="image" content="" />
+      <meta property="og:image" itemprop="image" content="" />
+      <meta property="og:image" itemprop="image" content="" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:image"
-        content=""
-      />
+      <meta name="twitter:image" content="" />
       <meta property="twitter:title" content="Turn2x" />
       <meta name="twitter:image:alt" content="Turn2x" />
       <meta property="twitter:description" content={description} />
+      {/*<!-- Start cookieyes banner -->*/}
+      <script
+        id="cookieyes"
+        type="text/javascript"
+        src="https://cdn-cookieyes.com/client_data/c784df841a4b683a5ed63773/script.js"
+      ></script>
+
+      {/*<!-- End cookieyes banner -->*/}
+
+      {/* Google tag (gtag.js) */}
+      <script
+        async
+        src="//www.googletagmanager.com/gtag/js?id=G-GMT0SXQMSW"
+      ></script>
+      <script>
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', ‘G-GMT0SXQMSW');`}
+      </script>
     </Helmet>
   );
 };
