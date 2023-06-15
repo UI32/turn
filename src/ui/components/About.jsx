@@ -50,6 +50,7 @@ const About = () => {
               imageSm={philipSm}
               position="philip:position"
               description="philip:description"
+              linkedin="https://www.linkedin.com/in/philip-kessler/"
             />
             <AboutCard
               name="Benedikt Stolz"
@@ -58,6 +59,7 @@ const About = () => {
               imageSm={benediktSm}
               position="benedikt:position"
               description="benedikt:description"
+              linkedin="https://www.linkedin.com/in/benediktstolz/"
             />
             <AboutCard
               name="Dr. Dominik Schollenberger"
@@ -66,6 +68,7 @@ const About = () => {
               imageSm={dominikSm}
               position="dominik:position"
               description="dominik:description"
+              linkedin="https://www.linkedin.com/in/dominik-schollenberger-14aa34ba/"
             />
           </div>
           <div className="about-clients" data-aos="custom-animation">

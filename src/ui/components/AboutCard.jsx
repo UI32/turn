@@ -3,7 +3,15 @@ import useTranslations from "../../hooks/useTranslations";
 import { ReactComponent as Cross } from "../../assets/icons/cross.svg";
 import cx from "classnames";
 
-const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
+const AboutCard = ({
+  image,
+  imageSm,
+  name,
+  alt,
+  position,
+  description,
+  linkedin,
+}) => {
   const t = useTranslations();
   const [extendInfo, setExtendInfo] = useState(false);
 
@@ -45,7 +53,7 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
             <p>{t("about:get-in-touch")}</p>
             <a
               className="link"
-              href="#"
+              href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
             >
