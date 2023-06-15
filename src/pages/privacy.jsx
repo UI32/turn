@@ -14,6 +14,7 @@ const Privacy = props => {
         title={metaTags.privacyTitle}
         description={metaTags.privacy}
         page="/privacy"
+        keywords={metaTags.privacyKeys}
       />
       <AppWrapper {...props} lang={locale}>
         <PrivacyPage />

@@ -27,6 +27,7 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
       <meta property="twitter:title" content="Turn2x" />
       <meta name="twitter:image:alt" content="Turn2x" />
       <meta property="twitter:description" content={description} />
+
       {/*<!-- Start cookieyes banner -->*/}
       <script
         id="cookieyes"
@@ -39,14 +40,14 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
       {/* Google tag (gtag.js) */}
       <script
         async
-        src="//www.googletagmanager.com/gtag/js?id=G-GMT0SXQMSW"
+        src="https://www.googletagmanager.com/gtag/js?id=G-GMT0SXQMSW"
       ></script>
       <script>
         {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-          gtag('config', ‘G-GMT0SXQMSW');`}
+        gtag('config', 'G-GMT0SXQMSW');`}
       </script>
     </Helmet>
   );

@@ -1,11 +1,11 @@
 {
-  "index": "Turn2x",
-  "indexTitle": "Turn2x",
-  "privacyTitle": "Privacy Policy",
-  "privacy": "[DE] Privacy policy page",
-  "legalTitle": "[DE] Legal notice",
-  "legal": "[DE] Legal notice page",
-  "cookiesTitle": "Cookies Policy",
-  "cookies": "[DE] Cookies policy page",
-  "keywords": "[DE]"
+  "index": "TURN2X dekarbonisiert die Industrie durch die Produktion von erneuerbarem Erdgas mit einem einzigartigen Elektrolyseverfahren.",
+  "indexTitle": "Turn2x - Erneuerbare Energien transportfähig machen",
+  "indexKeys": "CO2, erneuerbar, erdgas, fossile, brennstoffe, ESG, zertifizierung, neutral",
+  "privacyTitle": "Datenschutzerklärung",
+  "privacy": "Datenschutzerklärungen, Einstellungen und Cookie Informationen",
+  "privacyKeys": "Datenschutz, Privatsphäreeinstellungen",
+  "legalTitle": "Impressum",
+  "legal": "TURN2X mit Sitz in München, Geschäftsführung Philip Kessler und Benedikt Stolz.",
+  "legalKeys": "datenschutz, privatsphäre, impressum"
 }
