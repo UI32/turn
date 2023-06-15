@@ -4,6 +4,7 @@ import Panel from "./Panel";
 import AnimatedIcon from "./AnimatedIcon";
 import missionIcon from "../../assets/animations/Icon-5.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
+import MissionContent from "./MissionContent";
 
 const Mission = () => {
   const t = useTranslations();
@@ -23,7 +24,9 @@ const Mission = () => {
           }
           pretitle="mission:mission"
           title="mission:title"
-        ></Panel>
+        >
+          <MissionContent />
+        </Panel>
       </div>
     </div>
   );
