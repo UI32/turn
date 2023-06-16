@@ -112,7 +112,7 @@ const About = () => {
                 image={thomas}
                 position="thomas:position"
               />
-              <div className="about-cta">
+              <div className="about-cta" data-aos="custom-animation">
                 <h2 className="cta-title">{t("cta:title")}</h2>
                 <a
                   className="button"
