@@ -295,3 +295,26 @@
     margin-top: -2px;
   }
 }
+
+// Specific styles for German page
+
+.de {
+  @include mq($from: md, $until: 860px) {
+    .header {
+      .nav-item {
+        font-size: 17px;
+        padding: 0 12px;
+      }
+      .logo {
+        padding-left: 26px;
+        img {
+          width: 80px;
+        }
+        .lottie-container {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}

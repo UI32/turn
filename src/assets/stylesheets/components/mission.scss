@@ -1,13 +1,22 @@
 // Mission
 
 .mission {
-  z-index: 2;
+  z-index: 1;
   position: relative;
-  .beta {
-    max-width: 520px;
-  }
+
   .lottie-container {
     margin-left: -8px;
+  }
+  @include mq($from: md, $until: lg) {
+    .beta {
+      max-width: 60%;
+    }
+  }
+
+  @include mq(lg) {
+    .beta {
+      max-width: 520px;
+    }
   }
 }
 

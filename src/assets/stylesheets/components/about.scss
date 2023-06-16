@@ -16,7 +16,7 @@
     }
   }
 
-  .lead-m {
+  > .lead-m {
     margin-bottom: 30px;
   }
 
@@ -58,7 +58,7 @@
 
   @include mq(md) {
     .panel-header {
-      margin-bottom: 56px;
+      margin-bottom: 52px;
     }
     &-management {
       position: relative;
@@ -82,6 +82,11 @@
     &-advisors {
       display: flex;
       justify-content: space-between;
+      &-wrapper {
+        .lead-m {
+          margin-bottom: 30px;
+        }
+      }
       .about-position,
       .about-name {
         font-size: 18px;

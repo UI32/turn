@@ -100,6 +100,13 @@
         display: flex;
         align-items: center;
       }
+      .motto,
+      .quote {
+        flex: 1 1 50%;
+      }
+      .motto {
+        padding-right: 16px;
+      }
     }
     &-img {
       flex: 0 0 165px;
@@ -122,10 +129,4 @@
       }
     }
   }
-
-  // @include mq($from: md, $until: lg) {
-  //   &-info {
-  //     padding: 16px;
-  //   }
-  // }
 }
