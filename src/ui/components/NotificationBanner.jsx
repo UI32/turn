@@ -13,6 +13,7 @@ const NotificationBanner = () => {
         <div className="wrapper">
           <p className="text">{t("announcement:text")}</p>
           <button
+            aria-label="close"
             className="button-icon"
             onClick={() => {
               setclose(true);
