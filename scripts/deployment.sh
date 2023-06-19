@@ -1,6 +1,7 @@
 #!/bin/bash
 
 date=$(date)
+gitUserMail=$(git config user.email)
 
 clear
 
@@ -37,7 +38,7 @@ cd -
 rm -rf ../turn2xcom.github.io/.git 
 
 echo "**** Updating deploymentsLog file ..."
-echo $date >> ./src/deploymentsLog.txt 
+echo "By $gitUserName on $date" >> ./src/deploymentsLog.txt 
 
 echo "**** Removing build folder ..." 
 rm -rf ./public 
