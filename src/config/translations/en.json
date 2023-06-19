@@ -59,5 +59,7 @@
   "legal:name": "Legal",
   "careers:name": "Careers",
   "hiring:name": "We're hiring!",
-  "imprint:name": "Imprint"
+  "imprint:name": "Imprint",
+  "404:title": "This page doesn’t exist. Our solution to displace fossil fuels however, does.",
+  "404:proceed": "Proceed"
 }

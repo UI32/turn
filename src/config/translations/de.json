@@ -59,5 +59,7 @@
   "legal:name": "Legal",
   "careers:name": "Offene Positionen",
   "hiring:name": "We're hiring!",
-  "imprint:name": "Imprint"
+  "imprint:name": "Imprint",
+  "404:title": "Diese Seite existiert nicht. Unsere Lösungen zum Ersetzen Fossiler Brennstoffe sind jedoch existent.",
+  "404:proceed": "Weiter"
 }
