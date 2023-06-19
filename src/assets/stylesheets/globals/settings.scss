@@ -30,7 +30,7 @@ $bold: 700;
 $heavy: 900;
 
 // Layout
-$layout-maxWidth: 1220px;
+$layout-maxWidth: 1252px;
 
 $xxs: 0;
 $xs: 390px;
@@ -52,6 +52,5 @@ $grid-breakpoints: (
   // Large screen / desktop
   xl: $xl,
   // Extra large screen / wide desktop
-  xxl: $xxl
-    // Extra large screen / wide desktop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  xxl: $xxl // Extra large screen / wide desktop,,
 );

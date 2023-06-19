@@ -1,8 +1,9 @@
 // Process
 
 .process {
-  z-index: 2;
+  z-index: 3;
   position: relative;
+  margin-top: 60px;
   @include mq($from: md, $until: lg) {
     .beta {
       max-width: 260px;
@@ -19,6 +20,9 @@
 
 .process {
   $self: &;
+  &-panel {
+    margin-bottom: 0;
+  }
   &-content {
     .bullet {
       position: relative;

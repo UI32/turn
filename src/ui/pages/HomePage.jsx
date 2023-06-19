@@ -8,7 +8,8 @@ import About from "../components/About";
 import Process from "../components/Process";
 import Mission from "../components/Mission";
 import Model3D from "../components/Model3D";
-import QuoteBlock from "../components/QuoteBlock";
+import pattern from "../../assets/images/pattern1.png";
+// import QuoteBlock from "../components/QuoteBlock";
 
 const HomePage = () => {
   useEffect(() => {
@@ -18,7 +19,10 @@ const HomePage = () => {
   return (
     <MainLayout bottomPattern>
       <Hero />
-      <QuoteBlock />
+      <div className="top-pattern">
+        <img className="pattern" src={pattern} alt="pattern" />
+      </div>
+      {/*<QuoteBlock />*/}
       <Process />
       <Model3D />
       <Mission />
