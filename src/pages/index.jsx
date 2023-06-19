@@ -7,14 +7,19 @@ import HomePage from "../ui/pages/HomePage";
 import { validInput } from "../utils/entryCheck";
 import NotFoundPage from "./404";
 
+const isPrivate = process.env.ACCESS === "private";
+
 const IndexPage = props => {
   const locale = getLocaleFromPathname(props.location);
 
-  const userInput =
-    typeof window !== "undefined" ? window.prompt("Enter password: ") : true;
-  const result = validInput(userInput);
+  const prompt =
+    typeof window !== "undefined" && isPrivate
+      ? window.prompt("Enter password: ")
+      : undefined;
 
-  return result ? (
+  const inputValid = isPrivate ? validInput(prompt) : true;
+
+  return inputValid ? (
     <>
       <HelmetComponent
         title={metaTags.indexTitle}
