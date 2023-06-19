@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AppWrapper from "../ui/layouts/AppWarpper";
 import HelmetComponent from "../ui/layouts/HelmetComponent";
 import metaTags from "../config/meta-tags/en.json";
@@ -10,10 +10,11 @@ import NotFoundPage from "./404";
 const IndexPage = props => {
   const locale = getLocaleFromPathname(props.location);
 
-  const userInput = window.prompt("Enter password: ");
+  const userInput =
+    typeof window !== "undefined" ? window.prompt("Enter password: ") : true;
   const result = validInput(userInput);
 
-  return (
+  return result ? (
     <>
       <HelmetComponent
         title={metaTags.indexTitle}
@@ -22,9 +23,11 @@ const IndexPage = props => {
         page=""
       />
       <AppWrapper {...props} lang={locale}>
-        {result ? <HomePage /> : <NotFoundPage />}
+        <HomePage />
       </AppWrapper>
     </>
+  ) : (
+    <NotFoundPage />
   );
 };
 

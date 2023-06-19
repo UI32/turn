@@ -15,7 +15,8 @@ else
 fi
 
 echo "**** Checking if you have the deployment repo ..." 
-cd ../turn2xcom.github.io || { cd .. && git clone --depth 1 git@github.com:turn2xcom/turn2xcom.github.io.git; }   
+rm -rf ../turn2xcom.github.io/*
+cd .. && git clone --depth 1 git@github.com:turn2xcom/turn2xcom.github.io.git &&   
 cd - 
 
 echo "**** Building ..." 
