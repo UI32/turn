@@ -52,7 +52,17 @@
 .disable-scroll {
   .header {
     &.is-sticky {
-      position: relative;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 53px;
+        position: fixed;
+        background: rgba($black, 0.5);
+        top: 0;
+        left: 0;
+        z-index: 100;
+        animation: fade-in 0.3s ease;
+      }
     }
   }
 }

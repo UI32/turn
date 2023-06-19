@@ -1,13 +1,19 @@
 // Lang selector
 
 .lang-selector {
+  position: relative;
+  top: 1px;
   .lang-item {
     background: transparent;
     border: none;
     outline: none;
-    padding: 0 22px;
+    padding: 17px 16px;
+    line-height: 0.8;
     &:disabled {
       display: none;
     }
+  }
+  @include mq(md) {
+    top: 3px;
   }
 }

@@ -116,7 +116,7 @@ const About = () => {
                 <h2 className="cta-title">{t("cta:title")}</h2>
                 <a
                   className="button"
-                  href="#"
+                  href="https://turn-energy.notion.site/turn-energy/Careers-at-Turn-c960e136909b410ca737de169f5967a6"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

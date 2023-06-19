@@ -14,7 +14,7 @@ const Footer = () => {
           <span>{t("careers:name")}</span>
           <a
             className="button button-tiny"
-            href="#"
+            href="https://turn-energy.notion.site/turn-energy/Careers-at-Turn-c960e136909b410ca737de169f5967a6"
             target="_blank"
             rel="noopener noreferrer"
           >
