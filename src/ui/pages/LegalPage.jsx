@@ -23,16 +23,22 @@ const LegalPage = () => {
             <div className="col-4">
               <h3>EINGETRAGEN IM</h3>
               <p>
-                Amtsgericht <br /> Charlottenburg <br /> HRB 207260 B
+                Amtsgericht München <br /> HRB 280011,
               </p>
               <h3>UMSATZSTEUER IDR</h3>
-              <p>DE325519621</p>
+              <p>DE357474255</p>
             </div>
             <div className="col-4">
               <h3>VERTRETEN DURCH DIE GESCHÄFTSFÜHRER</h3>
               <p>
                 Philip Kessler <br />
+                kontakt:
+                <a href="mailto: info@turn2x.com"> info@turn2x.com</a>
+              </p>
+              <p>
                 Benedikt Stolz <br />
+                kontakt:
+                <a href="mailto: info@turn2x.com">info@turn2x.com</a>
               </p>
               <p></p>
               <p></p>
