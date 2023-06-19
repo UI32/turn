@@ -20,6 +20,9 @@
     padding: 4px 0;
     z-index: 99;
     animation: slide-bottom 0.3s ease;
+    + .content {
+      padding-top: 96px;
+    }
     .logo {
       padding-left: 34px;
     }
@@ -93,6 +96,9 @@
     &.is-sticky {
       min-height: 48px;
       padding: 0;
+      + .content {
+        padding-top: 47px;
+      }
     }
     .logo {
       position: relative;

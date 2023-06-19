@@ -1,7 +1,6 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 
-
 const Hero = () => {
   const t = useTranslations();
   return (
@@ -19,15 +18,13 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-bg" data-aos="custom-animation">
-        <div className="videoloop">
-          <video className="videoloop" autoPlay loop muted playsInline>
-            <source
-              src={
-                "https://turn2x.s3.eu-north-1.amazonaws.com/turnDroneVideo.mp4"
-              }
-            />
-          </video>
-        </div>
+        <video autoPlay loop muted playsInline>
+          <source
+            src={
+              "https://turn2x.s3.eu-north-1.amazonaws.com/turnDroneVideo.mp4"
+            }
+          />
+        </video>
       </div>
     </div>
   );

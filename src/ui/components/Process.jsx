@@ -35,30 +35,29 @@ const useCycleActiveStates = (stateList, delay) => {
     setActiveState(stateList[(idx + 1) % stateList.length]);
   };
   // trigger & content
-  const StateWrapper = ({ state, children, className, ...props }) => (
-    <div
-      onMouseEnter={() => activateState(state)}
-      onMouseLeave={resumeTimer}
-      className={cx({ active: state === activeState, [className]: className })}
-    >
-      {children}
-    </div>
-  );
+  const stateWrapperProps = (state, className) => ({
+    onMouseEnter: () => activateState(state),
+    onMouseLeave: resumeTimer,
+    className: cx({
+      active: state === activeState,
+      [className]: className,
+    }),
+  });
   // initialization
   useEffect(() => {
     resumeTimer();
     return () => clearTimeout(timerId.current);
   });
   // result
-  return [StateWrapper];
+  return [stateWrapperProps];
 };
 
 const Process = ({}) => {
   const t = useTranslations();
-  const [StateWrapper] = useCycleActiveStates(["E1", "E2", "E3"], 5000);
+  const [stateWrapperProps] = useCycleActiveStates(["E1", "E2", "E3"], 5000);
 
   return (
-    <div className="process" id="how-it-works" data-aos="custom-animation">
+    <div className="process" data-aos="custom-animation">
       <div className="wrapper">
         <Panel
           className="process-panel"
@@ -76,21 +75,21 @@ const Process = ({}) => {
         >
           <div className={cx("process-content")}>
             <div className="process-bullets" data-aos="custom-animation">
-              <StateWrapper state="E1" className="bullet">
+              <div {...stateWrapperProps("E1", "bullet")}>
                 {t("process:section1")}
-              </StateWrapper>
-              <StateWrapper state="E2" className="bullet">
+              </div>
+              <div {...stateWrapperProps("E2", "bullet")}>
                 {t("process:section2")}
-              </StateWrapper>
-              <StateWrapper state="E3" className="bullet">
+              </div>
+              <div {...stateWrapperProps("E3", "bullet")}>
                 {t("process:section3")}
-              </StateWrapper>
+              </div>
               <p className="caption">{t("process:caption1")}</p>
               <p className="caption">{t("process:caption2")}</p>
             </div>
             <div className="process-graphic" data-aos="custom-animation">
               <div className="mobile-graphic">
-                <StateWrapper state="E1" className="graphic-section section-1">
+                <div {...stateWrapperProps("E1", "graphic-section section-1")}>
                   <img
                     src={section1mb}
                     className="section-img mobile"
@@ -101,8 +100,8 @@ const Process = ({}) => {
                     className="section-img-active mobile"
                     alt="section 1 active"
                   />
-                </StateWrapper>
-                <StateWrapper state="E2" className="graphic-section section-2">
+                </div>
+                <div {...stateWrapperProps("E2", "graphic-section section-2")}>
                   <img
                     src={section2mb}
                     alt="section 2"
@@ -113,8 +112,8 @@ const Process = ({}) => {
                     alt="section 2 active"
                     className="section-img-active mobile"
                   />
-                </StateWrapper>
-                <StateWrapper state="E3" className="graphic-section section-3">
+                </div>
+                <div {...stateWrapperProps("E3", "graphic-section section-3")}>
                   <img
                     src={section3mb}
                     alt="section 3"
@@ -125,33 +124,33 @@ const Process = ({}) => {
                     alt="section 3 active"
                     className="section-img-active mobile"
                   />
-                </StateWrapper>
+                </div>
               </div>
               <div className="desktop-graphic">
-                <StateWrapper state="E1" className="graphic-section section-1">
+                <div {...stateWrapperProps("E1", "graphic-section section-1")}>
                   <img src={section1} className="section-img" alt="section 1" />
                   <img
                     src={section1active}
                     className="section-img-active"
                     alt="section 1 active"
                   />
-                </StateWrapper>
-                <StateWrapper state="E2" className="graphic-section section-2">
+                </div>
+                <div {...stateWrapperProps("E2", "graphic-section section-2")}>
                   <img src={section2} alt="section 2" className="section-img" />
                   <img
                     src={section2active}
                     alt="section 2 active"
                     className="section-img-active"
                   />
-                </StateWrapper>
-                <StateWrapper state="E3" className="graphic-section section-3">
+                </div>
+                <div {...stateWrapperProps("E3", "graphic-section section-3")}>
                   <img src={section3} alt="section 3" className="section-img" />
                   <img
                     src={section3active}
                     alt="section 3 active"
                     className="section-img-active"
                   />
-                </StateWrapper>
+                </div>
               </div>
             </div>
           </div>

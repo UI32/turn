@@ -52,7 +52,7 @@
 .top-pattern {
   position: relative;
   .pattern {
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     top: -60vh;
     left: 0;

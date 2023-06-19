@@ -23,10 +23,14 @@ const HomePage = () => {
         <img className="pattern" src={pattern} alt="pattern" />
       </div>
       {/*<QuoteBlock />*/}
+      <div id="how-it-works" className="nav-reference"></div>
       <Process />
       <Model3D />
+      <div id="mission" className="nav-reference"></div>
       <Mission />
+      <div id="about" className="nav-reference"></div>
       <About />
+      <div id="contact" className="nav-reference"></div>
       <Contact />
     </MainLayout>
   );
