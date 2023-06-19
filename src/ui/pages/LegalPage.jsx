@@ -9,43 +9,45 @@ const LegalPage = () => {
     <MainLayout bottomPattern simple>
       <div className="generic-content wrapper">
         <div className="panel">
-          <h1 className="alpha">{t("legal:name")}</h1>
+          <h1>{t("legal:name")}</h1>
           <div className="row">
             <div className="col-4">
-              <h2 className="lead-m">ANGABEN GEMÄSS § 5 TM</h2>
-              <p className="text-l">
-                AUCTA GmbH <br /> Zionskirchstr. 15 <br /> 10119 Berlin Kontakt:
-                contact@aucta.io
+              <h3>ANGABEN GEMÄSS § 5 TM</h3>
+              <p>
+                Turn Energy GmbH <br /> Am Kartoffelgarten 14, 81671 München,
+                Germany <br />
+                Kontakt:{" "}
+                <a href="mailto:privacy@turn2x.com">privacy@turn2x.com</a>
               </p>
             </div>
             <div className="col-4">
-              <h2 className="lead-m">EINGETRAGEN IM</h2>
-              <p className="text-l">
-                AUCTA GmbH <br /> Zionskirchstr. 15 <br /> 10119 Berlin Kontakt:
-                contact@aucta.io
+              <h3>EINGETRAGEN IM</h3>
+              <p>
+                Amtsgericht <br /> Charlottenburg <br /> HRB 207260 B
               </p>
-              <h2 className="lead-m">UMSATZSTEUER IDR</h2>
-              <p className="text-l">DE325519621</p>
+              <h3>UMSATZSTEUER IDR</h3>
+              <p>DE325519621</p>
             </div>
             <div className="col-4">
-              <h2 className="lead-m">VERTRETEN DURCH DIE GESCHÄFTSFÜHRER</h2>
-              <p className="text-l">
-                Daniel Seiler <br />
-                Henri Huselstein <br />
-                Elías Alonso
+              <h3>VERTRETEN DURCH DIE GESCHÄFTSFÜHRER</h3>
+              <p>
+                Philip Kessler <br />
+                Benedikt Stolz <br />
               </p>
-              <p className="text-l"></p>
-              <p className="text-l"></p>
+              <p></p>
+              <p></p>
             </div>
             <div className="col-4">
-              <h2 className="lead-m">KONTAKT</h2>
-              <p className="text-l">contact@aucta.io</p>
+              <h3>KONTAKT</h3>
+              <p>
+                <a href="mailto:privacy@turn2x.com">privacy@turn2x.com</a>
+              </p>
             </div>
           </div>
         </div>
         <div className="panel">
-          <h2 className="lead-m">STREITSCHLICHTUNG</h2>
-          <p className="text-l">
+          <h3>STREITSCHLICHTUNG</h3>
+          <p>
             Die Europäische Kommission stellt eine Plattform zur
             Online-Streitbeilegung (OS) bereit:
             https://ec.europa.eu/consumers/odr. Unsere E-Mail-Adresse finden Sie
@@ -53,8 +55,8 @@ const LegalPage = () => {
             Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
             teilzunehmen.
           </p>
-          <h2 className="lead-m">HAFTUNG FÜR INHALTE</h2>
-          <p className="text-l">
+          <h3>HAFTUNG FÜR INHALTE</h3>
+          <p>
             Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte
             auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach
             §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
@@ -67,8 +69,8 @@ const LegalPage = () => {
             Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
             Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
           </p>
-          <h2 className="lead-m">HAFTUNG FÜR LINKS</h2>
-          <p className="text-l">
+          <h3>HAFTUNG FÜR LINKS</h3>
+          <p>
             Unser Angebot enthält Links zu externen Websites Dritter, auf deren
             Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
             fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
@@ -81,8 +83,8 @@ const LegalPage = () => {
             nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
             derartige Links umgehend entfernen.
           </p>
-          <h2 className="lead-m">URHEBERRECHT</h2>
-          <p className="text-l">
+          <h3>URHEBERRECHT</h3>
+          <p>
             Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
             diesen Seiten unterliegen dem deutschen Urheberrecht. Die
             Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
