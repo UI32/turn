@@ -23,7 +23,8 @@ const LegalPage = () => {
             <div className="col-4">
               <h3>EINGETRAGEN IM</h3>
               <p>
-                Amtsgericht München <br /> HRB 280011,
+                Amtsgericht <br />
+                München <br /> HRB 280011,
               </p>
               <h3>UMSATZSTEUER IDR</h3>
               <p>DE357474255</p>
