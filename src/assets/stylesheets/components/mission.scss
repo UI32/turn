@@ -91,7 +91,7 @@
 
   .icon {
     color: $primary-light;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     width: 30px;
   }
 
@@ -141,7 +141,7 @@
   @include mq(md) {
     display: flex;
     align-items: center;
-    padding: 18px 22px 12px;
+    padding: 16px 22px;
     margin-bottom: 10px;
     border-radius: 8px;
     .icon {

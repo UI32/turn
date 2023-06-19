@@ -61,12 +61,6 @@
     }
   }
 
-  &-pattern {
-    z-index: 0;
-    @include centered(absolute);
-    margin-top: -120px;
-  }
-
   @include mq($until: 900px) {
     margin-top: 20px;
     &-block {

@@ -55,7 +55,7 @@ const useCycleActiveStates = (stateList, delay) => {
 
 const Process = ({}) => {
   const t = useTranslations();
-  const [StateWrapper] = useCycleActiveStates(["E1", "E2", "E3"], 3000);
+  const [StateWrapper] = useCycleActiveStates(["E1", "E2", "E3"], 5000);
 
   return (
     <div className="process" id="how-it-works" data-aos="custom-animation">
