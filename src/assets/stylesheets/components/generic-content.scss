@@ -4,16 +4,30 @@
   a {
     text-decoration: underline;
   }
-  .alpha,
-  .beta,
-  .gamma {
+
+  h1 {
+    @include typo-rwd(alpha);
+  }
+
+  h2 {
+    @include typo-rwd(beta);
+  }
+
+  h3 {
+    @include typo-rwd(lead-m);
+    text-transform: uppercase;
+    color: #6b7280;
+    margin: 30px 0 16px;
+  }
+  h1,
+  h2 {
     margin-bottom: 40px;
   }
-  .text-l {
-    opacity: 1;
-  }
+
   p {
     margin-bottom: 22px;
+    @include typo-rwd(text-l);
+    opacity: 1;
     + .lead-xs,
     + .lead-m {
       margin-top: 50px;
@@ -28,7 +42,10 @@
     border-radius: 6px;
     margin-bottom: 20px;
   }
-
+  table td,
+  table td * {
+    vertical-align: top;
+  }
   table {
     border-radius: 6px;
     border-collapse: collapse;
