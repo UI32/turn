@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 
     span {
       margin-right: 8px;
@@ -26,6 +27,7 @@
 
   .footer-caption {
     display: block;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .globe {

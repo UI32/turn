@@ -25,7 +25,7 @@ import siemens from "../../assets/images/clients/siemens.png";
 const About = () => {
   const t = useTranslations();
   return (
-    <div className="about" id="about">
+    <div className="about">
       <div className="wrapper">
         <Panel
           className="about-panel"

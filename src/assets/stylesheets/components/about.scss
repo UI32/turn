@@ -99,7 +99,7 @@
         font-size: 18px;
       }
       .about-card {
-        flex: 0 1 170px;
+        flex: 0 1 172px;
         min-width: 130px;
         &:not(:last-child) {
           margin-right: 12px;
@@ -110,9 +110,11 @@
       padding: 20px;
       max-height: 260px;
       margin: 0;
+      flex: 1 1 546px;
       .cta-title {
         font-size: 24px;
         line-height: 1.2;
+        max-width: 370px;
       }
     }
   }

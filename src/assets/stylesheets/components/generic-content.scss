@@ -3,6 +3,7 @@
 .generic-content {
   a {
     text-decoration: underline;
+    word-break: break-word;
   }
 
   h1 {
@@ -24,7 +25,9 @@
     margin-bottom: 40px;
   }
 
-  p {
+  p,
+  ul,
+  li {
     margin-bottom: 22px;
     @include typo-rwd(text-l);
     opacity: 1;
@@ -41,6 +44,8 @@
     border: 1px solid $grey-border;
     border-radius: 6px;
     margin-bottom: 20px;
+    width: 100%;
+    overflow-x: auto;
   }
   table td,
   table td * {
@@ -62,6 +67,15 @@
       font-weight: 500;
       color: $grey-dark;
       background: $grey-light;
+    }
+  }
+  @include mq($until: md) {
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .panel {
+      padding: 16px;
     }
   }
   @include mq(md) {

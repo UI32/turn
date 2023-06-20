@@ -17,7 +17,8 @@ const IndexPage = props => {
       ? window.prompt("Enter password: ")
       : undefined;
 
-  const inputValid = isPrivate ? validInput(prompt) : true;
+  const inputValid =
+    isPrivate && prompt !== undefined ? validInput(prompt) : true;
 
   return inputValid ? (
     <>
