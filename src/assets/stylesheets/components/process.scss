@@ -51,16 +51,18 @@
     }
 
     .graphic-section {
+      position: relative;
       img {
-        max-width: none;
         display: block;
         transition: all 2s ease;
       }
       .section-img {
-        position: absolute;
         opacity: 1;
       }
       .section-img-active {
+        position: absolute;
+        top: 0;
+        left: 0;
         opacity: 0;
       }
       &.active {
@@ -110,34 +112,9 @@
         padding-left: 10px;
         margin-top: -100px;
       }
+
       .graphic-section {
-        display: flex;
         margin-right: 10px;
-        &.section-1 {
-          img {
-            width: 218px;
-            height: 553px;
-          }
-        }
-        &.section-2 {
-          img {
-            width: 186px;
-            height: 332px;
-          }
-        }
-        &.section-3 {
-          img {
-            width: 328px;
-            height: 134px;
-          }
-        }
-        &.section-1,
-        &.section-2 {
-          align-self: flex-start;
-        }
-        &.section-3 {
-          align-self: center;
-        }
       }
     }
 

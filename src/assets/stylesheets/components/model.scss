@@ -55,18 +55,10 @@
   }
 
   @include mq(md) {
+    margin: 0 0 80px;
+
     .text-xl {
       font-size: 18px;
-    }
-  }
-
-  @include mq(lg) {
-    margin: 0 0 80px;
-    &-wrapper {
-      height: 893px;
-    }
-    .wrapper {
-      position: relative;
     }
     .panel {
       padding: 64px 56px;
@@ -83,6 +75,12 @@
       .lead-m {
         margin-bottom: 15px;
       }
+    }
+    &-wrapper {
+      height: 893px;
+    }
+    .wrapper {
+      position: relative;
     }
   }
 }
