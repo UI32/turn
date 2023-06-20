@@ -1,9 +1,13 @@
 // Globe
 
 .globe {
+  display: none;
   &-wrapper {
     position: relative;
   }
+
+  // Text
+
   &-text {
     margin: 0;
     @include centered(absolute);
@@ -11,17 +15,13 @@
       overflow: hidden;
       text {
         font-family: $font;
-        font-size: 20px;
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 4px;
       }
       svg {
-        width: 260px;
-        height: 260px;
         color: transparent;
         border-radius: 50%;
-
         -webkit-animation-name: rotate;
         -moz-animation-name: rotate;
         -ms-animation-name: rotate;

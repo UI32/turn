@@ -3,6 +3,7 @@ import useTranslations from "../../hooks/useTranslations";
 import { Link } from "gatsby";
 import Globe from "./Globe";
 import GlobeText from "./GlobeText";
+import GlobeMobile from "./GlobeMobile";
 
 const Footer = () => {
   const t = useTranslations();
@@ -10,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="wrapper">
-        <div className="footer-item">
+        <div className="footer-item careers">
           <span>{t("careers:name")}</span>
           <a
             className="button button-tiny"
@@ -21,17 +22,19 @@ const Footer = () => {
             {t("hiring:name")}
           </a>
         </div>
-        <Link className="footer-caption" to="/legal">
+        <Link className="footer-caption legal" to="/legal">
           {t("legal:name")}
         </Link>
-        <div className="globe-wrapper">
-          <GlobeText />
-          <Globe />
-        </div>
-        <Link className="footer-caption" to="/privacy">
+
+        <Link className="footer-caption privacy" to="/privacy">
           {t("data-privacy:name")}
         </Link>
-        <span className="footer-caption">© 2023 Turn Energy GmbH</span>
+        <span className="footer-caption copy">© 2023 Turn Energy GmbH</span>
+        <div className="globe-wrapper">
+          <GlobeText />
+          <GlobeMobile />
+          <Globe />
+        </div>
       </div>
     </footer>
   );

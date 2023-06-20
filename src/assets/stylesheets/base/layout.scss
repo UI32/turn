@@ -7,7 +7,7 @@
 .outer-wrapper {
   position: relative;
   padding-bottom: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 
   &.simple {
     background: $white;
@@ -21,9 +21,10 @@
   }
   .bottom-pattern {
     position: absolute;
-    bottom: 0;
     left: 0;
     z-index: 1;
+    bottom: 0;
+    width: 100%;
   }
   .content {
     z-index: 2;
@@ -35,16 +36,19 @@
   @include mq($until: md) {
     .bottom-pattern {
       max-width: none;
-      width: 250%;
+      width: 200%;
     }
   }
+
   @include mq(md) {
-    padding-bottom: 60px;
-  }
-  @include mq($from: md, $until: lg) {
     .bottom-pattern {
       max-width: none;
-      height: 1000px;
+      bottom: 0;
+    }
+  }
+  @include mq(xxl) {
+    .bottom-pattern {
+      bottom: -4%;
     }
   }
 }
