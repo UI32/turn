@@ -70,6 +70,10 @@
     }
   }
   @include mq($until: md) {
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+    }
     .panel {
       padding: 16px;
     }
