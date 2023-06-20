@@ -52,6 +52,8 @@
 
     .graphic-section {
       img {
+        max-width: none;
+        display: block;
         transition: all 2s ease;
       }
       .section-img {
