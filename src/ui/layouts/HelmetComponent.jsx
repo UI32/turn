@@ -12,36 +12,36 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <title>{title}</title>
-      <link rel="canonical" href={"http://turn2x.com/" + page} />
+      <link rel="canonical" href={"https://turn2x.com/" + page} />
       <meta property="og:title" content="Turn2x" />
       <meta property="og:site_name" content="Turn2x" />
-      <meta property="og:url" content={"http://turn2x.com/" + page} />
+      <meta property="og:url" content={"https://turn2x.com/" + page} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
         itemprop="image"
-        content="http://turn2x.com/og/og-921x518.png"
+        content="https://turn2x.com/og/og-921x518.png"
       />
       <meta
         property="og:image"
         itemprop="image"
-        content="http://turn2x.com/og/og-1200x1200.png"
+        content="https://turn2x.com/og/og-1200x1200.png"
       />
       <meta
         property="og:image"
         itemprop="image"
-        content="http://turn2x.com/og/og-400x400.png"
+        content="https://turn2x.com/og/og-400x400.png"
       />
       <meta
         property="og:image"
         itemprop="image"
-        content="http://turn2x.com/og/og-256x256.png"
+        content="https://turn2x.com/og/og-256x256.png"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:image"
-        content="http://turn2x.com/og/og-921x518.png"
+        content="https://turn2x.com/og/og-921x518.png"
       />
       <meta property="twitter:title" content="Turn2x" />
       <meta name="twitter:image:alt" content="Turn2x" />
