@@ -139,12 +139,16 @@ const Process = ({}) => {
                     src={section1}
                     className="section-img"
                     alt="section 1"
+                    width="215"
+                    height="563"
                   />
                   <img
                     loading="lazy"
                     src={section1active}
                     className="section-img-active"
                     alt="section 1 active"
+                    width="215"
+                    height="563"
                   />
                 </div>
                 <div {...stateWrapperProps("E2", "graphic-section section-2")}>
@@ -153,12 +157,16 @@ const Process = ({}) => {
                     src={section2}
                     alt="section 2"
                     className="section-img"
+                    width="185"
+                    height="563"
                   />
                   <img
                     loading="lazy"
                     src={section2active}
                     alt="section 2 active"
                     className="section-img-active"
+                    width="185"
+                    height="563"
                   />
                 </div>
                 <div {...stateWrapperProps("E3", "graphic-section section-3")}>
@@ -167,12 +175,16 @@ const Process = ({}) => {
                     src={section3}
                     alt="section 3"
                     className="section-img"
+                    width="327"
+                    height="565"
                   />
                   <img
                     loading="lazy"
                     src={section3active}
                     alt="section 3 active"
                     className="section-img-active"
+                    width="327"
+                    height="565"
                   />
                 </div>
               </div>
