@@ -11,17 +11,16 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="wrapper">
-        <div className="footer-item careers">
-          <span>{t("careers:name")}</span>
-          <a
-            className="button button-tiny"
-            href="https://turn-energy.notion.site/turn-energy/Careers-at-Turn-c960e136909b410ca737de169f5967a6"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("hiring:name")}
-          </a>
-        </div>
+        <a
+          className="footer-item careers"
+          href="https://turn-energy.notion.site/turn-energy/Careers-at-Turn-c960e136909b410ca737de169f5967a6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="text">{t("careers:name")}</span>
+          <span className="button button-tiny">{t("hiring:name")}</span>
+        </a>
+
         <Link className="footer-caption legal" to="/legal">
           {t("legal:name")}
         </Link>
