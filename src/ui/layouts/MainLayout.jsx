@@ -25,6 +25,7 @@ const MainLayout = ({ children, className, bottomPattern, simple }) => {
             className="bottom-pattern"
             src={simple ? pattern3 : pattern}
             alt="pattern"
+            loading="lazy"
           />
         )}
       </div>

@@ -17,7 +17,7 @@ const NotFoundPage = () => {
             loop={true}
             autoplay={true}
           ></AnimatedIcon>
-          <img src={logo} alt="Logo Turn2x" />
+          <img loading="lazy" src={logo} alt="Logo Turn2x" />
         </Link>
         <div className="panel">
           <h1 className="jumbo">404</h1>
@@ -27,7 +27,12 @@ const NotFoundPage = () => {
           </Link>
         </div>
       </div>
-      <img className="bottom-pattern" src={pattern} alt="pattern" />
+      <img
+        loading="lazy"
+        className="bottom-pattern"
+        src={pattern}
+        alt="pattern"
+      />
     </div>
   );
 };

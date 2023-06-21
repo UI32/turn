@@ -20,7 +20,7 @@ const HomePage = () => {
     <MainLayout bottomPattern>
       <Hero />
       <div className="top-pattern">
-        <img className="pattern" src={pattern} alt="pattern" />
+        <img className="pattern" src={pattern} alt="pattern" loading="lazy" />
       </div>
       {/*<QuoteBlock />*/}
       <div id="how-it-works" className="nav-reference"></div>

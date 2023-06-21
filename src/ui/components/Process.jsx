@@ -32,7 +32,7 @@ const useCycleActiveStates = (stateList, delay) => {
   };
   const cycleActiveState = () => {
     const idx = stateList.indexOf(activeState);
-    setActiveState(stateList[(idx + 1) % stateList.length]);
+    // setActiveState(stateList[(idx + 1) % stateList.length]);
   };
   // trigger & content
   const stateWrapperProps = (state, className) => ({
@@ -91,11 +91,13 @@ const Process = ({}) => {
               <div className="mobile-graphic">
                 <div {...stateWrapperProps("E1", "graphic-section section-1")}>
                   <img
+                    loading="lazy"
                     src={section1mb}
                     className="section-img mobile"
                     alt="section 1"
                   />
                   <img
+                    loading="lazy"
                     src={section1activemb}
                     className="section-img-active mobile"
                     alt="section 1 active"
@@ -103,11 +105,13 @@ const Process = ({}) => {
                 </div>
                 <div {...stateWrapperProps("E2", "graphic-section section-2")}>
                   <img
+                    loading="lazy"
                     src={section2mb}
                     alt="section 2"
                     className="section-img mobile"
                   />
                   <img
+                    loading="lazy"
                     src={section2activemb}
                     alt="section 2 active"
                     className="section-img-active mobile"
@@ -115,11 +119,13 @@ const Process = ({}) => {
                 </div>
                 <div {...stateWrapperProps("E3", "graphic-section section-3")}>
                   <img
+                    loading="lazy"
                     src={section3mb}
                     alt="section 3"
                     className="section-img mobile"
                   />
                   <img
+                    loading="lazy"
                     src={section3activemb}
                     alt="section 3 active"
                     className="section-img-active mobile"
@@ -128,24 +134,42 @@ const Process = ({}) => {
               </div>
               <div className="desktop-graphic">
                 <div {...stateWrapperProps("E1", "graphic-section section-1")}>
-                  <img src={section1} className="section-img" alt="section 1" />
                   <img
+                    loading="lazy"
+                    src={section1}
+                    className="section-img"
+                    alt="section 1"
+                  />
+                  <img
+                    loading="lazy"
                     src={section1active}
                     className="section-img-active"
                     alt="section 1 active"
                   />
                 </div>
                 <div {...stateWrapperProps("E2", "graphic-section section-2")}>
-                  <img src={section2} alt="section 2" className="section-img" />
                   <img
+                    loading="lazy"
+                    src={section2}
+                    alt="section 2"
+                    className="section-img"
+                  />
+                  <img
+                    loading="lazy"
                     src={section2active}
                     alt="section 2 active"
                     className="section-img-active"
                   />
                 </div>
                 <div {...stateWrapperProps("E3", "graphic-section section-3")}>
-                  <img src={section3} alt="section 3" className="section-img" />
                   <img
+                    loading="lazy"
+                    src={section3}
+                    alt="section 3"
+                    className="section-img"
+                  />
+                  <img
+                    loading="lazy"
                     src={section3active}
                     alt="section 3 active"
                     className="section-img-active"

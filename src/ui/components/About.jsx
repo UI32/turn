@@ -76,22 +76,52 @@ const About = () => {
           </div>
           <div className="about-clients" data-aos="custom-animation">
             <div className="client">
-              <img src={fraunhofer} alt="Fraunhofer" width="206" height="35" />
+              <img
+                src={fraunhofer}
+                alt="Fraunhofer"
+                width="206"
+                height="35"
+                loading="lazy"
+              />
             </div>
             <div className="client basf">
-              <img src={basf} alt="Basf" width="114" height="50" />
+              <img
+                src={basf}
+                alt="Basf"
+                width="114"
+                height="50"
+                loading="lazy"
+              />
             </div>
             <div className="client">
-              <img src={kit} alt="kit" width="92" height="43" />
+              <img src={kit} alt="kit" width="92" height="43" loading="lazy" />
             </div>
             <div className="client">
-              <img src={mercedes} alt="Mercedes Benz" width="186" height="52" />
+              <img
+                src={mercedes}
+                alt="Mercedes Benz"
+                width="186"
+                height="52"
+                loading="lazy"
+              />
             </div>
             <div className="client">
-              <img src={dvgw} alt="DVGW" width="81" height="50" />
+              <img
+                src={dvgw}
+                alt="DVGW"
+                width="81"
+                height="50"
+                loading="lazy"
+              />
             </div>
             <div className="client">
-              <img src={siemens} alt="Siemens" width="181" height="43" />
+              <img
+                src={siemens}
+                alt="Siemens"
+                width="181"
+                height="43"
+                loading="lazy"
+              />
             </div>
           </div>
           <div className="about-advisors-wrapper" data-aos="custom-animation">
