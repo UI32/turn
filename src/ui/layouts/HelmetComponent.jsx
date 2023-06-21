@@ -4,6 +4,10 @@ import { Helmet } from "react-helmet";
 const HelmetComponent = ({ description, page, title, keywords }) => {
   return (
     <Helmet>
+      <meta
+        name="viewport"
+        content="initial-scale=1.0 width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <title>{title}</title>
@@ -29,21 +33,19 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
         itemprop="image"
         content="https://turn2x.com/og/og-256x256.png"
       />
-
       <meta
         property="og:image"
         itemprop="image"
         content="https://turn2x.com/og/og-1200x630.png"
       />
-
-      <meta property="twitter:title" content="Turn2x" />
-      <meta property="twitter:description" content={description} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:image"
         content="https://turn2x.com/og/og-1200x630.png"
       />
+      <meta property="twitter:title" content="Turn2x" />
       <meta name="twitter:image:alt" content="Turn2x" />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:description" content={description} />
 
       {/*<!-- Start cookieyes banner -->*/}
       <script
