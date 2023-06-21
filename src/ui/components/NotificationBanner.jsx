@@ -4,11 +4,13 @@ import { ReactComponent as Cross } from "../../assets/icons/cross.svg";
 
 const NotificationBanner = () => {
   const t = useTranslations();
+  const isVisible = Date.now() >= new Date("2023-06-27");
 
   const [close, setclose] = useState(false);
 
   return (
-    !close && (
+    !close &&
+    isVisible && (
       <div className="notification-banner">
         <div className="wrapper">
           <a
