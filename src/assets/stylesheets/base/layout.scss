@@ -58,7 +58,10 @@
   .pattern {
     z-index: -1;
     position: absolute;
-    top: -60vh;
+    top: -600px;
     left: 0;
+  }
+  @include mq($from: 2000px) {
+    top: -1000px;
   }
 }
