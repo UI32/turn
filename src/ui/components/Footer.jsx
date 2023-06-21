@@ -30,10 +30,10 @@ const Footer = () => {
         <span className="footer-caption copy">© 2023 Turn Energy GmbH</span>
         <div className="globe-wrapper">
           {/*<GlobeText />*/}
-          <div className="show-in-tablet">
+          <div className="globe-mobile">
             <Globe mobile />
           </div>
-          <div className="show-in-desktop">
+          <div className="globe-desktop">
             <Globe />
           </div>
         </div>
