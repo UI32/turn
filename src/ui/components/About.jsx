@@ -51,6 +51,7 @@ const About = () => {
               position="philip:position"
               description="philip:description"
               linkedin="https://www.linkedin.com/in/philip-kessler/"
+              email="philip@turn2x.com"
             />
             <AboutCard
               name="Benedikt Stolz"
@@ -60,6 +61,7 @@ const About = () => {
               position="benedikt:position"
               description="benedikt:description"
               linkedin="https://www.linkedin.com/in/benediktstolz/"
+              email="benedikt@turn2x.com"
             />
             <AboutCard
               name="Dr. Dominik Schollenberger"
@@ -69,6 +71,7 @@ const About = () => {
               position="dominik:position"
               description="dominik:description"
               linkedin="https://www.linkedin.com/in/dominik-schollenberger-14aa34ba/"
+              email="dominik@turn2x.com"
             />
           </div>
           <div className="about-clients" data-aos="custom-animation">

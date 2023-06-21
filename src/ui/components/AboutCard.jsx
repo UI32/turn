@@ -11,6 +11,7 @@ const AboutCard = ({
   position,
   description,
   linkedin,
+  email,
 }) => {
   const t = useTranslations();
   const [extendInfo, setExtendInfo] = useState(false);
@@ -50,7 +51,16 @@ const AboutCard = ({
           <p className="about-position">{t(position)}</p>
           <p className="about-description">{t(description)}</p>
           <div className="about-contact">
-            <p>{t("about:get-in-touch")}</p>
+            <div className="link-wrapper">
+              <a
+                className="link"
+                href={`mailto:${email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("about:get-in-touch")}
+              </a>
+            </div>
             <a
               className="link"
               href={linkedin}
