@@ -96,7 +96,7 @@
   }
 
   @include mq(lg) {
-    padding: 10px 0 330px;
+    padding: 10px 0 350px;
     .globe-mobile {
       display: none;
     }
@@ -104,18 +104,18 @@
       display: block;
     }
     .globe-wrapper {
-      bottom: -410px;
+      bottom: -524px;
     }
 
     .globe-text {
-      text {
-        font-size: 14px;
-      }
       .circle {
         overflow: hidden;
+        text {
+          font-size: 15px;
+        }
         svg {
-          width: 1450px;
-          height: 1450px;
+          width: 1720px;
+          height: 1720px;
         }
       }
     }
