@@ -3,7 +3,7 @@ import { Link } from "gatsby-link";
 import AnimatedIcon from "../components/AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
-import pattern from "../../assets/images/pattern3.png";
+import pattern from "../../assets/images/pattern3-min.png";
 import useTranslations from "../../hooks/useTranslations";
 
 const NotFoundPage = () => {

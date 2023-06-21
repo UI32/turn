@@ -8,7 +8,7 @@ import About from "../components/About";
 import Process from "../components/Process";
 import Mission from "../components/Mission";
 import Model3D from "../components/Model3D";
-import pattern from "../../assets/images/pattern1.png";
+import pattern from "../../assets/images/pattern1-min.png";
 // import QuoteBlock from "../components/QuoteBlock";
 
 const HomePage = () => {
