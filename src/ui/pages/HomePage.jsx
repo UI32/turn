@@ -17,7 +17,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <MainLayout bottomPattern>
+    <MainLayout bottomPattern={false}>
       <Hero />
       <div className="top-pattern">
         <img className="pattern" src={pattern} alt="pattern" loading="lazy" />

@@ -14,9 +14,9 @@
 }
 
 .show-in-tablet {
-  display: none;
-  @include mq(md) {
-    display: block;
+  display: block;
+  @include mq(lg) {
+    display: none;
   }
 }
 

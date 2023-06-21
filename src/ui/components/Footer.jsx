@@ -2,8 +2,7 @@ import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import { Link } from "gatsby";
 import Globe from "./Globe";
-import GlobeText from "./GlobeText";
-import GlobeMobile from "./GlobeMobile";
+// import GlobeText from "./GlobeText";
 
 const Footer = () => {
   const t = useTranslations();
@@ -30,9 +29,13 @@ const Footer = () => {
         </Link>
         <span className="footer-caption copy">© 2023 Turn Energy GmbH</span>
         <div className="globe-wrapper">
-          <GlobeText />
-          <GlobeMobile />
-          <Globe />
+          {/*<GlobeText />*/}
+          <div className="show-in-tablet">
+            <Globe mobile />
+          </div>
+          <div className="show-in-desktop">
+            <Globe />
+          </div>
         </div>
       </div>
     </footer>

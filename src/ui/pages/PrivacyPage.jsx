@@ -6,7 +6,7 @@ const PrivacyPage = () => {
   const t = useTranslations();
 
   return (
-    <MainLayout bottomPattern simple>
+    <MainLayout simple>
       <div className="generic-content wrapper">
         <div className="panel">
           <h1>Datenschutzerklärung</h1>
