@@ -1,9 +1,9 @@
 // Banners
 
 .notification-banner {
-  background: $primary-dark;
-  color: $white;
-  padding: 10px 0 8px 0;
+  background: $primary-extra-light;
+  color: $primary-dark;
+  padding: 8px 0 7px;
   z-index: 11;
   position: relative;
 
@@ -13,8 +13,8 @@
     justify-content: flex-start;
   }
   .text {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 21.6px;
     flex: 1 1 auto;
     font-weight: 400;
     padding-right: 20px;

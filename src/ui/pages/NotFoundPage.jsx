@@ -3,7 +3,7 @@ import { Link } from "gatsby-link";
 import AnimatedIcon from "../components/AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
-import pattern from "../../assets/images/pattern3.png";
+import pattern from "../../assets/images/pattern3-min.png";
 import useTranslations from "../../hooks/useTranslations";
 
 const NotFoundPage = () => {
@@ -17,7 +17,7 @@ const NotFoundPage = () => {
             loop={true}
             autoplay={true}
           ></AnimatedIcon>
-          <img src={logo} alt="Logo Turn2x" />
+          <img loading="lazy" src={logo} alt="Logo Turn2x" />
         </Link>
         <div className="panel">
           <h1 className="jumbo">404</h1>
@@ -27,7 +27,12 @@ const NotFoundPage = () => {
           </Link>
         </div>
       </div>
-      <img className="bottom-pattern" src={pattern} alt="pattern" />
+      <img
+        loading="lazy"
+        className="bottom-pattern"
+        src={pattern}
+        alt="pattern"
+      />
     </div>
   );
 };

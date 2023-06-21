@@ -4,8 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { MemoryRouter } from "react-router-dom";
 import NotificationBanner from "../components/NotificationBanner";
-import pattern from "../../assets/images/pattern2.png";
-import pattern3 from "../../assets/images/pattern3.png";
+import pattern from "../../assets/images/bottom-pattern3.png";
+import pattern3 from "../../assets/images/pattern3-min.png";
 
 const MainLayout = ({ children, className, bottomPattern, simple }) => {
   return (
@@ -25,6 +25,7 @@ const MainLayout = ({ children, className, bottomPattern, simple }) => {
             className="bottom-pattern"
             src={simple ? pattern3 : pattern}
             alt="pattern"
+            loading="lazy"
           />
         )}
       </div>

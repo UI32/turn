@@ -3,13 +3,16 @@
 .footer {
   z-index: 1;
   position: relative;
-  padding: 58px 0 10px;
+  padding: 30px 0 140px;
   overflow: hidden;
 
   &-caption {
     font-size: 16px;
     opacity: 0.5;
     line-height: 19px;
+    display: block;
+    -webkit-tap-highlight-color: transparent;
+    padding-bottom: 22px;
   }
 
   &-item {
@@ -17,6 +20,7 @@
     flex-wrap: wrap;
     align-items: center;
     -webkit-tap-highlight-color: transparent;
+    padding-bottom: 22px;
 
     span {
       margin-right: 8px;
@@ -25,61 +29,94 @@
     }
   }
 
-  .footer-caption {
-    display: block;
-    -webkit-tap-highlight-color: transparent;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    > * {
+      flex: 1 1 50%;
+    }
+  }
+
+  .globe-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -240px;
+    z-index: -1;
   }
 
   .globe {
+    display: none;
     text-align: center;
   }
 
-  @include mq($until: sm) {
-    padding-left: 146px;
-    .globe-wrapper {
-      left: 16px;
-      top: 62px;
-    }
+  .globe-mobile {
+    display: block;
   }
 
-  @include mq($from: sm, $until: lg) {
-    padding: 30px 0 30px 200px;
-    .globe-wrapper {
-      left: 44px;
-      top: 36px;
-    }
-  }
-
-  @include mq($until: lg) {
-    .globe-wrapper {
-      position: absolute;
-      .footer-caption {
-        margin-top: 0;
+  .globe-text {
+    .circle {
+      text {
+        font-size: 12px;
+      }
+      svg {
+        width: 740px;
+        height: 740px;
       }
     }
-    position: relative;
-    &-item,
-    &-caption {
-      padding: 10px 0;
+  }
+  @include mq($until: md) {
+    .privacy {
+      order: -1;
     }
   }
 
-  @include mq(lg) {
+  @include mq(md) {
     .wrapper {
-      display: flex;
+      flex-wrap: nowrap;
       align-items: center;
       > * {
         flex: 1 1 25%;
       }
     }
-  }
-  @include mq(lg) {
+    .footer-item,
     .footer-caption {
-      &:not(:first-child) {
-        text-align: center;
-      }
-      &:last-child {
-        text-align: right;
+      padding: 0;
+    }
+  }
+
+  @include mq($from: md, $until: lg) {
+    .copy {
+      flex-basis: 30%;
+    }
+    .careers {
+      flex-basis: 36%;
+    }
+  }
+
+  @include mq(lg) {
+    padding: 10px 0 350px;
+    .globe-mobile {
+      display: none;
+    }
+    .globe {
+      display: block;
+    }
+    .globe-wrapper {
+      bottom: -524px;
+    }
+
+    .globe-text {
+      .circle {
+        overflow: hidden;
+        text {
+          font-size: 15px;
+        }
+        svg {
+          width: 1720px;
+          height: 1720px;
+        }
       }
     }
   }
