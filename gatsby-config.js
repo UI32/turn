@@ -12,6 +12,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-svgr",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-i18n",
       options: {
