@@ -21,6 +21,12 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
       <meta
         property="og:image"
         itemprop="image"
+        content="https://turn2x.com/og/og-1200x630.png"
+      />
+
+      <meta
+        property="og:image"
+        itemprop="image"
         content="https://turn2x.com/og/og-1200x1200.png"
       />
       <meta
@@ -33,11 +39,7 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
         itemprop="image"
         content="https://turn2x.com/og/og-256x256.png"
       />
-      <meta
-        property="og:image"
-        itemprop="image"
-        content="https://turn2x.com/og/og-1200x630.png"
-      />
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:image"
