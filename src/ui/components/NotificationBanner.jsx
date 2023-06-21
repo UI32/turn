@@ -11,7 +11,14 @@ const NotificationBanner = () => {
     !close && (
       <div className="notification-banner">
         <div className="wrapper">
-          <p className="text">{t("announcement:text")}</p>
+          <a
+            className="text"
+            href="https://turn-energy.notion.site/DRAFT-Press-release-Seed-Round-Turn-Energy-5bfcbe7d17de4ca88e8f1b5e3cbbc76d"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("announcement:text")}
+          </a>
           <button
             aria-label="close"
             className="button-icon"
