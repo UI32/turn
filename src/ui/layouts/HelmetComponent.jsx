@@ -21,7 +21,7 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
       <meta
         property="og:image"
         itemprop="image"
-        content="https://turn2x.com/og/og-921x518.png"
+        content="https://turn2x.com/og/og-1200x630.png"
       />
       <meta
         property="og:image"
