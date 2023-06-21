@@ -49,7 +49,19 @@ const AboutCard = ({
         <div className="info">
           <h2 className="about-name">{name}</h2>
           <p className="about-position">{t(position)}</p>
-          <p className="about-description">{t(description)}</p>
+          <p className="about-description">
+            {t(description, {
+              a: t => (
+                <a
+                  href="https://understand.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t}
+                </a>
+              ),
+            })}
+          </p>
           <div className="about-contact">
             <div className="link-wrapper">
               <a

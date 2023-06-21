@@ -23,8 +23,7 @@ const LegalPage = () => {
             <div className="col-4">
               <h3>EINGETRAGEN IM</h3>
               <p>
-                Amtsgericht <br />
-                München <br /> HRB 280011,
+                Amtsgericht München <br /> HRB 280011
               </p>
               <h3>UMSATZSTEUER ID</h3>
               <p>DE357474255</p>
@@ -33,12 +32,12 @@ const LegalPage = () => {
               <h3>VERTRETEN DURCH DIE GESCHÄFTSFÜHRER</h3>
               <p>
                 Philip Kessler <br />
-                kontakt:
+                Kontakt: &nbsp;
                 <a href="mailto: info@turn2x.com">info@turn2x.com</a>
               </p>
               <p>
                 Benedikt Stolz <br />
-                kontakt:
+                Kontakt: &nbsp;
                 <a href="mailto: info@turn2x.com">info@turn2x.com</a>
               </p>
               <p></p>
