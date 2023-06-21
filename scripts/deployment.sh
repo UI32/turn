@@ -15,10 +15,14 @@ else
     exit 0;
 fi
 
-echo "**** Checking if you have the deployment repo ..." 
-rm -rf ../turn2xcom.github.io/*
+echo "**** Deleting deployment repo if present and clonning it ..." 
+
+rm -rf ../turn2xcom.github.io
 cd .. && git clone --depth 1 git@github.com:turn2xcom/turn2xcom.github.io.git &&   
 cd - 
+
+echo "**** Deleting old build folder ..."
+rm -rf ./public
 
 echo "**** Building ..." 
 npm run build 
@@ -35,12 +39,10 @@ git push
 
 echo "**** Removing deployment repo ..."
 cd - 
-rm -rf ../turn2xcom.github.io/.git 
+rm -rf ../turn2xcom.github.io
 
 echo "**** Updating deploymentsLog file ..."
-echo "By $gitUserName on $date" >> ./src/deploymentsLog.txt 
+echo "By $gitUserMail on $date" >> ./src/deploymentsLog.txt  
 
-echo "**** Removing build folder ..." 
-rm -rf ./public 
 echo "**** Deployment succeeded!" 
 
