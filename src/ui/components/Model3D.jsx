@@ -16,7 +16,7 @@ const Model3D = () => {
         <div className="ui-cover bottom"></div>
       </div>
       <div className="wrapper">
-        <div className="panel info-panel">
+        <div className="panel info-panel" data-aos="custom-animation">
           <p className="lead-m">{t("model:label")}</p>
           <h2 className="beta">{t("model:title")}</h2>
           <p className="text-xl">{t("model:text")}</p>

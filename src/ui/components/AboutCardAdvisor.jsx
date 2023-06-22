@@ -5,14 +5,16 @@ const AboutCardAdvisor = ({ image, name, alt, position }) => {
   const t = useTranslations();
 
   return (
-    <div className="about-card advisor" data-aos="custom-animation">
-      <div className="about-content">
-        <div className="about-image">
-          <img src={image} alt={alt} loading="lazy" />
-        </div>
-        <div className="about-info">
-          <h2 className="about-name">{name}</h2>
-          <p className="about-position">{t(position)}</p>
+    <div className="about-card advisor">
+      <div data-aos="custom-animation">
+        <div className="about-content">
+          <div className="about-image">
+            <img src={image} alt={alt} loading="lazy" />
+          </div>
+          <div className="about-info">
+            <h2 className="about-name">{name}</h2>
+            <p className="about-position">{t(position)}</p>
+          </div>
         </div>
       </div>
     </div>
