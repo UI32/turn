@@ -8,6 +8,7 @@
   position: relative;
   padding-bottom: 0;
   overflow: hidden;
+  animation: fade-in 3s ease;
 
   &.simple {
     background: $white;
@@ -58,11 +59,17 @@
 
 .top-pattern {
   position: relative;
+
   .pattern {
     z-index: -1;
     position: absolute;
     top: -600px;
     left: 0;
+  }
+  @include mq($until: md) {
+    .pattern {
+      top: -140px;
+    }
   }
   @include mq($from: 2000px) {
     top: -1000px;
