@@ -56,7 +56,8 @@
   min-height: calc(100vw * 0.57);
   background: $grey-bg;
 
-  iframe {
+  iframe,
+  video {
     border: none;
     position: absolute;
     top: 0;
