@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="hero-bg" data-aos="custom-animation">
         <div className="video-container">
           <div className="video-size-wrapper">
-            <img className="sensor" src={sensor} />
+            <img className="sensor" src={sensor} alt="video sensor" />
             <video autoplay="" loop="" muted="" playsinline="">
               <source src="https://turn2x.s3.eu-north-1.amazonaws.com/turnDroneVideo.mp4" />
             </video>
