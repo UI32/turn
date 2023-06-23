@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="video-container">
           <div className="video-size-wrapper">
             <img className="sensor" src={sensor} alt="video sensor" />
-            <video autoplay="" loop="" muted="" playsinline="">
+            <video autoPlay loop muted playsInline>
               <source src="https://turn2x.s3.eu-north-1.amazonaws.com/turnDroneVideo.mp4" />
             </video>
             {/* <iframe
