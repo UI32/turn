@@ -11,6 +11,7 @@ const Legal = props => {
         title={metaTags.legalTitle}
         description={metaTags.legal}
         page="/de/legal"
+        keywords={metaTags.keys}
       />
       <AppWrapper {...props} lang="de">
         <LegalPage />

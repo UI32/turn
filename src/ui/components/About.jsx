@@ -9,12 +9,12 @@ import dominik from "../../assets/images/about/dominik.png";
 import dominikSm from "../../assets/images/about/dominik-mb.png";
 import thomas from "../../assets/images/about/thomas.png";
 import evan from "../../assets/images/about/evan.png";
-import christian from "../../assets/images/about/christian.png";
 import stefan from "../../assets/images/about/stefan.png";
 import AboutCard from "./AboutCard";
 import AboutCardAdvisor from "./AboutCardAdvisor";
 import AnimatedIcon from "./AnimatedIcon";
-import headerIcon from "../../assets/animations/Icon-3.json";
+import aboutIcon from "../../assets/animations/Icon-3.json";
+import { midScreenPlay } from "../../utils/lottieInteractivities";
 import fraunhofer from "../../assets/images/clients/fraunhofer.png";
 import basf from "../../assets/images/clients/basf.png";
 import kit from "../../assets/images/clients/kit.png";
@@ -22,22 +22,25 @@ import mercedes from "../../assets/images/clients/mercedes.png";
 import dvgw from "../../assets/images/clients/dvgw.png";
 import siemens from "../../assets/images/clients/siemens.png";
 
-const About = ({}) => {
+const About = () => {
   const t = useTranslations();
   return (
-    <div className="about" id="about">
+    <div className="about">
       <div className="wrapper">
         <Panel
           className="about-panel"
           icon={
             <AnimatedIcon
-              lottieAnimation={headerIcon}
+              lottieAnimation={aboutIcon}
+              startFrame={10}
+              autoplay={false}
               loop={true}
-              autoplay={true}
+              interactivity={midScreenPlay}
             ></AnimatedIcon>
           }
           pretitle="about:management"
           title="about:title"
+          data-aos="custom-animation"
         >
           <div className="about-management">
             <AboutCard
@@ -47,6 +50,8 @@ const About = ({}) => {
               imageSm={philipSm}
               position="philip:position"
               description="philip:description"
+              linkedin="https://www.linkedin.com/in/philip-kessler/"
+              email="philip@turn2x.com"
             />
             <AboutCard
               name="Benedikt Stolz"
@@ -55,74 +60,103 @@ const About = ({}) => {
               imageSm={benediktSm}
               position="benedikt:position"
               description="benedikt:description"
+              linkedin="https://www.linkedin.com/in/benediktstolz/"
+              email="benedikt@turn2x.com"
             />
             <AboutCard
-              name="Dominik Stolz"
-              alt="Dominik Stolz"
+              name="Dr. Dominik Schollenberger"
+              alt="Dr. Dominik Schollenberger"
               image={dominik}
               imageSm={dominikSm}
               position="dominik:position"
               description="dominik:description"
+              linkedin="https://www.linkedin.com/in/dominik-schollenberger-14aa34ba/"
+              email="dominik@turn2x.com"
             />
           </div>
           <div className="about-clients" data-aos="custom-animation">
             <div className="client">
-              <img src={fraunhofer} alt="Fraunhofer" width="206" height="35" />
+              <img
+                src={fraunhofer}
+                alt="Fraunhofer"
+                width="206"
+                height="35"
+                loading="lazy"
+              />
             </div>
             <div className="client basf">
-              <img src={basf} alt="Basf" width="114" height="50" />
+              <img
+                src={basf}
+                alt="Basf"
+                width="114"
+                height="50"
+                loading="lazy"
+              />
             </div>
             <div className="client">
-              <img src={kit} alt="kit" width="92" height="43" />
+              <img src={kit} alt="kit" width="92" height="43" loading="lazy" />
             </div>
             <div className="client">
-              <img src={mercedes} alt="Mercedes Benz" width="186" height="52" />
+              <img
+                src={mercedes}
+                alt="Mercedes Benz"
+                width="186"
+                height="52"
+                loading="lazy"
+              />
             </div>
             <div className="client">
-              <img src={dvgw} alt="DVGW" width="81" height="50" />
+              <img
+                src={dvgw}
+                alt="DVGW"
+                width="81"
+                height="50"
+                loading="lazy"
+              />
             </div>
             <div className="client">
-              <img src={siemens} alt="Siemens" width="181" height="43" />
+              <img
+                src={siemens}
+                alt="Siemens"
+                width="181"
+                height="43"
+                loading="lazy"
+              />
             </div>
           </div>
-          <p className="lead-m" data-aos="custom-animation">
-            {t("about:advisory-board")}
-          </p>
-          <div className="about-advisors" data-aos="custom-animation">
-            <AboutCardAdvisor
-              name="Dr. Stefan Kaufmann"
-              alt="Dr. Stefan Kaufmann"
-              image={stefan}
-              position="stefan:position"
-            />
-            <AboutCardAdvisor
-              name="Evan Horetsky"
-              alt="Evan Horetsky"
-              image={evan}
-              position="evan:position"
-            />
-            <AboutCardAdvisor
-              name="Thomas Schaffer"
-              alt="Thomas Schaffer"
-              image={thomas}
-              position="thomas:position"
-            />
-            <AboutCardAdvisor
-              name="Christian Schneider"
-              alt="Christian Schneider"
-              image={christian}
-              position="christian:position"
-            />
-          </div>
-          <div className="about-actions" data-aos="custom-animation">
-            <a
-              className="button"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("about:explore-carreer-opportunities")}
-            </a>
+          <div className="about-advisors-wrapper" data-aos="custom-animation">
+            <p className="lead-m">{t("about:advisory-board")}</p>
+            <div className="about-advisors">
+              <AboutCardAdvisor
+                name="Dr. Stefan Kaufmann"
+                alt="Dr. Stefan Kaufmann"
+                image={stefan}
+                position="stefan:position"
+              />
+              <AboutCardAdvisor
+                name="Evan Horetsky"
+                alt="Evan Horetsky"
+                image={evan}
+                position="evan:position"
+              />
+              <AboutCardAdvisor
+                name="Thomas Schaffer"
+                alt="Thomas Schaffer"
+                image={thomas}
+                position="thomas:position"
+              />
+              <div className="about-cta" data-aos="custom-animation">
+                <h2 className="cta-title">{t("cta:title")}</h2>
+                <a
+                  className="button"
+                  href="https://turn-energy.notion.site/turn-energy/Careers-at-Turn-c960e136909b410ca737de169f5967a6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("about:explore-carreer-opportunities")}
+                </a>
+              </div>
+            </div>
           </div>
         </Panel>
       </div>

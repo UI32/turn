@@ -1,1 +1,72 @@
 // Not found
+
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: $white;
+  text-align: center;
+  position: relative;
+
+  .alpha {
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    display: block;
+    padding: 20px 0 20px 48px;
+    z-index: 11;
+    -webkit-tap-highlight-color: transparent;
+    img {
+      display: block;
+      width: 119px;
+    }
+    .lottie-container {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -30px;
+      margin-top: -2px;
+    }
+  }
+  .content {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+  }
+  .bottom-pattern {
+    position: absolute;
+    bottom: 0;
+  }
+  .panel {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .button {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  @include mq($until: md) {
+    .bottom-pattern {
+      width: 100vh;
+      max-width: none;
+    }
+    .panel {
+      padding: 30px;
+    }
+  }
+  @include mq(xl) {
+    .bottom-pattern {
+      bottom: -40%;
+    }
+  }
+}

@@ -87,23 +87,21 @@ const Header = () => {
             </nav>
 
             <div className="header-actions" onClick={closeMenu}>
-              <LangSelector />
+              <LangSelector className="show-in-tablet" />
               <Link to="/#contact" className="button button-clear">
                 {t("contact-sales:name")}
               </Link>
             </div>
             <div className="show-in-mobile">
-              <div className="nav-item">
-                <span>{t("careers:name")}</span>
-                <a
-                  className="button button-tiny"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("hiring:name")}
-                </a>
-              </div>
+              <a
+                className="nav-item careers"
+                href="https://turn-energy.notion.site/turn-energy/Careers-at-Turn-c960e136909b410ca737de169f5967a6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="text">{t("careers:name")}</span>
+                <span className="button button-tiny">{t("hiring:name")}</span>
+              </a>
               <Link className="nav-item" to="/legal">
                 {t("legal:name")}
               </Link>
@@ -114,6 +112,8 @@ const Header = () => {
           </div>
         </div>
 
+        <LangSelector className="show-in-mobile lang-mobile" />
+
         <button
           className="button-menu show-in-mobile"
           onClick={toggleMenu}
@@ -122,7 +122,6 @@ const Header = () => {
           <div className="hamburger">
             <span className="line line-1"></span>
             <span className="line line-2"></span>
-            <span className="line line-3"></span>
           </div>
         </button>
       </div>

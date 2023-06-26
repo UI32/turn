@@ -93,8 +93,8 @@ $typography: (
   beta: (
     format: (
       xxs: (
-        fz: 32px,
-        lh: 1.1,
+        fz: 30px,
+        lh: 31.5px,
         fw: 500,
         ls: -0.03em,
       ),
@@ -118,11 +118,16 @@ $typography: (
 
   lead-m: (
     format: (
-      sm: (
-        fz: 15px,
-        lh: 18px,
+      xxs: (
+        fz: 14px,
+        lh: 16.8px,
         fw: 500,
         ls: 0.1em,
+      ),
+
+      md: (
+        fz: 15px,
+        lh: 18px,
       ),
     ),
   ),
@@ -163,10 +168,14 @@ $typography: (
   text-xl: (
     format: (
       xxs: (
-        fz: 20px,
-        lh: 24px,
+        fz: 16px,
+        lh: 19px,
         fw: 400,
         ls: -0.02em,
+      ),
+      md: (
+        fz: 20px,
+        lh: 24px,
       ),
     ),
   ),

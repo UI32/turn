@@ -2,13 +2,17 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  siteMetadata: {
-    title: `turn2x`,
-    siteUrl: `https://www.yourdomain.tld`,
-  },
+  // siteMetadata: {
+  //   siteUrl: "https://turn2x.com",
+  //   title: `Turn2x Making green energy transportable`,
+  //   description: `TURN2X decarbonizes the industry by producing Renewable Natural Gas with a unique methanation process.`,
+  //   author: `Bonsai Tech`,
+  //   keywords: `Climate, carbon, technology, renewable, natural, gas, fossil, fuels, footprint, ESG, certification, neutral, CO2`,
+  // },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-svgr",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-i18n",
       options: {

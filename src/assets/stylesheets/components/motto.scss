@@ -1,0 +1,36 @@
+// Motto
+
+.motto {
+  position: relative;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  .left-icon {
+    margin-right: 6px;
+    position: relative;
+    top: 3px;
+  }
+  .right-icon {
+    margin-left: 6px;
+  }
+
+  .left-icon,
+  .right-icon {
+    width: 24px;
+  }
+
+  .wrapper {
+    z-index: 10;
+    position: relative;
+  }
+
+  @include mq(900px) {
+    font-size: 41px;
+    line-height: 54px;
+    .left-icon,
+    .right-icon {
+      width: 33px;
+    }
+  }
+}

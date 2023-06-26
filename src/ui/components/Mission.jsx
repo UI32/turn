@@ -2,25 +2,31 @@ import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import Panel from "./Panel";
 import AnimatedIcon from "./AnimatedIcon";
-import headerIcon from "../../assets/animations/Icon-5.json";
+import missionIcon from "../../assets/animations/Icon-5.json";
+import { midScreenPlay } from "../../utils/lottieInteractivities";
+import MissionContent from "./MissionContent";
 
-const Mission = ({}) => {
+const Mission = () => {
   const t = useTranslations();
   return (
-    <div className="mission" id="mission" data-aos="custom-animation">
+    <div className="mission" data-aos="custom-animation">
       <div className="wrapper">
         <Panel
           className="mission-panel"
           icon={
             <AnimatedIcon
-              lottieAnimation={headerIcon}
+              startFrame={160}
+              lottieAnimation={missionIcon}
               loop={true}
-              autoplay={true}
+              autoplay={false}
+              interactivity={midScreenPlay}
             ></AnimatedIcon>
           }
           pretitle="mission:mission"
           title="mission:title"
-        ></Panel>
+        >
+          <MissionContent />
+        </Panel>
       </div>
     </div>
   );

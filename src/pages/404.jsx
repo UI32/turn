@@ -1,21 +1,24 @@
-import * as React from "react";
-import { IntlProvider } from "react-intl";
+import React from "react";
 import AppWrapper from "../ui/layouts/AppWarpper";
+import HelmetComponent from "../ui/layouts/HelmetComponent";
+import { getLocaleFromPathname } from "../libs/i18n";
+import NotFoundPage from "../ui/pages/NotFoundPage";
 
-const NotFoundPage = () => {
+const Legal = props => {
+  const locale = getLocaleFromPathname(props.location);
+
   return (
-    <IntlProvider>
-      <AppWrapper>
-        <div className="not-found-page">
-          <div className="content">
-            404
-          </div>
-        </div>
+    <>
+      <HelmetComponent
+        title="Not found"
+        description="Not found page"
+        page="/404"
+      />
+      <AppWrapper {...props} lang={locale}>
+        <NotFoundPage />
       </AppWrapper>
-    </IntlProvider>
+    </>
   );
 };
 
-export default NotFoundPage;
-
-export const Head = () => <title>Not found</title>;
+export default Legal;

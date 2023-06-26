@@ -1,0 +1,136 @@
+// Process
+
+.process {
+  z-index: 3;
+  position: relative;
+  margin-top: 60px;
+  @include mq($from: md, $until: lg) {
+    .beta {
+      max-width: 260px;
+    }
+  }
+  @include mq(lg) {
+    .beta {
+      max-width: 304px;
+    }
+  }
+}
+
+// Process content
+
+.process {
+  $self: &;
+  &-panel {
+    margin-bottom: 0;
+  }
+  &-content {
+    .bullet {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 24px;
+      @include typo-rwd(text-xl);
+      transition: color 2s ease;
+
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: rgba($primary, 0.4);
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        transition: all 0.6s ease;
+      }
+      &.active {
+        color: $primary-dark;
+        &:before {
+          background: $primary-dark;
+        }
+      }
+    }
+
+    .graphic-section {
+      position: relative;
+      img {
+        display: block;
+        transition: all 2s ease;
+      }
+      .section-img {
+        opacity: 1;
+      }
+      .section-img-active {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      &.active {
+        .section-img {
+          opacity: 0;
+        }
+        .section-img-active {
+          opacity: 1;
+        }
+      }
+    }
+
+    .desktop-graphic {
+      display: flex;
+    }
+
+    .mobile-graphic {
+      display: none;
+      align-items: center;
+      margin-top: 29px;
+      .section-img,
+      .section-img-active {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include mq($until: md) {
+      .desktop-graphic {
+        display: none;
+      }
+
+      .mobile-graphic {
+        flex-direction: column;
+        display: flex;
+      }
+    }
+
+    @include mq(md) {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 30px;
+      #{$self}-bullets {
+        flex: 0 0 260px;
+      }
+      #{$self}-graphic {
+        flex: 1 1 auto;
+        padding-left: 10px;
+        margin-top: -100px;
+      }
+
+      .graphic-section {
+        margin-right: 10px;
+      }
+
+      .bullet {
+        &:before {
+          top: 6px;
+        }
+      }
+    }
+
+    @include mq(lg) {
+      #{$self}-graphic {
+        padding-left: 42px;
+      }
+      #{$self}-bullets {
+        flex-basis: 310px;
+      }
+    }
+  }
+}

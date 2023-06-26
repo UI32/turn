@@ -7,10 +7,14 @@ $white: #fff;
 $primary: #4579dd;
 $primary-light: #487aee;
 $primary-dark: #385494;
+$primary-extra-light: #ecf1fc;
 $grey: #d1d5db;
-$grey-bg: #fcfcfb;
+$grey-bg: #f7f7f7;
 $grey-light: #f6f6f6;
 $grey-light2: #f0f0f0;
+$grey-medium: #9ca3af;
+$grey-dark: #6b7280;
+$grey-border: #e5e7eb;
 $success: #19aa86;
 $error: #ef4444;
 $error-dark: #7f1d1d;
@@ -27,12 +31,12 @@ $bold: 700;
 $heavy: 900;
 
 // Layout
-$layout-maxWidth: 1220px;
+$layout-maxWidth: 1252px;
 
 $xxs: 0;
 $xs: 390px;
 $sm: 520px;
-$md: 760px;
+$md: 780px;
 $lg: 1060px;
 $xl: 1220px;
 $xxl: 1600px;
@@ -49,6 +53,5 @@ $grid-breakpoints: (
   // Large screen / desktop
   xl: $xl,
   // Extra large screen / wide desktop
-  xxl: $xxl
-    // Extra large screen / wide desktop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  xxl: $xxl // Extra large screen / wide desktop,,,,,
 );

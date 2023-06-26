@@ -1,27 +1,30 @@
 // Header
 
 .header {
-  padding: 20px 0;
+  padding: 2px 0;
   background: $white;
+  position: relative;
+  z-index: 10;
+
+  .lang-selector {
+    z-index: 10;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   &.is-sticky {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    padding: 6px 0;
+    padding: 4px 0;
     z-index: 99;
     animation: slide-bottom 0.3s ease;
+    + .content {
+      padding-top: 96px;
+    }
     .logo {
       padding-left: 34px;
-      img {
-        width: 82px;
-      }
-      .lottie-container {
-        width: 70px;
-        height: 70px;
-        left: -22px;
-      }
     }
   }
   > .wrapper {
@@ -40,6 +43,7 @@
     position: relative;
     padding-left: 48px;
     z-index: 11;
+    -webkit-tap-highlight-color: transparent;
     img {
       display: block;
       width: 119px;
@@ -58,19 +62,22 @@
   .nav-item {
     @include typo-rwd(text-l);
     padding: 0 16px;
-    &:hover {
-      color: $primary-dark;
-      &:before {
-        opacity: 1;
-      }
-    }
+    border-radius: 6px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    transition: all 0.4s ease-in-out;
   }
 
   .button-menu {
     position: absolute;
-    top: 0;
-    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 20px 17px;
     -webkit-tap-highlight-color: transparent;
+    margin-top: -1px;
   }
 
   &-wrapper {
@@ -82,9 +89,16 @@
   // Mobile
 
   @include mq($until: md) {
+    .lang-mobile {
+      margin: 0 16px 0 auto;
+      right: -2px;
+    }
     &.is-sticky {
-      min-height: 46px;
-      padding-top: 15px;
+      min-height: 48px;
+      padding: 0;
+      + .content {
+        padding-top: 47px;
+      }
     }
     .logo {
       position: relative;
@@ -110,6 +124,9 @@
       z-index: 10;
       padding: 0 16px 20px 16px;
       animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      .lang-selector {
+        display: none;
+      }
     }
     &-wrapper {
       display: block;
@@ -121,7 +138,6 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      // justify-content: flex-end;
     }
 
     .header-nav {
@@ -132,8 +148,10 @@
       .header-content {
         display: block;
         background-color: $white;
-        background-image: url("../images/menu-pattern.png");
+        background-image: url("../images/menu-pattern-min.png");
         overflow-y: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
         .button-clear {
           background: transparent;
           height: auto;
@@ -144,7 +162,6 @@
     }
 
     .nav-item,
-    .lang-item,
     .button-clear {
       display: flex;
       align-items: center;
@@ -160,7 +177,6 @@
       }
     }
     .nav-item,
-    .lang-selector .lang-item,
     .button-clear {
       padding: 0;
       margin-top: 10px;
@@ -185,6 +201,18 @@
 
   @include mq(md) {
     padding: 25px 0;
+    &.is-sticky {
+      .logo {
+        img {
+          width: 82px;
+        }
+        .lottie-container {
+          width: 70px;
+          height: 70px;
+          left: -22px;
+        }
+      }
+    }
     &-nav {
       display: flex;
       align-items: center;
@@ -196,11 +224,31 @@
       align-items: center;
       margin-left: auto;
     }
+
+    .nav-item {
+      &:hover {
+        transition: all 0.4s ease-in-out;
+        color: $primary-dark;
+        background: linear-gradient(
+          90deg,
+          rgba(243, 244, 246, 1) 0%,
+          rgba(229, 231, 235, 1) 100%
+        );
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   @include mq(lg) {
     .nav-item {
       padding: 0 28px;
+    }
+  }
+  @supports (-webkit-touch-callout: none) {
+    .lang-mobile {
+      top: 1px;
     }
   }
 }
@@ -216,33 +264,28 @@
 
 .hamburger {
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 14px;
+  height: 8px;
   position: relative;
-  top: -2px;
+  // margin-top: 4px;
   .line {
-    width: 100%;
-    height: 3px;
+    width: 14px;
+    height: 2px;
     background: $black;
     display: inline-block;
     position: absolute;
     left: 0;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-
     transform-origin: left;
   }
 
   .line-1 {
-    top: 0;
+    top: 0px;
   }
 
   .line-2 {
-    top: 8px;
-  }
-
-  .line-3 {
-    top: 16px;
+    top: 6px;
   }
 }
 
@@ -250,11 +293,35 @@
   .line-1 {
     transform: translate(4.5px, 0) rotate(45deg);
   }
+
   .line-2 {
-    opacity: 0;
-  }
-  .line-3 {
-    top: 18px;
+    top: 10px;
     transform: translate(4.5px, 0) rotate(-45deg);
+  }
+  .button-menu {
+    margin-top: -2px;
+  }
+}
+
+// Specific styles for German page
+
+.de {
+  @include mq($from: md, $until: 860px) {
+    .header {
+      .nav-item {
+        font-size: 17px;
+        padding: 0 12px;
+      }
+      .logo {
+        padding-left: 26px;
+        img {
+          width: 80px;
+        }
+        .lottie-container {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
   }
 }

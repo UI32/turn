@@ -3,20 +3,22 @@ import useTranslations from "../../hooks/useTranslations";
 import ContactForm from "./ContactForm";
 import Panel from "./Panel";
 import AnimatedIcon from "./AnimatedIcon";
-import headerIcon from "../../assets/animations/Icon-2-loopable.json";
+import contactIcon from "../../assets/animations/Icon-2-loopable.json";
+import { midScreenPlay } from "../../utils/lottieInteractivities";
 
 const Contact = ({}) => {
   const t = useTranslations();
   return (
-    <div className="contact" id="contact" data-aos="custom-animation">
+    <div className="contact" data-aos="custom-animation">
       <div className="wrapper">
         <Panel
           className="contact-panel"
           icon={
             <AnimatedIcon
-              lottieAnimation={headerIcon}
+              lottieAnimation={contactIcon}
+              autoplay={false}
               loop={true}
-              autoplay={true}
+              interactivity={midScreenPlay}
             ></AnimatedIcon>
           }
           pretitle="contact:name"

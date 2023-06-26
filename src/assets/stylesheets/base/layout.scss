@@ -2,54 +2,76 @@
 
 .content {
   position: relative;
-  > div {
-    z-index: 2;
-    position: relative;
-  }
-  .hero {
-    z-index: 0;
-  }
 }
 
 .outer-wrapper {
   position: relative;
   padding-bottom: 0;
-  overflow-x: hidden;
+  overflow: hidden;
+  animation: fade-in 3s ease;
 
   &.simple {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
     background: $white;
+    .globe-wrapper {
+      opacity: 0.6;
+    }
     .content {
       flex: 1 1 auto;
+    }
+    .bottom-pattern {
+      position: fixed;
+      top: 40%;
     }
   }
   .bottom-pattern {
     position: absolute;
-    bottom: 0;
     left: 0;
     z-index: 1;
+    bottom: 0;
+    width: 100%;
   }
   .content {
     z-index: 2;
   }
   .footer {
     z-index: 2;
+    flex: 0 0 auto;
   }
   @include mq($until: md) {
     .bottom-pattern {
       max-width: none;
-      width: 250%;
+      width: 200%;
     }
   }
+
   @include mq(md) {
-    padding-bottom: 60px;
-  }
-  @include mq($from: md, $until: lg) {
     .bottom-pattern {
       max-width: none;
-      height: 1000px;
+      bottom: 0;
     }
+  }
+  @include mq(xxl) {
+    .bottom-pattern {
+      bottom: -4%;
+    }
+  }
+}
+
+.top-pattern {
+  position: relative;
+
+  .pattern {
+    z-index: -1;
+    position: absolute;
+    top: -600px;
+    left: 0;
+  }
+  @include mq($until: md) {
+    .pattern {
+      top: -140px;
+    }
+  }
+  @include mq($from: 2000px) {
+    top: -1000px;
   }
 }

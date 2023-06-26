@@ -37,3 +37,10 @@
 .text-xl {
   @include typo-rwd(text-xl);
 }
+
+.caption {
+  font-size: 14px;
+  line-height: 17px;
+  opacity: 0.4;
+  letter-spacing: -0.02em;
+}

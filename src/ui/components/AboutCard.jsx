@@ -3,7 +3,16 @@ import useTranslations from "../../hooks/useTranslations";
 import { ReactComponent as Cross } from "../../assets/icons/cross.svg";
 import cx from "classnames";
 
-const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
+const AboutCard = ({
+  image,
+  imageSm,
+  name,
+  alt,
+  position,
+  description,
+  linkedin,
+  email,
+}) => {
   const t = useTranslations();
   const [extendInfo, setExtendInfo] = useState(false);
 
@@ -19,26 +28,54 @@ const AboutCard = ({ image, imageSm, name, alt, position, description }) => {
 
   return (
     <div className={cx("about-card", { extended: extendInfo })}>
-      <div className="about-content" onClick={onExtendInfo}>
-        <div className="about-image" data-aos="custom-animation">
-          <img src={imageSm} alt={alt} />
-        </div>
-        <div className="about-info" data-aos="custom-animation">
-          <h2 className="about-name">{name}</h2>
-          <p className="about-position">{t(position)}</p>
+      <div data-aos="custom-animation">
+        <div className="about-content" onClick={onExtendInfo}>
+          <div className="about-image">
+            <img src={imageSm} alt={alt} loading="lazy" />
+          </div>
+          <div className="about-info">
+            <h2 className="about-name">{name}</h2>
+            <p className="about-position">{t(position)}</p>
+          </div>
         </div>
       </div>
+
+      <div className="overlay" onClick={onCloseInfo}></div>
+
       <div className="extra">
-        <img src={image} alt={alt} />
+        <div className="image">
+          <img src={image} alt={alt} loading="lazy" />
+        </div>
         <div className="info">
           <h2 className="about-name">{name}</h2>
           <p className="about-position">{t(position)}</p>
-          <p className="about-description">{t(description)}</p>
+          <p className="about-description">
+            {t(description, {
+              a: t => (
+                <a
+                  href="https://understand.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t}
+                </a>
+              ),
+            })}
+          </p>
           <div className="about-contact">
-            <p>{t("about:get-in-touch")}</p>
+            <div className="link-wrapper">
+              <a
+                className="link"
+                href={`mailto:${email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("about:get-in-touch")}
+              </a>
+            </div>
             <a
               className="link"
-              href="#"
+              href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
             >

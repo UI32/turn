@@ -11,6 +11,7 @@ const IndexPage = props => {
         title={metaTags.indexTitle}
         description={metaTags.index}
         page="/de/"
+        keywords={metaTags.indexKeys}
       />
       <AppWrapper {...props} lang="de">
         <HomePage />

@@ -1,10 +1,98 @@
 // Generic content
 
 .generic-content {
+  a {
+    text-decoration: underline;
+    word-break: break-word;
+  }
+
+  h1 {
+    @include typo-rwd(alpha);
+  }
+
+  h2 {
+    @include typo-rwd(beta);
+  }
+
+  h3 {
+    @include typo-rwd(lead-m);
+    text-transform: uppercase;
+    color: #6b7280;
+    margin: 30px 0 16px;
+  }
+  h1,
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  p,
+  ul,
+  li {
+    margin-bottom: 22px;
+    @include typo-rwd(text-l);
+    opacity: 1;
+    + .lead-xs,
+    + .lead-m {
+      margin-top: 50px;
+    }
+  }
+  .panel {
+    margin: 20px 0;
+  }
+
+  .table-wrapper {
+    border: 1px solid $grey-border;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    width: 100%;
+    overflow-x: auto;
+  }
+  table td,
+  table td * {
+    vertical-align: top;
+  }
+  table {
+    border-radius: 6px;
+    border-collapse: collapse;
+    overflow: hidden;
+    th,
+    td {
+      text-align: left;
+      padding: 16px 24px;
+    }
+
+    th {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 500;
+      color: $grey-dark;
+      background: $grey-light;
+    }
+  }
+  @include mq($until: md) {
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .panel {
+      padding: 16px;
+    }
+  }
   @include mq(md) {
-    margin-top: 100px;
+    margin-top: 52px;
     .panel {
       margin: 32px 0;
+    }
+    .row {
+      display: flex;
+      div[class^="col-"] {
+        &:not(:last-child) {
+          padding-right: 30px;
+        }
+      }
+    }
+    .col-4 {
+      flex: 1 1 25%;
     }
   }
 }
