@@ -61,7 +61,7 @@ const About = () => {
               position="benedikt:position"
               description="benedikt:description"
               linkedin="https://www.linkedin.com/in/benediktstolz/"
-              email="benedikt@turn2x.com"
+              email="ben@turn2x.com"
             />
             <AboutCard
               name="Dr. Dominik Schollenberger"
