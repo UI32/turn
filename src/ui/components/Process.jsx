@@ -32,7 +32,7 @@ const useCycleActiveStates = (stateList, delay) => {
   };
   const cycleActiveState = () => {
     const idx = stateList.indexOf(activeState);
-    // setActiveState(stateList[(idx + 1) % stateList.length]);
+    setActiveState(stateList[(idx + 1) % stateList.length]);
   };
   // trigger & content
   const stateWrapperProps = (state, className) => ({
