@@ -27,7 +27,7 @@ const Footer = () => {
         <Link className="footer-caption privacy" to="/privacy">
           {t("data-privacy:name")}
         </Link>
-        <span className="footer-caption copy">© 2023 Turn Energy GmbH</span>
+        <span className="footer-caption copy">© 2023 Turn2X</span>
         <div className="globe-wrapper">
           {/*<GlobeText />*/}
           <div className="globe-mobile">
