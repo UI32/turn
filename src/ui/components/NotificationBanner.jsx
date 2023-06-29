@@ -4,7 +4,7 @@ import { ReactComponent as Cross } from "../../assets/icons/cross.svg";
 
 const NotificationBanner = () => {
   const t = useTranslations();
-  const isVisible = Date.now() >= new Date("2023-06-27");
+  const isVisible = false; //waiting for client permission to make it visible
 
   const [close, setclose] = useState(false);
 
