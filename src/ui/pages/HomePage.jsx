@@ -9,7 +9,10 @@ import Process from "../components/Process";
 import Mission from "../components/Mission";
 import Model3D from "../components/Model3D";
 import pattern from "../../assets/images/pattern1-min.png";
-// import QuoteBlock from "../components/QuoteBlock";
+import QuoteBlock from "../components/QuoteBlock";
+import Quote from "../components/Quote";
+import author from "../../assets/images/thomas.png";
+import company from "../../assets/images/noelle.png";
 
 const HomePage = () => {
   useEffect(() => {
@@ -22,7 +25,19 @@ const HomePage = () => {
       <div className="top-pattern">
         <img className="pattern" src={pattern} alt="pattern" loading="lazy" />
       </div>
-      {/*<QuoteBlock />*/}
+      <QuoteBlock />
+      <div className="wrapper">
+        <Quote
+          author="Thomas Köhler"
+          authorImage={author}
+          quote="thomas-kohler:quote"
+          position="thomas-kohler:position"
+          company="Noelle + Von Campe"
+          companyImage={company}
+          companyWidth={106}
+          companyHeight={38}
+        />
+      </div>
       <div id="how-it-works" className="nav-reference"></div>
       <Process />
       <Model3D />

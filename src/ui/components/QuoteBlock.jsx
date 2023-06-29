@@ -2,14 +2,14 @@ import React from "react";
 import Motto from "./Motto";
 import author from "../../assets/images/dirk.png";
 import company from "../../assets/images/siempelkamp.png";
-import Quote from "../components/Quote";
+import QuoteAlt from "../components/QuoteAlt";
 
 const QuoteBlock = () => {
   return (
     <div className="quote-block" data-aos="custom-animation">
       <div className="wrapper">
         <Motto />
-        <Quote
+        <QuoteAlt
           author="Dirk Howe"
           authorImage={author}
           quote="dirk:quote"

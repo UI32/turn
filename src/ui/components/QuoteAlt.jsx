@@ -13,23 +13,23 @@ const Quote = ({
 }) => {
   const t = useTranslations();
   return (
-    <div className="quote">
-      <h2 className="beta">{t(quote)}</h2>
-      <div className="quote-info">
-        <div className="quote-img">
-          <img src={authorImage} alt={author} />
-        </div>
-        <div className="quote-extra">
+    <div className="quote-alt">
+      <div className="quote-alt-img">
+        <img src={authorImage} alt={author} />
+      </div>
+      <div className="quote-alt-info">
+        <p className="text-xl">{t(quote)}</p>
+        <div className="quote-alt-extra">
+          <div className="captions">
+            <p className="caption">{author}</p>
+            <p className="caption">{t(position)}</p>
+          </div>
           <img
             src={companyImage}
             alt={company}
             width={companyWidth}
             height={companyHeight}
           />
-          <div className="captions">
-            <p className="caption">{author}</p>
-            <p className="caption">{t(position)}</p>
-          </div>
         </div>
       </div>
     </div>
