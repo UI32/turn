@@ -9,7 +9,6 @@ import Process from "../components/Process";
 import Mission from "../components/Mission";
 import Model3D from "../components/Model3D";
 import pattern from "../../assets/images/pattern1-min.png";
-import QuoteBlock from "../components/QuoteBlock";
 import Quote from "../components/Quote";
 import author from "../../assets/images/thomas.png";
 import company from "../../assets/images/noelle.png";
@@ -25,7 +24,6 @@ const HomePage = () => {
       <div className="top-pattern">
         <img className="pattern" src={pattern} alt="pattern" loading="lazy" />
       </div>
-      <QuoteBlock />
       <div className="wrapper">
         <Quote
           author="Thomas Köhler"

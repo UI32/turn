@@ -1,7 +1,7 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 
-const Quote = ({
+const QuoteSm = ({
   authorImage,
   author,
   quote,
@@ -13,13 +13,13 @@ const Quote = ({
 }) => {
   const t = useTranslations();
   return (
-    <div className="quote-alt">
-      <div className="quote-alt-img">
+    <div className="quote-sm">
+      <div className="quote-sm-img">
         <img src={authorImage} alt={author} />
       </div>
-      <div className="quote-alt-info">
+      <div className="quote-sm-info">
         <p className="text-xl">{t(quote)}</p>
-        <div className="quote-alt-extra">
+        <div className="quote-sm-extra">
           <div className="captions">
             <p className="caption">{author}</p>
             <p className="caption">{t(position)}</p>
@@ -36,4 +36,4 @@ const Quote = ({
   );
 };
 
-export default Quote;
+export default QuoteSm;
