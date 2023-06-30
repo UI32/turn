@@ -14,7 +14,7 @@ const Quote = ({
 }) => {
   const t = useTranslations();
   return (
-    <>
+    <div data-aos="custom-animation">
       <div className="hide-in-tablet">
         <QuoteSm
           author={author}
@@ -49,7 +49,7 @@ const Quote = ({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
