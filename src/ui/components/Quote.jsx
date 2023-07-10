@@ -1,7 +1,8 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
+import QuoteSm from "../components/QuoteSm";
 
-const QuoteBlock = ({
+const Quote = ({
   authorImage,
   author,
   quote,
@@ -13,27 +14,43 @@ const QuoteBlock = ({
 }) => {
   const t = useTranslations();
   return (
-    <div className="quote">
-      <div className="quote-img">
-        <img src={authorImage} alt={author} />
+    <div data-aos="custom-animation">
+      <div className="hide-in-tablet">
+        <QuoteSm
+          author={author}
+          authorImage={authorImage}
+          quote={quote}
+          position={position}
+          company={company}
+          companyImage={companyImage}
+          companyWidth={96}
+          companyHeight={34}
+        />
       </div>
-      <div className="quote-info">
-        <p className="text-xl">{t(quote)}</p>
-        <div className="quote-extra">
-          <div className="captions">
-            <p className="caption">{author}</p>
-            <p className="caption">{t(position)}</p>
+      <div className="show-in-tablet">
+        <div className="quote">
+          <h2 className="beta">{t(quote)}</h2>
+          <div className="quote-info">
+            <div className="quote-img">
+              <img src={authorImage} alt={author} />
+            </div>
+            <div className="quote-extra">
+              <img
+                src={companyImage}
+                alt={company}
+                width={companyWidth}
+                height={companyHeight}
+              />
+              <div className="captions">
+                <p className="caption">{author}</p>
+                <p className="caption">{t(position)}</p>
+              </div>
+            </div>
           </div>
-          <img
-            src={companyImage}
-            alt={company}
-            width={companyWidth}
-            height={companyHeight}
-          />
         </div>
       </div>
     </div>
   );
 };
 
-export default QuoteBlock;
+export default Quote;

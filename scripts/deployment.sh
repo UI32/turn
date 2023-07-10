@@ -36,6 +36,7 @@ echo "**** Adding all the build and pushing to main ..."
 git add . 
 git commit -m "update" 
 git push  
+echo "**** Deployment completed! ****"
 
 echo "**** Removing deployment repo ..."
 cd - 
@@ -43,6 +44,9 @@ rm -rf ../turn2xcom.github.io
 
 echo "**** Updating deploymentsLog file ..."
 echo "By $gitUserMail on $date" >> ./src/deploymentsLog.txt  
+git add ./src/deploymentsLog.txt 
+git commit -m "update deploymentsLog"
+git push
 
-echo "**** Deployment succeeded!" 
+echo "**** All done!" 
 

@@ -1,126 +1,158 @@
 // Quote
 
 .quote {
+  $self: &;
   background: $white;
-  padding: 5px;
-  border-radius: 20px;
-  &-img {
-    border-radius: 12px;
-    overflow: hidden;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-    }
-  }
-  &-block {
-    z-index: 2;
-    position: relative;
-    .wrapper {
-      z-index: 2;
-      position: relative;
-    }
+  border-radius: 12px;
+  margin-top: 60px;
+
+  .beta {
+    font-weight: normal;
   }
 
-  &-info {
-    padding: 20px;
-  }
+  // Quote Sm
 
-  &-extra {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    margin-top: auto;
-    img {
-      margin-left: auto;
-      flex-shrink: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  &-extra {
-    align-items: center;
-    margin-top: auto;
-    img {
-      order: 1;
-      margin-left: auto;
-      flex-shrink: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  .text-xl {
-    margin-bottom: 10px;
-  }
-
-  .caption {
-    + .caption {
-      margin-top: 2px;
-    }
-  }
-
-  @include mq($until: 900px) {
-    margin-top: 20px;
-    &-block {
-      padding: 40px 0;
-    }
-    &-img {
-      background-image: url("../images/pattern-quote-min.png");
-      background-size: 100%;
-      background-repeat: no-repeat;
-      img {
-        max-width: 230px;
-        margin: 0 auto;
+  &-sm {
+    background: $white;
+    padding: 5px;
+    border-radius: 20px;
+    margin-top: 12px;
+    .caption {
+      + .caption {
+        margin-top: 2px;
       }
     }
-    .captions {
-      width: 50%;
-    }
+
     .text-xl {
-      font-size: 20px;
-      line-height: 24px;
-      margin-bottom: 26px;
+      margin-bottom: 10px;
     }
-  }
 
-  @include mq(900px) {
-    display: flex;
-    border-radius: 12px;
-    &-block {
-      padding: 154px 0;
-      > .wrapper {
-        display: flex;
-        align-items: center;
-      }
-      .motto,
-      .quote {
-        flex: 1 1 50%;
-      }
-      .motto {
-        padding-right: 16px;
-      }
-    }
     &-img {
-      flex: 0 0 165px;
+      border-radius: 12px;
+      overflow: hidden;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
     }
     &-info {
-      display: flex;
-      flex-direction: column;
-      padding: 26px 30px 24px 23px;
+      padding: 20px;
     }
-
     &-extra {
-      flex-direction: row;
+      margin-top: 20px;
+      display: flex;
       align-items: center;
       margin-top: auto;
       img {
-        order: 1;
         margin-left: auto;
         flex-shrink: 0;
         margin-bottom: 0;
+        order: 1;
       }
+    }
+  }
+
+  &-img {
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  // Media queries
+
+  @include mq(sm) {
+    &-sm {
+      display: flex;
+      border-radius: 12px;
+      &-img {
+        flex: 0 0 165px;
+      }
+      &-info {
+        display: flex;
+        flex-direction: column;
+        padding: 26px 30px 24px 23px;
+      }
+      &-extra {
+        flex-direction: row;
+        align-items: center;
+        margin-top: auto;
+        img {
+          order: 1;
+          margin-left: auto;
+          flex-shrink: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include mq($until: md) {
+    &-sm {
+      .captions {
+        width: 50%;
+      }
+      .text-xl {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 26px;
+      }
+      &-img {
+        background-image: url("../images/pattern-quote-min.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        img {
+          max-width: 230px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    padding: 36px 58px;
+
+    .beta {
+      flex: 0 1 80%;
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+    &-extra {
+      padding-left: 20px;
+      img {
+        margin-bottom: 9px;
+      }
+    }
+    &-img {
+      width: 100px;
+      height: 100px;
+    }
+    .caption {
+      + .caption {
+        margin-top: 4px;
+      }
+    }
+    &-sm {
+      margin-top: 60px;
+    }
+  }
+
+  @include mq(lg) {
+    .beta {
+      flex-basis: 622px;
+    }
+    &-extra {
+      padding-left: 51px;
+    }
+    &-info {
+      padding-left: 40px;
     }
   }
 }

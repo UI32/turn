@@ -1,8 +1,9 @@
 // Utils
 
-.hide-in-desktop {
+.hide-in-mobile {
+  display: none;
   @include mq(md) {
-    display: none;
+    display: block;
   }
 }
 
@@ -13,10 +14,22 @@
   }
 }
 
+.hide-in-tablet {
+  @include mq(md) {
+    display: none;
+  }
+}
+
 .show-in-tablet {
   display: none;
   @include mq(md) {
     display: block;
+  }
+}
+
+.hide-in-desktop {
+  @include mq(lg) {
+    display: none;
   }
 }
 
