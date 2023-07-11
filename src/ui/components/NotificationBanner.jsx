@@ -13,7 +13,7 @@ const NotificationBanner = () => {
         <div className="wrapper">
           <a
             className="text"
-            href="https://www.businessinsider.de/gruenderszene/business/mit-diesen-10-folien-pitchte-das-biogas-startup-turn2x-um-millionen/"
+            href="https://turn-energy.notion.site/Press-release-Seed-Round-Turn2X-5bfcbe7d17de4ca88e8f1b5e3cbbc76d"
             target="_blank"
             rel="noopener noreferrer"
           >
