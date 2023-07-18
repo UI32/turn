@@ -1,5 +1,6 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
+
 import sensor from "../../assets/images/hero-sensor.png";
 
 const Hero = () => {
@@ -37,7 +38,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
+        <script src="https://player.vimeo.com/api/player.js"></script>
       </div>
     </div>
   );
