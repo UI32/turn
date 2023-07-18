@@ -14,7 +14,7 @@ const LegalPage = () => {
             <div className="col-4">
               <h3>ANGABEN GEMÄSS § 5 TM</h3>
               <p>
-                Turn Energy GmbH <br /> Am Kartoffelgarten 14, 81671 München,
+                Turn Energy GmbH <br /> Leopoldstrasse 173E, 81671 München,
                 Germany <br />
                 Kontakt:{" "}
                 <a href="mailto:privacy@turn2x.com">privacy@turn2x.com</a>
