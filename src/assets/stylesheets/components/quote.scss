@@ -116,6 +116,13 @@
     align-items: center;
     padding: 36px 58px;
 
+    &.sm-text {
+      .beta {
+        font-size: 28px;
+        line-height: 1.1;
+      }
+    }
+
     .beta {
       flex: 0 1 80%;
     }
@@ -123,6 +130,7 @@
       display: flex;
       align-items: center;
       padding-left: 20px;
+      flex: 0 1 280px;
     }
     &-extra {
       padding-left: 20px;
@@ -153,6 +161,7 @@
     }
     &-info {
       padding-left: 40px;
+      flex: 0 0 380px;
     }
   }
 }
