@@ -1,6 +1,7 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
 import QuoteSm from "../components/QuoteSm";
+import cx from "classnames";
 
 const Quote = ({
   authorImage,
@@ -11,10 +12,11 @@ const Quote = ({
   company,
   companyHeight,
   companyWidth,
+  smText,
 }) => {
   const t = useTranslations();
   return (
-    <div data-aos="custom-animation">
+    <>
       <div className="hide-in-tablet">
         <QuoteSm
           author={author}
@@ -28,7 +30,7 @@ const Quote = ({
         />
       </div>
       <div className="show-in-tablet">
-        <div className="quote">
+        <div className={cx("quote", { "sm-text": smText })}>
           <h2 className="beta">{t(quote)}</h2>
           <div className="quote-info">
             <div className="quote-img">
@@ -49,7 +51,7 @@ const Quote = ({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
