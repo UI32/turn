@@ -28,7 +28,10 @@ const Carousel = ({ children }) => {
     arrows: false,
   };
 
-  const isMobile = window.innerWidth <= 780;
+  let isMobile = false;
+  if (typeof window !== "undefined") {
+    isMobile = window.innerWidth <= 780;
+  }
 
   return (
     <Slider {...(isMobile ? mobileSettings : settings)}>{children}</Slider>
