@@ -16,7 +16,23 @@ const Carousel = ({ children }) => {
     arrows: false,
   };
 
-  return <Slider {...settings}>{children}</Slider>;
+  const mobileSettings = {
+    dots: false,
+    infinite: true,
+    speed: 4000,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    arrows: false,
+  };
+
+  const isMobile = window.innerWidth <= 780;
+
+  return (
+    <Slider {...(isMobile ? mobileSettings : settings)}>{children}</Slider>
+  );
 };
 
 export default Carousel;

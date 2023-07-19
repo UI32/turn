@@ -146,7 +146,7 @@
     }
 
     .beta {
-      flex: 0 1 80%;
+      flex: 0 1 70%;
     }
     &-info {
       display: flex;
@@ -175,15 +175,15 @@
   }
 
   @include mq(lg) {
-    .beta {
-      flex-basis: 622px;
-    }
     &-extra {
       padding-left: 51px;
     }
     &-info {
       padding-left: 40px;
-      flex: 0 0 420px;
+      flex: 0 0 385px;
+    }
+    .beta {
+      flex-basis: 80%;
     }
   }
 }
