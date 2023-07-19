@@ -15,7 +15,7 @@ const LangSelector = ({ className }) => {
         aria-label="button language selection"
         disabled={locale === "de"}
       >
-        EN
+        DE
       </button>
       <button
         className={cx("lang-item", { active: locale === "en" })}
@@ -23,7 +23,7 @@ const LangSelector = ({ className }) => {
         aria-label="button language selection"
         disabled={locale === "en"}
       >
-        DE
+        EN
       </button>
     </div>
   );

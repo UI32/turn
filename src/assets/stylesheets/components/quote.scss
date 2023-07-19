@@ -1,10 +1,20 @@
 // Quote
 
+// Quotes
+
+.quotes {
+  margin-top: 12px;
+  @include mq(md) {
+    margin-top: 60px;
+  }
+}
+
+// Quote
+
 .quote {
   $self: &;
   background: $white;
   border-radius: 12px;
-  margin-top: 60px;
 
   .beta {
     font-weight: normal;
@@ -16,7 +26,7 @@
     background: $white;
     padding: 5px;
     border-radius: 20px;
-    margin-top: 12px;
+
     .caption {
       + .caption {
         margin-top: 2px;
@@ -62,6 +72,18 @@
   }
 
   // Media queries
+
+  @include mq($until: sm) {
+    &-sm {
+      display: flex;
+      flex-direction: column;
+      &-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+      }
+    }
+  }
 
   @include mq(sm) {
     &-sm {
@@ -116,13 +138,21 @@
     align-items: center;
     padding: 36px 58px;
 
+    &.sm-text {
+      .beta {
+        font-size: 28px;
+        line-height: 1.1;
+      }
+    }
+
     .beta {
-      flex: 0 1 80%;
+      flex: 0 1 70%;
     }
     &-info {
       display: flex;
       align-items: center;
       padding-left: 20px;
+      flex: 0 1 280px;
     }
     &-extra {
       padding-left: 20px;
@@ -145,14 +175,15 @@
   }
 
   @include mq(lg) {
-    .beta {
-      flex-basis: 622px;
-    }
     &-extra {
       padding-left: 51px;
     }
     &-info {
       padding-left: 40px;
+      flex: 0 0 385px;
+    }
+    .beta {
+      flex-basis: 80%;
     }
   }
 }
