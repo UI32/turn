@@ -63,6 +63,7 @@ const AboutCard = ({
             })}
           </p>
           <div className="about-contact">
+            {/*
             <div className="link-wrapper">
               <a
                 className="link"
@@ -72,7 +73,7 @@ const AboutCard = ({
               >
                 {t("about:get-in-touch")}
               </a>
-            </div>
+            </div>*/}
             <a
               className="link"
               href={linkedin}
