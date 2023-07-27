@@ -6,7 +6,7 @@ const Panel = ({ className, pretitle, title, icon, children }) => {
   const t = useTranslations();
   return (
     <div className={cx("panel", { [className]: className })}>
-      <div className="panel-header" data-aos="custom-animation">
+      <div className="panel-header">
         {icon}
         <p className="lead-m">{t(pretitle)}</p>
         <h2

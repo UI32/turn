@@ -7,20 +7,10 @@ const Motto = () => {
   const t = useTranslations();
   return (
     <div className="motto">
-      <img
-        src={logo1}
-        alt="Turnx2 pattern"
-        className="left-icon"
-        data-aos="custom-animation"
-      />
-      <span data-aos="custom-animation">{t("hero:quote")}</span>
+      <img src={logo1} alt="Turnx2 pattern" className="left-icon" />
+      <span>{t("hero:quote")}</span>
 
-      <img
-        src={logo2}
-        alt="Turnx2 pattern"
-        className="right-icon"
-        data-aos="custom-animation"
-      />
+      <img src={logo2} alt="Turnx2 pattern" className="right-icon" />
     </div>
   );
 };

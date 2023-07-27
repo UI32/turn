@@ -40,7 +40,6 @@ const About = () => {
           }
           pretitle="about:management"
           title="about:title"
-          data-aos="custom-animation"
         >
           <div className="about-management">
             <AboutCard
@@ -74,7 +73,7 @@ const About = () => {
               // email="dominik@turn2x.com"
             />
           </div>
-          <div className="about-clients" data-aos="custom-animation">
+          <div className="about-clients">
             <div className="client">
               <img
                 src={fraunhofer}
@@ -124,7 +123,7 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="about-advisors-wrapper" data-aos="custom-animation">
+          <div className="about-advisors-wrapper">
             <p className="lead-m">{t("about:advisory-board")}</p>
             <div className="about-advisors">
               <AboutCardAdvisor
@@ -145,7 +144,7 @@ const About = () => {
                 image={thomas}
                 position="thomas:position"
               />
-              <div className="about-cta" data-aos="custom-animation">
+              <div className="about-cta">
                 <h2 className="cta-title">{t("cta:title")}</h2>
                 <a
                   className="button"

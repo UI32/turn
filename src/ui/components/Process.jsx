@@ -57,7 +57,7 @@ const Process = ({}) => {
   const [stateWrapperProps] = useCycleActiveStates(["E1", "E2", "E3"], 5000);
 
   return (
-    <div className="process" data-aos="custom-animation">
+    <div className="process">
       <div className="wrapper">
         <Panel
           className="process-panel"
@@ -74,7 +74,7 @@ const Process = ({}) => {
           title="process:title"
         >
           <div className={cx("process-content")}>
-            <div className="process-bullets" data-aos="custom-animation">
+            <div className="process-bullets">
               <div {...stateWrapperProps("E1", "bullet")}>
                 {t("process:section1")}
               </div>
@@ -87,7 +87,7 @@ const Process = ({}) => {
               <p className="caption">{t("process:caption1")}</p>
               <p className="caption">{t("process:caption2")}</p>
             </div>
-            <div className="process-graphic" data-aos="custom-animation">
+            <div className="process-graphic">
               <div className="mobile-graphic">
                 <div {...stateWrapperProps("E1", "graphic-section section-1")}>
                   <img

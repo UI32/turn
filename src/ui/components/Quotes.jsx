@@ -8,7 +8,7 @@ import jorgCompany from "../../assets/images/energie360.svg";
 
 const Quotes = ({}) => {
   return (
-    <div data-aos="custom-animation" className="quotes wrapper">
+    <div className="quotes wrapper">
       <Carousel>
         <Quote
           author="Thomas Köhler"

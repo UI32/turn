@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="hero">
       <div className="hero-intro">
         <div className="wrapper">
-          <div className="hero-text" data-aos="custom-animation">
+          <div className="hero-text">
             <h1
               className="jumbo"
               dangerouslySetInnerHTML={{

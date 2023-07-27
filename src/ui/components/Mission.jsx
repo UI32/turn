@@ -9,7 +9,7 @@ import MissionContent from "./MissionContent";
 const Mission = () => {
   const t = useTranslations();
   return (
-    <div className="mission" data-aos="custom-animation">
+    <div className="mission">
       <div className="wrapper">
         <Panel
           className="mission-panel"

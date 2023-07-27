@@ -12,7 +12,7 @@ import Goal from "./Goal";
 const MissionContent = () => {
   const t = useTranslations();
   return (
-    <div className="mission-content" data-aos="custom-animation">
+    <div className="mission-content">
       <div className="goals">
         <Goal
           future

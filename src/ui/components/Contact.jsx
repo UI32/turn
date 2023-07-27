@@ -9,7 +9,7 @@ import { midScreenPlay } from "../../utils/lottieInteractivities";
 const Contact = ({}) => {
   const t = useTranslations();
   return (
-    <div className="contact" data-aos="custom-animation">
+    <div className="contact">
       <div className="wrapper">
         <Panel
           className="contact-panel"

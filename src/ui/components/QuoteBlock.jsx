@@ -6,7 +6,7 @@ import QuoteSm from "./QuoteSm";
 
 const QuoteBlock = () => {
   return (
-    <div className="quote-block" data-aos="custom-animation">
+    <div className="quote-block">
       <div className="wrapper">
         <Motto />
         <QuoteSm

@@ -4,7 +4,7 @@ import useTranslations from "../../hooks/useTranslations";
 const Model3D = () => {
   const t = useTranslations();
   return (
-    <div className="model" id="model" data-aos="custom-animation">
+    <div className="model" id="model">
       <div className="model-wrapper">
         <div className="ui-cover top-left"></div>
         <div className="ui-cover top-right"></div>
@@ -16,7 +16,7 @@ const Model3D = () => {
         <div className="ui-cover bottom"></div>
       </div>
       <div className="wrapper">
-        <div className="panel info-panel" data-aos="custom-animation">
+        <div className="panel info-panel">
           <p className="lead-m">{t("model:label")}</p>
           <h2 className="beta">{t("model:title")}</h2>
           <p className="text-xl">{t("model:text")}</p>
