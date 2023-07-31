@@ -19,6 +19,8 @@ import fraunhofer from "../../assets/images/clients/fraunhofer.png";
 import basf from "../../assets/images/clients/basf.png";
 import kit from "../../assets/images/clients/kit.png";
 import mercedes from "../../assets/images/clients/mercedes.png";
+import tumvl from "../../assets/images/clients/tumvl.png";
+import werk1 from "../../assets/images/clients/werk1.png";
 import dvgw from "../../assets/images/clients/dvgw.png";
 import siemens from "../../assets/images/clients/siemens.png";
 
@@ -78,8 +80,8 @@ const About = () => {
               <img
                 src={fraunhofer}
                 alt="Fraunhofer"
-                width="206"
-                height="35"
+                width="295"
+                height="50"
                 loading="lazy"
               />
             </div>
@@ -87,20 +89,38 @@ const About = () => {
               <img
                 src={basf}
                 alt="Basf"
-                width="114"
-                height="50"
+                width="163"
+                height="71"
                 loading="lazy"
               />
             </div>
             <div className="client">
-              <img src={kit} alt="kit" width="92" height="43" loading="lazy" />
+              <img src={kit} alt="kit" width="131" height="61" loading="lazy" />
             </div>
             <div className="client">
               <img
                 src={mercedes}
                 alt="Mercedes Benz"
-                width="186"
-                height="52"
+                width="266"
+                height="74"
+                loading="lazy"
+              />
+            </div>
+            <div className="client">
+              <img
+                src={tumvl}
+                alt="Tum VL"
+                width="296"
+                height="49"
+                loading="lazy"
+              />
+            </div>
+            <div className="client">
+              <img
+                src={werk1}
+                alt="Werk 1"
+                width="205"
+                height="73"
                 loading="lazy"
               />
             </div>
@@ -108,8 +128,8 @@ const About = () => {
               <img
                 src={dvgw}
                 alt="DVGW"
-                width="81"
-                height="50"
+                width="116"
+                height="71"
                 loading="lazy"
               />
             </div>
@@ -117,8 +137,8 @@ const About = () => {
               <img
                 src={siemens}
                 alt="Siemens"
-                width="181"
-                height="43"
+                width="259"
+                height="61"
                 loading="lazy"
               />
             </div>
