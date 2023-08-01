@@ -80,8 +80,8 @@ const About = () => {
               <img
                 src={fraunhofer}
                 alt="Fraunhofer"
-                width="295"
-                height="50"
+                width="149"
+                height="25"
                 loading="lazy"
               />
             </div>
@@ -89,29 +89,29 @@ const About = () => {
               <img
                 src={basf}
                 alt="Basf"
-                width="163"
-                height="71"
+                width="83"
+                height="37"
                 loading="lazy"
               />
             </div>
             <div className="client">
-              <img src={kit} alt="kit" width="131" height="61" loading="lazy" />
+              <img src={kit} alt="kit" width="66" height="31" loading="lazy" />
             </div>
             <div className="client">
               <img
                 src={mercedes}
                 alt="Mercedes Benz"
-                width="266"
-                height="74"
+                width="135"
+                height="38"
                 loading="lazy"
               />
             </div>
-            <div className="client">
+            <div className="client tumvl">
               <img
                 src={tumvl}
                 alt="Tum VL"
-                width="296"
-                height="49"
+                width="149"
+                height="25"
                 loading="lazy"
               />
             </div>
@@ -119,8 +119,8 @@ const About = () => {
               <img
                 src={werk1}
                 alt="Werk 1"
-                width="205"
-                height="73"
+                width="104"
+                height="37"
                 loading="lazy"
               />
             </div>
@@ -128,8 +128,8 @@ const About = () => {
               <img
                 src={dvgw}
                 alt="DVGW"
-                width="116"
-                height="71"
+                width="59"
+                height="36"
                 loading="lazy"
               />
             </div>
@@ -137,8 +137,8 @@ const About = () => {
               <img
                 src={siemens}
                 alt="Siemens"
-                width="259"
-                height="61"
+                width="131"
+                height="31"
                 loading="lazy"
               />
             </div>
