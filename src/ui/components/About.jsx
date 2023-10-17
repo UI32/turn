@@ -86,7 +86,7 @@ const About = () => {
                 loading="lazy"
               />
             </div>
-            <div className="client basf">
+            <div className="client">
               <img
                 src={basf}
                 alt="Basf"
@@ -116,7 +116,7 @@ const About = () => {
                 loading="lazy"
               />
             </div>
-            <div className="client tumvl">
+            <div className="client">
               <img
                 src={tumvl}
                 alt="Tum VL"
