@@ -8,12 +8,13 @@
 
   &-caption {
     font-size: 16px;
-    color: rgba($black, 0.5);
+    color: $grey-dark;
     line-height: 19px;
     display: flex;
     align-items: center;
     -webkit-tap-highlight-color: transparent;
     padding-bottom: 22px;
+    transition: 0.3s ease-in-out;
   }
 
   &-item {
@@ -25,18 +26,19 @@
 
     .text {
       margin-right: 8px;
-      color: rgba($black, 0.5);
+      color: $grey-dark;
       margin-top: 2px;
+      transition: 0.3s ease-in-out;
     }
   }
 
   &-caption::before,
   &-item::before {
     content: "";
-    height: 2px;
-    border-radius: 1px;
+    height: 1px;
+    border-radius: 0.5px;
     width: 0;
-    background: rgba($black, 0.25);
+    background: rgba($grey-dark, 0.75);
     display: inline-block;
     transition: 0.3s ease-in-out;
   }
@@ -44,9 +46,17 @@
   @media (hover: hover) {
     &-caption:not(.copy):hover,
     &-item:hover {
+      color: rgba($grey-dark, 0.75);
+
       &::before {
-        width: 8px;
-        margin-right: 4px;
+        width: 10px;
+        margin-right: 6px;
+      }
+    }
+
+    &-item:hover {
+      .text {
+        color: rgba($grey-dark, 0.75);
       }
     }
   }
