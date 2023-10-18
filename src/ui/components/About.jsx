@@ -19,6 +19,7 @@ import fraunhofer from "../../assets/images/clients/fraunhofer.png";
 import basf from "../../assets/images/clients/basf.png";
 import kit from "../../assets/images/clients/kit.png";
 import mercedes from "../../assets/images/clients/mercedes.png";
+import h2ub from "../../assets/images/clients/h2ub.png";
 import tumvl from "../../assets/images/clients/tumvl.png";
 import werk1 from "../../assets/images/clients/werk1.png";
 import dvgw from "../../assets/images/clients/dvgw.png";
@@ -85,7 +86,7 @@ const About = () => {
                 loading="lazy"
               />
             </div>
-            <div className="client basf">
+            <div className="client">
               <img
                 src={basf}
                 alt="Basf"
@@ -106,7 +107,16 @@ const About = () => {
                 loading="lazy"
               />
             </div>
-            <div className="client tumvl">
+            <div className="client">
+              <img
+                src={h2ub}
+                alt="H2UB"
+                width="62"
+                height="55"
+                loading="lazy"
+              />
+            </div>
+            <div className="client">
               <img
                 src={tumvl}
                 alt="Tum VL"

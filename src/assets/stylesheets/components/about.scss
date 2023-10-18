@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-between;
     .client {
-      flex: 1 1 50%;
+      flex: 1 1 33.33%;
       margin: 14px 0;
     }
   }
@@ -44,22 +44,21 @@
       letter-spacing: -0.03em;
     }
   }
-  @include mq($until: xs) {
-    .tumvl img {
-      max-width: 100px;
-    }
-  }
 
   @include mq($until: md) {
-    .basf {
-      order: -1;
-    }
     &-clients {
       padding-bottom: 20px;
     }
 
-    .client img {
-      display: block;
+    .client {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+
+      & img {
+        display: block;
+      }
     }
 
     &-cta {
@@ -126,7 +125,7 @@
     &-clients {
       .client {
         transform: scale(0.9);
-        flex-basis: 25%;
+        flex-basis: 20%;
         text-align: center;
         img {
           margin: 0 auto;
