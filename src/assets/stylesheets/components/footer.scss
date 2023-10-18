@@ -8,9 +8,10 @@
 
   &-caption {
     font-size: 16px;
-    opacity: 0.5;
+    color: rgba($black, 0.5);
     line-height: 19px;
-    display: block;
+    display: flex;
+    align-items: center;
     -webkit-tap-highlight-color: transparent;
     padding-bottom: 22px;
   }
@@ -24,8 +25,29 @@
 
     .text {
       margin-right: 8px;
-      opacity: 0.5;
+      color: rgba($black, 0.5);
       margin-top: 2px;
+    }
+  }
+
+  &-caption::before,
+  &-item::before {
+    content: "";
+    height: 2px;
+    border-radius: 1px;
+    width: 0;
+    background: rgba($black, 0.25);
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+  }
+
+  @media (hover: hover) {
+    &-caption:not(.copy):hover,
+    &-item:hover {
+      &::before {
+        width: 8px;
+        margin-right: 4px;
+      }
     }
   }
 
