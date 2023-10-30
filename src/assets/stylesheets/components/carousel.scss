@@ -3,6 +3,12 @@
 // Force quotes inside carousel to
 // get the tallest item height
 
+.slick-slider {
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: $white;
+}
+
 .slick-list {
   display: flex !important;
   .slick-track {
