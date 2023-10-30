@@ -13,6 +13,13 @@
     .client {
       flex: 1 1 33.33%;
       margin: 14px 0;
+
+      &.dvgw {
+        img {
+          position: relative;
+          top: -4px;
+        }
+      }
     }
   }
 

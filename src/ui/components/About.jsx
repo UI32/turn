@@ -134,7 +134,7 @@ const About = () => {
                 loading="lazy"
               />
             </div>
-            <div className="client">
+            <div className="client dvgw">
               <img
                 src={dvgw}
                 alt="DVGW"
