@@ -111,8 +111,8 @@ const About = () => {
               <img
                 src={h2ub}
                 alt="H2UB"
-                width="62"
-                height="55"
+                width="48"
+                height="42"
                 loading="lazy"
               />
             </div>
