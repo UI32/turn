@@ -26,6 +26,8 @@
 
 ## 🚀 How do I deploy the site?
 
+- Allways try to deploy from the `dev` branch, if you are working on a feature or bug fix, you can create a new branch from `dev` and work there, then merge your changes to `dev` and deploy from there.
+
 - If you have are working on a **Mac** or a **Linux** operating system, you can simply run `npm run deploy` to run the deployment script (it is located at `./scripts/deploy.sh`,in this folder). This script will build the site and push the static files to the deployment repo and update the 'main' branch of this repo.
 
 - 🚧 **CAUTION!** After running this script you will be in the `main` branch of this repo, you might want to switch back to the `dev` branch to continue working.
