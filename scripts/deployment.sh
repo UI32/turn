@@ -5,7 +5,7 @@ gitUserMail=$(git config user.email)
 
 clear
 
-printf 'This will clone the deployment repo, push, remove if and update the deploymentsLog file. Continue? (y/n) '
+printf 'This will clone the deployment repo, push, remove it and update the deploymentsLog file. Continue? (y/n) '
 read answer
 
 if [ "$answer" != "${answer#[Yy]}" ] ;then 
