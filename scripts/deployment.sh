@@ -48,5 +48,12 @@ git add ./src/deploymentsLog.txt
 git commit -m "update deploymentsLog"
 git push
 
-echo "**** All done!" 
+echo "**** Updating 'main' branch ..."
+git checkout main
+git pull origin dev
+git push
 
+echo "**** All done!" 
+echo "****"
+echo "CAUTION! You are on 'MAIN' branch now! You might want to go back to the previous branch before making changes."
+echo "****"
