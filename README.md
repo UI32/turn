@@ -1,50 +1,35 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# turn2x site development documentation
 
-## 🚀 Quick start
+## 📝 What is this project about?
 
-1.  **Create a Gatsby site.**
+- This is the source code of the site https://turn2x.com, it is a static site built using Gatsby (https://www.gatsbyjs.com/), it is hosted in GitHub Pages and it is deployed using a custom bash script. 
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## 🤔 What do you need to work and push to this project? 
 
-2.  **Start developing.**
+- Git (v2.25.1 or higher)
+- Node.js (v18.13.0 or higher)
+- A GitHub account with write access to this repository, and have a public SSH key associated to your account.
 
-    Navigate into your new site’s directory and start it up.
+- 🚧 **IMPORTANT!** If you want to deploy the site you will need also write access to this other repo: https://github.com/turn2xcom/turn2xcom.github.io (this is the repo that contains the static files that are served by the domain https://turn2x.com)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
 
-3.  **Open the code and start customizing!**
+## 🛠️ How do I start working on this project?
 
-    Your site is now running at http://localhost:8000!
+- Clone this repo
+- Run `npm install` to install all the dependencies
+- Run `npm start` to start the development server
+- Open `http://localhost:8000` in your browser to see the site running
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+- 🚧 **IMPORTANT!** Do not make any changes in the `main` branch, you should always work in the `dev` branch or any other branch that you create for a specific feature or bug fix. The `main` branch should only be updated after deployments (The deployment script will automatically update the `main` branch).
 
-4.  **Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## 🚀 How do I deploy the site?
 
-## 🚀 Quick start (Netlify)
+- If you have are working on a **Mac** or a **Linux** operating system, you can simply run `npm run deploy` to run the deployment script (it is located at `./scripts/deploy.sh`,in this folder). This script will build the site and push the static files to the deployment repo and update the 'main' branch of this repo.
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+- 🚧 **CAUTION!** After running this script you will be in the `main` branch of this repo, you might want to switch back to the `dev` branch to continue working.
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
-# turn2x
+- If you are using **Windows**, you can try to run the same script using Git Bash (https://gitforwindows.org/), if it does not work you can manually copy the files from the `./public` folder to the root folder of the deployment repo and push the changes, that will automatically trigger an update of the published site version.
+
+- 🚧 **IMPORTANT!** If you are deploying from Windows you might need to change the line endings of the files in the `./scripts` folder to LF (instead of CRLF) to avoid errors when running the script. You can do this using VS Code (https://code.visualstudio.com/) and clicking on the CRLF button at the bottom right corner of the editor window. 
