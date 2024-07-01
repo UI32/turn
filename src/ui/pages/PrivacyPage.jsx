@@ -55,7 +55,7 @@ const PrivacyPage = () => {
           <p>
             Turn Energy GmbH <br />
             Am Kartoffelgarten 14, <br />
-            81671 München, Germany
+            80804 München, Germany
             <br />
             <a href="mailto: privacy@turn2x.com"> privacy@turn2x.com</a>
           </p>
