@@ -1,9 +1,9 @@
 import React from "react";
-import useTranslations from "../../hooks/useTranslations";
+// import useTranslations from "../../hooks/useTranslations";
 import MainLayout from "../layouts/MainLayout";
 
 const PrivacyPage = () => {
-  const t = useTranslations();
+  // const t = useTranslations();
 
   return (
     <MainLayout simple>
@@ -55,7 +55,7 @@ const PrivacyPage = () => {
           <p>
             Turn Energy GmbH <br />
             Am Kartoffelgarten 14, <br />
-            80804 München, Germany
+            81671 München, Germany
             <br />
             <a href="mailto: privacy@turn2x.com"> privacy@turn2x.com</a>
           </p>
