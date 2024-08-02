@@ -95,7 +95,7 @@ const Header = () => {
             <div className="show-in-mobile">
               <a
                 className="nav-item careers"
-                href="https://turn2x.notion.site/Careers-at-Turn-c960e136909b410ca737de169f5967a6?pvs=4"
+                href="https://turn2x.jobs.personio.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
