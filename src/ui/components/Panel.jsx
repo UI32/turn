@@ -10,7 +10,7 @@ const Panel = ({ className, pretitle, title, icon, children }) => {
         {icon}
         <p className="lead-m">{t(pretitle)}</p>
         <h2
-          className="beta"
+          className="alpha"
           dangerouslySetInnerHTML={{
             __html: t(title),
           }}

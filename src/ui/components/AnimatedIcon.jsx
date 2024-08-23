@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
+import cx from "classnames";
 
 const AnimatedIcon = ({
   fps,
@@ -9,12 +10,14 @@ const AnimatedIcon = ({
   autoplay,
   interactivity,
   endFramesTrim,
+  className,
 }) => {
   if (fps) lottieAnimation.fr = fps;
   const startingFrame = startFrame || 0;
   const endingFrame = lottieAnimation.op - (endFramesTrim || 0);
+
   return (
-    <div className="lottie-container">
+    <div className={cx("lottie-container", className)}>
       <Lottie
         animationData={lottieAnimation}
         interactivity={

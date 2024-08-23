@@ -13,7 +13,7 @@ const Typography = () => {
         jumbo <span className="hl">h1</span> m36 d80
       </p>
       <p className="alpha">
-        alpha <span className="hl">h2</span> m32 d40
+        alpha <span className="hl">h2</span> m32 d36
       </p>
       <p className="beta">
         beta <span className="hl">h3</span> m20 d24

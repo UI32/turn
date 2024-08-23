@@ -3,16 +3,16 @@
 .panel {
   background: $white;
   border-radius: 12px;
-  padding: 24px;
+  padding: 32px;
   margin-bottom: 12px;
 
-  .beta {
-    margin-bottom: 14px;
+  .alpha {
+    margin-bottom: 20px;
   }
 
   .lead-m {
     color: rgba($black, 0.4);
-    margin-bottom: 14px;
+    margin-bottom: 20px;
   }
   .text-l {
     opacity: 0.5;
@@ -20,7 +20,7 @@
   }
 
   &-header {
-    .beta {
+    .alpha {
       span {
         color: $primary-dark;
       }
@@ -31,16 +31,15 @@
   }
   @include mq(md) {
     margin-bottom: 60px;
-    padding: 40px 18px 28px 24px;
+    padding: 40px;
     &-header {
+      .alpha {
+        margin-bottom: 36px;
+      }
       .text-l {
         margin-bottom: 39px;
       }
     }
-  }
-
-  @include mq(lg) {
-    padding: 56px;
   }
 }
 
