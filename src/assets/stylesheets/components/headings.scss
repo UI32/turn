@@ -12,9 +12,20 @@
   @include typo-rwd(beta);
 }
 
-.lead-xs {
-  @include typo-rwd(lead-xs);
-  text-transform: uppercase;
+.text-xl {
+  @include typo-rwd(text-xl);
+}
+
+.text-l {
+  @include typo-rwd(text-l);
+}
+
+.text-m {
+  @include typo-rwd(text-m);
+}
+
+.text-s {
+  @include typo-rwd(text-s);
 }
 
 .lead-m {
@@ -22,20 +33,12 @@
   text-transform: uppercase;
 }
 
-.text-s {
-  @include typo-rwd(text-s);
+.quote-l {
+  @include typo-rwd(quote-l);
 }
 
-.text-m {
-  @include typo-rwd(text-m);
-}
-
-.text-l {
-  @include typo-rwd(text-l);
-}
-
-.text-xl {
-  @include typo-rwd(text-xl);
+.quote-m {
+  @include typo-rwd(quote-m);
 }
 
 .caption {
