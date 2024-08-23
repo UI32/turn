@@ -3,7 +3,7 @@ import React from "react";
 const Typography = () => {
   return (
     <div className="wrapper">
-      <style jsx>{`
+      <style jsx="true">{`
         .hl {
           color: #4579dd;
           font-weight: 700;
