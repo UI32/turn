@@ -19,6 +19,7 @@ const Quotes = ({}) => {
           companyImage={thomasCompany}
           companyWidth={106}
           companyHeight={38}
+          quoteClass="quote-l"
         />
         <Quote
           author="Jörg Wild"
@@ -27,9 +28,8 @@ const Quotes = ({}) => {
           position="jorg-wild:position"
           company="Energie 360° AG"
           companyImage={jorgCompany}
-          companyWidth={143}
-          companyHeight={29}
-          smText
+          companyWidth={106}
+          companyHeight={38}
         />
       </Carousel>
     </div>

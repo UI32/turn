@@ -1,7 +1,5 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
-import QuoteSm from "../components/QuoteSm";
-import cx from "classnames";
 
 const Quote = ({
   authorImage,
@@ -12,46 +10,32 @@ const Quote = ({
   company,
   companyHeight,
   companyWidth,
-  smText,
+  quoteClass = "quote-m",
 }) => {
   const t = useTranslations();
   return (
-    <>
-      <div className="hide-in-tablet">
-        <QuoteSm
-          author={author}
-          authorImage={authorImage}
-          quote={quote}
-          position={position}
-          company={company}
-          companyImage={companyImage}
-          companyWidth={96}
-          companyHeight={34}
-        />
-      </div>
-      <div className="show-in-tablet">
-        <div className={cx("quote", { "sm-text": smText })}>
-          <h2 className="beta">{t(quote)}</h2>
-          <div className="quote-info">
-            <div className="quote-img">
-              <img src={authorImage} alt={author} />
-            </div>
-            <div className="quote-extra">
-              <img
-                src={companyImage}
-                alt={company}
-                width={companyWidth}
-                height={companyHeight}
-              />
-              <div className="captions">
-                <p className="caption">{author}</p>
-                <p className="caption">{t(position)}</p>
-              </div>
-            </div>
+    <div className="quote">
+      <div className="quote-author">
+        <div className="quote-img">
+          <img src={authorImage} alt={author} />
+        </div>
+        <div className="quote-extra">
+          <img
+            src={companyImage}
+            alt={company}
+            width={companyWidth}
+            height={companyHeight}
+          />
+          <div className="captions">
+            <p className="text-s">{author}</p>
+            <p className="text-s">{t(position)}</p>
           </div>
         </div>
       </div>
-    </>
+      <div className="quote-content">
+        <p className={quoteClass}>{t(quote)}</p>
+      </div>
+    </div>
   );
 };
 
