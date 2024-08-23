@@ -34,10 +34,10 @@ const Typography = () => {
         lead-m <span className="hl">overline</span> 14
       </p>
       <p className="quote-l">
-        <span className="hl">quote-l</span> m20 d36
+        <span className="hl">quote-l</span> m26 d36
       </p>
       <p className="quote-m">
-        <span className="hl">quote-m</span> m26 d28
+        <span className="hl">quote-m</span> m20 d28
       </p>
     </div>
   );
