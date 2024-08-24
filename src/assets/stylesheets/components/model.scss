@@ -7,7 +7,7 @@
   top: -27px;
 
   .panel {
-    padding: 27px 18px;
+    padding: 32px;
     width: 100%;
     max-width: none;
     border-radius: 12px;
@@ -16,8 +16,9 @@
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 0;
+    .alpha,
     .lead-m {
-      margin-bottom: 14px;
+      margin-bottom: 20px;
     }
   }
   &-wrapper {
@@ -75,14 +76,14 @@
       font-size: 18px;
     }
     .panel {
-      padding: 64px 56px;
-      max-width: 695px;
+      padding: 40px;
+      max-width: 644px;
       position: absolute;
       top: auto;
       bottom: -40px;
       left: 10px;
       transform: none;
-      .beta {
+      .alpha {
         max-width: 387px;
         margin-bottom: 12px;
       }
