@@ -9,6 +9,7 @@ import Process from "../components/Process";
 import Mission from "../components/Mission";
 import Model3D from "../components/Model3D";
 import Quotes from "../components/Quotes";
+import Plant from "../components/Plant";
 import Typography from "../components/Typography";
 
 const HomePage = () => {
@@ -24,6 +25,7 @@ const HomePage = () => {
       <div id="how-it-works" className="nav-reference"></div>
       <Process />
       <Model3D />
+      <Plant />
       <div id="mission" className="nav-reference"></div>
       <Mission />
       <div id="about" className="nav-reference"></div>

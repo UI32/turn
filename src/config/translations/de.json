@@ -65,5 +65,9 @@
   "hiring:name": "We're hiring!",
   "imprint:name": "Imprint",
   "404:title": "Diese Seite existiert nicht. Unsere Lösungen zum Ersetzen Fossiler Brennstoffe sind jedoch existent.",
-  "404:proceed": "Weiter"
+  "404:proceed": "Weiter",
+  "plant:label": "Inaugurated 2024",
+  "plant:title": "First Commercial Plant ",
+  "plant:text": "TURN2X's plant in Miajadas, Spain, marks a global milestone in commercial viability by selling 100% of its renewable natural gas output via longterm off-take contracts.",
+  "read-more:text": "Read more"  
 }

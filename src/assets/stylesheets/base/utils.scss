@@ -93,3 +93,10 @@
 .error-icon {
   color: $error;
 }
+
+.no-p-md {
+  padding: 0;
+  @include mq(md) {
+    padding: 0 16px;
+  }
+}
