@@ -128,6 +128,9 @@
         width: 314px;
         padding: 24px;
       }
+      @include mq(lg) {     
+        max-width: 314px;
+      }
       .icon {
         margin-bottom: 24px;
         transform: translateX(-7px);
