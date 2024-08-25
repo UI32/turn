@@ -25,7 +25,9 @@
   "mission:mission": "Mission",
   "mission:title": "Fossile Brennstoffe durch modulare RNG Anlagen ersetzen",
   "mission:2030": "23 Millionen Tonnen CO2 vermieden",
-  "mission:2024": "Scale-up des Standard Anlagenmoduls",
+  "mission:2024": "Project start for largest RNG plant in the world",
+  "mission:2024-1": "TURN2X raised >25M EUR (grants + equity)",
+  "mission:2024-2": "Inauguration of first commercial plant in Spain ",
   "mission:2023": "Nächste Iteration des Designs führt zu weiteren Patentanmeldungen",
   "mission:2022": "Basierend auf “Tech Proof” wurde TURN2X gegründet. Beginn der Skalierung der Technologie",
   "mission:2019": "Inbetriebnahme der Anlage in Falkenhagen und Produktion der ersten erneuerbaren Moleküle",
@@ -69,5 +71,7 @@
   "plant:label": "Inaugurated 2024",
   "plant:title": "First Commercial Plant ",
   "plant:text": "TURN2X's plant in Miajadas, Spain, marks a global milestone in commercial viability by selling 100% of its renewable natural gas output via longterm off-take contracts.",
-  "read-more:text": "Read more"  
+  "read-more:text": "Read more",
+    "press:item-1-pre": "pretitle longlonglonglong",
+  "press:item-1-title": "titletitletitle titletitle title title"
 }

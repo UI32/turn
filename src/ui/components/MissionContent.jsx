@@ -1,5 +1,4 @@
 import React from "react";
-import useTranslations from "../../hooks/useTranslations";
 import { ReactComponent as Graph } from "../../assets/icons/graph-light.svg";
 import { ReactComponent as PaperD } from "../../assets/icons/paper-dark.svg";
 import { ReactComponent as PaperL } from "../../assets/icons/paper-light.svg";
@@ -13,7 +12,6 @@ import { ReactComponent as TurnxL } from "../../assets/icons/turnx-light.svg";
 import Goal from "./Goal";
 
 const MissionContent = () => {
-  const t = useTranslations();
   return (
     <div className="mission-content">
       <div className="goals">
