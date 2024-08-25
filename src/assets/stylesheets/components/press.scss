@@ -11,18 +11,12 @@
     overflow-x: auto;
     white-space: nowrap;
     padding-left: 16px;
-    // -webkit-overflow-scrolling: touch;
-    // -ms-overflow-style: none;
-    // scrollbar-width: none;
-  
-    // &::-webkit-scrollbar {
-    //   display: none; 
-    // }    
 
     @include mq(md) {
       max-width: $layout-maxWidth;
       margin: 0 auto;
       padding: 0 16px;
+      padding-bottom: 16px;
     }
   }
 
