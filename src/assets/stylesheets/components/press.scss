@@ -1,6 +1,7 @@
 // Press
 
 .press {
+  background-color: red;
   margin-bottom: 80px;
 
   @include mq(md) {
@@ -48,10 +49,14 @@
   &.spacer {
     min-width: 6px;
     max-width: 6px;
-    margin-left: -6px;
     padding: 0;
     opacity: 0;
     border: 1px solid transparent;
+  
+    @include mq(md) {
+      margin-left: -6px;
+    }
+  
     @include mq($from: 1616px) {
       display: none;
     }
