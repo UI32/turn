@@ -11,6 +11,13 @@
     overflow-x: auto;
     white-space: nowrap;
     padding-left: 16px;
+    // -webkit-overflow-scrolling: touch;
+    // -ms-overflow-style: none;
+    // scrollbar-width: none;
+  
+    // &::-webkit-scrollbar {
+    //   display: none; 
+    // }    
 
     @include mq(md) {
       max-width: $layout-maxWidth;
@@ -31,6 +38,7 @@
 }
 
 .press-item {
+  $self: &;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -39,6 +47,16 @@
   border-radius: 12px;
   overflow: hidden;
   background-color: $white;
+
+  &:hover {
+    #{$self}-icon {
+      transform: translateX(8px);
+    }
+
+    #{$self}-img {
+      transform: scale(1.05);
+    }
+  }
 
   @include mq(lg) {
     height: 614px;
@@ -92,6 +110,8 @@
     width: 24px;
     margin-right: 16px;
     margin-left: 8px;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
 
     @include mq(lg) {
       margin-right: 0;
@@ -111,13 +131,33 @@
 
   &-img-container {
     flex-grow: 1;
+    overflow: hidden;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
   }
 
   &-img {
     object-fit: cover;
     height: 100%;
     width: 100%;
-    border-top-right-radius: 12px;
-    border-top-left-radius: 12px;
+    transition: transform 0.3s cubic-bezier(0.42, 0.87, 0.61, 1);
+    will-change: transform;
+  }
+
+  &-first {
+    background-color: $primary-light;
+    color: $white;
+
+    .lead-m {
+      color: $white;
+    }
+
+    .text-xl {
+      white-space: normal;
+      margin-top: 20px;
+      @include mq(lg) {
+        margin-top: 8px;
+      }
+    }
   }
 }

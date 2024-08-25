@@ -72,6 +72,9 @@
   "plant:title": "First Commercial Plant ",
   "plant:text": "TURN2X's plant in Miajadas, Spain, marks a global milestone in commercial viability by selling 100% of its renewable natural gas output via longterm off-take contracts.",
   "read-more:text": "Read more",
-    "press:item-1-pre": "pretitle longlonglonglong",
+  "press:label": "Deep dives",
+  "press:title": "Industry Insights",
+  "press:text": "Explore our in-depth analyses and expert insights on industry trends.",  
+  "press:item-1-pre": "pretitle longlonglonglong",
   "press:item-1-title": "titletitletitle titletitle title title"
 }
