@@ -5,18 +5,51 @@
   position: relative;
   padding-top: 80px;
 
+  @include mq(md) {
+    padding-top: 160px;
+  }
+
   .lottie-container {
     margin-left: -8px;
   }
   @include mq($from: md, $until: lg) {
-    .beta {
+    .alpha {
       max-width: 60%;
     }
   }
 
   @include mq(lg) {
-    .beta {
+    .alpha {
       max-width: 520px;
+      margin-bottom: 0;
+    }
+  }
+
+  .wrapper {
+    padding: 0;
+
+    @include mq(md) {
+      padding: 0 16px;
+    }
+  }
+
+  .panel {
+    border-radius: 0;
+    padding: 32px 16px;
+    margin-bottom: 80px;
+
+    @include mq(md) {
+      border-radius: 12px;
+      padding: 40px;
+    }
+  }
+
+  .panel-content {
+    margin-left: -16px;
+    width: calc(100% + 32px);
+    @include mq(md) {
+      margin-left: 0;
+      width: 100%;
     }
   }
 }
@@ -24,21 +57,36 @@
 // Mission content
 
 .mission-content {
+  overflow-x: auto;     
+  white-space: nowrap; 
+  padding-left: 16px;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+
   .timeline {
     display: none;
   }
 
   .goals {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     display: flex;
-    flex-direction: column-reverse;
-    margin-top: 24px;
+    gap: 16px;
   }
 
   @include mq(md) {
+    margin-top: -52px;
+    padding-left: 0;
     .timeline {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: 32px;
       &-item {
         font-weight: 500;
         &.is-past {
@@ -52,7 +100,6 @@
     .goals {
       flex-direction: column;
       align-items: flex-end;
-      margin-top: -88px;
     }
     .w-100 {
       width: 100%;
@@ -60,24 +107,29 @@
     .w-86_2 {
       width: 86.2%;
     }
-    .w-80_2 {
-      width: 80.2%;
+    .w-79 {
+      width: 79%;
     }
     .w-73_6 {
       width: 73.6%;
     }
-    .w-53_8 {
-      width: 53.8%;
+    .w-51_2 {
+      width: 51.2%;
     }
-    .w-47_2 {
-      width: 47.2%;
+    .w-44_2 {
+      width: 44.2%;
     }
     .last {
-      width: 218px;
+      max-width: 224px;
       flex-direction: column;
       align-items: flex-start;
+      @include mq(md) {     
+        width: 314px;
+        padding: 24px;
+      }
       .icon {
-        margin-bottom: 18px;
+        margin-bottom: 24px;
+        transform: translateX(-7px);
       }
     }
   }
@@ -87,66 +139,75 @@
 
 .goal {
   border-radius: 12px;
-  margin-bottom: 12px;
-  padding: 22px;
+  padding: 24px;
+  min-width: 222px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    min-width: auto;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &.spacer {
+    min-width: 0;
+    padding: 0;
+    opacity: 0;
+    margin-left: -4px;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
 
   .icon {
-    color: $primary-light;
-    margin-bottom: 10px;
-    width: 30px;
+    max-width: 40px;
+    width: 100%;
+    transform: translateX(-4px);
+
+    @include mq(md) {
+      margin-right: 16px;
+      transform: translateX(0);
+    }
   }
 
-  .documents {
-    width: 40px;
-  }
+  &-info {
+    .lead-m{
+      color: $grey-medium;
+      margin-bottom: 20px;
 
-  .helix {
-    width: 32px;
+      @include mq(md) {        
+        margin-bottom: 4px;
+      }
+    }
+  
+    .text-xl{
+      white-space: normal;
+    }
   }
-
-  .charge {
-    height: 32px;
-    width: auto;
-  }
-
-  .patterns {
-    width: 40px;
-  }
-
-  .document {
-    width: auto;
-    height: 30px;
-  }
-
-  .date {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.1em;
-    margin-bottom: 2px;
-  }
+  
   &:not(.is-past) {
     border: 2px solid rgba($primary, 0.2);
-    color: $primary-light;
+    .lead-m,
+    .text-xl {
+      color: $primary-light;
+    }
   }
 
   &.is-past {
-    border: 1px solid #f3f4f6;
+    border: 2px solid #f3f4f6;
     .icon {
       color: $primary-dark;
     }
     .date {
       color: $grey-medium;
-    }
-  }
-  @include mq(md) {
-    display: flex;
-    align-items: center;
-    padding: 16px 22px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    .icon {
-      margin: 0 20px 0 0;
     }
   }
 }

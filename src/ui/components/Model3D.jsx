@@ -17,7 +17,7 @@ const Model3D = () => {
       </div>
       <div className="wrapper custom-cursor_text view">
         <div className="panel info-panel">
-          <p className="lead-m">{t("model:label")}</p>
+          <p className="panel-pretitle lead-m">{t("model:label")}</p>
           <h2 className="alpha">{t("model:title")}</h2>
           <p className="text-xl">{t("model:text")}</p>
         </div>

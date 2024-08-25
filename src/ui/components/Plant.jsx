@@ -27,7 +27,7 @@ const Footer = () => {
           </Link>
           <Link to="/">
             <div className="panel plant-panel">
-              <p className="lead-m">{t("plant:label")}</p>
+              <p className="panel-pretitle lead-m">{t("plant:label")}</p>
               <h2 className="alpha">{t("plant:title")}</h2>
               <p className="text-xl">{t("plant:text")}</p>
               <div className="link-icon">

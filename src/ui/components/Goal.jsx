@@ -8,7 +8,7 @@ const Goal = ({ past, className, date, text, icon }) => {
     <div className={cx("goal", { "is-past": past, [className]: className })}>
       {icon}
       <div className="goal-info">
-        <p className="date">{date}</p>
+        <p className="lead-m">{date}</p>
         <p className="text-xl">{t(text)}</p>
       </div>
     </div>
