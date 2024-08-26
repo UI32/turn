@@ -1,10 +1,12 @@
 .nav-dropdown {
   position: relative;
   display: inline-block;
-  padding: 10px;
-  cursor: pointer;
 
-  .nav-dropdown-area {
+  &-title.is-open {
+    color: $primary-light;
+  }
+
+  &-area {
     opacity: 0;
     transform: translate(-50%, -4px);
     transition: all 0.3s ease;
@@ -12,7 +14,7 @@
     visibility: hidden;
     z-index: 1;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     padding: 20px 0 0 0;
     background: transparent;
@@ -30,14 +32,14 @@
     }
   }
 
-  .nav-dropdown-menu {
+  &-menu {
     position: relative;
-    background-color: white;
+    background-color: $white;
     border-radius: 12px;
-    padding: 16px 0;
-    border: 1px solid #d6e3ff;
+    padding: 20px 40px 20px 20px;
+    border: 1px solid $primary-border-light;
     width: fit-content;
-    transform: translateX(16%);
+    transform: translateX(14%);
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
 
     &::before,
@@ -48,12 +50,12 @@
     }
 
     &::before {
-      background: white;
-      border: 1px solid #d6e3ff;
+      background: $white;
+      border: 1px solid $primary-border-light;
       height: 38px;
       left: 50%;
       top: 16px;
-      transform: rotate(-135deg) translateX(30%) translateY(-130%);
+      transform: rotate(-135deg) translateX(23%) translateY(-120%);
       transform-origin: 0 0;
       width: 38px;
       border-bottom-right-radius: 6px;
@@ -61,18 +63,42 @@
     }
 
     &::after {
-      background: white;
+      background: $white;
       height: 80%;
       left: 8px;
       top: 0px;
       width: 80%;
-      border-top-color: white;
+      border-top-color: $white;
       border-width: 1px;
     }
 
     &-inner {
       z-index: 1;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
+  }
+}
+
+.nav-dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  &:hover {
+    .nav-item {
+      color: $primary-light;
+    }
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .nav-item {
+    padding: 0;
   }
 }

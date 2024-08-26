@@ -12,6 +12,8 @@ import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
 import NavDropdown from "./NavDropdown";
+import NavDropdownLink from "./NavDropdownLink";
+import PaperD from "../../assets/icons/paper-dark.svg";
 
 const Header = () => {
   const t = useTranslations();
@@ -31,12 +33,7 @@ const Header = () => {
   useEffect(() => {
     function handleScroll() {
       const scrollTop = window.pageYOffset;
-
-      if (scrollTop > 80) {
-        setisSticky(true);
-      } else {
-        setisSticky(false);
-      }
+      setisSticky(scrollTop > 80);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -75,38 +72,41 @@ const Header = () => {
         </Link>
         <div className="header-content">
           <div className="header-wrapper">
-            <nav className="header-nav" onClick={closeMenu}>
-              <Link Link to="/#how-it-works" className="nav-item">
+            <nav className="header-nav" onClick={closeMenu} role="navigation">
+              <Link to="/#how-it-works" className="nav-item">
                 {t("how-it-works:name")}
               </Link>
-
-              {/* <Link to="/#mission" className="nav-item">
-                {t("mission:name")}
-              </Link> */}
 
               <Link to="/" className="nav-item">
                 Commercial Plant
               </Link>
 
               <NavDropdown title="Industry Insights">
-                <Link to="/" className="nav-item">
-                  Commercial Plant
-                </Link>
-                <Link to="/" className="nav-item">
-                  Commercial Plant longlonglong
-                </Link>
+                <NavDropdownLink text="Maritime" to="/" icon={PaperD} />
+                <NavDropdownLink text="Utilities" to="/" icon={PaperD} />
+                <NavDropdownLink
+                  text="Energy Intensive Industries"
+                  to="/"
+                  icon={PaperD}
+                />
               </NavDropdown>
-
-              <Link to="/" className="nav-item">
-                Industry Insights
-              </Link>
 
               <Link to="/#about" className="nav-item">
                 {t("about:name")}
               </Link>
             </nav>
 
-            <div className="header-actions" onClick={closeMenu}>
+            <div
+              className="header-actions"
+              onClick={closeMenu}
+              onKeyDown={e => {
+                if (e.key === "Enter" || e.key === " ") {
+                  closeMenu();
+                }
+              }}
+              role="button"
+              tabIndex="0"
+            >
               <LangSelector className="show-in-tablet" />
               <Link to="/#contact" className="button button-clear">
                 {t("contact-sales:name")}
@@ -139,6 +139,8 @@ const Header = () => {
           className="button-menu show-in-mobile"
           onClick={toggleMenu}
           aria-label="menu"
+          role="button"
+          tabIndex="0"
         >
           <div className="hamburger">
             <span className="line line-1"></span>
