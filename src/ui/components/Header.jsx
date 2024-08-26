@@ -11,6 +11,7 @@ import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
+import NavDropdown from "./NavDropdown";
 
 const Header = () => {
   const t = useTranslations();
@@ -75,12 +76,31 @@ const Header = () => {
         <div className="header-content">
           <div className="header-wrapper">
             <nav className="header-nav" onClick={closeMenu}>
-              <Link to="/#mission" className="nav-item">
-                {t("mission:name")}
-              </Link>
-              <Link to="/#how-it-works" className="nav-item">
+              <Link Link to="/#how-it-works" className="nav-item">
                 {t("how-it-works:name")}
               </Link>
+
+              {/* <Link to="/#mission" className="nav-item">
+                {t("mission:name")}
+              </Link> */}
+
+              <Link to="/" className="nav-item">
+                Commercial Plant
+              </Link>
+
+              <NavDropdown title="Industry Insights">
+                <Link to="/" className="nav-item">
+                  Commercial Plant
+                </Link>
+                <Link to="/" className="nav-item">
+                  Commercial Plant longlonglong
+                </Link>
+              </NavDropdown>
+
+              <Link to="/" className="nav-item">
+                Industry Insights
+              </Link>
+
               <Link to="/#about" className="nav-item">
                 {t("about:name")}
               </Link>
@@ -92,6 +112,7 @@ const Header = () => {
                 {t("contact-sales:name")}
               </Link>
             </div>
+
             <div className="show-in-mobile">
               <a
                 className="nav-item careers"
