@@ -31,7 +31,10 @@ const AdaptiveCursor = () => {
         top: event.clientY,
       });
       const state = event.target?.getAttribute("data-cursor") || "default";
-      const label = event.target?.getAttribute("data-cursor-label") || "";
+      let label = event.target?.getAttribute("data-cursor-label") || "";
+      if (label === undefined || label === null) {
+        label = "";
+      }
       updateCursor(state, label);
     };
 
@@ -51,7 +54,7 @@ const AdaptiveCursor = () => {
           left: window.innerWidth / 2,
           top: window.innerHeight / 2,
         });
-        updateCursor("default");
+        updateCursor("default", "");
         document.addEventListener("mousemove", handleMouseMove);
         cursor.element.style.display = "flex";
       } else {

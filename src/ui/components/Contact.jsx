@@ -19,6 +19,7 @@ const Contact = ({}) => {
               autoplay={false}
               loop={true}
               interactivity={midScreenPlay}
+              className="hide-in-mobile"
             ></AnimatedIcon>
           }
           pretitle="contact:name"
