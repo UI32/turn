@@ -83,7 +83,7 @@ const Header = ({ onMenuToggle }) => {
                 {t("how-it-works:name")}
               </Link>
 
-              <Link to="/" className="nav-item" onClick={closeMenu}>
+              <Link to="/plant" className="nav-item" onClick={closeMenu}>
                 Commercial Plant
               </Link>
 

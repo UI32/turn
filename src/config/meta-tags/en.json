@@ -7,5 +7,10 @@
   "privacyKeys": "Privacy policy, cookie",
   "legalTitle": "Legal",
   "legal": "TURN2X, Headquartered in Munich, Philip Kessler, Benedikt Stolz, Dr. Dominik Schollenberger",
-  "legalKeys": "Legal, privacy, imprint"
+  "legalKeys": "Legal, privacy, imprint",
+  "plantTitle": "Plant",
+  "plant": "Plant description",
+  "plantKeys": "Plant keys"
+
+
 }
