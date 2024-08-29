@@ -31,6 +31,24 @@
     align-items: center;
     position: relative;
     min-height: 56px;
+    position: relative;
+  }
+
+  > .wrapper::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+
+    @include mq(xl) {
+      display: none;
+    }
+
   }
 
   &-actions,
@@ -165,7 +183,7 @@
       .header-content {
         display: block;
         background-color: $white;
-        background-image: url("../images/menu-pattern-min.png");
+        background-image: url("../images/menu-pattern-m.png");
         overflow-y: auto;
         background-repeat: no-repeat;
         background-size: cover;
@@ -208,6 +226,14 @@
 
       .button {
         margin-left: 10px;
+      }
+    }
+  }
+
+  @include mq(md) {
+    &.open-menu {
+      .header-content {
+        background-image: url("../images/menu-pattern-d.png");
       }
     }
   }
