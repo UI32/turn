@@ -118,6 +118,7 @@
     }
     &-content {
       display: none;
+      min-height: 100dvh;
       padding-right: 40px;
       position: fixed;
       top: 0;
@@ -134,7 +135,8 @@
         margin-left: 0;
         height: fit-content;    
         margin-top: 20px; 
-
+        margin-bottom: 32px;
+        
         button {
           max-height: 30px;
           padding: 9px 16px;
@@ -228,7 +230,7 @@
       border-radius: 6px;
       background-color: #F3F4F6;
       margin-left: 16px;
-      margin-bottom: 32px;
+
       &:hover {
         color: black;
         background: $primary-border-light;
