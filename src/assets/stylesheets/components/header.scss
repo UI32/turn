@@ -224,6 +224,16 @@
       }
     }
 
+    .button-clear.nav-item {
+      border-radius: 6px;
+      background-color: #F3F4F6;
+      margin-left: 16px;
+      &:hover {
+        color: black;
+        background: $primary-border-light;
+      }
+    }
+
     .nav-item {
       &:hover {
         transition: all 0.3s ease-in-out;
