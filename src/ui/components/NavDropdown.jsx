@@ -3,11 +3,10 @@ import cx from "classnames";
 
 const NavDropdown = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1220);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1220px)");
-
     const handleResize = () => {
       setIsLargeScreen(!mediaQuery.matches);
       if (!mediaQuery.matches) {
@@ -17,10 +16,10 @@ const NavDropdown = ({ title, children }) => {
 
     handleResize();
 
-    mediaQuery.addEventListener('change', handleResize);
+    mediaQuery.addEventListener("change", handleResize);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleResize);
+      mediaQuery.removeEventListener("change", handleResize);
     };
   }, []);
 
@@ -36,7 +35,7 @@ const NavDropdown = ({ title, children }) => {
     }
   };
 
-  const handleKeyDown = event => {
+  const handleKeyDown = (event) => {
     if (event.key === "Enter" || event.key === " ") {
       setIsOpen(!isOpen);
     }
