@@ -15,19 +15,25 @@ import NavDropdown from "./NavDropdown";
 import NavDropdownLink from "./NavDropdownLink";
 import PaperD from "../../assets/icons/paper-dark.svg";
 
-const Header = () => {
+const Header = ({ onMenuToggle }) => {
   const t = useTranslations();
 
   // Open/Close menu
 
   const [isMenuOpen, setisMenuOpen] = useState(false);
-  const toggleMenu = useCallback(
-    () => setisMenuOpen(!isMenuOpen),
-    [isMenuOpen],
-  );
-  const closeMenu = useCallback(() => setisMenuOpen(false), [setisMenuOpen]);
+  const toggleMenu = useCallback(() => {
+    setisMenuOpen(prev => {
+      const newValue = !prev;
+      onMenuToggle(newValue); // Notify parent about the change
+      return newValue;
+    });
+  }, [onMenuToggle]);
 
-  // Sticky header
+  const closeMenu = useCallback(() => {
+    setisMenuOpen(false);
+    onMenuToggle(false); // Notify parent to close the menu
+  }, [onMenuToggle]);
+
   const [isSticky, setisSticky] = useState(false);
 
   useEffect(() => {

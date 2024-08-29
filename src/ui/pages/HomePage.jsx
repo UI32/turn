@@ -12,7 +12,7 @@ import Quotes from "../components/Quotes";
 import Plant from "../components/Plant";
 import Press from "../components/Press";
 
-import Typography from "../components/Typography";
+// import Typography from "../components/Typography";
 
 const HomePage = () => {
   useEffect(() => {
@@ -21,7 +21,7 @@ const HomePage = () => {
 
   return (
     <MainLayout bottomPattern={false}>
-      <Typography />
+      {/* <Typography /> */}
       <Hero />
       <Quotes />
       <div id="how-it-works" className="nav-reference"></div>
