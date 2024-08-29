@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const NavDropdownLink = ({ to, icon, text }) => {
+const NavDropdownLink = ({ to, icon, text, onClick }) => {
   return (
-    <Link to={to} className="nav-dropdown-link">
+    <Link to={to} className="nav-dropdown-link" onClick={onClick}>
       {icon && (
         <img
           src={icon}

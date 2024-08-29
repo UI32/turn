@@ -22,6 +22,7 @@ const Footer = () => {
                 data-cursor="label"
                 data-cursor-label="READ MORE"
                 className="plant-img"
+                data-aos="custom-animation"
               />
             </div>
           </Link>

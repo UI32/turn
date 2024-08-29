@@ -72,30 +72,34 @@ const Header = () => {
         </Link>
         <div className="header-content">
           <div className="header-wrapper">
-            <nav className="header-nav" onClick={closeMenu} role="navigation">
-              <Link to="/#how-it-works" className="nav-item">
+            <nav className="header-nav" role="navigation">
+              <Link to="/#how-it-works" className="nav-item" onClick={closeMenu}>
                 {t("how-it-works:name")}
               </Link>
 
-              <Link to="/" className="nav-item">
+              <Link to="/" className="nav-item" onClick={closeMenu}>
                 Commercial Plant
               </Link>
 
+              <Link to="/#mission" className="nav-item hide-in-xl" onClick={closeMenu}>
+                Mission
+              </Link>
+
               <NavDropdown title="Industry Insights">
-                <NavDropdownLink text="Maritime" to="/" icon={PaperD} />
-                <NavDropdownLink text="Utilities" to="/" icon={PaperD} />
+                <NavDropdownLink text="Maritime" to="/" icon={PaperD} onClick={closeMenu}/>
+                <NavDropdownLink text="Utilities" to="/" icon={PaperD} onClick={closeMenu}/>
                 <NavDropdownLink
                   text="Energy Intensive Industries"
                   to="/"
                   icon={PaperD}
+                  onClick={closeMenu}
                 />
               </NavDropdown>
 
-              <Link to="/#about" className="nav-item">
+              <Link to="/#about" className="nav-item" onClick={closeMenu}>
                 {t("about:name")}
               </Link>
             </nav>
-
             <div
               className="header-actions"
               onClick={closeMenu}
@@ -107,39 +111,38 @@ const Header = () => {
               role="button"
               tabIndex="0"
             >
-              <LangSelector className="show-in-tablet" />
-              <Link to="/#contact" className="button button-clear">
-                {t("contact-sales:name")}
-              </Link>
-            </div>
+              <LangSelector className="show-in-xl" />
 
-            <div className="show-in-mobile">
               <a
-                className="nav-item careers"
+                className="nav-item careers hide-in-xl"
                 href="https://turn2x.jobs.personio.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="text">{t("careers:name")}</span>
-                <span className="button button-tiny">{t("hiring:name")}</span>
               </a>
+
+              <Link to="/#contact" className="button button-clear nav-item">
+                {t("contact-sales:name")}
+              </Link>
+            </div>
+
+            <div className="header-legal hide-in-xl">
               <Link className="nav-item" to="/legal">
                 {t("legal:name")}
               </Link>
               <Link className="nav-item" to="/privacy">
                 {t("data-privacy:name")}
               </Link>
+              <LangSelector className="lang-mobile button button-tiny" />
             </div>
           </div>
         </div>
 
-        <LangSelector className="show-in-mobile lang-mobile" />
-
         <button
-          className="button-menu show-in-mobile"
+          className="button-menu hide-in-xl"
           onClick={toggleMenu}
           aria-label="menu"
-          role="button"
           tabIndex="0"
         >
           <div className="hamburger">

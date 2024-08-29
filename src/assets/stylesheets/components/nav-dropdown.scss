@@ -1,30 +1,111 @@
 .nav-dropdown {
+  $self: &;
   position: relative;
   display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid black;
 
-  &-title.is-open {
-    color: $primary-light;
+  @include mq(xl) {
+    width: auto;
+    border-bottom: none;
+  }
+
+  &-title {
+    border-bottom: none !important;
+    justify-content: space-between;
+    min-width: 100%;
+    border: 0;
+
+    &-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+
+      @include mq(xl) {
+        display: none;
+      }
+
+      & .icon-line {
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: black;
+        transition: transform 0.3s ease-in-out;
+
+        &-1 {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        &-2 {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(90deg);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+
+    &.is-open {
+      @include mq(xl) {
+        color: $primary-light;
+      }
+
+      #{$self}-title-icon {
+        transform: rotate(90deg);
+      }
+
+      .icon-line {
+        &-1 {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        &-2 {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+    }
   }
 
   &-area {
-    opacity: 0;
-    transform: translate(-50%, -4px);
-    transition: all 0.3s ease;
-    pointer-events: none;
-    visibility: hidden;
-    z-index: 1;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    padding: 20px 0 0 0;
-    background: transparent;
-    min-width: max-content;
+    @include mq($until: xl) {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    @include mq(xl) {
+      opacity: 0;
+      transform: translate(-50%, -4px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+      visibility: hidden;
+      z-index: 1;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      padding: 20px 0 0 0;
+      background: transparent;
+      min-width: max-content;
+    }
 
     &.is-open {
-      opacity: 1;
-      transform: translate(-50%, 0);
-      pointer-events: auto;
-      visibility: visible;
+      @include mq($until: xl) {
+        max-height: 208px;
+        opacity: 1;
+        padding: 16px 0 32px 0;
+      }
+
+      @include mq(xl) {
+        opacity: 1;
+        transform: translate(-50%, 0);
+        pointer-events: auto;
+        visibility: visible;
+      }
     }
 
     &.is-open .nav-dropdown-menu::before {
@@ -33,43 +114,45 @@
   }
 
   &-menu {
-    position: relative;
-    background-color: $white;
-    border-radius: 12px;
-    padding: 20px 40px 20px 20px;
-    border: 1px solid $primary-border-light;
-    width: fit-content;
-    transform: translateX(14%);
-    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
-
-    &::before,
-    &::after {
-      content: "";
-      border: solid transparent;
-      position: absolute;
-    }
-
-    &::before {
-      background: $white;
+    @include mq(xl) {
+      position: relative;
+      background-color: $white;
+      border-radius: 12px;
+      padding: 20px 40px 20px 20px;
       border: 1px solid $primary-border-light;
-      height: 38px;
-      left: 50%;
-      top: 16px;
-      transform: rotate(-135deg) translateX(23%) translateY(-120%);
-      transform-origin: 0 0;
-      width: 38px;
-      border-bottom-right-radius: 6px;
-      transition: all 0.2s ease-out;
-    }
+      width: fit-content;
+      transform: translateX(14%);
+      box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
 
-    &::after {
-      background: $white;
-      height: 80%;
-      left: 8px;
-      top: 0px;
-      width: 80%;
-      border-top-color: $white;
-      border-width: 1px;
+      &::before,
+      &::after {
+        content: "";
+        border: solid transparent;
+        position: absolute;
+      }
+
+      &::before {
+        background: $white;
+        border: 1px solid $primary-border-light;
+        height: 38px;
+        left: 50%;
+        top: 16px;
+        transform: rotate(-135deg) translateX(23%) translateY(-120%);
+        transform-origin: 0 0;
+        width: 38px;
+        border-bottom-right-radius: 6px;
+        transition: all 0.2s ease-out;
+      }
+
+      &::after {
+        background: $white;
+        height: 80%;
+        left: 8px;
+        top: 0px;
+        width: 80%;
+        border-top-color: $white;
+        border-width: 1px;
+      }
     }
 
     &-inner {
@@ -86,7 +169,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 4px;
+
+  @include mq(xl) {
+    gap: 8px;
+  }
 
   &:hover {
     .nav-item {
@@ -100,5 +187,6 @@
   }
   .nav-item {
     padding: 0;
+    border-bottom: none;
   }
 }
