@@ -15,7 +15,7 @@ import useTranslations from "../../hooks/useTranslations";
 import pattern from "../../assets/images/pattern1-min.png";
 import { HOME_HERO_VIDEO, HOME_MODEL_3D } from '../../constants/mediaUrls';
 
-// import Typography from "../components/Typography";
+import Typography from "../components/Typography";
 
 const HomePage = () => {
   const t = useTranslations();
@@ -26,7 +26,7 @@ const HomePage = () => {
 
   return (
     <MainLayout bottomPattern={false} className="home">
-      {/* <Typography /> */}
+      <Typography />
       <Hero
         title={t("hero:title")}
         video={HOME_HERO_VIDEO}
