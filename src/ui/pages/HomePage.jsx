@@ -25,7 +25,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <MainLayout bottomPattern={false}>
+    <MainLayout bottomPattern={false} className="home">
       {/* <Typography /> */}
       <Hero
         title={t("hero:title")}

@@ -22,7 +22,7 @@ const AdaptiveCursor = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 780px)");
 
-    const handleMouseMove = event => {
+    const handleMouseMove = (event) => {
       if (!cursor.element) return;
 
       gsap.to(cursor.element, {
@@ -30,12 +30,42 @@ const AdaptiveCursor = () => {
         left: event.clientX,
         top: event.clientY,
       });
-      const state = event.target?.getAttribute("data-cursor") || "default";
-      let label = event.target?.getAttribute("data-cursor-label") || "";
+
+      const targetElement = event.target;
+      const state = targetElement?.getAttribute("data-cursor") || "default";
+      let label = targetElement?.getAttribute("data-cursor-label") || "";
       if (label === undefined || label === null) {
         label = "";
       }
       updateCursor(state, label);
+
+      // Check if the target has the data-cursor attribute, if not, hide the cursor
+      if (!targetElement.closest("[data-cursor]")) {
+        gsap.to(cursor.element, { duration: 0.3, opacity: 0 });
+      } else {
+        gsap.to(cursor.element, { duration: 0.3, opacity: 1 });
+      }
+    };
+
+    const handleScroll = () => {
+      const elements = document.querySelectorAll("[data-cursor]");
+      let isCursorVisible = false;
+
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (
+          rect.top <= window.innerHeight &&
+          rect.bottom >= 0 &&
+          rect.left <= window.innerWidth &&
+          rect.right >= 0
+        ) {
+          isCursorVisible = true;
+        }
+      });
+
+      if (!isCursorVisible) {
+        gsap.to(cursor.element, { duration: 0.3, opacity: 0 });
+      }
     };
 
     const updateCursor = (state, label) => {
@@ -47,7 +77,7 @@ const AdaptiveCursor = () => {
       cursor.element.innerHTML = label;
     };
 
-    const handleMediaChange = e => {
+    const handleMediaChange = (e) => {
       if (e.matches) {
         cursor.element = cursorRef.current;
         gsap.set(cursor.element, {
@@ -56,9 +86,11 @@ const AdaptiveCursor = () => {
         });
         updateCursor("default", "");
         document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("scroll", handleScroll);
         cursor.element.style.display = "flex";
       } else {
         document.removeEventListener("mousemove", handleMouseMove);
+        document.removeEventListener("scroll", handleScroll);
         if (cursor.element) {
           cursor.element.style.display = "none";
         }
@@ -70,6 +102,7 @@ const AdaptiveCursor = () => {
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("scroll", handleScroll);
       mediaQuery.removeEventListener("change", handleMediaChange);
     };
   }, [cursor]);

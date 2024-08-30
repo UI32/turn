@@ -17,12 +17,9 @@ const CommercialPlant = () => {
   }, []);
 
   return (
-    <MainLayout simple>
-      <div className="wrapper">
-        <h1>{t("legal:name")}</h1>
-      </div>
+    <MainLayout simple className="commercial-plant">
       <Hero 
-        title={t("hero:title")}
+        title={t("plant-hero:title")}
         video={HOME_HERO_VIDEO}
       />
       <Model3D src={HOME_MODEL_3D}>
