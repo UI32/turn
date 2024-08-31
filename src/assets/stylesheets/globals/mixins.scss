@@ -392,3 +392,19 @@ $mq-media-type: all !default;
 @if length($mq-show-breakpoints) > 0 {
   @include mq-show-breakpoints;
 }
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $grey-bg;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $grey;
+    border-radius: 8px;
+  }
+}

@@ -13,22 +13,8 @@
     padding-left: 16px;
     padding-bottom: 8px;
     
-    &::-webkit-scrollbar {
-      width: 16px;
-    }
+    @include custom-scrollbar;
     
-    &::-webkit-scrollbar-track {
-      background: $grey-bg;
-      border-radius: 8px;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-      background: $grey;
-      border-radius: 8px;
-      
-    }
-    
-
     @include mq(md) {
       max-width: $layout-maxWidth;
       margin: 0 auto;

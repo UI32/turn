@@ -8,6 +8,7 @@ import Press from "../components/Press";
 import Contact from "../components/Contact";
 import Quote from "../components/Quote";
 import ImageGrid1 from "../components/commercial-plant/ImageGrid1";
+import ImageGrid2 from "../components/commercial-plant/ImageGrid2";
 import useTranslations from "../../hooks/useTranslations";
 import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
 import thomas from "../../assets/images/thomas.png";
@@ -42,6 +43,7 @@ const CommercialPlant = () => {
           />
         </div>
       </section>
+      <ImageGrid2/>
       <Press />
       <div id="contact" className="nav-reference"></div>
       <Contact />
