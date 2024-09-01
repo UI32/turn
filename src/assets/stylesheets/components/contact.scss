@@ -10,6 +10,13 @@
     flex: 1 1 50%;
   }
 
+  &-info {
+    .text-l {
+      opacity: 1;
+      color: $grey-medium;
+    }
+  }
+
   .button {
     min-width: 116px;
     margin: 2px 0 4px;

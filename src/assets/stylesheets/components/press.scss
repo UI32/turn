@@ -145,11 +145,13 @@
     background-color: $primary-light;
     color: $white;
 
+    .alpha,
     .lead-m {
       color: $white;
     }
 
     .text-xl {
+      color: $white;
       white-space: normal;
       margin-top: 20px;
       @include mq(lg) {

@@ -89,7 +89,8 @@
     align-items: center;
     background: transparent;
     transition: all 0.3s ease-in-out;
-    border-bottom: 1px solid black;
+    color: $text-primary-dark;
+    border-bottom: 1px solid $text-primary-dark;
   }
 
   .button-menu {
@@ -328,7 +329,7 @@
   .line {
     width: 22px;
     height: 3px;
-    background: $black;
+    background: $text-primary-dark;
     display: inline-block;
     position: absolute;
     left: 0;

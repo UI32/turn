@@ -64,6 +64,7 @@
       line-height: 105%;
       margin-bottom: 20px;
       letter-spacing: -0.03em;
+      color: $text-primary-dark;
     }
   }
 
@@ -286,7 +287,7 @@
     font-weight: $regular;
   }
   .about-position {
-    color: rgba($black, 0.5);
+    color: $grey-medium;
   }
   .about-name {
     margin-bottom: 4px;
@@ -341,7 +342,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba($black, 0.5);
+    background: rgba($text-primary-dark, 0.5);
     z-index: 1;
     animation: fade-in 0.3s ease;
   }

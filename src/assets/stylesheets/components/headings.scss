@@ -6,45 +6,54 @@
 
 .alpha {
   @include typo-rwd(alpha);
+  color: $text-primary-dark;
 }
 
 .beta {
   @include typo-rwd(beta);
+  color: $text-primary-dark;
 }
 
 .text-xl {
   @include typo-rwd(text-xl);
+  color: $text-secondary-dark;
 }
 
 .text-l {
   @include typo-rwd(text-l);
+  color: $text-secondary-dark;
 }
 
 .text-m {
   @include typo-rwd(text-m);
+  color: $text-secondary-dark;
   text-align: center;
 }
 
 .text-s {
   @include typo-rwd(text-s);
+  color: $text-secondary-dark;
 }
 
 .lead-m {
   @include typo-rwd(lead-m);
   text-transform: uppercase;
+  color: $grey-medium;
 }
 
 .quote-l {
   @include typo-rwd(quote-l);
+  color: $text-primary-dark;
 }
 
 .quote-m {
   @include typo-rwd(quote-m);
+  color: $text-primary-dark;
 }
 
 .caption {
   font-size: 14px;
   line-height: 16px;
-  opacity: 0.4;
+  color: $grey-medium;
   letter-spacing: -0.02em;
 }

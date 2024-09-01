@@ -35,7 +35,7 @@
       padding: 36px 22px;
       @include typo-rwd(text-m);
       cursor: pointer;
-      color: $black;
+      color: $text-primary-dark;
       background-color: $white;
       border: 2px solid $primary-border-light;
       will-change: color, background-color, border-color;
