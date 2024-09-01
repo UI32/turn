@@ -6,12 +6,11 @@ import useTranslations from "../../../hooks/useTranslations";
 
 const ModelCards = () => {
   const t = useTranslations();
-  const [isSmallScreen, setIsSmallScreen] = useState(
-    window.matchMedia("(max-width: 960px)").matches,
-  );
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 960px)");
+    setIsSmallScreen(mediaQuery.matches);
     const handleMediaQueryChange = e => {
       setIsSmallScreen(e.matches);
     };
@@ -23,54 +22,27 @@ const ModelCards = () => {
 
   return (
     <div className="model-cards">
-
-      {isSmallScreen && (
+      {isSmallScreen ? (
         <Carousel settings={plantModelCards}>
-          <ModelCard
-            title={t("plant-card-1:title")}
-            subtitle={t("plant-card-1:subtitle")}
-            text={t("plant-card-1:text")}
-          />
-          <ModelCard
-            title={t("plant-card-2:title")}
-            subtitle={t("plant-card-2:subtitle")}
-            text={t("plant-card-2:text")}
-          />
-          <ModelCard
-            title={t("plant-card-3:title")}
-            subtitle={t("plant-card-3:subtitle")}
-            text={t("plant-card-3:text")}
-          />
-          <ModelCard
-            title={t("plant-card-4:title")}
-            subtitle={t("plant-card-4:subtitle")}
-            text={t("plant-card-4:text")}
-          />
+          {[1, 2, 3, 4].map(num => (
+            <ModelCard
+              key={num}
+              title={t(`plant-card-${num}:title`)}
+              subtitle={t(`plant-card-${num}:subtitle`)}
+              text={t(`plant-card-${num}:text`)}
+            />
+          ))}
         </Carousel>
-      )}
-
-      {!isSmallScreen && (
+      ) : (
         <div className="model-cards-desktop">
-          <ModelCard
-            title={t("plant-card-1:title")}
-            subtitle={t("plant-card-1:subtitle")}
-            text={t("plant-card-1:text")}
-          />
-          <ModelCard
-            title={t("plant-card-2:title")}
-            subtitle={t("plant-card-2:subtitle")}
-            text={t("plant-card-2:text")}
-          />
-          <ModelCard
-            title={t("plant-card-3:title")}
-            subtitle={t("plant-card-3:subtitle")}
-            text={t("plant-card-3:text")}
-          />
-          <ModelCard
-            title={t("plant-card-4:title")}
-            subtitle={t("plant-card-4:subtitle")}
-            text={t("plant-card-4:text")}
-          />
+          {[1, 2, 3, 4].map(num => (
+            <ModelCard
+              key={num}
+              title={t(`plant-card-${num}:title`)}
+              subtitle={t(`plant-card-${num}:subtitle`)}
+              text={t(`plant-card-${num}:text`)}
+            />
+          ))}
         </div>
       )}
     </div>
