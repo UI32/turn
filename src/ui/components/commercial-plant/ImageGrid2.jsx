@@ -5,7 +5,7 @@ import imageGrid23 from "../../../assets/images/commercial-plant/image-grid-2-3.
 import imageGrid24 from "../../../assets/images/commercial-plant/image-grid-2-4.jpg";
 import useTranslations from "../../../hooks/useTranslations";
 import sensor from "../../../assets/images/hero-sensor.png";
-import { HOME_HERO_VIDEO } from "../../../constants/mediaUrls";
+import { PLANT_GRID_VIDEO } from "../../../constants/mediaUrls";
 
 const ImageGrid2 = () => {
   const t = useTranslations();
@@ -18,7 +18,7 @@ const ImageGrid2 = () => {
             <div className="video-size-wrapper">
               <img className="sensor" src={sensor} alt="video sensor" />
               <video autoPlay loop muted playsInline>
-                <source src={HOME_HERO_VIDEO} />
+                <source src={PLANT_GRID_VIDEO} />
               </video>
             </div>
           </div>
