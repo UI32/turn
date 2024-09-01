@@ -27,9 +27,11 @@ const CommercialPlant = () => {
     <MainLayout className="commercial-plant">
       <Hero title={t("plant-hero:title")} video={HOME_HERO_VIDEO} />
       <Model3D src={PLANT_MODEL_3D}>
-        <ModelCards/>
-      </Model3D> 
-      <ImageGrid1/>
+        <div className="wrapper model-content">
+          <ModelCards />
+        </div>
+      </Model3D>
+      <ImageGrid1 />
       <section className="commercial-plant-quote">
         <div className="wrapper">
           <Quote
@@ -45,9 +47,9 @@ const CommercialPlant = () => {
           />
         </div>
       </section>
-      <ImageGrid2/>
+      <ImageGrid2 />
       <Press />
-      <Marquee/>
+      <Marquee />
       <div id="contact" className="nav-reference"></div>
       <Contact />
     </MainLayout>

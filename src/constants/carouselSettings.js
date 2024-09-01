@@ -12,10 +12,10 @@ export const defaultSettings = {
 export const plantModelCards = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 750,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 3500,
   arrows: false,
 };
