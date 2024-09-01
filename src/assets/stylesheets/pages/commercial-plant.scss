@@ -10,6 +10,18 @@
       margin: 160px 0;
     }
   }
+
+  .model .ui-cover.top-left {
+    width: 100%;
+  }
+
+  .press {
+    margin-bottom: 62px;
+
+    @include mq(md) {
+      margin-bottom: 108px;
+    }
+  }
 }
 
 .commercial-plant-grid-1,

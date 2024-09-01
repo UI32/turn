@@ -10,9 +10,11 @@ import Quote from "../components/Quote";
 import ImageGrid1 from "../components/commercial-plant/ImageGrid1";
 import ImageGrid2 from "../components/commercial-plant/ImageGrid2";
 import useTranslations from "../../hooks/useTranslations";
-import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
+import { HOME_HERO_VIDEO, PLANT_MODEL_3D } from "../../constants/mediaUrls";
 import thomas from "../../assets/images/thomas.png";
 import thomasCompany from "../../assets/images/noelle.png";
+import Marquee from "../components/Marquee";
+import ModelCards from "../components/commercial-plant/ModelCards";
 
 const CommercialPlant = () => {
   const t = useTranslations();
@@ -24,9 +26,9 @@ const CommercialPlant = () => {
   return (
     <MainLayout className="commercial-plant">
       <Hero title={t("plant-hero:title")} video={HOME_HERO_VIDEO} />
-      <Model3D src={HOME_MODEL_3D}>
-        <div className="wrapper custom-cursor_text view">diff content here</div>
-      </Model3D>
+      <Model3D src={PLANT_MODEL_3D}>
+        <ModelCards/>
+      </Model3D> 
       <ImageGrid1/>
       <section className="commercial-plant-quote">
         <div className="wrapper">
@@ -45,6 +47,7 @@ const CommercialPlant = () => {
       </section>
       <ImageGrid2/>
       <Press />
+      <Marquee/>
       <div id="contact" className="nav-reference"></div>
       <Contact />
     </MainLayout>

@@ -12,7 +12,7 @@ const ImageGrid2 = () => {
 
   return (
     <section className="commercial-plant-grid-2">
-      <div class="no-p-md wrapper">
+      <div className="no-p-md wrapper">
         <div className="video-bg" data-aos="custom-animation">
           <div className="video-container">
             <div className="video-size-wrapper">
