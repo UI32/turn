@@ -35,14 +35,14 @@ const ImageGrid2 = () => {
             <div className="image-grid-item show-in-tablet">
               <img
                 src={imageGrid21}
-                alt="plant inaguration photo"
+                alt="plant inaguration visual"
                 loading="lazy"
               />
             </div>
             <div className="image-grid-item show-in-tablet">
               <img
                 src={imageGrid22}
-                alt="plant inaguration photo"
+                alt="plant inaguration visual"
                 loading="lazy"
               />
             </div>
@@ -51,14 +51,14 @@ const ImageGrid2 = () => {
             <div className="image-grid-item show-in-tablet">
               <img
                 src={imageGrid23}
-                alt="plant inaguration photo"
+                alt="plant inaguration visual"
                 loading="lazy"
               />
             </div>
             <div className="image-grid-item show-in-tablet">
               <img
                 src={imageGrid24}
-                alt="plant inaguration photo"
+                alt="plant inaguration visual"
                 loading="lazy"
               />
             </div>
@@ -71,28 +71,28 @@ const ImageGrid2 = () => {
             <div className="grid-2-slider-item">
               <img
                 src={imageGrid21}
-                alt="plant inaguration photo"
+                alt="plant inaguration visual"
                 loading="lazy"
               />
             </div>
             <div className="grid-2-slider-item">
               <img
                 src={imageGrid22}
-                alt="plant inaguration photo"
+                alt="plant inaguration visual"
                 loading="lazy"
               />
             </div>
             <div className="grid-2-slider-item">
               <img
                 src={imageGrid23}
-                alt="plant inaguration photo"
+                alt="plant inaguration visual"
                 loading="lazy"
               />
             </div>
             <div className="grid-2-slider-item">
               <img
                 src={imageGrid24}
-                alt="plant inaguration photo"
+                alt="plant inaguration visual"
                 loading="lazy"
               />
             </div>
