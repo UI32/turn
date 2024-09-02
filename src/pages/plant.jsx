@@ -3,7 +3,7 @@ import AppWrapper from "../ui/layouts/AppWarpper";
 import HelmetComponent from "../ui/layouts/HelmetComponent";
 import metaTags from "../config/meta-tags/en.json";
 import { getLocaleFromPathname } from "../libs/i18n";
-import CommercialPlant from "../ui/pages/CommercialPlant";
+import CommercialPlant from "../ui/pages/CommercialPlantPage";
 
 const Plant = props => {
   const locale = getLocaleFromPathname(props.location);
