@@ -9,7 +9,7 @@ const ImageGrid1 = () => {
   const t = useTranslations();
 
   return (
-    <section className="commercial-plant-grid-1">
+    <section className="grid-1">
       <div className="wrapper">
         <div className="image-grid">
           <div className="image-grid-col-1">

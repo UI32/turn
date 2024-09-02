@@ -11,7 +11,7 @@ const ImageGrid2 = () => {
   const t = useTranslations();
 
   return (
-    <section className="commercial-plant-grid-2">
+    <section className="grid-2">
       <div className="no-p-md wrapper">
         <div className="video-bg" data-aos="custom-animation">
           <div className="video-container">
@@ -65,38 +65,38 @@ const ImageGrid2 = () => {
           </div>
         </div>
       </div>
-      <div className="commercial-plant-grid-2-slider hide-in-tablet">
-        <div className="commercial-plant-grid-2-slider-wrapper">
-          <div className="commercial-plant-grid-2-slider-container">
-            <div className="commercial-plant-grid-2-slider-item">
+      <div className="grid-2-slider hide-in-tablet">
+        <div className="grid-2-slider-wrapper">
+          <div className="grid-2-slider-container">
+            <div className="grid-2-slider-item">
               <img
                 src={imageGrid21}
                 alt="plant inaguration photo"
                 loading="lazy"
               />
             </div>
-            <div className="commercial-plant-grid-2-slider-item">
+            <div className="grid-2-slider-item">
               <img
                 src={imageGrid22}
                 alt="plant inaguration photo"
                 loading="lazy"
               />
             </div>
-            <div className="commercial-plant-grid-2-slider-item">
+            <div className="grid-2-slider-item">
               <img
                 src={imageGrid23}
                 alt="plant inaguration photo"
                 loading="lazy"
               />
             </div>
-            <div className="commercial-plant-grid-2-slider-item">
+            <div className="grid-2-slider-item">
               <img
                 src={imageGrid24}
                 alt="plant inaguration photo"
                 loading="lazy"
               />
             </div>
-            <div className="commercial-plant-grid-2-slider-item spacer"></div>
+            <div className="grid-2-slider-item spacer"></div>
           </div>
         </div>
       </div>
