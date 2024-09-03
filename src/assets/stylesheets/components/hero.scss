@@ -87,3 +87,28 @@
   transform: translateX(-50%);
   height: max(100%, calc(100vw * 0.57));
 }
+
+// Hero with img 
+
+.hero__img {
+
+  .hero-text .lead-m {
+    margin-bottom: 20px;
+    @include mq(md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .hero-img-container {
+    flex-grow: 1;
+    display: flex;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      @include mq(xl) {
+        max-height: 960px;
+      }
+    }
+  }
+}

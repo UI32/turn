@@ -13,7 +13,7 @@ import Plant from "../components/Plant";
 import Press from "../components/Press";
 import useTranslations from "../../hooks/useTranslations";
 import pattern from "../../assets/images/pattern1-min.png";
-import { HOME_HERO_VIDEO, HOME_MODEL_3D } from '../../constants/mediaUrls';
+import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
 
 // import Typography from "../components/Typography";
 
@@ -27,10 +27,7 @@ const HomePage = () => {
   return (
     <MainLayout bottomPattern={false} className="home">
       {/* <Typography /> */}
-      <Hero
-        title={t("hero:title")}
-        video={HOME_HERO_VIDEO}
-      />
+      <Hero title={t("hero:title")} video={HOME_HERO_VIDEO} />
       <div className="top-pattern">
         <img className="pattern" src={pattern} alt="pattern" loading="lazy" />
       </div>

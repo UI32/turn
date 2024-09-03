@@ -10,5 +10,8 @@
   "legalKeys": "datenschutz, privatsphäre, impressum",
   "plantTitle": "Plant metatitle",
   "plant": "Plant description",
-  "plantKeys": "Plant keys"
+  "plantKeys": "Plant keys",
+  "maritimeTitle": "Maritime",
+  "maritime": "maritime description",
+  "maritimeKeys": "maritime keys"  
 }

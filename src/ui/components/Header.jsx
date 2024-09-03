@@ -92,7 +92,7 @@ const Header = ({ onMenuToggle }) => {
               </Link>
 
               <NavDropdown title="Industry Insights">
-                <NavDropdownLink text="Maritime" to="/" icon={PaperD} onClick={closeMenu}/>
+                <NavDropdownLink text="Maritime" to="/industry-insights/maritime" icon={PaperD} onClick={closeMenu}/>
                 <NavDropdownLink text="Utilities" to="/" icon={PaperD} onClick={closeMenu}/>
                 <NavDropdownLink
                   text="Energy Intensive Industries"
