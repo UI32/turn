@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const AdaptiveCursor = () => {
+const AdaptiveCursor = ({ bgColor = "#487AEE" }) => {
   const cursorRef = useRef(null);
   const cursor = useRef({
     element: null,
@@ -12,7 +12,7 @@ const AdaptiveCursor = () => {
         width: 40,
       },
       label: {
-        backgroundColor: "#487AEE",
+        backgroundColor: bgColor,
         height: 116,
         width: 116,
       },
@@ -39,7 +39,6 @@ const AdaptiveCursor = () => {
       }
       updateCursor(state, label);
 
-      // Check if the target has the data-cursor attribute, if not, hide the cursor
       if (!targetElement.closest("[data-cursor]")) {
         gsap.to(cursor.element, { duration: 0.3, opacity: 0 });
       } else {
@@ -105,7 +104,7 @@ const AdaptiveCursor = () => {
       document.removeEventListener("scroll", handleScroll);
       mediaQuery.removeEventListener("change", handleMediaChange);
     };
-  }, [cursor]);
+  }, [cursor, bgColor]);
 
   return <div id="adaptive-cursor" className="text-m" ref={cursorRef}></div>;
 };

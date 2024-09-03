@@ -40,7 +40,7 @@ const IntroCards = () => {
         <h2 className="jumbo">{t("maritime-intro:title")}</h2>
 
         <div className="intro-cards-container">
-          <AdaptiveCursor />
+          <AdaptiveCursor bgColor="#F0E5A6"/>
           {cardData.map((card, index) => (
             <IntroCard
               key={index}
