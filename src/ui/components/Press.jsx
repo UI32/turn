@@ -5,8 +5,33 @@ import imgEnergy from "../../assets/images/press-item-energy.jpg";
 import imgMariti from "../../assets/images/press-item-maritime.jpg";
 import imgUtilit from "../../assets/images/press-item-utilities.jpg";
 
-const Press = () => {
+const Press = ({ hiddenItem }) => {
   const t = useTranslations();
+
+  const pressItems = [
+    {
+      id: "maritime",
+      to: "/",
+      pretitleKey: "press:item-1-pre",
+      titleKey: "press:item-1-title",
+      img: imgMariti,
+    },
+    {
+      id: "utilities",
+      to: "/",
+      pretitleKey: "press:item-1-pre",
+      titleKey: "press:item-1-title",
+      img: imgUtilit,
+    },
+    {
+      id: "energy",
+      to: "/",
+      pretitleKey: "press:item-1-pre",
+      titleKey: "press:item-1-title",
+      img: imgEnergy,
+    },
+  ];
+
   return (
     <section className="press">
       <div className="press-wrapper">
@@ -22,24 +47,17 @@ const Press = () => {
             </div>
           </div>
 
-          <PressItem
-            to="/"
-            pretitle="press:item-1-pre"
-            title="press:item-1-title"
-            img={imgMariti}
-          />
-          <PressItem
-            to="/"
-            pretitle="press:item-1-pre"
-            title="press:item-1-title"
-            img={imgUtilit}
-          />
-          <PressItem
-            to="/"
-            pretitle="press:item-1-pre"
-            title="press:item-1-title"
-            img={imgEnergy}
-          />
+          {pressItems.map((item) =>
+            item.id !== hiddenItem ? (
+              <PressItem
+                key={item.id}
+                to={item.to}
+                pretitle={t(item.pretitleKey)}
+                title={t(item.titleKey)}
+                img={item.img}
+              />
+            ) : null
+          )}
           <div className="press-item spacer"></div>
         </div>
       </div>

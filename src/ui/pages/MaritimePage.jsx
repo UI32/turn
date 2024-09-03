@@ -8,6 +8,7 @@ import useTranslations from "../../hooks/useTranslations";
 import pattern from "../../assets/images/pattern1-min.png";
 import heroImg from "../../assets/images/industry-insights/maritime-hero.jpg";
 import IntroCards from "../components/industry-insights/IntroCards";
+import Press from "../components/Press";
 
 const MaritimePage = () => {
   const t = useTranslations();
@@ -29,7 +30,7 @@ const MaritimePage = () => {
       </div>
 
       <IntroCards />
-
+      <Press hiddenItem="maritime"/>
       <div id="contact" className="nav-reference"></div>
       <Contact />
     </MainLayout>
