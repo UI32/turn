@@ -36,6 +36,7 @@
   &-icon-container {
     position: relative;
     margin-bottom: 20px;
+    pointer-events: none;
   }
 
   &-icon {
@@ -59,6 +60,7 @@
   &-content {
     transform: none;
     transition: transform 0.3s ease;
+    pointer-events: none;
   }
 
   &-title {

@@ -36,6 +36,8 @@ const IntroCard = ({ title, text, iconLight, iconWhite }) => {
 
   return (
     <article
+      data-cursor="label"
+      data-cursor-label="HOVER"
       className="intro-card"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}

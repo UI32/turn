@@ -7,6 +7,8 @@ import EmissW from "../../../assets/icons/emiss-white.svg";
 import EmissL from "../../../assets/icons/emiss-light.svg";
 import FuelW from "../../../assets/icons/fuel-white.svg";
 import FuelL from "../../../assets/icons/fuel-light.svg";
+import AdaptiveCursor from "../AdaptiveCursor";
+
 
 const cardData = [
   {
@@ -38,6 +40,7 @@ const IntroCards = () => {
         <h2 className="jumbo">{t("maritime-intro:title")}</h2>
 
         <div className="intro-cards-container">
+          <AdaptiveCursor />
           {cardData.map((card, index) => (
             <IntroCard
               key={index}
