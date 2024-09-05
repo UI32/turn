@@ -15,6 +15,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
       pretitleKey: "press:item-1-pre",
       titleKey: "press:item-1-title",
       img: imgMariti,
+      isExternal: false,
     },
     {
       id: "utilities",
@@ -22,6 +23,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
       pretitleKey: "press:item-1-pre",
       titleKey: "press:item-1-title",
       img: imgUtilit,
+      isExternal: false,
     },
     {
       id: "energy",
@@ -29,6 +31,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
       pretitleKey: "press:item-1-pre",
       titleKey: "press:item-1-title",
       img: imgEnergy,
+      isExternal: false,
     },
   ];
 
@@ -60,6 +63,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
                 pretitle={t(item.pretitleKey)}
                 title={t(item.titleKey)}
                 img={item.img}
+                isExternal={item.isExternal}
               />
             ) : null
           )}

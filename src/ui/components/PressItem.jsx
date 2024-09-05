@@ -4,10 +4,11 @@ import useTranslations from "../../hooks/useTranslations";
 import cx from "classnames";
 import arrowIcon from "../../assets/icons/right-arrow-light.svg";
 
-const PressItem = ({ to, title, pretitle, img, className }) => {
+const PressItem = ({ to, title, pretitle, img, className, isExternal = false }) => {
   const t = useTranslations();
-  return (
-    <Link to={to} className={cx("press-item", { [className]: className })}>
+  
+  const content = (
+    <>
       <div className="press-item-heading">
         <div className="press-item-pretitle">
           <p className="lead-m">{t(pretitle)}</p>
@@ -22,6 +23,21 @@ const PressItem = ({ to, title, pretitle, img, className }) => {
       <div className="press-item-img-container">
         <img src={img} alt="press item visual" className="press-item-img" />
       </div>
+    </>
+  );
+
+  return isExternal ? (
+    <a 
+      href={to} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className={cx("press-item", { [className]: className })}
+    >
+      {content}
+    </a>
+  ) : (
+    <Link to={to} className={cx("press-item", { [className]: className })}>
+      {content}
     </Link>
   );
 };
