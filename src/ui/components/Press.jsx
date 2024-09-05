@@ -5,10 +5,10 @@ import imgEnergy from "../../assets/images/press-item-energy.jpg";
 import imgMariti from "../../assets/images/press-item-maritime.jpg";
 import imgUtilit from "../../assets/images/press-item-utilities.jpg";
 
-const Press = ({ hiddenItem }) => {
+const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
   const t = useTranslations();
 
-  const pressItems = [
+  const defaultPressItems = [
     {
       id: "maritime",
       to: "/",
@@ -32,22 +32,27 @@ const Press = ({ hiddenItem }) => {
     },
   ];
 
+  const items = pressItems || defaultPressItems;
+
+  const pressLabel = label || t("press:label");
+  const pressTitle = title || t("press:title");
+  const pressText = text || t("press:text");
+
   return (
     <section className="press">
       <div className="press-wrapper">
         <div className="press-container">
-
           <div className="press-item press-item-first">
             <div className="press-item-heading">
               <div className="press-item-pretitle">
-                <p className="lead-m">{t("press:label")}</p>
+                <p className="lead-m">{pressLabel}</p>
               </div>
-              <h3 className="press-item-title alpha">{t("press:title")}</h3>
-              <p className="press-item-text text-xl">{t("press:text")}</p>
+              <h3 className="press-item-title alpha">{pressTitle}</h3>
+              <p className="press-item-text text-xl">{pressText}</p>
             </div>
           </div>
 
-          {pressItems.map((item) =>
+          {items.map((item) =>
             item.id !== hiddenItem ? (
               <PressItem
                 key={item.id}
