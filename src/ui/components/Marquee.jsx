@@ -12,7 +12,7 @@ const logos = [logoBi, logoDs, logoFt, logoFa, logoHs, logoHi, logoSz];
 
 const LogoItem = ({ logo }) => (
   <li className="marquee-item">
-    <img src={logo} alt="press logo" loading="lazy" />
+    <img src={logo} alt="press logo" loading="eager" />
   </li>
 );
 
