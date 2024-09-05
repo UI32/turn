@@ -13,7 +13,7 @@ const Footer = () => {
       <AdaptiveCursor />
       <div className="wrapper no-p-md">
         <div className="plant-container">
-          <Link to="/">
+          <Link to="/plant">
             <div className="plant-img-wrapper">
               <img
                 src={plantImg}
@@ -26,7 +26,7 @@ const Footer = () => {
               />
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/plant">
             <div className="panel plant-panel">
               <p className="panel-pretitle lead-m">{t("plant:label")}</p>
               <h2 className="alpha">{t("plant:title")}</h2>

@@ -3,7 +3,6 @@ import cx from "classnames";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { MemoryRouter } from "react-router-dom";
-import NotificationBanner from "../components/NotificationBanner";
 import pattern from "../../assets/images/bottom-pattern3.png";
 import pattern3 from "../../assets/images/pattern3-min.png";
 
@@ -22,7 +21,6 @@ const MainLayout = ({ children, className, bottomPattern, simple }) => {
           simple: simple,
         })}
       >
-        <NotificationBanner />
         <Header onMenuToggle={handleMenuToggle} />
         <div className={cx("content", { opacity: isMenuOpen })}>
           {children}
