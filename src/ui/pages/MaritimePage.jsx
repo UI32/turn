@@ -12,6 +12,7 @@ import Press from "../components/Press";
 import Model3D from "../components/Model3D";
 import ToggleCards from "../components/ToggleCards";
 import SolutionCards from "../components/SolutionCards";
+import Challenge from "../components/Challenge";
 import { HOME_MODEL_3D } from "../../constants/mediaUrls";
 
 const MaritimePage = () => {
@@ -34,6 +35,8 @@ const MaritimePage = () => {
       </div>
 
       <IntroCards />
+
+      <Challenge/>
 
       <SolutionCards/>
 
