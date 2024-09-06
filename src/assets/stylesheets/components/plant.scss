@@ -1,10 +1,10 @@
 // Plant section 
 
 .plant {
-  padding-top: 80px;
   padding-bottom: 120px;
 
   @include mq(lg) {
+    padding-top: 80px;
     padding-bottom: 104px;
   }
 
