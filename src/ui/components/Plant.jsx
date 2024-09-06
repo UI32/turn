@@ -5,7 +5,7 @@ import useTranslations from "../../hooks/useTranslations";
 import plantImg from "../../assets/images/first-comm-plant.jpg";
 import arrowIcon from "../../assets/icons/right-arrow-light.svg";
 
-const Footer = () => {
+const Plant = () => {
   const t = useTranslations();
 
   return (
@@ -47,4 +47,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Plant;
