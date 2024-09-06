@@ -84,11 +84,11 @@ const Header = ({ onMenuToggle }) => {
               </Link>
 
               <Link to="/plant" className="nav-item" onClick={closeMenu}>
-                Commercial Plant
+                {t("plant:name")}
               </Link>
 
               <Link to="/#mission" className="nav-item hide-in-xl" onClick={closeMenu}>
-                Mission
+                {t("mission:name")}
               </Link>
 
               {/* <NavDropdown title="Industry Insights">

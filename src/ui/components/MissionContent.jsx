@@ -19,8 +19,8 @@ const MissionContent = () => {
         <Goal
           future
           icon={<TurnxL className="icon" />}
-          date="By 2030"
-          text="mission:2030"
+          date="BY 2031"
+          text="mission:2031"
           className="last"
         />
 
