@@ -11,6 +11,7 @@ import IntroCards from "../components/industry-insights/IntroCards";
 import Press from "../components/Press";
 import Model3D from "../components/Model3D";
 import ToggleCards from "../components/ToggleCards";
+import SolutionCards from "../components/SolutionCards";
 import { HOME_MODEL_3D } from "../../constants/mediaUrls";
 
 const MaritimePage = () => {
@@ -34,9 +35,11 @@ const MaritimePage = () => {
 
       <IntroCards />
 
+      <SolutionCards/>
+
       <Model3D src={HOME_MODEL_3D}>
         <div className="wrapper model-content">
-          <ToggleCards  />
+          <ToggleCards />
         </div>
       </Model3D>
 
