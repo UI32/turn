@@ -10,7 +10,7 @@ import Mission from "../components/Mission";
 import Model3D from "../components/Model3D";
 import Quotes from "../components/Quotes";
 import Plant from "../components/Plant";
-import Press from "../components/Press";
+// import Press from "../components/Press";
 import useTranslations from "../../hooks/useTranslations";
 import pattern from "../../assets/images/pattern1-min.png";
 import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
@@ -46,7 +46,7 @@ const HomePage = () => {
       <Plant />
       <div id="mission" className="nav-reference"></div>
       <Mission />
-      <Press />
+      {/* <Press />   temp */}
       <div id="about" className="nav-reference"></div>
       <About />
       <div id="contact" className="nav-reference"></div>

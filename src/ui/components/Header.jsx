@@ -11,9 +11,9 @@ import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
-import NavDropdown from "./NavDropdown";
-import NavDropdownLink from "./NavDropdownLink";
-import PaperD from "../../assets/icons/paper-dark.svg";
+// import NavDropdown from "./NavDropdown";
+// import NavDropdownLink from "./NavDropdownLink";
+// import PaperD from "../../assets/icons/paper-dark.svg";
 
 const Header = ({ onMenuToggle }) => {
   const t = useTranslations();
@@ -91,7 +91,7 @@ const Header = ({ onMenuToggle }) => {
                 Mission
               </Link>
 
-              <NavDropdown title="Industry Insights">
+              {/* <NavDropdown title="Industry Insights">
                 <NavDropdownLink text="Maritime" to="/industry-insights/maritime" icon={PaperD} onClick={closeMenu}/>
                 <NavDropdownLink text="Utilities" to="/" icon={PaperD} onClick={closeMenu}/>
                 <NavDropdownLink
@@ -100,7 +100,7 @@ const Header = ({ onMenuToggle }) => {
                   icon={PaperD}
                   onClick={closeMenu}
                 />
-              </NavDropdown>
+              </NavDropdown> */}
 
               <Link to="/#about" className="nav-item" onClick={closeMenu}>
                 {t("about:name")}

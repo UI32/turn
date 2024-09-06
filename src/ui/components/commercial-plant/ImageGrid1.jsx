@@ -2,7 +2,7 @@ import React from "react";
 import imageGrid11 from "../../../assets/images/commercial-plant/image-grid-1-1.jpg";
 import imageGrid12 from "../../../assets/images/commercial-plant/image-grid-1-2.jpg";
 import imageGrid13 from "../../../assets/images/commercial-plant/image-grid-1-3.jpg";
-import imageGrid1map from "../../../assets/images/commercial-plant/image-grid-1-map.jpg";
+import imageGrid1map from "../../../assets/images/commercial-plant/image-grid-1-map.png";
 import useTranslations from "../../../hooks/useTranslations";
 
 const ImageGrid1 = () => {
