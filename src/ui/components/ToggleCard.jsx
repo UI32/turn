@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const ToggleCard = () => {
+const ToggleCard = ({ title, text }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
@@ -10,7 +10,6 @@ const ToggleCard = () => {
   };
 
   useEffect(() => {
-    // Set the content height dynamically when the dropdown is open
     if (contentRef.current) {
       setContentHeight(contentRef.current.scrollHeight);
     }
@@ -19,7 +18,9 @@ const ToggleCard = () => {
   return (
     <div className={`toggle-card ${isOpen ? "open" : ""}`}>
       <div className="toggle-card-header" onClick={toggleDropdown}>
-        <p>Reliability</p>
+        <p className="beta">
+          {title}
+        </p>
         <div className="toggle-card-icon">
           <span className="toggle-card-line toggle-card-line-1"></span>
           <span className="toggle-card-line toggle-card-line-2"></span>
@@ -33,10 +34,8 @@ const ToggleCard = () => {
         }}
         ref={contentRef}
       >
-        <p>
-          The blending approach creates long-term security around fleet
-          investments since it allows for regulatory compliance for marine fuel
-          decarbonisation until 2035 and beyond.
+        <p className="text-xl">
+          {text}
         </p>
       </div>
     </div>

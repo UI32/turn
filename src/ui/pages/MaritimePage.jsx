@@ -9,7 +9,9 @@ import pattern from "../../assets/images/pattern1-min.png";
 import heroImg from "../../assets/images/industry-insights/maritime-hero.jpg";
 import IntroCards from "../components/industry-insights/IntroCards";
 import Press from "../components/Press";
-import ToggleCard from "../components/ToggleCard";
+import Model3D from "../components/Model3D";
+import ToggleCards from "../components/ToggleCards";
+import { HOME_MODEL_3D } from "../../constants/mediaUrls";
 
 const MaritimePage = () => {
   const t = useTranslations();
@@ -19,7 +21,7 @@ const MaritimePage = () => {
   }, []);
 
   return (
-    <MainLayout className="commercial-plant">
+    <MainLayout className="maritime-page">
       <Hero
         title={t("maritime-hero:title")}
         pretitle={t("maritime-hero:pretitle")}
@@ -32,10 +34,11 @@ const MaritimePage = () => {
 
       <IntroCards />
 
-<div className="wrapper">
-      <ToggleCard />
-
-</div>
+      <Model3D src={HOME_MODEL_3D}>
+        <div className="wrapper model-content">
+          <ToggleCards  />
+        </div>
+      </Model3D>
 
       <Press hiddenItem="maritime"/>
       <div id="contact" className="nav-reference"></div>

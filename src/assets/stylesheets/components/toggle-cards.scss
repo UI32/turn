@@ -1,18 +1,26 @@
+.toggle-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .toggle-card {
   $self: &;
   border-radius: 8px;
   overflow: hidden;
-
-  width: 300px;
-
+  width: 100%;
   transition: all 0.5s ease;
-
   background-color: $primary-dark;
+
+  .beta {
+    color: $white;
+    font-size: 24px;
+  }
 
   &.open {
     background-color: $white;
 
-    p {
+    .text-xl {
       color: $text-primary-dark;
     }
 
@@ -27,6 +35,10 @@
     #{$self}-line-1 {
       transform: translate(-50%, -50%) rotate(90deg);
       will-change: transform;
+    }
+
+    .beta {
+      color: $text-primary-dark;
     }
   }
 
@@ -63,19 +75,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 18px 24px 18px 32px;
-
     color: $white;
     transition: background-color 0.5s ease;
-
     cursor: pointer;
-
-    p {
-      font-size: 24px;
-    }
-
-    &:hover {
-      // background-color: #2f477a;
-    }
   }
 
   &-body {
@@ -83,11 +85,10 @@
     opacity: 0;
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.5s ease;
-
     will-change: max-height, opacity;
     border-radius: 0 0 8px 8px;
 
-    p {
+    .text-xl {
       margin: 16px 32px 32px 32px;
     }
   }
