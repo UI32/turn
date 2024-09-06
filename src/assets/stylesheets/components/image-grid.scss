@@ -111,9 +111,16 @@
 
   .video-container {
     position: relative;
+    min-height: 680px;
 
     @include mq(md) {
       border-radius: 8px;
+      min-height: 57vw;
+    }
+
+    @include mq(xl) {
+      height: 876px;
+      min-height: 100%;
     }
   }
 
