@@ -1,7 +1,6 @@
 // Header
 
 .header {
-  padding: 2px 0;
   background: $white;
   position: relative;
   z-index: 10;
@@ -31,6 +30,30 @@
     display: flex;
     align-items: center;
     position: relative;
+    min-height: 56px;
+    position: relative;
+  }
+
+  > .wrapper::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+
+    @include mq(xl) {
+      display: none;
+    }
+
+  }
+
+  &-actions,
+  &-legal {
+    width: 100%;
   }
 
   &-content {
@@ -60,14 +83,14 @@
   }
 
   .nav-item {
-    @include typo-rwd(text-l);
+    font-weight: 500;
     padding: 0 16px;
-    border-radius: 6px;
-    height: 41px;
     display: flex;
     align-items: center;
     background: transparent;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: $text-primary-dark;
+    border-bottom: 1px solid $text-primary-dark;
   }
 
   .button-menu {
@@ -83,15 +106,15 @@
   &-wrapper {
     display: flex;
     align-items: center;
-    flex: 1 1 auto;
+    width: 100%;
   }
 
-  // Mobile
 
-  @include mq($until: md) {
+  @include mq($until: xl) {
+
     .lang-mobile {
       margin: 0 16px 0 auto;
-      right: -2px;
+
     }
     &.is-sticky {
       min-height: 48px;
@@ -109,11 +132,12 @@
         left: -20px;
       }
       img {
-        width: 65px;
+        width: 81px;
       }
     }
     &-content {
       display: none;
+      min-height: 100dvh;
       padding-right: 40px;
       position: fixed;
       top: 0;
@@ -125,7 +149,17 @@
       padding: 0 16px 20px 16px;
       animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
       .lang-selector {
-        display: none;
+        max-width: 55px;
+        margin-right: auto;
+        margin-left: 0;
+        height: fit-content;    
+        margin-top: 20px; 
+        margin-bottom: 32px;
+        
+        button {
+          max-height: 30px;
+          padding: 9px 16px;
+        }
       }
     }
     &-wrapper {
@@ -133,22 +167,24 @@
       position: absolute;
       top: 100px;
       bottom: 16px;
-      left: 16px;
-      right: 16px;
+      left: 32px;
+      right: 32px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      width: auto;
     }
 
     .header-nav {
-      margin-top: auto;
+      margin-top: 76px;
+      width: 100%;
     }
 
     &.open-menu {
       .header-content {
         display: block;
         background-color: $white;
-        background-image: url("../images/menu-pattern-min.png");
+        background-image: url("../images/menu-pattern-m.png");
         overflow-y: auto;
         background-repeat: no-repeat;
         background-size: cover;
@@ -161,25 +197,19 @@
       }
     }
 
+    .button-clear {
+      border-radius: 0;
+    }
+
     .nav-item,
     .button-clear {
       display: flex;
       align-items: center;
-      &:before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        background: $primary;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 22px;
-        opacity: 0.4;
-      }
+      
     }
     .nav-item,
     .button-clear {
       padding: 0;
-      margin-top: 10px;
       padding: 16px 0;
       -webkit-tap-highlight-color: transparent;
     }
@@ -193,6 +223,8 @@
     }
 
     .nav-item {
+      @include typo-rwd(beta);
+
       .button {
         margin-left: 10px;
       }
@@ -200,7 +232,14 @@
   }
 
   @include mq(md) {
-    padding: 25px 0;
+    &.open-menu {
+      .header-content {
+        background-image: url("../images/menu-pattern-d.png");
+      }
+    }
+  }
+
+  @include mq(xl) {
     &.is-sticky {
       .logo {
         img {
@@ -213,39 +252,59 @@
         }
       }
     }
-    &-nav {
-      display: flex;
-      align-items: center;
-      flex: 1 1 auto;
-      justify-content: center;
-    }
-    &-actions {
-      display: flex;
-      align-items: center;
-      margin-left: auto;
+
+    .button-clear.nav-item {
+      border-radius: 6px;
+      background-color: #F3F4F6;
+      margin-left: 16px;
+
+      &:hover {
+        color: black;
+        background: $primary-border-light;
+      }
     }
 
     .nav-item {
       &:hover {
-        transition: all 0.4s ease-in-out;
-        color: $primary-dark;
-        background: linear-gradient(
-          90deg,
-          rgba(243, 244, 246, 1) 0%,
-          rgba(229, 231, 235, 1) 100%
-        );
+        transition: all 0.3s ease-in-out;
+        color: $primary-light;
+
         &:before {
           opacity: 1;
         }
       }
     }
+
+    > .wrapper {
+      min-height: 80px;
+    }
+
+    &-nav {
+      padding-left: 100px;
+      margin-right: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // max-width: 920px; temp
+      max-width: 630px;
+      margin-left: auto;
+      flex-grow: 1;
+      padding-left: 80px;
+    }
+
+    & .nav-item {
+      height: 41px;
+      border: none;
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      width: auto;
+    }
+
   }
 
-  @include mq(lg) {
-    .nav-item {
-      padding: 0 28px;
-    }
-  }
   @supports (-webkit-touch-callout: none) {
     .lang-mobile {
       top: 1px;
@@ -264,14 +323,14 @@
 
 .hamburger {
   display: block;
-  width: 14px;
-  height: 8px;
+  width: 22px;
+  height: 14px;
   position: relative;
-  // margin-top: 4px;
+
   .line {
-    width: 14px;
-    height: 2px;
-    background: $black;
+    width: 22px;
+    height: 3px;
+    background: $text-primary-dark;
     display: inline-block;
     position: absolute;
     left: 0;
@@ -285,18 +344,18 @@
   }
 
   .line-2 {
-    top: 6px;
+    top: 10px;
   }
 }
 
 .open-menu {
   .line-1 {
-    transform: translate(4.5px, 0) rotate(45deg);
+    transform: translate(2.5px, -2.5px) rotate(45deg);
   }
 
   .line-2 {
     top: 10px;
-    transform: translate(4.5px, 0) rotate(-45deg);
+    transform: translate(2.5px, 2.5px) rotate(-45deg);
   }
   .button-menu {
     margin-top: -2px;

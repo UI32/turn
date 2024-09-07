@@ -3,19 +3,10 @@
 .process {
   z-index: 3;
   position: relative;
-  margin-top: 12px;
-  @include mq($from: md, $until: lg) {
-    .beta {
-      max-width: 260px;
-    }
-  }
+  margin-top: 80px;
+
   @include mq(md) {
-    margin-top: 60px;
-  }
-  @include mq(lg) {
-    .beta {
-      max-width: 304px;
-    }
+    margin-top: 160px;
   }
 }
 
@@ -25,39 +16,55 @@
   $self: &;
   &-panel {
     margin-bottom: 0;
+
+    @include mq(md) {
+      padding-bottom: 80px;
+    }
+
+    @include mq(lg) {
+      padding-bottom: 120px;
+    }
   }
   &-content {
     .bullet {
       position: relative;
-      padding-left: 20px;
-      margin-bottom: 24px;
-      @include typo-rwd(text-xl);
-      transition: color 2s ease;
+      margin-bottom: 16px;
+      max-width: 283px;
+      text-align: center;
+      border-radius: 12px;
+      padding: 36px 22px;
+      @include typo-rwd(text-m);
+      cursor: pointer;
+      color: $text-primary-dark;
+      background-color: $white;
+      border: 2px solid $primary-border-light;
+      will-change: color, background-color, border-color;
+      transition: color 0.2s ease, background-color 1s ease,
+        border-color 1s ease;
 
-      &:before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        background: rgba($primary, 0.4);
-        border-radius: 50%;
-        position: absolute;
-        top: 3px;
-        left: 0;
-        transition: all 0.6s ease;
-      }
       &.active {
-        color: $primary-dark;
-        &:before {
-          background: $primary-dark;
-        }
+        color: $white;
+        background-color: $primary-light;
+        border-color: $primary-light;
       }
+
+      @include mq(md) {
+        max-width: 212px;
+        padding-inline: 12px;
+      }
+    }
+
+    #{$self}-graphic-caption {
+      margin-top: 34px;
     }
 
     .graphic-section {
       position: relative;
+      margin-bottom: 6px;
       img {
         display: block;
-        transition: all 2s ease;
+        transition: all 1s ease;
+        cursor: pointer;
       }
       .section-img {
         opacity: 1;
@@ -80,6 +87,8 @@
 
     .desktop-graphic {
       display: flex;
+      min-height: 100%;
+      align-items: center;
     }
 
     .mobile-graphic {
@@ -105,34 +114,50 @@
 
     @include mq(md) {
       display: flex;
-      align-items: flex-start;
-      margin-top: 30px;
+      align-items: stretch;
+
       #{$self}-bullets {
-        flex: 0 0 260px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
       }
+
+      #{$self}-bullets-container {
+        height: 100%;
+        min-height: calc(100% + 40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       #{$self}-graphic {
         flex: 1 1 auto;
         padding-left: 10px;
-        margin-top: -100px;
+      }
+
+      #{$self}-bullets-caption {
+        margin-top: auto;
+        transform: translateY(-40px);
       }
 
       .graphic-section {
         margin-right: 10px;
-      }
-
-      .bullet {
-        &:before {
-          top: 6px;
-        }
+        margin-bottom: 0;
       }
     }
 
     @include mq(lg) {
       #{$self}-graphic {
-        padding-left: 42px;
+        padding-left: 100px;
       }
-      #{$self}-bullets {
-        flex-basis: 310px;
+
+      #{$self}-bullets-caption {
+        transform: translateY(0);
+      }
+
+      #{$self}-bullets-container {
+        align-items: flex-end;
       }
     }
   }

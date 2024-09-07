@@ -1,0 +1,149 @@
+.solution-cards {
+  &-label {
+    margin-bottom: 20px;
+    @include mq(xl) {
+      text-align: center;
+    }
+  }
+  &-title {
+    margin-bottom: 40px;
+    @include mq(xl) {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+  }
+
+  &-wrapper {
+    overflow-x: auto;
+    padding-left: 16px;
+    padding-bottom: 8px;
+
+    @include custom-scrollbar;
+
+    @include mq(md) {
+      max-width: $layout-maxWidth;
+      margin: 0 auto;
+      padding: 0 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    @include mq(xl) {
+      max-width: 1304px;
+      margin-inline: auto;
+      justify-content: space-between;
+    }
+  }
+}
+
+.solution-card {
+  min-width: 255px;
+  width: 100%;
+  min-height: 198px;
+  background-color: $white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  @include mq(lg) {
+    max-width: 380px;
+  }
+
+  &.spacer {
+    min-width: 6px;
+    max-width: 6px;
+    padding: 0;
+    opacity: 0;
+    border: 1px solid transparent;
+
+    @include mq(md) {
+      margin-left: -6px;
+    }
+
+    @include mq($from: 844px) {
+      display: none;
+    }
+  }
+
+  &-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 32px 22px 32px;
+
+    @include mq(xl) {
+      padding: 40px 40px 36px 40px;
+    }
+
+    .solution-card-label {
+      margin-bottom: 16px;
+      @include mq(xl) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .solution-card-number {
+      display: flex;
+      align-items: baseline;
+
+      .solution-card-number-big {
+        font-size: 80px;
+        line-height: 105%;
+        font-weight: 500;
+        letter-spacing: -2.4px;
+
+        @include mq(xl) {
+          font-size: 144px;
+          line-height: 90%;
+          margin-bottom: 8px;
+          letter-spacing: -4.32px;
+        }
+      }
+
+      .solution-card-number-small {
+        font-size: 36px;
+        line-height: 111%;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding-block: 8px;
+
+    @include mq(xl) {
+      padding-block: 12px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 183px;
+
+      @include mq(xl) {
+        max-width: 272px;
+      }
+    }
+  }
+
+  &.sol-1 .solution-card-img-container {
+    background-color: $brand-indigo;
+  }
+  &.sol-2 .solution-card-img-container {
+    background-color: $brand-teal;
+  }
+  &.sol-3 .solution-card-img-container {
+    background-color: $brand-green;
+  }
+}

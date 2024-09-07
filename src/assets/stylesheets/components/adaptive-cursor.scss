@@ -1,0 +1,34 @@
+// Adaptive cursor
+
+#adaptive-cursor {
+  width: 0;
+  height: 0;
+  z-index: 100;
+  padding: 8px;
+  border-radius: 50%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  color: $white;
+  background-color: transparent;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: color 0.3s ease;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.has-label-state {
+  transition-delay: 0.3s;
+}
+
+[data-cursor-label] {
+  @include mq(md) {
+    cursor: none;
+  }
+}

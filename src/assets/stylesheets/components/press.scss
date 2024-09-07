@@ -1,0 +1,162 @@
+// Press
+
+.press {
+  margin-bottom: 80px;
+
+  @include mq(md) {
+    margin-bottom: 160px;
+  }
+
+  &-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 16px;
+    padding-bottom: 8px;
+    
+    @include custom-scrollbar;
+    
+    @include mq(md) {
+      max-width: $layout-maxWidth;
+      margin: 0 auto;
+      padding: 0 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    @include mq(md) {
+      gap: 16px;
+    }
+  }
+}
+
+.press-item {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 255px;
+  height: 440px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: $white;
+
+  &:hover {
+    #{$self}-icon {
+      transform: translateX(8px);
+    }
+
+    #{$self}-img {
+      transform: scale(1.05);
+    }
+  }
+
+  @include mq(lg) {
+    height: 614px;
+    min-width: 380px;
+  }
+
+  &.spacer {
+    min-width: 6px;
+    max-width: 6px;
+    padding: 0;
+    opacity: 0;
+    border: 1px solid transparent;
+  
+    @include mq(md) {
+      margin-left: -6px;
+    }
+  
+    @include mq($from: 1616px) {
+      display: none;
+    }
+  }
+
+  &-heading {
+    padding: 32px 16px 20px 32px;
+
+    @include mq(lg) {
+      padding: 40px 40px 32px 40px;
+    }
+  }
+
+  &-pretitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include mq(lg) {
+      margin-bottom: 32px;
+    }
+
+    .lead-m {
+      color: $grey-medium;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-icon {
+    width: 24px;
+    margin-right: 16px;
+    margin-left: 8px;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+
+    @include mq(lg) {
+      margin-right: 0;
+    }
+  }
+
+  &-title {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5em;
+    height: 5.1rem;
+  }
+
+  &-img-container {
+    flex-grow: 1;
+    overflow: hidden;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  &-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s cubic-bezier(0.42, 0.87, 0.61, 1);
+    will-change: transform;
+  }
+
+  &-first {
+    background-color: $primary-light;
+    color: $white;
+
+    .alpha,
+    .lead-m {
+      color: $white;
+    }
+
+    .text-xl {
+      color: $white;
+      white-space: normal;
+      margin-top: 20px;
+      @include mq(lg) {
+        margin-top: 8px;
+      }
+    }
+  }
+}

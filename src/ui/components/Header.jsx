@@ -11,31 +11,35 @@ import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
+// import NavDropdown from "./NavDropdown";
+// import NavDropdownLink from "./NavDropdownLink";
+// import PaperD from "../../assets/icons/paper-dark.svg";
 
-const Header = () => {
+const Header = ({ onMenuToggle }) => {
   const t = useTranslations();
 
   // Open/Close menu
 
   const [isMenuOpen, setisMenuOpen] = useState(false);
-  const toggleMenu = useCallback(
-    () => setisMenuOpen(!isMenuOpen),
-    [isMenuOpen],
-  );
-  const closeMenu = useCallback(() => setisMenuOpen(false), [setisMenuOpen]);
+  const toggleMenu = useCallback(() => {
+    setisMenuOpen(prev => {
+      const newValue = !prev;
+      onMenuToggle(newValue); // Notify parent about the change
+      return newValue;
+    });
+  }, [onMenuToggle]);
 
-  // Sticky header
+  const closeMenu = useCallback(() => {
+    setisMenuOpen(false);
+    onMenuToggle(false); // Notify parent to close the menu
+  }, [onMenuToggle]);
+
   const [isSticky, setisSticky] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
       const scrollTop = window.pageYOffset;
-
-      if (scrollTop > 80) {
-        setisSticky(true);
-      } else {
-        setisSticky(false);
-      }
+      setisSticky(scrollTop > 80);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -74,50 +78,78 @@ const Header = () => {
         </Link>
         <div className="header-content">
           <div className="header-wrapper">
-            <nav className="header-nav" onClick={closeMenu}>
-              <Link to="/#mission" className="nav-item">
-                {t("mission:name")}
-              </Link>
-              <Link to="/#how-it-works" className="nav-item">
+            <nav className="header-nav" role="navigation">
+              <Link to="/#how-it-works" className="nav-item" onClick={closeMenu}>
                 {t("how-it-works:name")}
               </Link>
-              <Link to="/#about" className="nav-item">
+
+              <Link to="/plant" className="nav-item" onClick={closeMenu}>
+                {t("plant:name")}
+              </Link>
+
+              <Link to="/#mission" className="nav-item hide-in-xl" onClick={closeMenu}>
+                {t("mission:name")}
+              </Link>
+
+              {/* <NavDropdown title="Industry Insights">
+                <NavDropdownLink text="Maritime" to="/industry-insights/maritime" icon={PaperD} onClick={closeMenu}/>
+                <NavDropdownLink text="Utilities" to="/" icon={PaperD} onClick={closeMenu}/>
+                <NavDropdownLink
+                  text="Energy Intensive Industries"
+                  to="/"
+                  icon={PaperD}
+                  onClick={closeMenu}
+                />
+              </NavDropdown> */}
+
+              <Link to="/#about" className="nav-item" onClick={closeMenu}>
                 {t("about:name")}
               </Link>
             </nav>
+            <div
+              className="header-actions"
+              onClick={closeMenu}
+              onKeyDown={e => {
+                if (e.key === "Enter" || e.key === " ") {
+                  closeMenu();
+                }
+              }}
+              role="button"
+              tabIndex="0"
+            >
+              <LangSelector className="show-in-xl" />
 
-            <div className="header-actions" onClick={closeMenu}>
-              <LangSelector className="show-in-tablet" />
-              <Link to="/#contact" className="button button-clear">
-                {t("contact-sales:name")}
-              </Link>
-            </div>
-            <div className="show-in-mobile">
               <a
-                className="nav-item careers"
+                className="nav-item careers hide-in-xl"
                 href="https://turn2x.jobs.personio.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="text">{t("careers:name")}</span>
-                <span className="button button-tiny">{t("hiring:name")}</span>
               </a>
+
+              <Link to="/#contact" className="button button-clear nav-item">
+                {t("contact-sales:name")}
+              </Link>
+            </div>
+
+            <div className="header-legal hide-in-xl">
               <Link className="nav-item" to="/legal">
                 {t("legal:name")}
               </Link>
               <Link className="nav-item" to="/privacy">
                 {t("data-privacy:name")}
               </Link>
+              <LangSelector className="lang-mobile button button-tiny" />
             </div>
           </div>
         </div>
 
-        <LangSelector className="show-in-mobile lang-mobile" />
-
         <button
-          className="button-menu show-in-mobile"
+          className="button-menu hide-in-xl"
           onClick={toggleMenu}
           aria-label="menu"
+          tabIndex="0"
         >
           <div className="hamburger">
             <span className="line line-1"></span>

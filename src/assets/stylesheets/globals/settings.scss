@@ -4,10 +4,16 @@
 
 $black: #000;
 $white: #fff;
+
 $primary: #4579dd;
 $primary-light: #487aee;
 $primary-dark: #385494;
 $primary-extra-light: #ecf1fc;
+$primary-border-light: #D6E3FF;
+
+$text-primary-dark: #111827;
+$text-secondary-dark: #374151;
+
 $grey: #d1d5db;
 $grey-bg: #f7f7f7;
 $grey-light: #f6f6f6;
@@ -15,11 +21,16 @@ $grey-light2: #f0f0f0;
 $grey-medium: #9ca3af;
 $grey-dark: #6b7280;
 $grey-border: #e5e7eb;
+
 $success: #19aa86;
 $error: #ef4444;
 $error-dark: #7f1d1d;
 $error-light: #fca5a5;
 $error-extra-light: #fff7f7;
+
+$brand-indigo: #4150D9;
+$brand-teal: #2CACE3;
+$brand-green: #2AD7B7;
 
 // Fonts
 $font-base: 16px;
@@ -31,7 +42,7 @@ $bold: 700;
 $heavy: 900;
 
 // Layout
-$layout-maxWidth: 1252px;
+$layout-maxWidth: 1600px;
 
 $xxs: 0;
 $xs: 390px;

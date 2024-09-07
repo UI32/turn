@@ -1,65 +1,74 @@
 import React from "react";
-import useTranslations from "../../hooks/useTranslations";
-import { ReactComponent as Document } from "../../assets/icons/document.svg";
-import { ReactComponent as Cog } from "../../assets/icons/cog.svg";
-import { ReactComponent as Documents } from "../../assets/icons/documents.svg";
-import { ReactComponent as Helix } from "../../assets/icons/helix.svg";
-import { ReactComponent as Charge } from "../../assets/icons/charge.svg";
-import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
-import { ReactComponent as Patterns } from "../../assets/icons/double-pattern.svg";
+import { ReactComponent as Graph } from "../../assets/icons/graph-light.svg";
+import { ReactComponent as PaperD } from "../../assets/icons/paper-dark.svg";
+import { ReactComponent as PaperL } from "../../assets/icons/paper-light.svg";
+import { ReactComponent as Rocket } from "../../assets/icons/rocket-light.svg";
+import { ReactComponent as Scale } from "../../assets/icons/scale-light.svg";
+import { ReactComponent as Target } from "../../assets/icons/target-dark.svg";
+import { ReactComponent as TurnxD } from "../../assets/icons/turnx-dark.svg";
+import { ReactComponent as TurnxL } from "../../assets/icons/turnx-light.svg";
+
+
 import Goal from "./Goal";
 
 const MissionContent = () => {
-  const t = useTranslations();
   return (
     <div className="mission-content">
       <div className="goals">
+        <span className="goal spacer"></span>
         <Goal
           future
-          icon={<Logo className="icon" />}
-          date="By 2030"
-          text="mission:2030"
+          icon={<TurnxL className="icon" />}
+          date="BY 2031"
+          text="mission:2031"
           className="last"
         />
 
         <Goal
           future
-          icon={<Helix className="icon helix" />}
+          icon={<Rocket className="icon" />}
           date="2024"
           text="mission:2024"
-          className="w-47_2"
+          className="w-44_2"
         />
         <Goal
           future
-          icon={<Documents className="icon documents" />}
+          icon={<Graph className="icon" />}
+          date="2024"
+          text="mission:2024-1"
+          className="w-44_2"
+        />
+        <Goal
+          future
+          icon={<Scale className="icon" />}
+          date="2024"
+          text="mission:2024-2"
+          className="w-44_2"
+        />                
+        <Goal
+          future
+          icon={<PaperL className="icon" />}
           date="2023"
           text="mission:2023"
-          className="w-53_8"
+          className="w-51_2"
         />
         <Goal
           past
-          icon={<Charge className="icon charge" />}
-          date="2022"
-          text="mission:2022"
-          className="w-73_6"
-        />
-        <Goal
-          past
-          icon={<Patterns className="icon patterns" />}
+          icon={<TurnxD className="icon" />}
           date="2019"
           text="mission:2019"
-          className="w-80_2"
+          className="w-79"
         />
         <Goal
           past
-          icon={<Cog className="icon cog" />}
+          icon={<Target className="icon" />}
           date="2018"
           text="mission:2018"
           className="w-86_2"
         />
         <Goal
           past
-          icon={<Document className="icon document" />}
+          icon={<PaperD className="icon" />}
           date="2016"
           text="mission:2016"
           className="w-100"

@@ -58,19 +58,13 @@ $typography: (
     format: (
       xxs: (
         fz: 36px,
-        lh: 37.8px,
+        lh: 38px,
         ls: -0.03em,
         fw: 500,
       ),
       md: (
-        fz: 60px,
-        lh: 1.2,
-      ),
-
-      lg: (
         fz: 80px,
         lh: 84px,
-        ls: -0.03em,
       ),
     ),
   ),
@@ -78,65 +72,49 @@ $typography: (
   alpha: (
     format: (
       xxs: (
-        fz: 36px,
-        lh: 37.8px,
+        fz: 32px,
+        lh: 36px,
         ls: -0.03em,
         fw: 500,
       ),
-      lg: (
-        fz: 42px,
-        lh: 44.1px,
-        ls: -0.03em,
+      md: (
+        fz: 36px,
+        lh: 40px,
       ),
     ),
   ),
+
   beta: (
     format: (
       xxs: (
-        fz: 30px,
-        lh: 31.5px,
-        fw: 500,
+        fz: 20px,
+        lh: 26px,
+        fw: 400,
         ls: -0.03em,
       ),
-      lg: (
-        fz: 36px,
-        lh: 37.8px,
-      ),
-    ),
-  ),
-
-  lead-xs: (
-    format: (
-      xxs: (
-        fz: 10px,
-        lh: 10.5px,
-        fw: 500,
-        ls: -0.04em,
-      ),
-    ),
-  ),
-
-  lead-m: (
-    format: (
-      xxs: (
-        fz: 14px,
-        lh: 16.8px,
-        fw: 500,
-        ls: 0.1em,
-      ),
-
       md: (
-        fz: 15px,
-        lh: 18px,
+        fz: 24px,
+        lh: 28px,
       ),
     ),
   ),
 
-  text-s: (
+  text-xl: (
     format: (
-      sm: (
-        fz: 14px,
-        lh: 16.8px,
+      xxs: (
+        fz: 20px,
+        lh: 26px,
+        fw: 400,
+        ls: -0.03em,
+      ),
+    ),
+  ),
+
+  text-l: (
+    format: (
+      xxs: (
+        fz: 16px,
+        lh: 20px,
         fw: 400,
         ls: -0.02em,
       ),
@@ -147,35 +125,61 @@ $typography: (
     format: (
       xxs: (
         fz: 16px,
-        lh: 19.2px,
+        lh: 20px,
+        fw: 500,
+        ls: -0.03em,
+      ),
+    ),
+  ),  
+
+  text-s: (
+    format: (
+      xxs: (
+        fz: 14px,
+        lh: 16px,
         fw: 400,
         ls: -0.02em,
       ),
     ),
   ),
 
-  text-l: (
+  lead-m: (
     format: (
       xxs: (
-        fz: 18px,
-        lh: 21.6px,
-        fw: 400,
-        ls: -0.02em,
+        fz: 14px,
+        lh: 16px,
+        fw: 500,
+        ls: 0.1em,
       ),
     ),
   ),
 
-  text-xl: (
+  quote-l : (
     format: (
       xxs: (
-        fz: 16px,
-        lh: 19px,
+        fz: 26px,
+        lh: 30px,
         fw: 400,
-        ls: -0.02em,
+        ls: -0.03em,
       ),
       md: (
+        fz: 36px,
+        lh: 40px,
+      ),
+    ),
+  ),
+
+  quote-m : (
+    format: (
+      xxs: (
         fz: 20px,
         lh: 24px,
+        fw: 400,
+        ls: -0.03em,
+      ),
+      md: (
+        fz: 28px,
+        lh: 36px,
       ),
     ),
   ),

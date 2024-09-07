@@ -68,27 +68,35 @@ const Process = ({}) => {
               autoplay={false}
               startFrame={120}
               interactivity={midScreenPlay}
+              className="hide-in-mobile"
             ></AnimatedIcon>
           }
           pretitle="process:esg-compliant"
           title="process:title"
         >
           <div className={cx("process-content")}>
-            <div className="process-bullets">
-              <div {...stateWrapperProps("E1", "bullet")}>
-                {t("process:section1")}
+            <div className="process-bullets show-in-tablet">
+              <div className="process-bullets-container">
+                <div {...stateWrapperProps("E1", "bullet")}>
+                  {t("process:section1")}
+                </div>
+                <div {...stateWrapperProps("E2", "bullet")}>
+                  {t("process:section2")}
+                </div>
+                <div {...stateWrapperProps("E3", "bullet")}>
+                  {t("process:section3")}
+                </div>
               </div>
-              <div {...stateWrapperProps("E2", "bullet")}>
-                {t("process:section2")}
+              <div className="process-bullets-caption">
+                <p className="caption">{t("process:caption1")}</p>
+                <p className="caption">{t("process:caption2")}</p>
               </div>
-              <div {...stateWrapperProps("E3", "bullet")}>
-                {t("process:section3")}
-              </div>
-              <p className="caption">{t("process:caption1")}</p>
-              <p className="caption">{t("process:caption2")}</p>
             </div>
             <div className="process-graphic">
               <div className="mobile-graphic">
+                <div {...stateWrapperProps("E1", "bullet",)}>
+                  {t("process:section1")}  
+                </div>
                 <div {...stateWrapperProps("E1", "graphic-section section-1")}>
                   <img
                     loading="lazy"
@@ -102,6 +110,9 @@ const Process = ({}) => {
                     className="section-img-active mobile"
                     alt="section 1 active"
                   />
+                </div>
+                <div {...stateWrapperProps("E2", "bullet")}>
+                  {t("process:section2")}
                 </div>
                 <div {...stateWrapperProps("E2", "graphic-section section-2")}>
                   <img
@@ -117,6 +128,9 @@ const Process = ({}) => {
                     className="section-img-active mobile"
                   />
                 </div>
+                <div {...stateWrapperProps("E3", "bullet")}>
+                  {t("process:section3")}
+                </div>
                 <div {...stateWrapperProps("E3", "graphic-section section-3")}>
                   <img
                     loading="lazy"
@@ -130,6 +144,10 @@ const Process = ({}) => {
                     alt="section 3 active"
                     className="section-img-active mobile"
                   />
+                </div>
+                <div className="process-graphic-caption hide-in-desktop">
+                  <p className="caption">{t("process:caption1")}</p>
+                  <p className="caption">{t("process:caption2")}</p>
                 </div>
               </div>
               <div className="desktop-graphic">

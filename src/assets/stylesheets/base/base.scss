@@ -13,7 +13,7 @@ html {
 body {
   @include typo-rwd(body);
   background: $grey-bg;
-  color: $black;
+  color: $text-primary-dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -65,12 +65,6 @@ a {
   max-width: $layout-maxWidth;
   margin: 0 auto;
   padding: 0 16px;
-}
-
-.icon {
-  path {
-    fill: currentColor;
-  }
 }
 
 svg {

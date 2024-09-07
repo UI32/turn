@@ -1,0 +1,95 @@
+.toggle-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toggle-card {
+  $self: &;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.5s ease;
+  background-color: $primary-dark;
+
+  .beta {
+    color: $white;
+    font-size: 24px;
+  }
+
+  &.open {
+    background-color: $white;
+
+    .text-xl {
+      color: $text-primary-dark;
+    }
+
+    #{$self}-icon {
+      background-color: $primary-dark;
+      transform: rotate(90deg);
+    }
+
+    #{$self}-line {
+      background-color: $white;
+    }
+    #{$self}-line-1 {
+      transform: translate(-50%, -50%) rotate(90deg);
+      will-change: transform;
+    }
+
+    .beta {
+      color: $text-primary-dark;
+    }
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: $white;
+    transition: all 0.5s ease;
+    will-change: transform;
+    position: relative;
+  }
+
+  &-line {
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $primary-dark;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+    will-change: transform;
+  }
+
+  &-line-2 {
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px 18px 32px;
+    color: $white;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+  }
+
+  &-body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    will-change: max-height, opacity;
+    border-radius: 0 0 8px 8px;
+
+    .text-xl {
+      margin: 16px 32px 32px 32px;
+    }
+  }
+}

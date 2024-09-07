@@ -1,11 +1,17 @@
 {
   "index": "TURN2X dekarbonisiert die Industrie durch die Produktion von erneuerbarem Erdgas mit einem einzigartigen Elektrolyseverfahren.",
-  "indexTitle": "Turn2X - Erneuerbare Energien transportfähig machen",
+  "indexTitle": "TURN2X - Erneuerbare Energien transportfähig machen",
   "indexKeys": "CO2, erneuerbar, erdgas, fossile, brennstoffe, ESG, zertifizierung, neutral",
   "privacyTitle": "Datenschutzerklärung",
   "privacy": "Datenschutzerklärungen, Einstellungen und Cookie Informationen",
   "privacyKeys": "Datenschutz, Privatsphäreeinstellungen",
   "legalTitle": "Impressum",
   "legal": "TURN2X mit Sitz in München, Geschäftsführung Philip Kessler und Benedikt Stolz.",
-  "legalKeys": "datenschutz, privatsphäre, impressum"
+  "legalKeys": "datenschutz, privatsphäre, impressum",
+  "plantTitle": "TURN2X - Eröffnung der ersten kommerziellen Anlage in Spanien",
+  "plant": "TURN2X hat Europas erste kommerzielle Anlage für erneuerbares Erdgas in Miajadas, Spanien, eingeweiht",
+  "plantKeys": "Plant keys",
+  "maritimeTitle": "Maritime",
+  "maritime": "maritime description",
+  "maritimeKeys": "maritime keys"  
 }

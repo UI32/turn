@@ -31,7 +31,6 @@
     margin-bottom: 22px;
     @include typo-rwd(text-l);
     opacity: 1;
-    + .lead-xs,
     + .lead-m {
       margin-top: 50px;
     }

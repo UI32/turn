@@ -13,6 +13,7 @@
 // Components
 
 @import "components/header.scss";
+@import "components/nav-dropdown.scss";
 @import "components/lang-selector.scss";
 @import "components/hero.scss";
 @import "components/footer.scss";
@@ -34,3 +35,21 @@
 @import "components/model.scss";
 @import "components/motto.scss";
 @import "components/carousel.scss";
+@import "components/adaptive-cursor.scss";
+@import "components/plant.scss";
+@import "components/link-icon.scss";
+@import "components/press.scss";
+@import "components/marquee.scss";
+@import "components/model-cards.scss";
+@import "components/image-grid.scss";
+@import "components/intro-cards.scss";
+@import "components/toggle-cards.scss";
+@import "components/solution-cards.scss";
+@import "components/challenge.scss";
+
+
+// Components
+
+@import "pages/home.scss";
+@import "pages/commercial-plant.scss";
+@import "pages/maritime.scss";

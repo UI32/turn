@@ -1,0 +1,138 @@
+.intro-cards {
+  padding: 80px 0;
+  @include mq(md) {
+    padding: 80px 0 160px;
+  }
+
+  .jumbo {
+    margin-bottom: 80px;
+    @include mq(lg) {
+      margin-bottom: 160px;
+      max-width: 886px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include mq(lg) {
+      flex-direction: row;
+    }
+  }
+  
+  #adaptive-cursor {
+    color: $text-primary-dark;
+  }
+}
+
+.intro-card {
+  $self: &;
+  width: 100%;
+  min-height: fit-content;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: $primary-light;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  position: relative;
+
+  &-icon-container {
+    position: relative;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+
+  &-icon {
+    width: 40px;
+  }
+
+  &-icon-white {
+    position: absolute;
+    inset: 0;
+  }
+
+  &-icon-light {
+    opacity: 0;
+  }
+
+  &-title,
+  &-text {
+    color: $white;
+  }
+
+  &-content {
+    transform: none;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  &-title {
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+
+  &-text {
+    opacity: 1;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+
+  @include mq(lg) {
+    min-height: 536px;
+    background-color: $white;
+
+    &:hover {
+      background-color: $primary-light;
+
+      #{$self}-title {
+        color: $white;
+      }
+
+      #{$self}-text {
+        opacity: 1;
+      }
+
+      #{$self}-icon-white {
+        opacity: 1;
+      }
+
+      #{$self}-icon-light {
+        opacity: 0;
+      }
+    }
+
+    &-icon-light,
+    &-icon-white {
+      transition: opacity 0.3s ease;
+    }
+
+    &-icon-white {
+      opacity: 0;
+    }
+
+    &-icon-light {
+      opacity: 1;
+    }
+
+    &-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 40px;
+    }
+
+    &-title {
+      color: $text-primary-dark;
+    }
+
+    &-text {
+      color: $white;
+      opacity: 0;
+    }
+
+    &-content {
+      transform: translateY(100%);
+    }
+  }
+}

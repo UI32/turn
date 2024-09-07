@@ -2,18 +2,16 @@
 
 .lang-selector {
   position: relative;
-  top: 1px;
+
   .lang-item {
     background: transparent;
     border: none;
     outline: none;
     padding: 17px 16px;
     line-height: 0.8;
+    font-weight: 500;
     &:disabled {
       display: none;
     }
-  }
-  @include mq(md) {
-    top: 3px;
   }
 }

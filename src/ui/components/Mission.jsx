@@ -20,6 +20,7 @@ const Mission = () => {
               loop={true}
               autoplay={false}
               interactivity={midScreenPlay}
+              className="hide-in-mobile"
             ></AnimatedIcon>
           }
           pretitle="mission:mission"
