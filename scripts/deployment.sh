@@ -2,6 +2,7 @@
 
 date=$(date)
 gitUserMail=$(git config user.email)
+gitCommitHash=$(git rev-parse --short HEAD)
 
 clear
 
@@ -43,7 +44,7 @@ cd -
 rm -rf ../turn2xcom.github.io
 
 echo "**** Updating deploymentsLog file ..."
-echo "By $gitUserMail on $date" >> ./src/deploymentsLog.txt  
+echo "By $gitUserMail on $date (commit hash: $gitCommitHash)" >> ./src/deploymentsLog.txt  
 git add ./src/deploymentsLog.txt 
 git commit -m "update deploymentsLog"
 git push
