@@ -1,5 +1,4 @@
 import React from "react";
-import useTranslations from "../../hooks/useTranslations";
 import Panel from "./Panel";
 import AnimatedIcon from "./AnimatedIcon";
 import missionIcon from "../../assets/animations/Icon-5.json";
@@ -7,7 +6,6 @@ import { midScreenPlay } from "../../utils/lottieInteractivities";
 import MissionContent from "./MissionContent";
 
 const Mission = () => {
-  const t = useTranslations();
   return (
     <div className="mission">
       <div className="wrapper">

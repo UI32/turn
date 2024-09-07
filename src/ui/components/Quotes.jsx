@@ -6,7 +6,7 @@ import thomasCompany from "../../assets/images/noelle.png";
 import jorg from "../../assets/images/jorg.png";
 import jorgCompany from "../../assets/images/energie360.svg";
 
-const Quotes = ({}) => {
+const Quotes = () => {
   return (
     <div className="quotes wrapper">
       <Carousel>
