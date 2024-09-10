@@ -6,7 +6,7 @@ import AnimatedIcon from "./AnimatedIcon";
 import contactIcon from "../../assets/animations/Icon-2-loopable.json";
 import { midScreenPlay } from "../../utils/lottieInteractivities";
 
-const Contact = ({}) => {
+const Contact = () => {
   const t = useTranslations();
   return (
     <div className="contact">

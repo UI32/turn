@@ -52,7 +52,7 @@ const useCycleActiveStates = (stateList, delay) => {
   return [stateWrapperProps];
 };
 
-const Process = ({}) => {
+const Process = () => {
   const t = useTranslations();
   const [stateWrapperProps] = useCycleActiveStates(["E1", "E2", "E3"], 5000);
 
@@ -94,8 +94,8 @@ const Process = ({}) => {
             </div>
             <div className="process-graphic">
               <div className="mobile-graphic">
-                <div {...stateWrapperProps("E1", "bullet",)}>
-                  {t("process:section1")}  
+                <div {...stateWrapperProps("E1", "bullet")}>
+                  {t("process:section1")}
                 </div>
                 <div {...stateWrapperProps("E1", "graphic-section section-1")}>
                   <img

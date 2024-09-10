@@ -34,6 +34,13 @@ const IntroCard = ({ title, text, iconLight, iconWhite }) => {
     };
   }, []);
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setHover(!hover);
+    }
+  };
+
   return (
     <article
       data-cursor="label"
@@ -41,6 +48,10 @@ const IntroCard = ({ title, text, iconLight, iconWhite }) => {
       className="intro-card"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex="0"
+      aria-label={`Intro card for ${title}`}
     >
       <div className="intro-card-icon-container">
         <img
