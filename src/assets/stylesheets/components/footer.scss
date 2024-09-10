@@ -109,22 +109,14 @@
     .wrapper {
       flex-wrap: nowrap;
       align-items: center;
+      justify-content: space-between;
       > * {
-        flex: 1 1 25%;
+        flex: inherit;
       }
     }
     .footer-item,
     .footer-caption {
       padding: 0;
-    }
-  }
-
-  @include mq($from: md, $until: lg) {
-    .copy {
-      flex-basis: 30%;
-    }
-    .careers {
-      flex-basis: 36%;
     }
   }
 
