@@ -79,7 +79,11 @@ const Header = ({ onMenuToggle }) => {
         <div className="header-content">
           <div className="header-wrapper">
             <nav className="header-nav" role="navigation">
-              <Link to="/#how-it-works" className="nav-item" onClick={closeMenu}>
+              <Link
+                to="/#how-it-works"
+                className="nav-item"
+                onClick={closeMenu}
+              >
                 {t("how-it-works:name")}
               </Link>
 
@@ -87,16 +91,30 @@ const Header = ({ onMenuToggle }) => {
                 {t("plant:name")}
               </Link>
 
-              <Link to="/#mission" className="nav-item hide-in-xl" onClick={closeMenu}>
+              <Link
+                to="/#mission"
+                className="nav-item hide-in-xl"
+                onClick={closeMenu}
+              >
                 {t("mission:name")}
               </Link>
 
               <NavDropdown title="Industry Insights">
-                <NavDropdownLink text="Maritime" to="/industry-insights/maritime" icon={PaperD} onClick={closeMenu}/>
-                <NavDropdownLink text="Utilities" to="/" icon={PaperD} onClick={closeMenu}/>
+                <NavDropdownLink
+                  text="Maritime"
+                  to="/industry-insights/maritime"
+                  icon={PaperD}
+                  onClick={closeMenu}
+                />
+                <NavDropdownLink
+                  text="Utilities"
+                  to="/industry-insights/utilities"
+                  icon={PaperD}
+                  onClick={closeMenu}
+                />
                 <NavDropdownLink
                   text="Energy Intensive Industries"
-                  to="/"
+                  to="/industry-insights/energy"
                   icon={PaperD}
                   onClick={closeMenu}
                 />

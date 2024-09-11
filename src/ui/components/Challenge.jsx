@@ -1,9 +1,7 @@
 import React from "react";
-import useTranslations from "../../hooks/useTranslations";
 import sensor from "../../assets/images/hero-sensor.png";
 
-const Challenge = ({ video }) => {
-  const t = useTranslations();
+const Challenge = ({ label, title, text, video }) => {
 
   return (
     <section className="challenge">
@@ -20,11 +18,9 @@ const Challenge = ({ video }) => {
             </div>
           </div>
           <div className="panel challenge-panel">
-            <p className="panel-pretitle lead-m">
-              {t("maritime-challenge:pretitle")}
-            </p>
-            <h2 className="alpha">{t("maritime-challenge:title")}</h2>
-            <p className="text-xl">{t("maritime-challenge:text")}</p>
+            <p className="panel-pretitle lead-m">{label}</p>
+            <h2 className="alpha">{title}</h2>
+            <p className="text-xl">{text}</p>
           </div>
         </div>
       </div>

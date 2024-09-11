@@ -13,5 +13,11 @@
   "plantKeys": "Plant keys",
   "maritimeTitle": "Maritime",
   "maritime": "maritime description",
-  "maritimeKeys": "maritime keys"  
+  "maritimeKeys": "maritime keys",
+  "utilitiesTitle": "Utilities",
+  "utilities": "utilities description",
+  "utilitiesKeys": "utilities keys",
+  "energyTitle": "Energy",
+  "energy": "energy description",
+  "energyKeys": "energy keys"  
 }

@@ -11,7 +11,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
   const defaultPressItems = [
     {
       id: "maritime",
-      to: "/",
+      to: "/industry-insights/maritime",
       pretitleKey: "press:item-1-pre",
       titleKey: "press:item-1-title",
       img: imgMariti,
@@ -19,7 +19,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
     },
     {
       id: "utilities",
-      to: "/",
+      to: "/industry-insights/utilities",
       pretitleKey: "press:item-2-pre",
       titleKey: "press:item-2-title",
       img: imgUtilit,
@@ -27,7 +27,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
     },
     {
       id: "energy",
-      to: "/",
+      to: "/industry-insights/energy",
       pretitleKey: "press:item-3-pre",
       titleKey: "press:item-3-title",
       img: imgEnergy,
@@ -36,7 +36,6 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
   ];
 
   const items = pressItems || defaultPressItems;
-
   const pressLabel = label || t("press:label");
   const pressTitle = title || t("press:title");
   const pressText = text || t("press:text");

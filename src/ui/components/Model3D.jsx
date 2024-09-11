@@ -1,8 +1,16 @@
 import React from "react";
 
-const Model3D = ({ src, children }) => {
+const Model3D = ({ src, children, headingLabel, headingTitle }) => {
   return (
     <div className="model" id="model">
+      {headingTitle && (
+        <div className="wrapper">
+          <div className="model-heading">
+            <p className="lead-m">{headingLabel}</p>
+            <h3 className="alpha">{headingTitle}</h3>
+          </div>
+        </div>
+      )}
       <div className="model-wrapper">
         <div className="ui-cover top-left"></div>
         <div className="ui-cover top-right"></div>

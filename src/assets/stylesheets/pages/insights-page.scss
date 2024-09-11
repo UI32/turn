@@ -1,4 +1,4 @@
-.maritime-page {
+.insights-page {
   .model {
     padding-bottom: 20px;
     @include mq(md) {
@@ -7,6 +7,17 @@
 
     @include mq(lg) {
       margin-bottom: 120px;
+    }
+  }
+
+  .model-heading {
+    max-width: 675px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -80px;
+
+    .lead-m {
+      margin-bottom: 20px;
     }
   }
 
@@ -35,5 +46,11 @@
     @include mq(lg) {
       max-width: 380px;
     }
+  }
+}
+
+.utilities-page {
+  .intro-card:hover {
+    background-color: $primary-dark;
   }
 }

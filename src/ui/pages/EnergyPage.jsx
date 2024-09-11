@@ -11,7 +11,6 @@ import IntroCards from "../components/industry-insights/IntroCards";
 import Press from "../components/Press";
 import Model3D from "../components/Model3D";
 import ToggleCards from "../components/ToggleCards";
-import SolutionCards from "../components/SolutionCards";
 import Challenge from "../components/Challenge";
 import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
 import PaperW from "../../assets/icons/paper-white.svg";
@@ -21,7 +20,7 @@ import EmissL from "../../assets/icons/emiss-light.svg";
 import FuelW from "../../assets/icons/fuel-white.svg";
 import FuelL from "../../assets/icons/fuel-light.svg";
 
-const MaritimePage = () => {
+const EnergyPage = () => {
   const t = useTranslations();
 
   useEffect(() => {
@@ -65,10 +64,10 @@ const MaritimePage = () => {
       titleKey: "maritime-3d-card-3:title",
       textKey: "maritime-3d-card-3:text",
     },        
-  ];  
+  ];
 
   return (
-    <MainLayout className="maritime-page insights-page">
+    <MainLayout className="energy-page insights-page">
       <Hero
         title={t("maritime-hero:title")}
         pretitle={t("maritime-hero:pretitle")}
@@ -78,7 +77,10 @@ const MaritimePage = () => {
         <img className="pattern" src={pattern} alt="pattern" loading="lazy" />
       </div>
 
-      <IntroCards title={t("maritime-intro:title")} cardItems={introCardItems} />
+      <IntroCards
+        title={t("maritime-intro:title")}
+        cardItems={introCardItems}
+      />
 
       <Challenge
         label={t("maritime-challenge:pretitle")}
@@ -87,16 +89,18 @@ const MaritimePage = () => {
         video={HOME_HERO_VIDEO}
       />
 
-      <SolutionCards />
-
-      <Model3D src={HOME_MODEL_3D}>
+      <Model3D
+        src={HOME_MODEL_3D}
+        headingLabel={t("maritime-challenge:pretitle")}
+        headingTitle={t("maritime-challenge:title")}
+      >
         <div className="wrapper model-content">
           <ToggleCards items={toggleCardItems} />
         </div>
       </Model3D>
 
       <Press
-        hiddenItem="maritime"
+        hiddenItem="energy"
         label={t("maritime-press:label")}
         title={t("maritime-press:title")}
         text={t("maritime-press:text")}
@@ -107,4 +111,4 @@ const MaritimePage = () => {
   );
 };
 
-export default MaritimePage;
+export default EnergyPage;
