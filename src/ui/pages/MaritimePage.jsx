@@ -13,7 +13,7 @@ import Model3D from "../components/Model3D";
 import ToggleCards from "../components/ToggleCards";
 import SolutionCards from "../components/SolutionCards";
 import Challenge from "../components/Challenge";
-import { HOME_MODEL_3D } from "../../constants/mediaUrls";
+import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
 
 const MaritimePage = () => {
   const t = useTranslations();
@@ -29,24 +29,23 @@ const MaritimePage = () => {
         pretitle={t("maritime-hero:pretitle")}
         img={heroImg}
       />
-
       <div className="top-pattern">
         <img className="pattern" src={pattern} alt="pattern" loading="lazy" />
       </div>
-
       <IntroCards />
-
-      <Challenge/>
-
-      <SolutionCards/>
-
+      <Challenge video={HOME_HERO_VIDEO} />
+      <SolutionCards />
       <Model3D src={HOME_MODEL_3D}>
         <div className="wrapper model-content">
           <ToggleCards />
         </div>
       </Model3D>
-
-      <Press hiddenItem="maritime"/>
+      <Press
+        hiddenItem="maritime"
+        label={t("maritime-press:label")}
+        title={t("maritime-press:title")}
+        text={t("maritime-press:text")}
+      />
       <div id="contact" className="nav-reference"></div>
       <Contact />
     </MainLayout>

@@ -20,16 +20,16 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
     {
       id: "utilities",
       to: "/",
-      pretitleKey: "press:item-1-pre",
-      titleKey: "press:item-1-title",
+      pretitleKey: "press:item-2-pre",
+      titleKey: "press:item-2-title",
       img: imgUtilit,
       isExternal: false,
     },
     {
       id: "energy",
       to: "/",
-      pretitleKey: "press:item-1-pre",
-      titleKey: "press:item-1-title",
+      pretitleKey: "press:item-3-pre",
+      titleKey: "press:item-3-title",
       img: imgEnergy,
       isExternal: false,
     },
@@ -55,7 +55,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
             </div>
           </div>
 
-          {items.map((item) =>
+          {items.map(item =>
             item.id !== hiddenItem ? (
               <PressItem
                 key={item.id}
@@ -65,7 +65,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
                 img={item.img}
                 isExternal={item.isExternal}
               />
-            ) : null
+            ) : null,
           )}
           <div className="press-item spacer"></div>
         </div>

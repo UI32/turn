@@ -1,27 +1,30 @@
 import React from "react";
 import useTranslations from "../../hooks/useTranslations";
-import plantImg from "../../assets/images/first-comm-plant.jpg";
+import sensor from "../../assets/images/hero-sensor.png";
 
-const Challenge = () => {
+const Challenge = ({ video }) => {
   const t = useTranslations();
 
   return (
     <section className="challenge">
       <div className="wrapper no-p-md">
         <div className="challenge-container">
-          <div className="challenge-img-wrapper">
-            <img
-              src={plantImg}
-              alt="challenge video"
-              loading="lazy"
-              className="challenge-img"
-            />
+          <div className="challenge-vis-wrapper">
+            <div className="video-container">
+              <div className="video-size-wrapper">
+                <img className="sensor" src={sensor} alt="video sensor" />
+                <video autoPlay loop muted playsInline>
+                  <source src={video} />
+                </video>
+              </div>
+            </div>
           </div>
-
           <div className="panel challenge-panel">
-            <p className="panel-pretitle lead-m">{t("plant:label")}</p>
-            <h2 className="alpha">{t("plant:title")}</h2>
-            <p className="text-xl">{t("plant:text")}</p>
+            <p className="panel-pretitle lead-m">
+              {t("maritime-challenge:pretitle")}
+            </p>
+            <h2 className="alpha">{t("maritime-challenge:title")}</h2>
+            <p className="text-xl">{t("maritime-challenge:text")}</p>
           </div>
         </div>
       </div>

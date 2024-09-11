@@ -77,8 +77,12 @@
   "press:label": "Deep dives",
   "press:title": "Industry Insights",
   "press:text": "Explore our in-depth analyses and expert insights on industry trends.",
-  "press:item-1-pre": "Energy intensive industries",
+  "press:item-1-pre": "Maritime",
   "press:item-1-title": "e-LNG is the Cheapest Way to Decarbonize Shipping",
+  "press:item-2-pre": "Utilities",
+  "press:item-2-title": "Harnessing Renewable Natural Gas to Decarbonize Utilities",
+  "press:item-3-pre": "Energy intensive industries",
+  "press:item-3-title": "Transforming the Industry with Renewable Natural Gas",    
   "plant-hero:title": "Launching our First Commercial Plant in Miajadas, Spain",
   "plant-grid-1:title": "World's First Plant Demonstrating Commercial Viability",
   "plant-grid-1:text": "TURN2X's plant in Miajadas, Spain, marks a global milestone in commercial viability by selling 100% of its renewable natural gas output via longterm off-take contracts. This achievement underscores TURN2X's pioneering role in sustainable energy solutions.",
@@ -127,6 +131,11 @@
   "maritime-3d-card-2:title": "Reliability",
   "maritime-3d-card-2:text": "The blending approach creates long-term security around fleet investments since it allows for regulatory compliance for marine fuel decarbonisation until 2035 and beyond.",
   "maritime-3d-card-3:title": "Competitive Edge",
-  "maritime-3d-card-3:text": "The blending approach creates long-term security around fleet investments since it allows for regulatory compliance for marine fuel decarbonisation until 2035 and beyond."
-
+  "maritime-3d-card-3:text": "The blending approach creates long-term security around fleet investments since it allows for regulatory compliance for marine fuel decarbonisation until 2035 and beyond.",
+  "maritime-challenge:pretitle": "The challenge",
+  "maritime-challenge:title": "Transition to Alternative Fuels",
+  "maritime-challenge:text": "With emerging regulations, cargo and cruise ship operators must move away from fleets designed for conventional fossil fuels. The shift to alternative fuels—such as Liquefied Natural Gas (LNG), Methanol, Ammonia, and Hydrotreated Vegetable Oil (HVO)—is vital, as these fuels impact ship design, engine specifications, storage, and operations. Ships, built for over 20 years of service, need to be compatible with alternative fuels for future compliance. This urgency is reflected in the rising orders for LNG-fueled vessels, where fossil LNG is seen as a \"bridge fuel\" in the transition to greener options.",
+  "maritime-press:label": "Deep dives",
+  "maritime-press:title": "More Insights",
+  "maritime-press:text": "Explore our in-depth analyses and expert insights on industry trends."
 }
