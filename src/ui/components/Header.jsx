@@ -99,21 +99,21 @@ const Header = ({ onMenuToggle }) => {
                 {t("mission:name")}
               </Link>
 
-              <NavDropdown title="Industry Insights">
+              <NavDropdown title={t("industry-insights:name")}>
                 <NavDropdownLink
-                  text="Maritime"
+                  text={t("maritime:name")}
                   to="/industry-insights/maritime"
                   icon={PaperD}
                   onClick={closeMenu}
                 />
                 <NavDropdownLink
-                  text="Utilities"
+                  text={t("utilities:name")}
                   to="/industry-insights/utilities"
                   icon={PaperD}
                   onClick={closeMenu}
                 />
                 <NavDropdownLink
-                  text="Energy Intensive Industries"
+                  text={t("energy:name")}
                   to="/industry-insights/energy"
                   icon={PaperD}
                   onClick={closeMenu}
