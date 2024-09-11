@@ -34,7 +34,7 @@ const ModelCards = () => {
           ))}
         </Carousel>
       ) : (
-        <div className="model-cards-desktop">
+        <div className="model-cards-desktop" data-aos="stagger-from-bottom" data-aos-anchor-placement="center-bottom" data-aos-once="true">
           {[1, 2, 3, 4].map(num => (
             <ModelCard
               key={num}

@@ -16,6 +16,7 @@ const SolutionCards = () => {
       imgKey: img1,
       num1Key: "15",
       num2Key: "%",
+      durationKey: "3",
     },
     {
       id: "sol-2",
@@ -24,6 +25,7 @@ const SolutionCards = () => {
       imgKey: img2,
       num1Key: "83",
       num2Key: "%",
+      durationKey: "5",
     },
     {
       id: "sol-3",
@@ -32,6 +34,7 @@ const SolutionCards = () => {
       imgKey: img3,
       num1Key: "2",
       num2Key: "x",
+      durationKey: "1",
     },
   ];
 
@@ -57,6 +60,7 @@ const SolutionCards = () => {
               num1={item.num1Key}
               num2={item.num2Key}
               img={item.imgKey}
+              duration={item.durationKey}
             />
           ))}
           <div className="solution-card spacer"></div>

@@ -43,7 +43,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
   return (
     <section className="press">
       <div className="press-wrapper">
-        <div className="press-container">
+        <div className="press-container" data-aos="stagger-from-right" data-aos-once="true">
           <div className="press-item press-item-first">
             <div className="press-item-heading">
               <div className="press-item-pretitle">
