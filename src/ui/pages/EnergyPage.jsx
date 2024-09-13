@@ -31,46 +31,46 @@ const EnergyPage = () => {
     {
       iconLight: EmissL,
       iconWhite: EmissW,
-      titleKey: "maritime-intro-card-1:title",
-      textKey: "maritime-intro-card-1:text",
+      titleKey: "energy-intro-card-1:title",
+      textKey: "energy-intro-card-1:text",
     },
     {
       iconLight: FuelL,
       iconWhite: FuelW,
-      titleKey: "maritime-intro-card-2:title",
-      textKey: "maritime-intro-card-2:text",
+      titleKey: "energy-intro-card-2:title",
+      textKey: "energy-intro-card-2:text",
     },
     {
       iconLight: PaperL,
       iconWhite: PaperW,
-      titleKey: "maritime-intro-card-3:title",
-      textKey: "maritime-intro-card-3:text",
+      titleKey: "energy-intro-card-3:title",
+      textKey: "energy-intro-card-3:text",
     },
   ];
 
   const toggleCardItems = [
     {
       id: "item1",
-      titleKey: "maritime-3d-card-1:title",
-      textKey: "maritime-3d-card-1:text",
+      titleKey: "energy-3d-card-1:title",
+      textKey: "energy-3d-card-1:text",
     },
     {
       id: "item2",
-      titleKey: "maritime-3d-card-2:title",
-      textKey: "maritime-3d-card-3:text",
+      titleKey: "energy-3d-card-2:title",
+      textKey: "energy-3d-card-2:text",
     },
     {
       id: "item3",
-      titleKey: "maritime-3d-card-3:title",
-      textKey: "maritime-3d-card-3:text",
+      titleKey: "energy-3d-card-3:title",
+      textKey: "energy-3d-card-3:text",
     },        
   ];
 
   return (
     <MainLayout className="energy-page insights-page">
       <Hero
-        title={t("maritime-hero:title")}
-        pretitle={t("maritime-hero:pretitle")}
+        title={t("energy-hero:title")}
+        pretitle={t("energy-hero:pretitle")}
         img={heroImg}
       />
       <div className="top-pattern">
@@ -78,21 +78,21 @@ const EnergyPage = () => {
       </div>
 
       <IntroCards
-        title={t("maritime-intro:title")}
+        title={t("energy-intro:title")}
         cardItems={introCardItems}
       />
 
       <Challenge
-        label={t("maritime-challenge:pretitle")}
-        title={t("maritime-challenge:title")}
-        text={t("maritime-challenge:text")}
+        label={t("energy-challenge:pretitle")}
+        title={t("energy-challenge:title")}
+        text={t("energy-challenge:text")}
         video={HOME_HERO_VIDEO}
       />
 
       <Model3D
         src={HOME_MODEL_3D}
-        headingLabel={t("maritime-challenge:pretitle")}
-        headingTitle={t("maritime-challenge:title")}
+        headingLabel={t("energy-solution:pretitle")}
+        headingTitle={t("energy-solution:title")}
       >
         <div className="wrapper model-content">
           <ToggleCards items={toggleCardItems} />
@@ -101,9 +101,9 @@ const EnergyPage = () => {
 
       <Press
         hiddenItem="energy"
-        label={t("maritime-press:label")}
-        title={t("maritime-press:title")}
-        text={t("maritime-press:text")}
+        label={t("energy-press:label")}
+        title={t("energy-press:title")}
+        text={t("energy-press:text")}
       />
       <div id="contact" className="nav-reference"></div>
       <Contact />

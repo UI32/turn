@@ -57,7 +57,7 @@ const UtilitiesPage = () => {
     {
       id: "item2",
       titleKey: "utilities-3d-card-2:title",
-      textKey: "utilities-3d-card-3:text",
+      textKey: "utilities-3d-card-2:text",
     },
     {
       id: "item3",
@@ -91,8 +91,8 @@ const UtilitiesPage = () => {
 
       <Model3D
         src={HOME_MODEL_3D}
-        headingLabel={t("utilities-model:pretitle")}
-        headingTitle={t("utilities-model:title")}
+        headingLabel={t("utilities-solution:pretitle")}
+        headingTitle={t("utilities-solution:title")}
       >
         <div className="wrapper model-content">
           <ToggleCards items={toggleCardItems} />

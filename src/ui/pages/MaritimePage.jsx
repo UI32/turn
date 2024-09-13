@@ -58,7 +58,7 @@ const MaritimePage = () => {
     {
       id: "item2",
       titleKey: "maritime-3d-card-2:title",
-      textKey: "maritime-3d-card-3:text",
+      textKey: "maritime-3d-card-2:text",
     },
     {
       id: "item3",

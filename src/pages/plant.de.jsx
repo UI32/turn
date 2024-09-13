@@ -1,7 +1,7 @@
 import React from "react";
 import AppWrapper from "../ui/layouts/AppWarpper";
 import HelmetComponent from "../ui/layouts/HelmetComponent";
-import metaTags from "../config/meta-tags/en.json";
+import metaTags from "../config/meta-tags/de.json";
 import CommercialPlant from "../ui/pages/CommercialPlantPage";
 
 const Plant = props => {

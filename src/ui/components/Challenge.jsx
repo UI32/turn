@@ -17,7 +17,7 @@ const Challenge = ({ label, title, text, video }) => {
               </div>
             </div>
           </div>
-          <div className="panel challenge-panel" data-aos="custom-animation">
+          <div className="panel challenge-panel">
             <p className="panel-pretitle lead-m">{label}</p>
             <h2 className="alpha">{title}</h2>
             <p className="text-xl">{text}</p>
