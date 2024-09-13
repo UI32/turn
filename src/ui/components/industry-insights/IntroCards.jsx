@@ -11,7 +11,13 @@ const IntroCards = ({ title, cardItems }) => {
       <div className="wrapper">
         <h2 className="jumbo">{title}</h2>
 
-        <div className="intro-cards-container" data-aos="stagger-from-right" data-aos-anchor-placement="center-bottom" data-aos-once="true">
+        <div
+          id="intro-cards-container"
+          className="intro-cards-container"
+          data-aos="stagger-from-right"
+          data-aos-anchor="#intro-cards-container"
+          data-aos-anchor-placement="top-bottom"
+        >
           <AdaptiveCursor bgColor="#F0E5A6" />
           {cardItems.map((card, index) => (
             <div className="w100" key={index}>

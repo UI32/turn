@@ -41,9 +41,15 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
   const pressText = text || t("press:text");
 
   return (
-    <section className="press">
+    <section className="press" id="press-section">
       <div className="press-wrapper">
-        <div className="press-container" data-aos="stagger-from-right" data-aos-once="true">
+        <div
+          className="press-container"
+          data-aos="stagger-from-right"
+          data-aos-anchor="#press-section"
+          data-aos-anchor-placement="top-center"
+          data-aos-delay="10"
+        >
           <div className="press-item press-item-first">
             <div className="press-item-heading">
               <div className="press-item-pretitle">

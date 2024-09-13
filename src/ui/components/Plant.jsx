@@ -27,7 +27,7 @@ const Plant = () => {
             </div>
           </Link>
           <Link to="/plant">
-            <div className="panel plant-panel">
+            <div className="panel plant-panel" data-aos="custom-animation">
               <p className="panel-pretitle lead-m">{t("plant:label")}</p>
               <h2 className="alpha">{t("plant:title")}</h2>
               <p className="text-xl">{t("plant:text")}</p>

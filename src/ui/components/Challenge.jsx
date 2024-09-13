@@ -7,7 +7,7 @@ const Challenge = ({ label, title, text, video }) => {
     <section className="challenge">
       <div className="wrapper no-p-md">
         <div className="challenge-container">
-          <div className="challenge-vis-wrapper">
+          <div className="challenge-vis-wrapper" data-aos="custom-animation">
             <div className="video-container">
               <div className="video-size-wrapper">
                 <img className="sensor" src={sensor} alt="video sensor" />
@@ -17,7 +17,7 @@ const Challenge = ({ label, title, text, video }) => {
               </div>
             </div>
           </div>
-          <div className="panel challenge-panel">
+          <div className="panel challenge-panel" data-aos="custom-animation">
             <p className="panel-pretitle lead-m">{label}</p>
             <h2 className="alpha">{title}</h2>
             <p className="text-xl">{text}</p>
