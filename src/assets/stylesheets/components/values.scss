@@ -1,0 +1,146 @@
+.values-section {
+  padding-bottom: 110px;
+}
+
+.values-wrapper {
+  overflow-x: auto;
+  padding-left: 16px;
+  padding-bottom: 8px;
+
+  @include custom-scrollbar;
+
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-track {
+    background: $grey-bg;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: $grey;
+  }
+
+  @include mq(md) {
+    max-width: $layout-maxWidth;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-bottom: 16px;
+  }
+
+  @include mq(1584px) {
+    padding-left: 0;
+    position: relative;
+    right: 0;
+    left: auto;
+    max-width: 100%;
+    margin-left: auto;
+
+    .value-item:first-child {
+      margin-left: calc(50vw - 800px);
+    }
+    .value-item:nth-last-child(2) {
+      margin-right: calc(50vw - 800px);
+    }
+  }
+}
+
+.values-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  @include mq(md) {
+    gap: 16px;
+  }
+}
+
+.values-carousel {
+  width: calc(100% + 16px);
+  margin-left: -8px;
+
+  .slick-slider {
+    background-color: transparent;
+  }
+  .slick-dots {
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+  }
+  .slick-slide {
+    margin: 0 8px;
+  }
+}
+
+.value-item {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: $white;
+  min-height: 100%;
+
+  @include mq(md) {
+    min-width: 380px;
+  }
+
+  &.spacer {
+    min-width: 6px;
+    max-width: 6px;
+    padding: 0;
+    opacity: 0;
+    border: 1px solid transparent;
+
+    @include mq(md) {
+      margin-left: -6px;
+    }
+
+    @include mq($from: 1616px) {
+      min-width: 1px;
+      max-width: 1px;
+    }
+  }
+
+  &-heading {
+    padding: 32px;
+
+    @include mq(lg) {
+      padding: 32px 32px 52px 32px;
+    }
+  }
+
+  &-pretitle {
+    margin-bottom: 20px;
+  }
+
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-text {
+    font-size: 16px;
+    @include mq(md) {
+      font-size: 20px;
+    }
+  }
+
+  &-img-container {
+    display: grid;
+    place-items: center center;
+    overflow: hidden;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background-color: $primary-bg;
+    margin-top: auto;
+  }
+
+  &-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-width: 380px;
+  }
+}

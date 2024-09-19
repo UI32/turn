@@ -6,14 +6,15 @@ import Hero from "../components/industry-insights/Hero";
 import Contact from "../components/Contact";
 import useTranslations from "../../hooks/useTranslations";
 import pattern from "../../assets/images/pattern1-min.png";
-import heroImg from "../../assets/images/industry-insights/maritime-hero.jpg";
+import heroImg from "../../assets/images/industry-insights/img-maritime.jpg";
+import heroImgMobile from "../../assets/images/industry-insights/img-maritime-card.jpg";
 import IntroCards from "../components/industry-insights/IntroCards";
 import Press from "../components/Press";
 import Model3D from "../components/Model3D";
 import ToggleCards from "../components/ToggleCards";
 import SolutionCards from "../components/SolutionCards";
 import Challenge from "../components/Challenge";
-import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
+import { MARITIME_HERO_VIDEO, MARITIME_MODEL_3D } from "../../constants/mediaUrls";
 import PaperW from "../../assets/icons/paper-white.svg";
 import PaperL from "../../assets/icons/paper-light.svg";
 import EmissW from "../../assets/icons/emiss-white.svg";
@@ -31,7 +32,7 @@ const MaritimePage = () => {
   const introCardItems = [
     {
       iconLight: EmissL,
-      iconWhite: EmissW,
+      iconWhite: EmissW,     
       titleKey: "maritime-intro-card-1:title",
       textKey: "maritime-intro-card-1:text",
     },
@@ -73,6 +74,7 @@ const MaritimePage = () => {
         title={t("maritime-hero:title")}
         pretitle={t("maritime-hero:pretitle")}
         img={heroImg}
+        imgMobile={heroImgMobile}
       />
       <div className="top-pattern">
         <img className="pattern" src={pattern} alt="pattern" loading="lazy" />
@@ -84,12 +86,12 @@ const MaritimePage = () => {
         label={t("maritime-challenge:pretitle")}
         title={t("maritime-challenge:title")}
         text={t("maritime-challenge:text")}
-        video={HOME_HERO_VIDEO}
+        video={MARITIME_HERO_VIDEO}
       />
 
       <SolutionCards />
 
-      <Model3D src={HOME_MODEL_3D}>
+      <Model3D src={MARITIME_MODEL_3D}>
         <div className="wrapper model-content">
           <ToggleCards items={toggleCardItems} />
         </div>

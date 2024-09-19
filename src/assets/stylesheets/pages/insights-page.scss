@@ -51,6 +51,8 @@
 
 .utilities-page {
   .intro-card:hover {
-    background-color: $primary-dark;
+    @include mq(lg) {
+      background-color: $primary-dark;
+    }
   }
 }

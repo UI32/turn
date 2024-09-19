@@ -11,7 +11,6 @@ const AboutCard = ({
   position,
   description,
   linkedin,
-  email,
 }) => {
   const t = useTranslations();
   const [extendInfo, setExtendInfo] = useState(false);
@@ -30,11 +29,11 @@ const AboutCard = ({
     <div className={cx("about-card", { extended: extendInfo })}>
       <div className="about-content" onClick={onExtendInfo}>
         <div className="about-image">
-          <img src={imageSm} alt={alt} loading="lazy" />
+          <img src={image} alt={alt} loading="lazy" />
         </div>
         <div className="about-info">
-          <h2 className="about-name">{name}</h2>
-          <p className="about-position">{t(position)}</p>
+          <h2 className="text-xl">{name}</h2>
+          <p className="text-l">{t(position)}</p>
         </div>
       </div>
 
@@ -42,12 +41,12 @@ const AboutCard = ({
 
       <div className="extra">
         <div className="image">
-          <img src={image} alt={alt} loading="lazy" />
+          <img src={imageSm} alt={alt} loading="lazy" />
         </div>
         <div className="info">
-          <h2 className="about-name">{name}</h2>
-          <p className="about-position">{t(position)}</p>
-          <p className="about-description">
+          <h4 className="about-name beta">{name}</h4>
+          <p className="about-position text-xl">{t(position)}</p>
+          <p className="about-description text-xl">
             {t(description, {
               a: t => (
                 <a
@@ -61,19 +60,8 @@ const AboutCard = ({
             })}
           </p>
           <div className="about-contact">
-            {/*
-            <div className="link-wrapper">
-              <a
-                className="link"
-                href={`mailto:${email}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t("about:get-in-touch")}
-              </a>
-            </div>*/}
             <a
-              className="link"
+              className="text-xl"
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"

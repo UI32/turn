@@ -1,0 +1,181 @@
+.accordion {
+  padding-block: 80px;
+  @include mq(lg) {
+    padding-block: 180px;
+  }
+
+}
+
+.accordion-container {
+  display: flex;
+  min-height: 728px;
+  margin-inline: auto;
+  gap: 8px;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  $self: &;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  transition: flex-basis 600ms cubic-bezier(0.36, 0.98, 0.78, 1),
+    transform 300ms ease-out;
+  will-change: flex-basis, transform;
+  cursor: pointer;
+  position: relative;
+
+  &:not(.active):hover {
+    transform: scale(1.015);
+  }
+
+  &.active {
+    flex-basis: calc(100% - 288px);
+    will-change: flex-basis, transform;
+
+    #{$self}-year {
+      transform: translateX(37px);
+    }
+  }
+
+  &:not(.active) {
+    flex-basis: 88px;
+    will-change: flex-basis;
+
+    #{$self}-img {
+      opacity: 0;
+    }
+
+    #{$self}-content {
+      opacity: 0;
+      transform: translateY(-50%);
+      transition: opacity 300ms ease 150ms, transform 600ms ease-out;
+    }
+  }
+
+  &-img {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 600ms ease;
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &-year {
+    position: absolute;
+    top: 40px;
+    left: 3px;
+    padding: 12px 20px 11px;
+    border-radius: 42px;
+    color: $white;
+    line-height: 100%;
+    transition: all 600ms ease;
+  }
+
+  &-1 {
+    background-color: $primary-bg-light;
+    #{$self}-year {
+      background-color: $primary-bg-light;
+    }
+  }
+
+  &-2 {
+    background-color: $primary-bg;
+    #{$self}-year {
+      background-color: $primary-bg;
+    }
+  }
+
+  &-3 {
+    background-color: $primary-dark;
+    #{$self}-year {
+      background-color: $primary-dark;
+    }
+  }
+
+  &-4 {
+    background-color: $primary-bg-dark;
+    #{$self}-year {
+      background-color: $primary-bg-dark;
+    }
+  }
+
+  &-content {
+    background: $white;
+    width: 644px;
+    position: absolute;
+    bottom: -80px;
+    left: 80px;
+    margin-top: auto;
+    padding: 40px;
+    border-radius: 12px;
+    transition: opacity 150ms ease, transform 600ms ease-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.accordion-carousel {
+  width: calc(100% + 16px);
+  margin-left: -8px;
+
+  .slick-slider {
+    background-color: transparent;
+  }
+  .slick-dots {
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+  }
+  .slick-slide {
+    margin: 0 8px;
+  }
+}
+
+.accordion-card {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: $white;
+
+  &-content {
+    padding: 32px;
+  }
+
+  &-label {
+    margin-bottom: 20px;
+  }
+
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-text {
+    font-size: 16px;
+  }
+
+  &-img-container {
+    display: grid;
+    place-items: center center;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  &-img {
+    object-fit: cover;
+    height: 100%;
+    min-height: 256px;
+    width: 100%;
+  }
+}

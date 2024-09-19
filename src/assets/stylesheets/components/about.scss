@@ -3,232 +3,86 @@
 .about {
   margin-bottom: 80px;
 
-  &-container {
-    max-width: 1110px;
-    margin-inline: auto;
+  .panel {
+    padding: 0;
+    margin-bottom: 40px;
+    background: transparent;
   }
 
   .lottie-container {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
-  &-clients {
+  &-advisors-container,
+  &-management {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    .client {
-      flex: 1 1 33.33%;
-      margin: 14px 0;
-
-      &.dvgw {
-        img {
-          position: relative;
-          top: -4px;
-        }
-      }
-    }
+    gap: 8px;
   }
 
-  &-advisors {
-
-    .lead-m {
-      color: $grey-medium;
-      margin-bottom: 36px;
-    }
-  }
-
-  > .lead-m {
-    margin-bottom: 30px;
-  }
-
-  &-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../images/pattern-cta-min.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: 30px 16px;
-    max-height: 260px;
-    margin-top: 20px;
-    .button {
-      line-height: 1.1;
-      flex-shrink: 0;
-    }
-    .cta-title {
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 105%;
-      margin-bottom: 20px;
-      letter-spacing: -0.03em;
-      color: $text-primary-dark;
-    }
-  }
-
-  @include mq($until: md) {
-    &-clients {
-      padding-bottom: 20px;
-    }
-
-    .client {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4px;
-
-      & img {
-        display: block;
-      }
-    }
-
-    &-cta {
-      .button {
-        font-size: 17px;
-        padding: 0 20px;
-      }
-    }
+  &-advisors-lead {
+    margin-bottom: 20px;
   }
 
   @include mq(md) {
+
     margin-bottom: 160px;
 
-    .panel-header {
-      margin-bottom: 52px;
-    }
+    &-advisors-container,
     &-management {
       position: relative;
       display: flex;
-      justify-content: space-between;
-      .about-card {
-        width: 33.3%;
-        &:not(:last-child) {
-          margin-right: 32px;
-        }
-      }
-    }
-
-    &-clients {
-      padding: 36px 0 50px;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      gap: 60px;
     }
 
     &-advisors {
-      display: flex;
-      gap: 16px;
+      margin-left: auto;
+      max-width: 740px;
+    } 
 
-      &-wrapper {
-        .lead-m {
-          margin-bottom: 30px;
-        }
-      }
-      .about-position,
-      .about-name {
-        font-size: 18px;
-      }
-      .about-card {
-        flex: 0 1 172px;
-        min-width: 130px;
-      }
+    &-management {
+      max-width: 1128px;
     }
 
-    &-card-wrapper {
-      max-width: 422px;
-    }
-
-    &-card-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    &-cta-wrapper {
-      flex-grow: 1;
-    }
-
-    &-cta {
-      padding: 20px;
-      max-height: 260px;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-
-      .button {
-        padding: 16px 30px;
-        height: auto;
-      }
-
-      .cta-title {
-        font-size: 24px;
-        line-height: 1.2;
-        max-width: 370px;
-      }
-    }
-  }
-
-  @include mq(lg) {
-    &-card-wrapper {
-      max-width: 50%;
-    }
-
-    &-cta-wrapper {
-      width: 50%;
-    }
-
-    &-cta {
-
-      .button {
-        padding: 0px 30px;
-        height: 51px;
-      }
+    .marquee {
+      margin-bottom: 80px;
     }
 
   }
 
-  @include mq($from: 600px, $until: xl) {
-    &-clients {
-      .client {
-        transform: scale(0.9);
-        flex-basis: 20%;
-        text-align: center;
-        img {
-          margin: 0 auto;
-        }
-        &:first-child {
-          img {
-            margin: 0;
-          }
-        }
-      }
-    }
-  }
   @include mq(xl) {
-    &-clients {
-      .client {
-        flex: 0 0 auto;
-        &:not(:last-child) {
-          padding-right: 10px;
-        }
-      }
+    &-advisors {
+      margin-right: 120px;
     }
   }
+
+  @include mq(1600px) {
+    &-advisors {
+      margin-left: auto;
+      margin-right: 302px;
+    }
+  }
+
 }
 
 // About card
 
 .about-card {
   -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  max-width: calc(50% - 4px);  
+  
   &:not(.advisor) {
     cursor: pointer;
+    
     .about-image {
       overflow: hidden;
       position: relative;
-      padding-top: 96%;
+      border-radius: 12px;
+
       img {
-        position: absolute;
-        top: 0;
-        left: 0;
         display: block;
         width: 100%;
         transition: 0.3s;
@@ -237,69 +91,29 @@
         }
       }
     }
-
-    .link {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 6px;
-      height: 41px;
-      transition: background-color 0.3s ease;
-      padding: 0 12px;
-      margin-left: -12px;
-      margin-bottom: -12px;
-      &:hover {
-        color: $primary-dark;
-        background: linear-gradient(
-          90deg,
-          rgba(243, 244, 246, 1) 0%,
-          rgba(229, 231, 235, 1) 100%
-        );
-      }
-      &-wrapper {
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  &.advisor {
-    .about-position,
-    .about-name {
-      font-size: 16px;
-      line-height: 19.2px;
-    }
-    img {
-      display: block;
-      width: 100%;
-    }
   }
 
   .about-image {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
-  .about-name,
-  .about-position,
-  .about-description,
-  .about-contact {
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.02em;
-    font-weight: $regular;
-  }
-  .about-position {
-    color: $grey-medium;
-  }
-  .about-name {
+  .text-xl {
     margin-bottom: 4px;
   }
 
+  .text-l {
+    opacity: 0.6;
+  }
+
+
   .extra {
     display: none;
-    padding: 54px 60px;
+    padding: 40px;
     max-width: 950px;
     background: $white;
-    border-radius: 12px;
     animation: fade-in 0.3s ease;
+    border-radius: 12px;
+
     .image {
       overflow: hidden;
       position: relative;
@@ -314,16 +128,29 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 12px;
     }
     .info {
       display: flex;
       flex-direction: column;
     }
+
     .about-description {
       flex: 1 1 auto;
     }
+    .about-name {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+    .about-position {
+      margin-bottom: 32px;
+      color: $grey-medium;
+    }
     .about-contact {
-      margin-top: 20px;
+      margin-top: 40px;
+      .text-xl {
+        color: $primary-link;
+      }
     }
   }
 
@@ -342,7 +169,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba($text-primary-dark, 0.5);
+    background-color: $grey-overlay;
     z-index: 1;
     animation: fade-in 0.3s ease;
   }
@@ -363,10 +190,6 @@
       z-index: 10;
       transform: translate(-50%, -50%);
       display: flex;
-
-      .about-position {
-        margin-bottom: 27px;
-      }
     }
   }
 
@@ -398,13 +221,30 @@
   }
 
   @include mq(md) {
+    max-width: 336px;
+    min-height: 446px;
+
     .info {
       padding: 0 40px;
     }
     .extra {
       .image {
         width: 320px;
-        height: 430px;
+      }
+    }
+  }
+
+  @include mq(1080px) {
+    .image {
+      min-height: 600px;
+      min-width: 400px;
+    }
+    .extra {
+      .about-description {
+        flex: none;
+      }
+      .about-name {
+        margin-top: auto;
       }
     }
   }

@@ -1,9 +1,9 @@
 import React from "react";
 import PressItem from "./PressItem";
 import useTranslations from "../../hooks/useTranslations";
-import imgEnergy from "../../assets/images/press-item-energy.jpg";
-import imgMariti from "../../assets/images/press-item-maritime.jpg";
-import imgUtilit from "../../assets/images/press-item-utilities.jpg";
+import imgEnergy from "../../assets/images/img-landing-energy-intensive.jpg";
+import imgMariti from "../../assets/images/img-landing-maritime.jpg";
+import imgUtilit from "../../assets/images/img-landing-utilities.jpg";
 
 const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
   const t = useTranslations();
@@ -49,6 +49,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
           data-aos-anchor="#press-section"
           data-aos-anchor-placement="top-center"
           data-aos-delay="10"
+          data-aos-once="true"
         >
           <div className="press-item press-item-first">
             <div className="press-item-heading">

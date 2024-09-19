@@ -21,7 +21,7 @@ const ModelCards = () => {
   }, []);
 
   return (
-    <div className="model-cards" id="model-cards-section">
+    <div className="model-cards custom-slick" id="model-cards-section">
       {isSmallScreen ? (
         <Carousel settings={plantModelCards}>
           {[1, 2, 3, 4].map(num => (

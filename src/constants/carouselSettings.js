@@ -19,3 +19,14 @@ export const plantModelCards = {
   autoplaySpeed: 3500,
   arrows: false,
 };
+
+export const valuesCards = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3500,
+  arrows: false,
+};

@@ -6,19 +6,20 @@ import Hero from "../components/industry-insights/Hero";
 import Contact from "../components/Contact";
 import useTranslations from "../../hooks/useTranslations";
 import pattern from "../../assets/images/pattern1-min.png";
-import heroImg from "../../assets/images/industry-insights/maritime-hero.jpg";
+import heroImg from "../../assets/images/industry-insights/img-energy-intensive-industries.jpg";
+import heroImgMobile from "../../assets/images/industry-insights/img-energy-intensive-industries-card.jpg";
 import IntroCards from "../components/industry-insights/IntroCards";
 import Press from "../components/Press";
 import Model3D from "../components/Model3D";
 import ToggleCards from "../components/ToggleCards";
 import Challenge from "../components/Challenge";
-import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
-import PaperW from "../../assets/icons/paper-white.svg";
-import PaperL from "../../assets/icons/paper-light.svg";
+import { ENERGY_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
+import StepW from "../../assets/icons/step-white.svg";
+import StepL from "../../assets/icons/step-light.svg";
 import EmissW from "../../assets/icons/emiss-white.svg";
 import EmissL from "../../assets/icons/emiss-light.svg";
-import FuelW from "../../assets/icons/fuel-white.svg";
-import FuelL from "../../assets/icons/fuel-light.svg";
+import GiftW from "../../assets/icons/gift-white.svg";
+import GiftL from "../../assets/icons/gift-light.svg";
 
 const EnergyPage = () => {
   const t = useTranslations();
@@ -35,14 +36,14 @@ const EnergyPage = () => {
       textKey: "energy-intro-card-1:text",
     },
     {
-      iconLight: FuelL,
-      iconWhite: FuelW,
+      iconLight: GiftL,
+      iconWhite: GiftW,
       titleKey: "energy-intro-card-2:title",
       textKey: "energy-intro-card-2:text",
     },
     {
-      iconLight: PaperL,
-      iconWhite: PaperW,
+      iconLight: StepL,
+      iconWhite: StepW,
       titleKey: "energy-intro-card-3:title",
       textKey: "energy-intro-card-3:text",
     },
@@ -72,6 +73,7 @@ const EnergyPage = () => {
         title={t("energy-hero:title")}
         pretitle={t("energy-hero:pretitle")}
         img={heroImg}
+        imgMobile={heroImgMobile}        
       />
       <div className="top-pattern">
         <img className="pattern" src={pattern} alt="pattern" loading="lazy" />
@@ -86,7 +88,7 @@ const EnergyPage = () => {
         label={t("energy-challenge:pretitle")}
         title={t("energy-challenge:title")}
         text={t("energy-challenge:text")}
-        video={HOME_HERO_VIDEO}
+        video={ENERGY_HERO_VIDEO}
       />
 
       <Model3D

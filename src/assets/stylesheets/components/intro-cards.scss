@@ -47,6 +47,9 @@
 
   &-icon {
     width: 40px;
+    @include mq(lg) {
+      width: 72px;
+    }
   }
 
   &-icon-white {

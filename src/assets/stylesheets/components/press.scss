@@ -2,6 +2,26 @@
 
 .press {
   margin-bottom: 80px;
+  position: relative;
+
+  &::after {
+    content:'';
+    display: block;
+    width: 100%;
+    background-color: $grey-bg;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 300ms ease 1600ms;
+    pointer-events: none;
+  }
+
+  &:has(.aos-animate)::after  {
+    opacity: 0;
+  }
 
   @include mq(md) {
     margin-bottom: 160px;
@@ -12,9 +32,9 @@
     white-space: nowrap;
     padding-left: 16px;
     padding-bottom: 8px;
-    
+
     @include custom-scrollbar;
-    
+
     @include mq(md) {
       max-width: $layout-maxWidth;
       margin: 0 auto;

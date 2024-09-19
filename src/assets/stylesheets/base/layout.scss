@@ -79,3 +79,21 @@
     top: -1000px;
   }
 }
+
+.custom-slick {
+  .slick-dots li button::before {
+    content: "";
+    top: 6px;
+    left: 6px;
+    background-color: $grey;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    opacity: 1;
+  }
+
+  .slick-dots li.slick-active button::before {
+    background-color: $primary-light;
+    opacity: 1;
+  }
+}

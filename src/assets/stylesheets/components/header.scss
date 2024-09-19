@@ -311,6 +311,10 @@
   }
 }
 
+body.disable-scroll .header {
+  opacity: 0;
+}
+
 // Hamburger
 
 .button-menu {

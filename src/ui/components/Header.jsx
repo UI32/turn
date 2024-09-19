@@ -13,7 +13,10 @@ import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
 import NavDropdown from "./NavDropdown";
 import NavDropdownLink from "./NavDropdownLink";
-import PaperD from "../../assets/icons/paper-dark.svg";
+import energyIcon from "../../assets/icons/nav-icon-energy.svg";
+import maritimeIcon from "../../assets/icons/nav-icon-maritime.svg";
+import utilitiesIcon from "../../assets/icons/nav-icon-utilities.svg";
+
 
 const Header = ({ onMenuToggle }) => {
   const t = useTranslations();
@@ -103,24 +106,24 @@ const Header = ({ onMenuToggle }) => {
                 <NavDropdownLink
                   text={t("maritime:name")}
                   to="/industry-insights/maritime"
-                  icon={PaperD}
+                  icon={maritimeIcon}
                   onClick={closeMenu}
                 />
                 <NavDropdownLink
                   text={t("utilities:name")}
                   to="/industry-insights/utilities"
-                  icon={PaperD}
+                  icon={utilitiesIcon}
                   onClick={closeMenu}
                 />
                 <NavDropdownLink
                   text={t("energy:name")}
                   to="/industry-insights/energy"
-                  icon={PaperD}
+                  icon={energyIcon}
                   onClick={closeMenu}
                 />
               </NavDropdown>
 
-              <Link to="/#about" className="nav-item" onClick={closeMenu}>
+              <Link to="/about" className="nav-item" onClick={closeMenu}>
                 {t("about:name")}
               </Link>
             </nav>

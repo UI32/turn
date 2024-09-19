@@ -18,6 +18,15 @@ import ModelCards from "../components/commercial-plant/ModelCards";
 import imgP1 from "../../assets/images/press-1.jpg";
 import imgP2 from "../../assets/images/press-2.jpg";
 import imgP3 from "../../assets/images/press-3.jpg";
+import logoBi from "../../assets/images/marquee/logo-business-insider.svg";
+import logoDs from "../../assets/images/marquee/logo-der-spiegel.svg";
+import logoFt from "../../assets/images/marquee/logo-financial-times.svg";
+import logoFa from "../../assets/images/marquee/logo-frankfurter-allgmeine.svg";
+import logoHs from "../../assets/images/marquee/logo-handelsblatt.svg";
+import logoHi from "../../assets/images/marquee/logo-hydrogeninsight.svg";
+import logoSz from "../../assets/images/marquee/logo-sueddeutsche-zeitung.svg";
+
+const logos = [logoBi, logoDs, logoFt, logoFa, logoHs, logoHi, logoSz];
 
 const CommercialPlant = () => {
   const t = useTranslations();
@@ -84,7 +93,7 @@ const CommercialPlant = () => {
         text={t("plant-press:text")}
         pressItems={pressItems}
       />
-      <Marquee />
+      <Marquee logos={logos} />
       <div id="contact" className="nav-reference"></div>
       <Contact />
     </MainLayout>

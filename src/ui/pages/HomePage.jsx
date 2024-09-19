@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Hero from "../components/Hero";
 import Contact from "../components/Contact";
-import About from "../components/About";
 import Process from "../components/Process";
 import Mission from "../components/Mission";
 import Model3D from "../components/Model3D";
@@ -15,7 +14,7 @@ import useTranslations from "../../hooks/useTranslations";
 import pattern from "../../assets/images/pattern1-min.png";
 import { HOME_HERO_VIDEO, HOME_MODEL_3D } from "../../constants/mediaUrls";
 
-// import Typography from "../components/Typography";
+//  import Typography from "../components/Typography";
 
 const HomePage = () => {
   const t = useTranslations();
@@ -47,8 +46,6 @@ const HomePage = () => {
       <div id="mission" className="nav-reference"></div>
       <Mission />
       <Press />
-      <div id="about" className="nav-reference"></div>
-      <About />
       <div id="contact" className="nav-reference"></div>
       <Contact />
     </MainLayout>

@@ -1,0 +1,18 @@
+.disclaimer {
+  .jumbo {
+    font-size: 32px;
+    @include mq(md) {
+      font-size: 80px;
+    }
+  }
+  .panel-pretitle {
+    @include mq(lg) {
+      margin-bottom: 20px;
+    }
+  }
+  .panel {
+    @include mq(lg) {
+      padding: 80px 80px 90px 80px;
+    }
+  }
+}
