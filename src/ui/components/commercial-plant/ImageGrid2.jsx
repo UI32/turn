@@ -1,8 +1,8 @@
 import React from "react";
-import imageGrid21 from "../../../assets/images/commercial-plant/image-grid-2-1.jpg";
-import imageGrid22 from "../../../assets/images/commercial-plant/image-grid-2-2.jpg";
-import imageGrid23 from "../../../assets/images/commercial-plant/image-grid-2-3.jpg";
-import imageGrid24 from "../../../assets/images/commercial-plant/image-grid-2-4.jpg";
+import imageGrid21 from "../../../assets/images/commercial-plant/img-inauguration-1.jpg";
+import imageGrid22 from "../../../assets/images/commercial-plant/img-inauguration-2.jpg";
+import imageGrid23 from "../../../assets/images/commercial-plant/img-inauguration-3.jpg";
+import imageGrid24 from "../../../assets/images/commercial-plant/img-inauguration-4.jpg";
 import useTranslations from "../../../hooks/useTranslations";
 import sensor from "../../../assets/images/hero-sensor.png";
 import { PLANT_GRID_VIDEO } from "../../../constants/mediaUrls";

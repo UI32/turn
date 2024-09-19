@@ -27,9 +27,9 @@
   cursor: pointer;
   position: relative;
 
-  &:not(.active):hover {
-    transform: scale(1.015);
-  }
+  // &:not(.active):hover {
+  //   transform: scale(1.015);
+  // }
 
   &.active {
     flex-basis: calc(100% - 288px);
