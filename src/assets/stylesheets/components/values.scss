@@ -9,17 +9,27 @@
 
   @include custom-scrollbar;
 
+
   &::-webkit-scrollbar-track,
   &::-webkit-scrollbar-thumb {
     background: transparent;
   }
 
   &:hover::-webkit-scrollbar-track {
-    background: $grey-bg;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 36%,
+      rgba(229, 231, 235, 1) 36%,
+      rgba(229, 231, 235, 1) 64%,
+      rgba(255, 255, 255, 0) 64%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
   &:hover::-webkit-scrollbar-thumb {
-    background: $grey;
+    background-color: #487AEE;
   }
 
   @include mq(md) {

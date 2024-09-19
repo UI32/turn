@@ -395,16 +395,40 @@ $mq-media-type: all !default;
 
 @mixin custom-scrollbar {
   &::-webkit-scrollbar {
-    width: 16px;
+    background-color: transparent;
+    width: 14px;
   }
 
+  /* background of the scrollbar except button or resizer */
   &::-webkit-scrollbar-track {
-    background: $grey-bg;
-    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 36%,
+      rgba(229, 231, 235, 1) 36%,
+      rgba(229, 231, 235, 1) 64%,
+      rgba(255, 255, 255, 0) 64%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
+  /* scrollbar itself */
   &::-webkit-scrollbar-thumb {
-    background: $grey;
-    border-radius: 8px;
+    background: #487AEE;
+    border: 6px solid #f7f7f7;
+    border-right: none;
+    border-left: none;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #487AEE;
+    border: 5px solid #f7f7f7;
+    border-right: none;
+    border-left: none;
+  }
+
+  /* set button(top and bottom of the scrollbar) */
+  &::-webkit-scrollbar-button {
+    display: none;
   }
 }
