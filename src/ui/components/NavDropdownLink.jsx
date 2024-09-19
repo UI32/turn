@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
+import LinkLocalized from "./LinkLocalized";
 
 const NavDropdownLink = ({ to, icon, text, onClick }) => {
   return (
-    <Link to={to} className="nav-dropdown-link" onClick={onClick}>
+    <LinkLocalized to={to} className="nav-dropdown-link" onClick={onClick}>
       {icon && (
         <img
           src={icon}
@@ -12,7 +12,7 @@ const NavDropdownLink = ({ to, icon, text, onClick }) => {
         />
       )}
       <span className="nav-item">{text}</span>
-    </Link>
+    </LinkLocalized>
   );
 };
 

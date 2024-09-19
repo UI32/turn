@@ -1,6 +1,6 @@
 import React from "react";
 import AdaptiveCursor from "../components/AdaptiveCursor";
-import { Link } from "gatsby";
+import LinkLocalized from "../components/LinkLocalized";
 import useTranslations from "../../hooks/useTranslations";
 import plantImg from "../../assets/images/first-comm-plant.jpg";
 import arrowIcon from "../../assets/icons/right-arrow-light.svg";
@@ -13,7 +13,7 @@ const Plant = () => {
       <AdaptiveCursor />
       <div className="wrapper no-p-md">
         <div className="plant-container">
-          <Link to="/plant">
+          <LinkLocalized to="/plant">
             <div className="plant-img-wrapper">
               <img
                 src={plantImg}
@@ -25,8 +25,8 @@ const Plant = () => {
                 data-aos="custom-animation"
               />
             </div>
-          </Link>
-          <Link to="/plant">
+          </LinkLocalized>
+          <LinkLocalized to="/plant">
             <div className="panel plant-panel" data-aos="custom-animation">
               <p className="panel-pretitle lead-m">{t("plant:label")}</p>
               <h2 className="alpha">{t("plant:title")}</h2>
@@ -40,7 +40,7 @@ const Plant = () => {
                 />
               </div>
             </div>
-          </Link>
+          </LinkLocalized>
         </div>
       </div>
     </section>
