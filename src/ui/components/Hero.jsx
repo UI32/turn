@@ -1,5 +1,6 @@
 import React from "react";
 import sensor from "../../assets/images/hero-sensor.png";
+import TextReveal from "./TextReveal";
 
 const Hero = ({ title, video }) => {
   return (
@@ -7,12 +8,7 @@ const Hero = ({ title, video }) => {
       <div className="hero-intro">
         <div className="wrapper">
           <div className="hero-text">
-            <h1
-              className="jumbo"
-              dangerouslySetInnerHTML={{
-                __html: title,
-              }}
-            />
+            <TextReveal title={title}/>
           </div>
         </div>
       </div>

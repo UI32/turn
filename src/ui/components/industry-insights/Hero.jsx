@@ -1,5 +1,6 @@
 import React from "react";
 import useMediaQuery from "../../../hooks/useMediaQuery";
+import TextReveal from "../TextReveal";
 
 const Hero = ({ title, pretitle, img, imgMobile }) => {
 
@@ -11,12 +12,7 @@ const Hero = ({ title, pretitle, img, imgMobile }) => {
         <div className="wrapper">
           <div className="hero-text">
             {pretitle && <p className="lead-m">{pretitle}</p>}
-            <h1
-              className="jumbo"
-              dangerouslySetInnerHTML={{
-                __html: title,
-              }}
-            />
+            <TextReveal title={title}/>
           </div>
         </div>
       </div>
