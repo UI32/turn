@@ -13,7 +13,12 @@ const ImageGrid2 = () => {
   return (
     <section className="grid-2">
       <div className="no-p-md wrapper">
-        <div className="video-bg" data-aos="custom-animation">
+        <div
+          className="video-bg"
+          data-aos="zoom-out"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-once="true"
+        >
           <div className="video-container">
             <div className="video-size-wrapper">
               <img className="sensor" src={sensor} alt="video sensor" />
@@ -37,6 +42,9 @@ const ImageGrid2 = () => {
                 src={imageGrid21}
                 alt="plant inaguration visual"
                 loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
               />
             </div>
             <div className="image-grid-item show-in-tablet">
@@ -44,6 +52,9 @@ const ImageGrid2 = () => {
                 src={imageGrid22}
                 alt="plant inaguration visual"
                 loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
               />
             </div>
           </div>
@@ -53,6 +64,9 @@ const ImageGrid2 = () => {
                 src={imageGrid23}
                 alt="plant inaguration visual"
                 loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
               />
             </div>
             <div className="image-grid-item show-in-tablet">
@@ -60,6 +74,9 @@ const ImageGrid2 = () => {
                 src={imageGrid24}
                 alt="plant inaguration visual"
                 loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
               />
             </div>
           </div>

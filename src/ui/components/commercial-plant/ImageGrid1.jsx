@@ -14,15 +14,36 @@ const ImageGrid1 = () => {
         <div className="image-grid">
           <div className="image-grid-col-1">
             <div className="image-grid-item">
-              <img src={imageGrid11} alt="plant" loading="eager" />
+              <img
+                src={imageGrid11}
+                alt="plant"
+                loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
+              />
             </div>
             <div className="image-grid-item">
-              <img src={imageGrid12} alt="plant" loading="eager" />
+              <img
+                src={imageGrid12}
+                alt="plant"
+                loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
+              />
             </div>
           </div>
           <div className="image-grid-col-2">
             <div className="image-grid-item">
-              <img src={imageGrid13} alt="plant" loading="eager" />
+              <img
+                src={imageGrid13}
+                alt="plant"
+                loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
+              />
             </div>
             <div className="image-grid-item image-grid-item--content">
               <h4 className="alpha">{t("plant-grid-1:title")}</h4>
@@ -34,7 +55,14 @@ const ImageGrid1 = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={imageGrid1map} alt="plant" loading="eager" />
+                <img
+                  src={imageGrid1map}
+                  alt="plant"
+                  loading="eager"
+                  data-aos="zoom-out"
+                  data-aos-anchor-placement="center-bottom"
+                  data-aos-once="true"
+                />
               </a>
             </div>
           </div>

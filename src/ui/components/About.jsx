@@ -61,7 +61,12 @@ const About = () => {
           pretitle="about:management"
           title="about:title"
         >
-          <div className="about-management">
+          <div
+            className="about-management"
+            data-aos="stagger-from-bottom"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-once="true"
+          >
             <AboutCard
               name="Philip Kessler"
               alt="Philip Kessler"
@@ -100,7 +105,12 @@ const About = () => {
           <p className="lead-m about-advisors-lead">
             {t("about:advisory-board")}
           </p>
-          <div className="about-advisors-container">
+          <div
+            className="about-advisors-container"
+            data-aos="stagger-from-bottom"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-once="true"
+          >
             <AboutCardAdvisor
               name="Dr. Stefan Kaufmann"
               alt="Dr. Stefan Kaufmann"

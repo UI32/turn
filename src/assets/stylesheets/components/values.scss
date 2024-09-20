@@ -2,6 +2,31 @@
   padding-bottom: 110px;
 }
 
+.values-wrapper-outer {
+  position: relative;
+
+  @include mq(md) {
+    &::after {
+      content:'';
+      display: block;
+      width: 100%;
+      background-color: $grey-bg;
+      height: 18px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+      transition: opacity 300ms ease 1600ms;
+      pointer-events: none;
+    }
+  
+    &:has(.aos-animate)::after  {
+      opacity: 0;
+    }
+  }
+}
+
 .values-wrapper {
   overflow-x: auto;
   padding-left: 16px;

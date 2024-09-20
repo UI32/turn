@@ -79,7 +79,7 @@ const Values = () => {
     ));
 
   return (
-    <section className="values-section">
+    <section className="values-section" id="values-section">
       {isSmallScreen ? (
         <div className="wrapper">
           <div className="values-carousel custom-slick">
@@ -87,10 +87,19 @@ const Values = () => {
           </div>
         </div>
       ) : (
-        <div className="values-wrapper">
-          <div className="values-container">
-            {renderValueItems()}
-            <div className="value-item spacer"></div>
+        <div className="values-wrapper-outer">
+          <div className="values-wrapper">
+            <div
+              className="values-container"
+              data-aos="stagger-from-right"
+              data-aos-anchor="#values-section"
+              data-aos-anchor-placement="top-center"
+              data-aos-delay="10"
+              data-aos-once="true"
+            >
+              {renderValueItems()}
+              <div className="value-item spacer"></div>
+            </div>
           </div>
         </div>
       )}
