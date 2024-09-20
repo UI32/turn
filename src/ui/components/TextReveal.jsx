@@ -1,29 +1,27 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import SplitType from 'split-type'; // Correct import statement for SplitType
+import SplitType from 'split-type';
 
 const TextReveal = ({ title }) => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    // Ensure SplitType and GSAP are only executed in the browser
     if (typeof window !== 'undefined') {
-      // Initialize SplitType on the referenced text element
       const myText = new SplitType(textRef.current);
 
-      // Hide the entire text block initially
-      gsap.set(textRef.current, { opacity: 0 });
+      // Ensure the text is hidden until the animation starts
+      gsap.set(textRef.current, { visibility: 'visible', opacity: 0 });
 
       // GSAP animation for each character
       gsap.fromTo(
         '.char',
-        { y: '100%', opacity: 0 }, // Start from below and invisible
+        { y: '100%', opacity: 0 },
         {
           y: 0,
-          opacity: 1, // Animate opacity to 1 to make it visible
-          stagger: 0.02, // Time between each character animation
-          delay: 0.03,   // Delay before animation starts
-          duration: 0.5, // Duration of each character animation
+          opacity: 1,
+          stagger: 0.02,
+          delay: 0.03,
+          duration: 0.5,
           ease: 'power2.out',
         }
       );
