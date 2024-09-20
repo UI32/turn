@@ -122,3 +122,7 @@
 .line {
   overflow: hidden;
 }
+.jumbo .char {
+  opacity: 0;
+  transform: translateY(100%);
+}
