@@ -21,6 +21,7 @@ const ImageGrid1 = () => {
                 data-aos="zoom-out"
                 data-aos-anchor-placement="center-bottom"
                 data-aos-once="true"
+                data-aos-duration="1500"
               />
             </div>
             <div className="image-grid-item">
@@ -31,6 +32,7 @@ const ImageGrid1 = () => {
                 data-aos="zoom-out"
                 data-aos-anchor-placement="center-bottom"
                 data-aos-once="true"
+                data-aos-duration="1500"
               />
             </div>
           </div>
@@ -43,6 +45,7 @@ const ImageGrid1 = () => {
                 data-aos="zoom-out"
                 data-aos-anchor-placement="center-bottom"
                 data-aos-once="true"
+                data-aos-duration="1500"
               />
             </div>
             <div className="image-grid-item image-grid-item--content">
@@ -62,6 +65,7 @@ const ImageGrid1 = () => {
                   data-aos="zoom-out"
                   data-aos-anchor-placement="center-bottom"
                   data-aos-once="true"
+                  data-aos-duration="1500"
                 />
               </a>
             </div>
