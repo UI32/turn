@@ -12,8 +12,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "chmod u+x ./scripts/deployment.sh && ./scripts/deployment.sh"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@svgr/webpack": "^8.0.1",
