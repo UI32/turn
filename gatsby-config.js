@@ -4,7 +4,7 @@
 module.exports = {
   // siteMetadata: {
   //   siteUrl: "https://turn2x.com",
-  //   title: `Turn2x Making green energy transportable`,
+  //   title: `TURN2X Making green energy transportable`,
   //   description: `TURN2X decarbonizes the industry by producing Renewable Natural Gas with a unique methanation process.`,
   //   author: `Bonsai Tech`,
   //   keywords: `Climate, carbon, technology, renewable, natural, gas, fossil, fuels, footprint, ESG, certification, neutral, CO2`,
@@ -33,7 +33,7 @@ module.exports = {
         icon: "src/images/icon.png", // This path is relative to the root
         crossOrigin: `use-credentials`,
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
-        description: "Turn2x",
+        description: "TURN2X",
       },
     },
   ],

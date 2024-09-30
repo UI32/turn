@@ -12,8 +12,8 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
       <meta name="keywords" content={keywords} />
       <title>{title}</title>
       <link rel="canonical" href={"https://turn2x.com/" + page} />
-      <meta property="og:title" content="Turn2x" />
-      <meta property="og:site_name" content="Turn2x" />
+      <meta property="og:title" content="TURN2X" />
+      <meta property="og:site_name" content="TURN2X" />
       <meta property="og:url" content={"https://turn2x.com/" + page} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
@@ -45,8 +45,8 @@ const HelmetComponent = ({ description, page, title, keywords }) => {
         name="twitter:image"
         content="https://turn2x.com/og/og-1200x630.png"
       />
-      <meta property="twitter:title" content="Turn2x" />
-      <meta name="twitter:image:alt" content="Turn2x" />
+      <meta property="twitter:title" content="TURN2X" />
+      <meta name="twitter:image:alt" content="TURN2X" />
       <meta property="twitter:description" content={description} />
 
       {/*<!-- Start cookieyes banner -->*/}

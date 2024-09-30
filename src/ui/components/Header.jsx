@@ -77,7 +77,7 @@ const Header = ({ onMenuToggle }) => {
             loop={true}
             autoplay={true}
           ></AnimatedIcon>
-          <img src={logo} alt="Logo Turn2x" />
+          <img src={logo} alt="Logo TURN2X" />
         </Link>
         <div className="header-content">
           <div className="header-wrapper">

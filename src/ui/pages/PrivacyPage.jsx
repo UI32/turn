@@ -724,7 +724,7 @@ const PrivacyPage = () => {
           </p>
           <div>
             <p>Datenschutzerkl&auml;rung</p>
-            <p>Turn2x</p>
+            <p>TURN2Xs</p>
           </div>
         </div>
       </div>

@@ -26,7 +26,6 @@ import logoKi from "../../assets/images/marquee/logo-kit.svg";
 import logoLi from "../../assets/images/marquee/logo-linde.svg";
 import logoMe from "../../assets/images/marquee/logo-mercedes.svg";
 import logoSi from "../../assets/images/marquee/logo-siemens.svg";
-import logoTes from "../../assets/images/marquee/logo-tes.svg";
 import logoTe from "../../assets/images/marquee/logo-tesla.svg";
 import logoTu from "../../assets/images/marquee/logo-tum.svg";
 
@@ -37,7 +36,6 @@ const logos = [
   logoLi,
   logoMe,
   logoSi,
-  logoTes,
   logoTe,
   logoTu,
 ];
@@ -63,9 +61,6 @@ const About = () => {
         >
           <div
             className="about-management"
-            data-aos="stagger-from-bottom"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
           >
             <AboutCard
               name="Philip Kessler"
