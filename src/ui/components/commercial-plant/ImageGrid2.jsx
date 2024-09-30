@@ -18,6 +18,7 @@ const ImageGrid2 = () => {
           data-aos="zoom-out"
           data-aos-anchor-placement="center-bottom"
           data-aos-once="true"
+          data-aos-duration="1500"
         >
           <div className="video-container">
             <div className="video-size-wrapper">
@@ -45,6 +46,7 @@ const ImageGrid2 = () => {
                 data-aos="zoom-out"
                 data-aos-anchor-placement="center-bottom"
                 data-aos-once="true"
+                data-aos-duration="1500"
               />
             </div>
             <div className="image-grid-item show-in-tablet">
@@ -55,6 +57,7 @@ const ImageGrid2 = () => {
                 data-aos="zoom-out"
                 data-aos-anchor-placement="center-bottom"
                 data-aos-once="true"
+                data-aos-duration="1500"
               />
             </div>
           </div>
@@ -67,6 +70,7 @@ const ImageGrid2 = () => {
                 data-aos="zoom-out"
                 data-aos-anchor-placement="center-bottom"
                 data-aos-once="true"
+                data-aos-duration="1500"
               />
             </div>
             <div className="image-grid-item show-in-tablet">
@@ -77,6 +81,7 @@ const ImageGrid2 = () => {
                 data-aos="zoom-out"
                 data-aos-anchor-placement="center-bottom"
                 data-aos-once="true"
+                data-aos-duration="1500"
               />
             </div>
           </div>
