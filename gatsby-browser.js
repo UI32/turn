@@ -1,22 +1,35 @@
-exports.onRouteUpdate = ({ location }) =>
-  setTimeout(() => scrollToAnchor(location), 500);
+exports.onInitialClientRender = () => {
+  // Ensure the page always starts at the top on initial load
+  window.scrollTo(0, 0);
+};
+
+exports.onRouteUpdate = ({ location }) => {
+  // Ensure that no scroll happens and the page stays at the top on route changes without hash
+  if (location.hash) {
+    // If navigating to a hash, smoothly scroll to the anchor
+    setTimeout(() => scrollToAnchor(location), 500);
+  } else {
+    // Force scroll to the top without any smooth behavior
+    window.scrollTo(0, 0);
+  }
+};
 
 /**
- *
- * @desc - a function to jump to the correct scroll position
- * @param {Object} location -
- * @param {Number} [mainNavHeight] - the height of any persistent nav -> document.querySelector(`nav`)
+ * @desc - A function to jump to the correct scroll position for anchor links
+ * @param {Object} location - The location object containing the hash
+ * @param {Number} [mainNavHeight] - Optional height of persistent nav if needed
  */
 function scrollToAnchor(location, mainNavHeight = 0) {
-  // Check for location so build does not fail
   if (location && location.hash) {
-    const item = document.querySelector(`${location.hash}`).offsetTop;
+    const targetElement = document.querySelector(`${location.hash}`);
+    if (targetElement) {
+      const itemOffsetTop = targetElement.offsetTop;
 
-    window.scrollTo({
-      top: item - mainNavHeight,
-      behavior: "smooth",
-    });
+      // Smooth scroll to the element
+      window.scrollTo({
+        top: itemOffsetTop - mainNavHeight,
+        behavior: "smooth", // Smooth scrolling to the anchor
+      });
+    }
   }
-
-  return true;
 }

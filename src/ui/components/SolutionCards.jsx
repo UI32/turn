@@ -16,6 +16,7 @@ const SolutionCards = () => {
       imgKey: img1,
       num1Key: "15",
       num2Key: "%",
+      durationKey: "2",
     },
     {
       id: "sol-2",
@@ -24,14 +25,16 @@ const SolutionCards = () => {
       imgKey: img2,
       num1Key: "83",
       num2Key: "%",
+      durationKey: "4",
     },
     {
       id: "sol-3",
       labelKey: "maritime-solution-card-3:label",
       textKey: "maritime-solution-card-3:text",
       imgKey: img3,
-      num1Key: "2",
-      num2Key: "x",
+      num1Key: "34",
+      num2Key: "%",
+      durationKey: "3",
     },
   ];
 
@@ -57,6 +60,7 @@ const SolutionCards = () => {
               num1={item.num1Key}
               num2={item.num2Key}
               img={item.imgKey}
+              duration={item.durationKey}
             />
           ))}
           <div className="solution-card spacer"></div>

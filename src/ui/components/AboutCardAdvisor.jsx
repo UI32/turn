@@ -11,8 +11,8 @@ const AboutCardAdvisor = ({ image, name, alt, position }) => {
           <img src={image} alt={alt} loading="lazy" />
         </div>
         <div className="about-info">
-          <h2 className="about-name">{name}</h2>
-          <p className="about-position">{t(position)}</p>
+          <h2 className="text-xl">{name}</h2>
+          <p className="text-l">{t(position)}</p>
         </div>
       </div>
     </div>

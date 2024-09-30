@@ -11,9 +11,12 @@ import cx from "classnames";
 import AnimatedIcon from "./AnimatedIcon";
 import headerIcon from "../../assets/animations/Icon-1.json";
 import logo from "../../assets/images/logo-text.svg";
-// import NavDropdown from "./NavDropdown";
-// import NavDropdownLink from "./NavDropdownLink";
-// import PaperD from "../../assets/icons/paper-dark.svg";
+import NavDropdown from "./NavDropdown";
+import NavDropdownLink from "./NavDropdownLink";
+import energyIcon from "../../assets/icons/nav-icon-energy.svg";
+import maritimeIcon from "../../assets/icons/nav-icon-maritime.svg";
+import utilitiesIcon from "../../assets/icons/nav-icon-utilities.svg";
+
 
 const Header = ({ onMenuToggle }) => {
   const t = useTranslations();
@@ -74,12 +77,16 @@ const Header = ({ onMenuToggle }) => {
             loop={true}
             autoplay={true}
           ></AnimatedIcon>
-          <img src={logo} alt="Logo Turn2x" />
+          <img src={logo} alt="Logo TURN2X" />
         </Link>
         <div className="header-content">
           <div className="header-wrapper">
             <nav className="header-nav" role="navigation">
-              <Link to="/#how-it-works" className="nav-item" onClick={closeMenu}>
+              <Link
+                to="/#how-it-works"
+                className="nav-item"
+                onClick={closeMenu}
+              >
                 {t("how-it-works:name")}
               </Link>
 
@@ -87,22 +94,36 @@ const Header = ({ onMenuToggle }) => {
                 {t("plant:name")}
               </Link>
 
-              <Link to="/#mission" className="nav-item hide-in-xl" onClick={closeMenu}>
+              <Link
+                to="/#mission"
+                className="nav-item hide-in-xl"
+                onClick={closeMenu}
+              >
                 {t("mission:name")}
               </Link>
 
-              {/* <NavDropdown title="Industry Insights">
-                <NavDropdownLink text="Maritime" to="/industry-insights/maritime" icon={PaperD} onClick={closeMenu}/>
-                <NavDropdownLink text="Utilities" to="/" icon={PaperD} onClick={closeMenu}/>
+              <NavDropdown title={t("industry-insights:name")}>
                 <NavDropdownLink
-                  text="Energy Intensive Industries"
-                  to="/"
-                  icon={PaperD}
+                  text={t("maritime:name")}
+                  to="/industry-insights/maritime"
+                  icon={maritimeIcon}
                   onClick={closeMenu}
                 />
-              </NavDropdown> */}
+                <NavDropdownLink
+                  text={t("utilities:name")}
+                  to="/industry-insights/utilities"
+                  icon={utilitiesIcon}
+                  onClick={closeMenu}
+                />
+                <NavDropdownLink
+                  text={t("energy:name")}
+                  to="/industry-insights/energy"
+                  icon={energyIcon}
+                  onClick={closeMenu}
+                />
+              </NavDropdown>
 
-              <Link to="/#about" className="nav-item" onClick={closeMenu}>
+              <Link to="/about" className="nav-item" onClick={closeMenu}>
                 {t("about:name")}
               </Link>
             </nav>

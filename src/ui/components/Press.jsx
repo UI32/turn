@@ -1,9 +1,9 @@
 import React from "react";
 import PressItem from "./PressItem";
 import useTranslations from "../../hooks/useTranslations";
-import imgEnergy from "../../assets/images/press-item-energy.jpg";
-import imgMariti from "../../assets/images/press-item-maritime.jpg";
-import imgUtilit from "../../assets/images/press-item-utilities.jpg";
+import imgEnergy from "../../assets/images/img-landing-energy-intensive.jpg";
+import imgMariti from "../../assets/images/img-landing-maritime.jpg";
+import imgUtilit from "../../assets/images/img-landing-utilities.jpg";
 
 const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
   const t = useTranslations();
@@ -11,7 +11,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
   const defaultPressItems = [
     {
       id: "maritime",
-      to: "/",
+      to: "/industry-insights/maritime",
       pretitleKey: "press:item-1-pre",
       titleKey: "press:item-1-title",
       img: imgMariti,
@@ -19,32 +19,38 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
     },
     {
       id: "utilities",
-      to: "/",
-      pretitleKey: "press:item-1-pre",
-      titleKey: "press:item-1-title",
+      to: "/industry-insights/utilities",
+      pretitleKey: "press:item-2-pre",
+      titleKey: "press:item-2-title",
       img: imgUtilit,
       isExternal: false,
     },
     {
       id: "energy",
-      to: "/",
-      pretitleKey: "press:item-1-pre",
-      titleKey: "press:item-1-title",
+      to: "/industry-insights/energy",
+      pretitleKey: "press:item-3-pre",
+      titleKey: "press:item-3-title",
       img: imgEnergy,
       isExternal: false,
     },
   ];
 
   const items = pressItems || defaultPressItems;
-
   const pressLabel = label || t("press:label");
   const pressTitle = title || t("press:title");
   const pressText = text || t("press:text");
 
   return (
-    <section className="press">
+    <section className="press" id="press-section">
       <div className="press-wrapper">
-        <div className="press-container">
+        <div
+          className="press-container"
+          data-aos="stagger-from-right"
+          data-aos-anchor="#press-section"
+          data-aos-anchor-placement="top-center"
+          data-aos-delay="10"
+          data-aos-once="true"
+        >
           <div className="press-item press-item-first">
             <div className="press-item-heading">
               <div className="press-item-pretitle">
@@ -55,7 +61,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
             </div>
           </div>
 
-          {items.map((item) =>
+          {items.map(item =>
             item.id !== hiddenItem ? (
               <PressItem
                 key={item.id}
@@ -65,7 +71,7 @@ const Press = ({ hiddenItem, pressItems = null, label, title, text }) => {
                 img={item.img}
                 isExternal={item.isExternal}
               />
-            ) : null
+            ) : null,
           )}
           <div className="press-item spacer"></div>
         </div>

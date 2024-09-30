@@ -1,8 +1,8 @@
 import React from "react";
-import imageGrid21 from "../../../assets/images/commercial-plant/image-grid-2-1.jpg";
-import imageGrid22 from "../../../assets/images/commercial-plant/image-grid-2-2.jpg";
-import imageGrid23 from "../../../assets/images/commercial-plant/image-grid-2-3.jpg";
-import imageGrid24 from "../../../assets/images/commercial-plant/image-grid-2-4.jpg";
+import imageGrid21 from "../../../assets/images/commercial-plant/img-inauguration-1.jpg";
+import imageGrid22 from "../../../assets/images/commercial-plant/img-inauguration-2.jpg";
+import imageGrid23 from "../../../assets/images/commercial-plant/img-inauguration-3.jpg";
+import imageGrid24 from "../../../assets/images/commercial-plant/img-inauguration-4.jpg";
 import useTranslations from "../../../hooks/useTranslations";
 import sensor from "../../../assets/images/hero-sensor.png";
 import { PLANT_GRID_VIDEO } from "../../../constants/mediaUrls";
@@ -13,7 +13,12 @@ const ImageGrid2 = () => {
   return (
     <section className="grid-2">
       <div className="no-p-md wrapper">
-        <div className="video-bg" data-aos="custom-animation">
+        <div
+          className="video-bg"
+          data-aos="zoom-out"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-once="true"
+        >
           <div className="video-container">
             <div className="video-size-wrapper">
               <img className="sensor" src={sensor} alt="video sensor" />
@@ -36,14 +41,20 @@ const ImageGrid2 = () => {
               <img
                 src={imageGrid21}
                 alt="plant inaguration visual"
-                loading="lazy"
+                loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
               />
             </div>
             <div className="image-grid-item show-in-tablet">
               <img
                 src={imageGrid22}
                 alt="plant inaguration visual"
-                loading="lazy"
+                loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
               />
             </div>
           </div>
@@ -52,14 +63,20 @@ const ImageGrid2 = () => {
               <img
                 src={imageGrid23}
                 alt="plant inaguration visual"
-                loading="lazy"
+                loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
               />
             </div>
             <div className="image-grid-item show-in-tablet">
               <img
                 src={imageGrid24}
                 alt="plant inaguration visual"
-                loading="lazy"
+                loading="eager"
+                data-aos="zoom-out"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-once="true"
               />
             </div>
           </div>
@@ -72,28 +89,28 @@ const ImageGrid2 = () => {
               <img
                 src={imageGrid21}
                 alt="plant inaguration visual"
-                loading="lazy"
+                loading="eager"
               />
             </div>
             <div className="grid-2-slider-item">
               <img
                 src={imageGrid22}
                 alt="plant inaguration visual"
-                loading="lazy"
+                loading="eager"
               />
             </div>
             <div className="grid-2-slider-item">
               <img
                 src={imageGrid23}
                 alt="plant inaguration visual"
-                loading="lazy"
+                loading="eager"
               />
             </div>
             <div className="grid-2-slider-item">
               <img
                 src={imageGrid24}
                 alt="plant inaguration visual"
-                loading="lazy"
+                loading="eager"
               />
             </div>
             <div className="grid-2-slider-item spacer"></div>

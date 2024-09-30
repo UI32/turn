@@ -36,6 +36,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-slick": "^0.29.0",
     "sass": "^1.62.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "split-type": "^0.3.4"
   }
 }

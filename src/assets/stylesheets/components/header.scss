@@ -285,8 +285,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // max-width: 920px; temp
-      max-width: 630px;
+      max-width: 920px;
       margin-left: auto;
       flex-grow: 1;
       padding-left: 80px;
@@ -310,6 +309,10 @@
       top: 1px;
     }
   }
+}
+
+body.disable-scroll .header {
+  opacity: 0;
 }
 
 // Hamburger

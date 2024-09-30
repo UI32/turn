@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import LinkLocalized from "../components/LinkLocalized";
 import useTranslations from "../../hooks/useTranslations";
 import cx from "classnames";
 import arrowIcon from "../../assets/icons/right-arrow-light.svg";
@@ -36,9 +36,9 @@ const PressItem = ({ to, title, pretitle, img, className, isExternal = false }) 
       {content}
     </a>
   ) : (
-    <Link to={to} className={cx("press-item", { [className]: className })}>
+    <LinkLocalized to={to} className={cx("press-item", { [className]: className })}>
       {content}
-    </Link>
+    </LinkLocalized>
   );
 };
 

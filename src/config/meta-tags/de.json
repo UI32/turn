@@ -11,7 +11,15 @@
   "plantTitle": "TURN2X - Eröffnung der ersten kommerziellen Anlage in Spanien",
   "plant": "TURN2X hat Europas erste kommerzielle Anlage für erneuerbares Erdgas in Miajadas, Spanien, eingeweiht",
   "plantKeys": "Plant keys",
-  "maritimeTitle": "Maritime",
-  "maritime": "maritime description",
-  "maritimeKeys": "maritime keys"  
+  "maritimeTitle": "TURN2X - BRANCHENEINBLICK: SEEFAHRT",
+  "maritime": "TURN2X dekarbonisiert die Industrie durch die Produktion von erneuerbarem Erdgas mit einem einzigartigen Elektrolyseverfahren.",
+  "maritimeKeys": "maritime keys",
+  "utilitiesTitle": "TURN2X - BRANCHENEINBLICK: ENERGIEVERSORGUNG",
+  "utilities": "TURN2X dekarbonisiert die Industrie durch die Produktion von erneuerbarem Erdgas mit einem einzigartigen Elektrolyseverfahren.",
+  "utilitiesKeys": "utilities keys",
+  "energyTitle": "TURN2X - BRANCHENEINBLICK: ENERGIEINTENSIVE INDUSTRIEN",
+  "energy": "TURN2X dekarbonisiert die Industrie durch die Produktion von erneuerbarem Erdgas mit einem einzigartigen Elektrolyseverfahren.",
+  "energyKeys": "energy keys",
+  "aboutTitle": "TURN2X - ABOUT",
+  "about": "TURN2X decarbonizes the industry by producing Renewable Natural Gas with a unique methanation process."  
 }

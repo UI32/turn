@@ -1,4 +1,6 @@
 .intro-cards {
+
+  background: linear-gradient(180deg, rgba(247,247,247,0) 0%, rgba(247,247,247,0) 90%, rgba(247,247,247,0.9920343137254902) 100%);
   padding: 80px 0;
   @include mq(md) {
     padding: 80px 0 160px;
@@ -45,6 +47,9 @@
 
   &-icon {
     width: 40px;
+    @include mq(lg) {
+      width: 72px;
+    }
   }
 
   &-icon-white {

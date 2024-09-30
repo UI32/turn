@@ -113,3 +113,19 @@
     padding: 0 16px;
   }
 }
+
+.w100 {
+  width: 100%;
+}
+
+// gsap and split-type class for hero animation
+.line {
+  overflow: hidden;
+}
+.jumbo .char {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.hero-text .jumbo {
+  visibility: hidden; /* Hide the text initially */
+}

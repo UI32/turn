@@ -11,7 +11,15 @@
   "plantTitle": "TURN2X - Launching First Commercial Plant in Spain",
   "plant": "TURN2X has inaugurated Europe's first commercial renewable natural gas plant in Miajadas, Spain.",
   "plantKeys": "Plant keys",
-  "maritimeTitle": "Maritime",
-  "maritime": "maritime description",
-  "maritimeKeys": "maritime keys"  
+  "maritimeTitle": "TURN2X - INDUSTRY INSIGHT: MARITIME",
+  "maritime": "TURN2X decarbonizes the industry by producing Renewable Natural Gas with a unique methanation process.",
+  "maritimeKeys": "maritime keys",
+  "utilitiesTitle": "TURN2X - INDUSTRY INSIGHT: UTILITIES",
+  "utilities": "TURN2X decarbonizes the industry by producing Renewable Natural Gas with a unique methanation process.",
+  "utilitiesKeys": "utilities keys",
+  "energyTitle": "TURN2X - INDUSTRY INSIGHT: ENERGY INTENSIVE INDUSTRIES",
+  "energy": "TURN2X decarbonizes the industry by producing Renewable Natural Gas with a unique methanation process.",
+  "energyKeys": "energy keys",
+  "aboutTitle": "TURN2X - ABOUT",
+  "about": "TURN2X decarbonizes the industry by producing Renewable Natural Gas with a unique methanation process."
 }
