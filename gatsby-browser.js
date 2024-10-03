@@ -1,17 +1,17 @@
 exports.onInitialClientRender = () => {
-  // Ensure the page always starts at the top on initial load
   window.scrollTo(0, 0);
+  addSmoothScrollForSamePageLinks();
 };
 
 exports.onRouteUpdate = ({ location }) => {
-  // Ensure that no scroll happens and the page stays at the top on route changes without hash
   if (location.hash) {
-    // If navigating to a hash, smoothly scroll to the anchor
     setTimeout(() => scrollToAnchor(location), 500);
   } else {
-    // Force scroll to the top without any smooth behavior
     window.scrollTo(0, 0);
   }
+  
+  // Reattach the smooth scroll event listener after each route update
+  addSmoothScrollForSamePageLinks();
 };
 
 /**
@@ -24,12 +24,33 @@ function scrollToAnchor(location, mainNavHeight = 0) {
     const targetElement = document.querySelector(`${location.hash}`);
     if (targetElement) {
       const itemOffsetTop = targetElement.offsetTop;
-
-      // Smooth scroll to the element
       window.scrollTo({
         top: itemOffsetTop - mainNavHeight,
-        behavior: "smooth", // Smooth scrolling to the anchor
+        behavior: "smooth",
       });
     }
   }
+}
+
+/**
+ * @desc - Adds smooth scroll behavior for same-page anchor links.
+ */
+function addSmoothScrollForSamePageLinks() {
+  document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const url = new URL(this.href);
+
+      if (url.pathname === window.location.pathname) {
+        e.preventDefault();
+        const targetElement = document.querySelector(url.hash);
+        if (targetElement) {
+          const itemOffsetTop = targetElement.offsetTop;
+          window.scrollTo({
+            top: itemOffsetTop,
+            behavior: 'smooth',
+          });
+        }
+      }
+    });
+  });
 }
