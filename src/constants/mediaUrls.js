@@ -1,10 +1,15 @@
 // VIDEO
 export const HOME_HERO_VIDEO = "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/turnDroneVideo.mp4"
-export const PLANT_HERO_VIDEO = "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-new+plant2.mp4"
-export const PLANT_GRID_VIDEO = "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-inauguration2.mp4"
-export const MARITIME_HERO_VIDEO = "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-maritime.mp4"
-export const UTILITIES_HERO_VIDEO = "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-utilities.mp4"
-export const ENERGY_HERO_VIDEO = "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-energy-intensive-industries.mp4"
+export const PLANT_HERO_VIDEO =
+  "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-new-plant-2-comp.mp4";
+export const PLANT_GRID_VIDEO =
+  "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-inauguration-2-comp.mp4";
+export const MARITIME_HERO_VIDEO =
+  "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-maritime-comp.mp4";
+export const UTILITIES_HERO_VIDEO =
+  "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-utilities-comp.mp4";
+export const ENERGY_HERO_VIDEO =
+  "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-energy-intensive-industries-comp.mp4";
 
 
 
