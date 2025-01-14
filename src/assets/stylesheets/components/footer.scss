@@ -148,4 +148,27 @@
       }
     }
   }
+
+  .footer-eu-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 50%;
+
+    .eu-funding-logo {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .footer-caption.copy {
+      padding-bottom: 0;
+    }
+  }
+
+  @include mq(md) {
+    .footer-eu-section {
+      flex: inherit;
+    }
+  }
 }

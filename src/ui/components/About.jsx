@@ -29,16 +29,7 @@ import logoSi from "../../assets/images/marquee/logo-siemens.svg";
 import logoTe from "../../assets/images/marquee/logo-tesla.svg";
 import logoTu from "../../assets/images/marquee/logo-tum.svg";
 
-const logos = [
-  logoBa,
-  logoBas,
-  logoKi,
-  logoLi,
-  logoMe,
-  logoSi,
-  logoTe,
-  logoTu,
-];
+const logos = [logoBa, logoBas, logoKi, logoLi, logoMe, logoSi, logoTe, logoTu];
 
 const About = () => {
   const t = useTranslations();
@@ -59,9 +50,7 @@ const About = () => {
           pretitle="about:management"
           title="about:title"
         >
-          <div
-            className="about-management"
-          >
+          <div className="about-management">
             <AboutCard
               name="Philip Kessler"
               alt="Philip Kessler"
