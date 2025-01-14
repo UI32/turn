@@ -14,8 +14,8 @@ const LegalPage = () => {
             <div className="col-4">
               <h3>ANGABEN GEMÄSS § 5 TM</h3>
               <p>
-                Turn Energy GmbH <br /> Leopoldstrasse 173E, 80804 München,
-                Germany <br />
+                TURN2X GmbH <br /> Leopoldstrasse 173E, 80804 München, Germany{" "}
+                <br />
                 Kontakt:{" "}
                 <a href="mailto:privacy@turn2x.com">privacy@turn2x.com</a>
               </p>

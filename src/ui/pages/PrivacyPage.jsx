@@ -53,7 +53,7 @@ const PrivacyPage = () => {
           <h3>Verantwortlicher</h3>
           <p>Für die Datenverarbeitung verantwortlich ist</p>
           <p>
-            Turn Energy GmbH <br />
+            TURN2X GmbH <br />
             Am Kartoffelgarten 14, <br />
             81671 München, Germany
             <br />
