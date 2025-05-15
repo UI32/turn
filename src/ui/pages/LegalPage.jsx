@@ -14,7 +14,7 @@ const LegalPage = () => {
             <div className="col-4">
               <h3>ANGABEN GEMÄSS § 5 TM</h3>
               <p>
-                TURN2X GmbH <br /> Leopoldstrasse 173E, 80804 München, Germany{" "}
+                TURN2X GmbH <br /> Kartoffelgarten 14, 81671 München, Germany{" "}
                 <br />
                 Kontakt:{" "}
                 <a href="mailto:privacy@turn2x.com">privacy@turn2x.com</a>
