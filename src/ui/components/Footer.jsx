@@ -34,7 +34,7 @@ const Footer = () => {
             alt="funded-by-EU"
             className="eu-funding-logo"
           />
-          <span className="footer-caption copy">© 2023 TURN2X</span>
+          <span className="footer-caption copy">© 2025 TURN2X</span>
         </div>
         <div className="globe-wrapper">
           {/*<GlobeText />*/}
