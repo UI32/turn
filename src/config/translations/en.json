@@ -58,7 +58,7 @@
   "contact:error": "There has been an error. Please, try again",
   "contact:name": "Contact",
   "contact:title": "Want to Know More?",
-  "contact:address": "TURN2X <br /> Am Kartoffelgarten 14 <br /> 81671 München, Germany",
+  "contact:address": "TURN2X GmbH <br /> Am Kartoffelgarten 14 <br /> 81671 München <br/> Germany",
   "contact:info": "info@turn2x.com",
   "contact:full-name": "Full Name",
   "contact:phone": "Phone",
@@ -86,7 +86,7 @@
   "press:item-2-pre": "UTILITIES",
   "press:item-2-title": "Harnessing Renewable Natural Gas to Decarbonize Utilities",
   "press:item-3-pre": "ENERGY INTENSIVE INDUSTRIES",
-  "press:item-3-title": "Transforming the Industry with Renewable Natural Gas",    
+  "press:item-3-title": "Transforming the Industry with Renewable Natural Gas",
   "plant-hero:title": "Launching our First Commercial Plant in Miajadas, Spain",
   "plant-grid-1:title": "World's First Plant Demonstrating Commercial Viability",
   "plant-grid-1:text": "TURN2X's plant in Miajadas, Spain, marks a global milestone in commercial viability by selling 100% of its renewable natural gas output via longterm off-take contracts. This achievement underscores TURN2X's pioneering role in sustainable energy solutions.",
@@ -122,7 +122,6 @@
   "maritime-intro-card-2:text": "The vast majority of ships use very low sulphur fuel oil (VLSFO), which contains, for example, sulphur oxides (SOx), thereby causing major health and environmental harm.",
   "maritime-intro-card-3:title": "Regulations",
   "maritime-intro-card-3:text": "The European Union (EU) as well as the International Maritime Organization (IMO) have imposed several regulations and strategies in recent years to further drive industry decarbonisation (adoption of FuelEU Maritime, inclusion in EU-ETS, MEPC 80).",
-
   "maritime-solution:pretitle": "The Solution",
   "maritime-solution:title": "e-LNG as the Economical Choice for Shipping",
   "maritime-solution-card-1:label": "production",
@@ -219,5 +218,4 @@
   "about-values:label-5": "OUR VALUES",
   "about-values:title-5": "Strength in Difference",
   "about-values:text-5": "We celebrate the unique qualities, strengths and backgrounds that each individual brings to our organization and actively work on fostering a diverse environment. By embracing our differences, we unlock our true collective potential."
-
 }
