@@ -12,12 +12,14 @@ const ButtonGeneric = ({
   loading,
   success,
   tiny,
+  extraPadding,
 }) => {
   const t = useTranslations();
   const buttonClasses = cx("button", {
     "button-clear": clear,
     "is-disabled": disabled,
     "button-tiny": tiny,
+    "button-extra-padding": extraPadding,
   });
   const buttonContent = (
     <>

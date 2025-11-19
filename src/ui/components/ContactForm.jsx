@@ -137,6 +137,7 @@ const Contact = () => {
           success={successVisible}
           label={successVisible ? "" : "contact:submit"}
           disabled={errors.email || errors.name}
+          extraPadding={true}
         />
       )}
     </form>
