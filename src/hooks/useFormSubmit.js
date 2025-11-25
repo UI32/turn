@@ -5,14 +5,11 @@ import { convertToFormData } from "../utils/format";
 // Form submission is done with Formspree
 
 const SUCCESS_VISIBLE_TIME = 2000;
-const formSpreeEndpoint = "https://formspree.io/f/xqkorqap";
+const formSpreeEndpoint = "https://formspree.io/f/xnnwpyjv" // Turn 2X account endpoint 
 
 const useFormSubmit = () => {
   const [loading, setLoading] = useState();
-
   const [submitResult, setSubmitResult] = useState({});
-
-  const t = useTranslations();
 
   useEffect(() => {
     // Removes the success flag after some wait time.
@@ -20,8 +17,8 @@ const useFormSubmit = () => {
     setTimeout(() => setSubmitResult({}), SUCCESS_VISIBLE_TIME);
   }, [submitResult]);
 
-  const submit = useCallback(async formData => {
-    const formatedData = convertToFormData(formData);
+  const submit = useCallback(async data => {
+    const formatedData = convertToFormData(data);
     try {
       setLoading(true);
       const response = await fetch(formSpreeEndpoint, {
