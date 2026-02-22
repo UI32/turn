@@ -87,10 +87,10 @@ const Process = () => {
                   {t("process:section3")}
                 </div>
               </div>
-              <div className="process-bullets-caption">
+              {/* <div className="process-bullets-caption">
                 <p className="caption">{t("process:caption1")}</p>
                 <p className="caption">{t("process:caption2")}</p>
-              </div>
+              </div> */}
             </div>
             <div className="process-graphic">
               <div className="mobile-graphic">
@@ -145,10 +145,10 @@ const Process = () => {
                     className="section-img-active mobile"
                   />
                 </div>
-                <div className="process-graphic-caption hide-in-desktop">
+                {/* <div className="process-graphic-caption hide-in-desktop">
                   <p className="caption">{t("process:caption1")}</p>
                   <p className="caption">{t("process:caption2")}</p>
-                </div>
+                </div> */}
               </div>
               <div className="desktop-graphic">
                 <div {...stateWrapperProps("E1", "graphic-section section-1")}>
