@@ -1,5 +1,5 @@
 // VIDEO
-export const HOME_HERO_VIDEO = "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/turnDroneVideo.mp4"
+export const HOME_HERO_VIDEO = "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/turn-hero-vid.mp4"
 export const PLANT_HERO_VIDEO =
   "https://turn2x-assets.s3.eu-west-3.amazonaws.com/video/video-new-plant-2-comp.mp4";
 export const PLANT_GRID_VIDEO =
